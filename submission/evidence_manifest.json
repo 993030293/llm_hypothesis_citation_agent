@@ -1,0 +1,44 @@
+{
+  "project": "llm_hypothesis_citation_agent",
+  "canonical_runs": [
+    {
+      "case_id": "success_case",
+      "source_run_dir": "outputs/runs/20260529_193717",
+      "evidence_dir": "submission/evidence/success_case",
+      "input_pdf": "inputs/papers/success_demo.pdf",
+      "command": "python agent/workflow.py --pdf inputs/papers/success_demo.pdf --task \"Generate a new research hypothesis and verify citations\"",
+      "observed_label_counts": {
+        "Green": 3,
+        "Yellow": 1,
+        "Red": 0
+      },
+      "core_artifacts": [
+        "tool_calls.jsonl",
+        "retrieved_literature.jsonl",
+        "generated_hypothesis.md",
+        "citation_verification.csv",
+        "final_report.md"
+      ]
+    },
+    {
+      "case_id": "boundary_case",
+      "source_run_dir": "outputs/runs/20260529_193944",
+      "evidence_dir": "submission/evidence/boundary_case",
+      "input_pdf": "inputs/papers/boundary_demo.pdf",
+      "command": "python agent/workflow.py --pdf inputs/papers/boundary_demo.pdf --task \"Generate a boundary-case hypothesis and verify citations\" --inject-bad-citation",
+      "observed_label_counts": {
+        "Green": 0,
+        "Yellow": 1,
+        "Red": 1
+      },
+      "core_artifacts": [
+        "tool_calls.jsonl",
+        "retrieved_literature.jsonl",
+        "generated_hypothesis.md",
+        "citation_verification.csv",
+        "final_report.md"
+      ]
+    }
+  ],
+  "no_fabrication_policy": "Screenshots, recordings, DOI records, retrieval results, and QQ/WeChat logs must be real. If live QQ/WeChat integration is unavailable, present the terminal QQ command adapter honestly and show reproducible logs."
+}

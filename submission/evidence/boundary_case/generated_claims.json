@@ -1,0 +1,75 @@
+{
+  "hypotheses": [
+    {
+      "hypothesis_id": "H001",
+      "idea_type": "insufficient evidence",
+      "evidence_status": "insufficient_evidence_for_generation",
+      "research_gap": "The current run did not retrieve at least two usable literature records around hypothesis generation, citation risk, metadata matching, literature search.",
+      "new_hypothesis": "No citation-backed research hypothesis should be presented from this run alone.",
+      "why_novel": "Not assessed because the evidence base is too thin.",
+      "required_evidence": [
+        "At least two retrievable papers with usable metadata.",
+        "At least one abstract or snippet that can support each citation-backed claim."
+      ],
+      "supporting_citations": [
+        {
+          "claim_id": "C001",
+          "literature_id": "L001",
+          "title": "MedDiscovery: Emergent Cross-Domain Scientific Reasoning in an Autonomous Multi-Agent Hypothesis Generation System",
+          "year": 2025,
+          "doi": "10.2139/ssrn.5920904",
+          "evidence_id": "E002",
+          "retrieval_source": "crossref"
+        }
+      ],
+      "risk_or_limitation": "Presenting a hypothesis here would overstate the evidence.",
+      "testable_prediction": "After additional retrieval, the agent should either form a supported idea or keep the run as insufficient.",
+      "citation_claim_ids": [
+        "C001"
+      ],
+      "hypothesis_text": "Insufficient evidence for generation."
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "C001",
+      "claim_text": "Prior work reports that MedDiscovery: Emergent Cross-Domain Scientific Reasoning in an Autonomous Multi-Agent Hypothesis Generation System",
+      "hypothesis_id": "H001",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "MedDiscovery: Emergent Cross-Domain Scientific Reasoning in an Autonomous Multi-Agent Hypothesis Generation System",
+        "authors": [
+          "Panos Skouras"
+        ],
+        "year": 2025,
+        "doi": "10.2139/ssrn.5920904",
+        "venue": "",
+        "url": "https://doi.org/10.2139/ssrn.5920904",
+        "retrieval_source": "crossref",
+        "literature_id": "L001",
+        "evidence_id": "E002",
+        "abstract": "",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C002",
+      "claim_text": "Boundary-case claim: this deliberately invalid citation is included to demonstrate Red labeling when a cited work cannot be found.",
+      "hypothesis_id": "H_BOUNDARY",
+      "claim_role": "bad_citation_boundary_case",
+      "cited_work": {
+        "title": "Clearly Nonexistent Citation Verification Paper for Boundary Demo",
+        "authors": [
+          "No Such Author"
+        ],
+        "year": 2099,
+        "doi": "INTENTIONALLY_INVALID_DOI_FOR_DEMO",
+        "venue": "",
+        "url": "",
+        "retrieval_source": "manual_boundary_case"
+      }
+    }
+  ],
+  "markdown": "# Generated Research Idea Cards\n\nInput paper: Ambiguous Cross Domain Hypothesis Generation with Citation Risk\n\n## H001: insufficient evidence\nEvidence status: `insufficient_evidence_for_generation`\n\nResearch gap: The current run did not retrieve at least two usable literature records around hypothesis generation, citation risk, metadata matching, literature search.\n\nNew hypothesis: No citation-backed research hypothesis should be presented from this run alone.\n\nWhy novel: Not assessed because the evidence base is too thin.\n\nRequired evidence:\n- At least two retrievable papers with usable metadata.\n- At least one abstract or snippet that can support each citation-backed claim.\n\nSupporting citations:\n- C001: MedDiscovery: Emergent Cross-Domain Scientific Reasoning in an Autonomous Multi-Agent Hypothesis Generation System (2025), DOI: 10.2139/ssrn.5920904\n\nRisk or limitation: Presenting a hypothesis here would overstate the evidence.\n\nTestable prediction: After additional retrieval, the agent should either form a supported idea or keep the run as insufficient.\n\n## Citation-Backed Claims To Verify\n\n| Claim ID | Hypothesis | Claim | Cited Title | Year | DOI |\n|---|---|---|---|---|---|\n| C001 | H001 | Prior work reports that MedDiscovery: Emergent Cross-Domain Scientific Reasoning in an Autonomous Multi-Agent Hypothesis Generation System | MedDiscovery: Emergent Cross-Domain Scientific Reasoning in an Autonomous Multi-Agent Hypothesis Generation System | 2025 | 10.2139/ssrn.5920904 |\n| C002 | H_BOUNDARY | Boundary-case claim: this deliberately invalid citation is included to demonstrate Red labeling when a cited work cannot be found. | Clearly Nonexistent Citation Verification Paper for Boundary Demo | 2099 | INTENTIONALLY_INVALID_DOI_FOR_DEMO |\n\nNote: the boundary-case citation is intentionally invalid and should be labeled Red.",
+  "evidence_id": "E003"
+}

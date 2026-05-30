@@ -1,0 +1,17 @@
+{
+  "case_id": "index_terms_style",
+  "pdf_path": "inputs\\stress_cases\\papers\\index_terms_style.pdf",
+  "source_type": "synthetic_parser_stress_fixture",
+  "source_note": "Generated locally to test PDF layout and extraction behavior; not claimed as a real published paper.",
+  "discipline": "computer_science",
+  "layout_type": "index_terms_style",
+  "expected_keyword_source": "declared",
+  "expected_keywords": [
+    "retrieval augmented generation",
+    "citation verification",
+    "large language models"
+  ],
+  "expected_readiness": "ready",
+  "online_audit": true,
+  "demo_command": "python agent/workflow.py --pdf inputs\\stress_cases\\papers\\index_terms_style.pdf --task \"Stress audit case index_terms_style\""
+}

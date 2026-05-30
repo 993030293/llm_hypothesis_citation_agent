@@ -1,0 +1,23 @@
+{
+  "queries": [
+    {
+      "query_id": "Q001",
+      "query": "Ambiguous Cross Domain Hypothesis Generation with Citation Risk hypothesis generation citation risk metadata matching",
+      "purpose": "Find papers directly related to the input paper topic.",
+      "required_terms": [
+        "hypothesis generation",
+        "citation risk",
+        "metadata matching"
+      ],
+      "source_keywords": [
+        "hypothesis generation",
+        "citation risk",
+        "metadata matching",
+        "literature search",
+        "boundary cases"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    }
+  ]
+}

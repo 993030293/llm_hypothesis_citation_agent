@@ -1,0 +1,20 @@
+{
+  "case_id": "real_evomarket",
+  "pdf_path": "inputs\\stress_cases\\papers\\real_evomarket.pdf",
+  "source_type": "local_real_pdf",
+  "source_note": "Real local PDF supplied by the user for live testing.",
+  "discipline": "finance",
+  "layout_type": "keywords_before_abstract_two_column",
+  "expected_keyword_source": "declared",
+  "expected_keywords": [
+    "agent-based modeling",
+    "financial market simulation",
+    "calibration",
+    "scalability",
+    "multi-agent systems",
+    "simulation fidelity"
+  ],
+  "expected_readiness": "ready",
+  "online_audit": true,
+  "demo_command": "python agent/workflow.py --pdf inputs\\stress_cases\\papers\\real_evomarket.pdf --task \"Stress audit case real_evomarket\""
+}

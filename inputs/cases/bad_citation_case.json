@@ -1,0 +1,14 @@
+{
+  "case_id": "bad_citation_case",
+  "purpose": "Demonstrate that an intentionally invalid citation is rejected and labeled Red.",
+  "input_pdf": "inputs/papers/boundary_demo.pdf",
+  "expected_labels": ["Red"],
+  "demo_command": "python agent/workflow.py --pdf inputs/papers/boundary_demo.pdf --task \"Generate a boundary-case hypothesis and verify citations\" --inject-bad-citation",
+  "expected_artifacts": [
+    "tool_calls.jsonl",
+    "retrieved_literature.jsonl",
+    "citation_verification.csv",
+    "final_report.md"
+  ]
+}
+

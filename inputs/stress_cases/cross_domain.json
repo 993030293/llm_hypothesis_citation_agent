@@ -1,0 +1,17 @@
+{
+  "case_id": "cross_domain",
+  "pdf_path": "inputs\\stress_cases\\papers\\cross_domain.pdf",
+  "source_type": "synthetic_parser_stress_fixture",
+  "source_note": "Generated locally to test PDF layout and extraction behavior; not claimed as a real published paper.",
+  "discipline": "robotics_healthcare",
+  "layout_type": "cross_domain",
+  "expected_keyword_source": "declared",
+  "expected_keywords": [
+    "robotic rehabilitation",
+    "clinical decision support",
+    "human-in-the-loop"
+  ],
+  "expected_readiness": "ready",
+  "online_audit": true,
+  "demo_command": "python agent/workflow.py --pdf inputs\\stress_cases\\papers\\cross_domain.pdf --task \"Stress audit case cross_domain\""
+}
