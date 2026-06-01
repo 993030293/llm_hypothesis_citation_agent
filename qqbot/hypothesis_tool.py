@@ -181,6 +181,7 @@ def _format_run_response(run_dir: Path, live_demo: bool, stdout: str) -> str:
         f"- {run_dir / 'tool_calls.jsonl'}\n"
         f"- {run_dir / 'retrieved_literature.jsonl'}\n"
         f"- {run_dir / 'citation_verification.csv'}\n"
+        f"- {run_dir / 'evidence_chain.csv'}\n"
         f"- {run_dir / 'final_report.md'}\n\n"
         "Citation verification rows:\n"
         f"{citation_summary}\n\n"

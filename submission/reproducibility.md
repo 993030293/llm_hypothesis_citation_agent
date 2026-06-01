@@ -40,12 +40,13 @@ python agent/workflow.py --pdf inputs/papers/success_demo.pdf --task "Generate a
 Expected behavior:
 
 - A new `outputs/runs/<timestamp>/` directory is created.
-- The run contains all nine core artifacts.
+- The run contains all core artifacts, including `evidence_chain.csv`.
 - `citation_verification.csv` contains at least one Green label.
 
 Canonical prepared evidence:
 
 - `submission/evidence/success_case/citation_verification.csv`
+- `submission/evidence/success_case/evidence_chain.csv`
 - `submission/evidence/success_case/tool_calls.jsonl`
 - `submission/evidence/success_case/retrieved_literature.jsonl`
 - `submission/evidence/success_case/final_report.md`
@@ -66,6 +67,7 @@ Expected behavior:
 Canonical prepared evidence:
 
 - `submission/evidence/boundary_case/citation_verification.csv`
+- `submission/evidence/boundary_case/evidence_chain.csv`
 - `submission/evidence/boundary_case/tool_calls.jsonl`
 - `submission/evidence/boundary_case/retrieved_literature.jsonl`
 - `submission/evidence/boundary_case/final_report.md`
@@ -119,6 +121,8 @@ Every complete run should contain:
 - `retrieved_literature.jsonl`
 - `generated_hypothesis.md`
 - `citation_verification.csv`
+- `evidence_chain.csv`
+- `evidence_chain.md`
 - `final_report.md`
 - `tool_calls.jsonl`
 - `evidence_items.jsonl`
@@ -138,4 +142,6 @@ Manual validation before presentation:
   responses normalized by project code.
 - Open `citation_verification.csv` and confirm Green/Yellow/Red labels have
   reasons and evidence IDs.
+- Open `evidence_chain.csv` and confirm every claim links to evidence IDs and
+  tool-call IDs.
 - Open `final_report.md` and confirm the report explains the labels.

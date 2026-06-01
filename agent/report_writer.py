@@ -1,10 +1,12 @@
 from __future__ import annotations
 
 import csv
+import json
 import time
 from pathlib import Path
 from typing import Any
 
+from agent.evidence_chain_tracer import build_evidence_chain_rows
 from agent.run_logging import EvidenceStore, ToolCallLogger
 from agent.utils import clean_text, now_iso, write_json, write_jsonl
 
@@ -89,11 +91,13 @@ class ReportWriter:
                     "paper_summary.json",
                     "search_queries.json",
                     "retrieved_literature.jsonl",
-                    "generated_hypothesis.md",
-                    "citation_verification.csv",
-                    "final_report.md",
-                    "tool_calls.jsonl",
-                    "evidence_items.jsonl",
+                "generated_hypothesis.md",
+                "citation_verification.csv",
+                "evidence_chain.csv",
+                "evidence_chain.md",
+                "final_report.md",
+                "tool_calls.jsonl",
+                "evidence_items.jsonl",
                 ]
             },
         )
@@ -121,6 +125,13 @@ class ReportWriter:
         counts = {label: 0 for label in ("Green", "Yellow", "Red")}
         for row in verification_rows:
             counts[row.get("color_label", "Red")] = counts.get(row.get("color_label", "Red"), 0) + 1
+        evidence_chain_rows = build_evidence_chain_rows(
+            hypothesis_payload={"claims": claims},
+            literature=literature,
+            verification_rows=verification_rows,
+            evidence_items=evidence_items,
+            tool_calls=self._read_jsonl(self.logger.path),
+        )
 
         lines = [
             "# Final Report",
@@ -148,6 +159,7 @@ class ReportWriter:
             f"- Evidence items recorded: {len(evidence_items)}",
             "",
             "Required run artifacts are in this same run directory: tool_calls.jsonl, retrieved_literature.jsonl, citation_verification.csv, and final_report.md.",
+            "Evidence-chain artifacts are also written as evidence_chain.csv and evidence_chain.md.",
             "",
             "## Search Queries",
             "",
@@ -199,6 +211,25 @@ class ReportWriter:
         lines.extend(
             [
                 "",
+                "## Evidence Chain Table",
+                "",
+                "| Claim ID | Hypothesis | Color | Support Category | Evidence IDs | Tool Calls | Manual Review |",
+                "|---|---|---|---|---|---|---|",
+            ]
+        )
+        for row in evidence_chain_rows:
+            evidence_ids = ";".join(
+                item for item in [row.get("source_evidence_ids"), row.get("verification_evidence_id")] if item
+            )
+            lines.append(
+                f"| {row.get('claim_id')} | {row.get('hypothesis_id')} | {row.get('color_label')} | "
+                f"{row.get('support_category')} | {evidence_ids} | {row.get('tool_call_ids')} | "
+                f"{row.get('manual_review_required')} |"
+            )
+
+        lines.extend(
+            [
+                "",
                 "## Retrieved Literature Preview",
                 "",
                 "| Literature ID | Selected | Relevance | Source | Year | Title | DOI | Evidence |",
@@ -227,3 +258,16 @@ class ReportWriter:
 
     def _cell(self, text: Any) -> str:
         return clean_text(text).replace("|", "\\|")
+
+    def _read_jsonl(self, path: Path) -> list[dict[str, Any]]:
+        if not path.exists():
+            return []
+        rows: list[dict[str, Any]] = []
+        for line in path.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            try:
+                rows.append(json.loads(line))
+            except json.JSONDecodeError:
+                continue
+        return rows

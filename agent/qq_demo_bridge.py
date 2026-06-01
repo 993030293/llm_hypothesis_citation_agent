@@ -14,6 +14,7 @@ CORE_ARTIFACTS = [
     "tool_calls.jsonl",
     "retrieved_literature.jsonl",
     "citation_verification.csv",
+    "evidence_chain.csv",
     "final_report.md",
 ]
 

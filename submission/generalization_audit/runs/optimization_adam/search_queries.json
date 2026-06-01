@@ -1,0 +1,191 @@
+{
+  "queries": [
+    {
+      "query_id": "Q001",
+      "query": "Adam: A Method for Stochastic Optimization optimization stochastic adam",
+      "purpose": "Find papers directly related to the input paper topic.",
+      "required_terms": [
+        "optimization",
+        "stochastic",
+        "adam"
+      ],
+      "source_keywords": [
+        "optimization",
+        "stochastic",
+        "adam",
+        "objective",
+        "cient",
+        "problems",
+        "parameters",
+        "university",
+        "openai",
+        "jimmy",
+        "functions",
+        "gradients"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q002",
+      "query": "optimization stochastic adam objective cient problems",
+      "purpose": "Find thematically related literature from extracted keywords.",
+      "required_terms": [
+        "optimization",
+        "stochastic",
+        "adam",
+        "objective"
+      ],
+      "source_keywords": [
+        "optimization",
+        "stochastic",
+        "adam",
+        "objective",
+        "cient",
+        "problems",
+        "parameters",
+        "university",
+        "openai",
+        "jimmy",
+        "functions",
+        "gradients"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q003",
+      "query": "gradients problems straightforward implement computationally cient has",
+      "purpose": "Find papers around the research problem or gap.",
+      "required_terms": [
+        "gradients",
+        "problems",
+        "straightforward",
+        "implement"
+      ],
+      "source_keywords": [
+        "optimization",
+        "stochastic",
+        "adam",
+        "objective",
+        "cient",
+        "problems",
+        "parameters",
+        "university",
+        "openai",
+        "jimmy",
+        "functions",
+        "gradients"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q004",
+      "query": "optimization stochastic adam objective survey review",
+      "purpose": "Find broader review literature for citation grounding.",
+      "required_terms": [
+        "optimization",
+        "stochastic",
+        "adam"
+      ],
+      "source_keywords": [
+        "optimization",
+        "stochastic",
+        "adam",
+        "objective",
+        "cient",
+        "problems",
+        "parameters",
+        "university",
+        "openai",
+        "jimmy",
+        "functions",
+        "gradients"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q005",
+      "query": "optimization stochastic adam objective cient method framework",
+      "purpose": "Follow-up method query from initial retrieval results.",
+      "required_terms": [
+        "optimization",
+        "stochastic",
+        "adam",
+        "objective"
+      ],
+      "source_keywords": [
+        "optimization",
+        "stochastic",
+        "adam",
+        "objective",
+        "cient",
+        "problems",
+        "parameters",
+        "university",
+        "openai",
+        "jimmy",
+        "functions",
+        "gradients"
+      ],
+      "query_stage": "followup",
+      "query_type": "method-oriented"
+    },
+    {
+      "query_id": "Q006",
+      "query": "optimization stochastic adam objective application cross disciplinary",
+      "purpose": "Follow-up application query for cross-disciplinary hypothesis transfer.",
+      "required_terms": [
+        "optimization",
+        "stochastic",
+        "adam",
+        "objective"
+      ],
+      "source_keywords": [
+        "optimization",
+        "stochastic",
+        "adam",
+        "objective",
+        "cient",
+        "problems",
+        "parameters",
+        "university",
+        "openai",
+        "jimmy",
+        "functions",
+        "gradients"
+      ],
+      "query_stage": "followup",
+      "query_type": "application-oriented"
+    },
+    {
+      "query_id": "Q007",
+      "query": "optimization stochastic adam objective limitations challenge",
+      "purpose": "Follow-up limitation query to surface uncertainty or contradiction.",
+      "required_terms": [
+        "optimization",
+        "stochastic",
+        "adam",
+        "objective"
+      ],
+      "source_keywords": [
+        "optimization",
+        "stochastic",
+        "adam",
+        "objective",
+        "cient",
+        "problems",
+        "parameters",
+        "university",
+        "openai",
+        "jimmy",
+        "functions",
+        "gradients"
+      ],
+      "query_stage": "followup",
+      "query_type": "limitation-oriented"
+    }
+  ]
+}

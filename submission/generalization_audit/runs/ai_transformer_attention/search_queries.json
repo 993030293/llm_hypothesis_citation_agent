@@ -1,0 +1,191 @@
+{
+  "queries": [
+    {
+      "query_id": "Q001",
+      "query": "Provided proper attribution is provided, Google hereby grants permission to google attention our",
+      "purpose": "Find papers directly related to the input paper topic.",
+      "required_terms": [
+        "google",
+        "attention",
+        "our"
+      ],
+      "source_keywords": [
+        "google",
+        "attention",
+        "our",
+        "com",
+        "best",
+        "transformer",
+        "translation",
+        "bleu",
+        "training",
+        "provided",
+        "encoder",
+        "decoder"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q002",
+      "query": "google attention our com best transformer",
+      "purpose": "Find thematically related literature from extracted keywords.",
+      "required_terms": [
+        "google",
+        "attention",
+        "our",
+        "com"
+      ],
+      "source_keywords": [
+        "google",
+        "attention",
+        "our",
+        "com",
+        "best",
+        "transformer",
+        "translation",
+        "bleu",
+        "training",
+        "provided",
+        "encoder",
+        "decoder"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q003",
+      "query": "provided solely proper attribution google hereby grants",
+      "purpose": "Find papers around the research problem or gap.",
+      "required_terms": [
+        "provided",
+        "solely",
+        "proper",
+        "attribution"
+      ],
+      "source_keywords": [
+        "google",
+        "attention",
+        "our",
+        "com",
+        "best",
+        "transformer",
+        "translation",
+        "bleu",
+        "training",
+        "provided",
+        "encoder",
+        "decoder"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q004",
+      "query": "google attention our com survey review",
+      "purpose": "Find broader review literature for citation grounding.",
+      "required_terms": [
+        "google",
+        "attention",
+        "our"
+      ],
+      "source_keywords": [
+        "google",
+        "attention",
+        "our",
+        "com",
+        "best",
+        "transformer",
+        "translation",
+        "bleu",
+        "training",
+        "provided",
+        "encoder",
+        "decoder"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q005",
+      "query": "google attention our com best method framework",
+      "purpose": "Follow-up method query from initial retrieval results.",
+      "required_terms": [
+        "google",
+        "attention",
+        "our",
+        "com"
+      ],
+      "source_keywords": [
+        "google",
+        "attention",
+        "our",
+        "com",
+        "best",
+        "transformer",
+        "translation",
+        "bleu",
+        "training",
+        "provided",
+        "encoder",
+        "decoder"
+      ],
+      "query_stage": "followup",
+      "query_type": "method-oriented"
+    },
+    {
+      "query_id": "Q006",
+      "query": "google attention our com application cross disciplinary",
+      "purpose": "Follow-up application query for cross-disciplinary hypothesis transfer.",
+      "required_terms": [
+        "google",
+        "attention",
+        "our",
+        "com"
+      ],
+      "source_keywords": [
+        "google",
+        "attention",
+        "our",
+        "com",
+        "best",
+        "transformer",
+        "translation",
+        "bleu",
+        "training",
+        "provided",
+        "encoder",
+        "decoder"
+      ],
+      "query_stage": "followup",
+      "query_type": "application-oriented"
+    },
+    {
+      "query_id": "Q007",
+      "query": "google attention our com limitations challenge",
+      "purpose": "Follow-up limitation query to surface uncertainty or contradiction.",
+      "required_terms": [
+        "google",
+        "attention",
+        "our",
+        "com"
+      ],
+      "source_keywords": [
+        "google",
+        "attention",
+        "our",
+        "com",
+        "best",
+        "transformer",
+        "translation",
+        "bleu",
+        "training",
+        "provided",
+        "encoder",
+        "decoder"
+      ],
+      "query_stage": "followup",
+      "query_type": "limitation-oriented"
+    }
+  ]
+}

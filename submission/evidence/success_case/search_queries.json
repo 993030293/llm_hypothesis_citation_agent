@@ -18,26 +18,6 @@
       ],
       "query_stage": "initial",
       "query_type": "seed"
-    },
-    {
-      "query_id": "Q002",
-      "query": "retrieval augmented generation large language models citation verification scientific writing evidence tracking method framework",
-      "purpose": "Follow-up method query from initial retrieval results.",
-      "required_terms": [
-        "retrieval augmented generation",
-        "large language models",
-        "citation verification",
-        "scientific writing"
-      ],
-      "source_keywords": [
-        "retrieval augmented generation",
-        "large language models",
-        "citation verification",
-        "scientific writing",
-        "evidence tracking"
-      ],
-      "query_stage": "followup",
-      "query_type": "method-oriented"
     }
   ]
 }

@@ -1,0 +1,18 @@
+{
+  "source_pdf": "C:\\Users\\99303\\git\\llm_hypothesis_citation_agent\\inputs\\papers\\boundary_demo.pdf",
+  "title": "Ambiguous Cross Domain Hypothesis Generation with Citation Risk",
+  "abstract": "Cross domain hypothesis generation often combines partial signals from multiple disciplines. This creates a risk that a system may cite papers that exist but only weakly support the generated claim, or cite papers that cannot be found at all.",
+  "keywords": [
+    "hypothesis generation",
+    "citation risk",
+    "metadata matching",
+    "literature search",
+    "boundary cases"
+  ],
+  "research_problem": "Ambiguous Cross Domain Hypothesis Generation with Citation Risk Abstract. Cross domain hypothesis generation often combines partial signals from multiple disciplines.",
+  "page_count": 1,
+  "pages_read": 1,
+  "text_excerpt": "Ambiguous Cross Domain Hypothesis Generation with Citation Risk Abstract. Cross domain hypothesis generation often combines partial signals from multiple disciplines. This creates a risk that a system may cite papers that exist but only weakly support the generated claim, or cite papers that cannot be found at all. Keywords: hypothesis generation; citation risk; metadata matching; literature search; boundary cases Introduction. The research problem is how to expose uncertain support and incorrect references during a live demonstration. This demo input is designed to be used with the workflow flag that injects one deliberately invalid citation, so the final verification table should include a Red row. The goal is not to fabricate evidence. The invalid reference is explicitly labeled as a boundary case and should be rejected by the verifier.",
+  "extraction_warning": "",
+  "evidence_id": "E001"
+}

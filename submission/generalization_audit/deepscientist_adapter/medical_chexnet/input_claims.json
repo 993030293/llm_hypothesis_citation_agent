@@ -1,0 +1,158 @@
+{
+  "claims": [
+    {
+      "claim_id": "C001",
+      "claim_text": "Prior work reports that - Early and accurate detection of pneumonia from chest X-ray images is crucial for timely treatment and patient care.",
+      "hypothesis_id": "H001",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Pneumonia Detection from Chest X-rays Using the CheXNet Deep Learning Algorithm",
+        "authors": [
+          "Himanshu Bairwa",
+          "Rinku `Jangid"
+        ],
+        "year": 2024,
+        "doi": "10.20944/preprints202407.0104.v1",
+        "venue": "",
+        "url": "https://doi.org/10.20944/preprints202407.0104.v1",
+        "retrieval_source": "crossref",
+        "literature_id": "L001",
+        "evidence_id": "E002",
+        "abstract": "- Early and accurate detection of pneumonia from chest X-ray images is crucial for timely treatment and patient care. In study presents a robust computational framework leveraging the CheXnet algorithm, a deep learning model, to identify pneumonia from chest X-rays. Developed a neural network architecture trained on a substantial dataset of chest X- ray images labeled as 'Normal' and 'Pneumonia'. The user- friendly interface of the system allows for seamless uploading of images, with the model subsequently providing predictions, a confusion matrix, accuracy metrics, and layer activations visualizations. The algorithm's performance was rigorously evaluated, with a confusion matrix indicating a high number of true positives and true negatives. Specifically, the model detected pneumonia with an accuracy of 92.47%, as shown by the results displayed in the system's interface. The precision, recall, and F1-score for pneumonia detection were 0.90, 0.96, and 0.93 respectively, with the overall system achieving an accuracy of 0.91 across the test set of 624 images. Visualizations of the neural network layers reveal the complex feature mappings the model uses to differentiate between normal and pathological findings. These insights could be vital for enhancing the interpretability of deep learning models in medical diagnostics. The Results indicate that the CheXnet-based neural network is a promising tool for automating pneumonia detection in clinical settings, which can assist radiologists in the diagnostic process and potentially improve patient outcomes through earlier intervention.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C002",
+      "claim_text": "Prior work reports that We develop an algorithm that can detect pneumonia from chest X-rays at a\\nlevel exceeding practicing radiologists.",
+      "hypothesis_id": "H001",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "CheXNet: Radiologist-Level Pneumonia Detection on Chest X-Rays with Deep\\n Learning",
+        "authors": [
+          "Pranav Rajpurkar",
+          "Jeremy Irvin",
+          "Kaylie Zhu",
+          "Brandon Yang",
+          "Hershel Mehta",
+          "Tony Duan",
+          "Daisy Yi Ding",
+          "Aarti Bagul",
+          "Curtis P. Langlotz",
+          "Katie Shpanskaya",
+          "Matthew P. Lungren",
+          "Andrew Y. Ng"
+        ],
+        "year": 2017,
+        "doi": "10.48550/arxiv.1711.05225",
+        "venue": "arXiv (Cornell University)",
+        "url": "http://arxiv.org/abs/1711.05225",
+        "retrieval_source": "openalex",
+        "literature_id": "L002",
+        "evidence_id": "E003",
+        "abstract": "We develop an algorithm that can detect pneumonia from chest X-rays at a\\nlevel exceeding practicing radiologists. Our algorithm, CheXNet, is a 121-layer\\nconvolutional neural network trained on ChestX-ray14, currently the largest\\npublicly available chest X-ray dataset, containing over 100,000 frontal-view\\nX-ray images with 14 diseases. Four practicing academic radiologists annotate a\\ntest set, on which we compare the performance of CheXNet to that of\\nradiologists. We find that CheXNet exceeds average radiologist performance on\\nthe F1 metric. We extend CheXNet to detect all 14 diseases in ChestX-ray14 and\\nachieve state of the art results on all 14 diseases.\\n",
+        "snippet": "preprint"
+      }
+    },
+    {
+      "claim_id": "C003",
+      "claim_text": "Prior work reports that We develop an algorithm that can detect pneumonia from chest X-rays at a level exceeding practicing radiologists.",
+      "hypothesis_id": "H002",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "CheXNet: Radiologist-Level Pneumonia Detection on Chest X-Rays with Deep Learning",
+        "authors": [
+          "Pranav Rajpurkar",
+          "Jeremy Irvin",
+          "Kaylie Zhu",
+          "Brandon Yang",
+          "Hershel Mehta",
+          "Tony Duan",
+          "Daisy Ding",
+          "Aarti Bagul",
+          "Curtis Langlotz",
+          "Katie Shpanskaya",
+          "Matthew P. Lungren",
+          "Andrew Y. Ng"
+        ],
+        "year": 2017,
+        "doi": "",
+        "venue": "arXiv",
+        "url": "http://arxiv.org/abs/1711.05225v3",
+        "retrieval_source": "arxiv",
+        "literature_id": "L003",
+        "evidence_id": "E004",
+        "abstract": "We develop an algorithm that can detect pneumonia from chest X-rays at a level exceeding practicing radiologists. Our algorithm, CheXNet, is a 121-layer convolutional neural network trained on ChestX-ray14, currently the largest publicly available chest X-ray dataset, containing over 100,000 frontal-view X-ray images with 14 diseases. Four practicing academic radiologists annotate a test set, on which we compare the performance of CheXNet to that of radiologists. We find that CheXNet exceeds average radiologist performance on the F1 metric. We extend CheXNet to detect all 14 diseases in ChestX-ray14 and achieve state of the art results on all 14 diseases.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C004",
+      "claim_text": "Prior work reports that PURPOSE Although several studies have compared the performance of deep learning (DL) models and radiologists for the diagnosis of COVID-19 pneumonia on CT of the chest, these results have not been collectively evaluated.",
+      "hypothesis_id": "H002",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Diagnostic performance of deep learning models versus radiologists in COVID-19 pneumonia: A systematic review and meta-analysis.",
+        "authors": [
+          "Mohammadreza Chavoshi",
+          "Sara Zamani",
+          "S. A. Mirshahvalad"
+        ],
+        "year": 2024,
+        "doi": "10.1016/j.clinimag.2024.110092",
+        "venue": "Clinical imaging",
+        "url": "https://www.semanticscholar.org/paper/2fdca9ace971ebe8e9462a87a0d7f14723ea5b2d",
+        "retrieval_source": "semantic_scholar",
+        "literature_id": "L004",
+        "evidence_id": "E005",
+        "abstract": "PURPOSE Although several studies have compared the performance of deep learning (DL) models and radiologists for the diagnosis of COVID-19 pneumonia on CT of the chest, these results have not been collectively evaluated. We performed a meta-analysis of original articles comparing the performance of DL models versus radiologists in detecting COVID-19 pneumonia. METHODS A systematic search was conducted on the three main medical literature databases, Scopus, Web of Science, and PubMed, for articles published as of February 1st, 2023. We included original scientific articles that compared DL models trained to detect COVID-19 pneumonia on CT to radiologists. Meta-analysis was performed to determine DL versus radiologist performance in terms of model sensitivity and specificity, taking into account inter and intra-study heterogeneity. RESULTS Twenty-two articles met the inclusion criteria. Based on the meta-analytic calculations, DL models had significantly higher pooled sensitivity (0.933 vs. 0.829, p < 0.001) compared to radiologists with similar pooled specificity (0.905 vs. 0.897, p = 0.746). In the differentiation of COVID-19 versus community-acquired pneumonia, the DL models had significantly higher sensitivity compared to radiologists (0.915 vs. 0.836, p = 0.001). CONCLUSIONS DL models have high performance for screening of COVID-19 pneumonia on chest CT, offering the possibility of these models for augmenting radiologists in clinical practice.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C005",
+      "claim_text": "Prior work reports that This paper presents ChronoXFormer, a novel computer-aided diagnostic (CAD) framework designed to model pneumonia progression using longitudinal chest X-ray image sequences.",
+      "hypothesis_id": "H003",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "ChronoXFormer: A Reproducible Longitudinal Vison Transformer Method for Pneumonia Progression from Chest X-rays",
+        "authors": [
+          "CHITHRA V S",
+          "S Niraj",
+          "Varun Madhavan"
+        ],
+        "year": 2026,
+        "doi": "10.2139/ssrn.6271058",
+        "venue": "",
+        "url": "https://doi.org/10.2139/ssrn.6271058",
+        "retrieval_source": "crossref",
+        "literature_id": "L005",
+        "evidence_id": "E017",
+        "abstract": "This paper presents ChronoXFormer, a novel computer-aided diagnostic (CAD) framework designed to model pneumonia progression using longitudinal chest X-ray image sequences. Unlike conventional deep learning approaches that analyze radiographs independently, the proposed method explicitly incorporates temporal disease dynamics by leveraging consecutive follow-up images from the same patient.ChronoXFormer integrates a pretrained Vision Transformer (ViT-B/16) for spatial feature extraction with a temporal transformer encoder to capture disease evolution over time. The model jointly predicts pneumonia severity, disease stage (before, peak, after), and overall progression trends (improving, static, worsening), enabling patient-level monitoring from imaging data alone.The framework is evaluated on longitudinal cohorts derived from the CheXpert dataset, demonstrating strong performance in disease stage classification and reliable trajectory prediction despite severe class imbalance. To address this challenge, imbalance-aware weighted loss strategies are incorporated, significantly improving sensitivity to underrepresented disease progression patterns.Overall, the results highlight the feasibility and effectiveness of a fully image-based longitudinal learning approach for continuous disease monitoring, without reliance on clinical reports or additional metadata. The proposed framework provides a scalable and interpretable solution for temporal analysis in medical imaging.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C006",
+      "claim_text": "Prior work reports that Chest X-ray imaging is commonly used to diagnose pneumonia, but accurately localizing the pneumonia-affected regions typically requires detailed pixel-level annotations, which are costly and time consuming to obtain.",
+      "hypothesis_id": "H003",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Weakly Supervised Pneumonia Localization from Chest X-Rays Using Deep Neural Network and Grad-CAM Explanations",
+        "authors": [
+          "Kiran Shahi",
+          "Anup Bagale"
+        ],
+        "year": 2025,
+        "doi": "",
+        "venue": "arXiv",
+        "url": "http://arxiv.org/abs/2511.00456v5",
+        "retrieval_source": "arxiv",
+        "literature_id": "L006",
+        "evidence_id": "E006",
+        "abstract": "Chest X-ray imaging is commonly used to diagnose pneumonia, but accurately localizing the pneumonia-affected regions typically requires detailed pixel-level annotations, which are costly and time consuming to obtain. To address this limitation, this study proposes a weakly supervised deep learning framework for pneumonia classification and localization using Gradient-weighted Class Activation Mapping (Grad-CAM). Instead of relying on costly pixel-level annotations, the proposed method utilizes image-level labels to generate clinically meaningful heatmaps that highlight pneumonia-affected regions. Furthermore, we evaluate seven pre-trained deep learning models, including a Vision Transformer, under identical training conditions, using focal loss and patient-wise splits to prevent data leakage. Experimental results suggest that all models achieved high classification accuracy (96--98\\%), with ResNet-18 and EfficientNet-B0 showing the best overall performance and MobileNet-V3 providing an efficient lightweight alternative. Grad-CAM heatmap visualizations confirm that the proposed methods focus on clinically relevant lung regions, supporting the use of explainable AI for radiological diagnostics. Overall, this work highlights the potential of weakly supervised, explainable models that enhance transparency and clinical trust in AI-assisted pneumonia screening.",
+        "snippet": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,277 @@
+{
+  "hypotheses": [
+    {
+      "hypothesis_id": "H001",
+      "idea_type": "conservative extension",
+      "evidence_status": "citation_backed",
+      "research_gap": "Additionally, providing provenance for their decisions and updating their world knowledge remain open research problems. Pre- trained models with a differentiable access mechanism to explicit non-parametric memory have so far been only investigated for extractive downstream tasks.",
+      "new_hypothesis": "A conservative next study should test whether techniques or observations from 'LLaMP: Large Language Model Made Powerful for High-fidelity Materials Knowledge Retrieval and Distillation' and 'Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks' improve evidence-grounded work on tasks, pre-trained, language, memory.",
+      "why_novel": "It combines two retrieved strands with the input paper's research problem rather than copying either paper.",
+      "required_evidence": [
+        "Verify that both cited works exist and match metadata.",
+        "Verify that abstracts or snippets support the claims used to ground the idea.",
+        "Run a small empirical or literature review check before presenting the idea as a conclusion."
+      ],
+      "supporting_citations": [
+        {
+          "claim_id": "C001",
+          "literature_id": "L001",
+          "title": "LLaMP: Large Language Model Made Powerful for High-fidelity Materials Knowledge Retrieval and Distillation",
+          "year": 2024,
+          "doi": "10.48550/arxiv.2401.17244",
+          "evidence_id": "E002",
+          "retrieval_source": "openalex"
+        },
+        {
+          "claim_id": "C002",
+          "literature_id": "L002",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "year": 2020,
+          "doi": "",
+          "evidence_id": "E003",
+          "retrieval_source": "openalex"
+        }
+      ],
+      "risk_or_limitation": "Novelty is moderate; the idea may be an incremental extension if the cited works already overlap strongly.",
+      "testable_prediction": "If this idea is valid, then a follow-up study on tasks, pre-trained, language, memory should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.",
+      "citation_claim_ids": [
+        "C001",
+        "C002"
+      ],
+      "hypothesis_text": "A conservative next study should test whether techniques or observations from 'LLaMP: Large Language Model Made Powerful for High-fidelity Materials Knowledge Retrieval and Distillation' and 'Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks' improve evidence-grounded work on tasks, pre-trained, language, memory."
+    },
+    {
+      "hypothesis_id": "H002",
+      "idea_type": "cross-disciplinary analogy",
+      "evidence_status": "citation_backed",
+      "research_gap": "Additionally, providing provenance for their decisions and updating their world knowledge remain open research problems. Pre- trained models with a differentiable access mechanism to explicit non-parametric memory have so far been only investigated for extractive downstream tasks.",
+      "new_hypothesis": "If the mechanisms discussed in 'A Simple Survey of Pre-trained Language Models' transfer across domains, then tasks, pre-trained, language, memory may benefit from a cross-disciplinary evaluation protocol grounded by 'Evaluation of search-enabled Pre-trained Large Language Models on retrieval tasks for the PubChem Database'.",
+      "why_novel": "The idea explicitly treats retrieved literature as an analogy source for a different research setting.",
+      "required_evidence": [
+        "Verify that both cited works exist and match metadata.",
+        "Verify that abstracts or snippets support the claims used to ground the idea.",
+        "Run a small empirical or literature review check before presenting the idea as a conclusion."
+      ],
+      "supporting_citations": [
+        {
+          "claim_id": "C003",
+          "literature_id": "L003",
+          "title": "A Simple Survey of Pre-trained Language Models",
+          "year": 2022,
+          "doi": "10.20944/preprints202208.0238.v1",
+          "evidence_id": "E004",
+          "retrieval_source": "crossref"
+        },
+        {
+          "claim_id": "C004",
+          "literature_id": "L004",
+          "title": "Evaluation of search-enabled Pre-trained Large Language Models on retrieval tasks for the PubChem Database",
+          "year": 2024,
+          "doi": "10.1101/2024.08.15.608120",
+          "evidence_id": "E005",
+          "retrieval_source": "crossref"
+        }
+      ],
+      "risk_or_limitation": "The analogy may fail if the source domain assumptions do not hold for the input paper's domain.",
+      "testable_prediction": "If this idea is valid, then a follow-up study on tasks, pre-trained, language, memory should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.",
+      "citation_claim_ids": [
+        "C003",
+        "C004"
+      ],
+      "hypothesis_text": "If the mechanisms discussed in 'A Simple Survey of Pre-trained Language Models' transfer across domains, then tasks, pre-trained, language, memory may benefit from a cross-disciplinary evaluation protocol grounded by 'Evaluation of search-enabled Pre-trained Large Language Models on retrieval tasks for the PubChem Database'."
+    },
+    {
+      "hypothesis_id": "H003",
+      "idea_type": "high-risk speculative idea",
+      "evidence_status": "citation_backed",
+      "research_gap": "Additionally, providing provenance for their decisions and updating their world knowledge remain open research problems. Pre- trained models with a differentiable access mechanism to explicit non-parametric memory have so far been only investigated for extractive downstream tasks.",
+      "new_hypothesis": "A higher-risk hypothesis is that the shared signals behind 'What Makes Good In-Context Examples for GPT-$3$?' and 'Automated Literature Review Using NLP Techniques and LLM-Based Retrieval-Augmented Generation' point to a broader latent factor affecting tasks, pre-trained, language, memory.",
+      "why_novel": "It proposes a broader latent explanation rather than only applying a known method.",
+      "required_evidence": [
+        "Verify that both cited works exist and match metadata.",
+        "Verify that abstracts or snippets support the claims used to ground the idea.",
+        "Run a small empirical or literature review check before presenting the idea as a conclusion."
+      ],
+      "supporting_citations": [
+        {
+          "claim_id": "C005",
+          "literature_id": "L005",
+          "title": "What Makes Good In-Context Examples for GPT-$3$?",
+          "year": 2021,
+          "doi": "10.48550/arxiv.2101.06804",
+          "evidence_id": "E006",
+          "retrieval_source": "openalex"
+        },
+        {
+          "claim_id": "C006",
+          "literature_id": "L006",
+          "title": "Automated Literature Review Using NLP Techniques and LLM-Based Retrieval-Augmented Generation",
+          "year": 2024,
+          "doi": "",
+          "evidence_id": "E007",
+          "retrieval_source": "arxiv"
+        }
+      ],
+      "risk_or_limitation": "This is speculative and should be treated as Yellow unless stronger evidence is retrieved.",
+      "testable_prediction": "If this idea is valid, then a follow-up study on tasks, pre-trained, language, memory should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.",
+      "citation_claim_ids": [
+        "C005",
+        "C006"
+      ],
+      "hypothesis_text": "A higher-risk hypothesis is that the shared signals behind 'What Makes Good In-Context Examples for GPT-$3$?' and 'Automated Literature Review Using NLP Techniques and LLM-Based Retrieval-Augmented Generation' point to a broader latent factor affecting tasks, pre-trained, language, memory."
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "C001",
+      "claim_text": "Prior work reports that Reducing hallucination of Large Language Models (LLMs) is imperative for use in the sciences, where reliability and reproducibility are crucial.",
+      "hypothesis_id": "H001",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "LLaMP: Large Language Model Made Powerful for High-fidelity Materials Knowledge Retrieval and Distillation",
+        "authors": [
+          "Yuan Chiang",
+          "Hsieh, Elvis",
+          "Chia-Hong Chou",
+          "Janosh Riebesell"
+        ],
+        "year": 2024,
+        "doi": "10.48550/arxiv.2401.17244",
+        "venue": "arXiv (Cornell University)",
+        "url": "http://arxiv.org/abs/2401.17244",
+        "retrieval_source": "openalex",
+        "literature_id": "L001",
+        "evidence_id": "E002",
+        "abstract": "Reducing hallucination of Large Language Models (LLMs) is imperative for use in the sciences, where reliability and reproducibility are crucial. However, LLMs inherently lack long-term memory, making it a nontrivial, ad hoc, and inevitably biased task to fine-tune them on domain-specific literature and data. Here we introduce LLaMP, a multimodal retrieval-augmented generation (RAG) framework of hierarchical reasoning-and-acting (ReAct) agents that can dynamically and recursively interact with computational and experimental data on Materials Project (MP) and run atomistic simulations via high-throughput workflow interface. Without fine-tuning, LLaMP demonstrates strong tool usage ability to comprehend and integrate various modalities of materials science concepts, fetch relevant data stores on the fly, process higher-order data (such as crystal structure and elastic tensor), and streamline complex tasks in computational materials and chemistry. We propose a simple metric combining uncertainty and confidence estimates to evaluate the self-consistency of responses by LLaMP and vanilla LLMs. Our benchmark shows that LLaMP effectively mitigates the intrinsic bias in LLMs, counteracting the errors on bulk moduli, electronic bandgaps, and formation energies that seem to derive from mixed data sources. We also demonstrate LLaMP's capability to edit crystal structures and run annealing molecular dynamics simulations using pre-trained machine-learning force fields. The framework offers an intuitive and nearly hallucination-free approach to exploring and scaling materials informatics, and establishes a pathway for knowledge distillation and fine-tuning other language models. Code and live demo are available at https://github.com/chiang-yuan/llamp",
+        "snippet": "preprint"
+      }
+    },
+    {
+      "claim_id": "C002",
+      "claim_text": "Prior work reports that Large pre-trained language models have been shown to store factual knowledge in their parameters, and achieve state-of-the-art results when fine-tuned on downstream NLP tasks.",
+      "hypothesis_id": "H001",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+        "authors": [
+          "Patrick Lewis",
+          "Ethan Perez",
+          "Aleksandra Piktus",
+          "Fabio Petroni",
+          "Vladimir Karpukhin",
+          "Naman Goyal",
+          "Heinrich Küttler",
+          "Mike Lewis",
+          "Wen-tau Yih",
+          "Tim Rocktäschel",
+          "Sebastian Riedel",
+          "Douwe Kiela"
+        ],
+        "year": 2020,
+        "doi": "",
+        "venue": "UCL Discovery (University College London)",
+        "url": "https://discovery.ucl.ac.uk/id/eprint/10100504/",
+        "retrieval_source": "openalex",
+        "literature_id": "L002",
+        "evidence_id": "E003",
+        "abstract": "Large pre-trained language models have been shown to store factual knowledge in their parameters, and achieve state-of-the-art results when fine-tuned on downstream NLP tasks. However, their ability to access and precisely manipulate knowledge is still limited, and hence on knowledge-intensive tasks, their performance lags behind task-specific architectures. Additionally, providing provenance for their decisions and updating their world knowledge remain open research problems. Pre-trained models with a differentiable access mechanism to explicit non-parametric memory can overcome this issue, but have so far been only investigated for extractive downstream tasks. We explore a general-purpose fine-tuning recipe for retrieval-augmented generation (RAG) -- models which combine pre-trained parametric and non-parametric memory for language generation. We introduce RAG models where the parametric memory is a pre-trained seq2seq model and the non-parametric memory is a dense vector index of Wikipedia, accessed with a pre-trained neural retriever. We compare two RAG formulations, one which conditions on the same retrieved passages across the whole generated sequence, the other can use different passages per token. We fine-tune and evaluate our models on a wide range of knowledge-intensive NLP tasks and set the state-of-the-art on three open domain QA tasks, outperforming parametric seq2seq models and task-specific retrieve-and-extract architectures. For language generation tasks, we find that RAG models generate more specific, diverse and factual language than a state-of-the-art parametric-only seq2seq baseline.",
+        "snippet": "article"
+      }
+    },
+    {
+      "claim_id": "C003",
+      "claim_text": "Prior work reports that Pre-trained Language Models (PTLM) have remarkable and successful performance in solving lots of NLP tasks nowadays.",
+      "hypothesis_id": "H002",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "A Simple Survey of Pre-trained Language Models",
+        "authors": [
+          "Zhenyi Zhu"
+        ],
+        "year": 2022,
+        "doi": "10.20944/preprints202208.0238.v1",
+        "venue": "",
+        "url": "https://doi.org/10.20944/preprints202208.0238.v1",
+        "retrieval_source": "crossref",
+        "literature_id": "L003",
+        "evidence_id": "E004",
+        "abstract": "Pre-trained Language Models (PTLM) have remarkable and successful performance in solving lots of NLP tasks nowadays. And previous researchers have created many SOTA models and these models are included in many long surveys(Qiu et al., 2020). So, we would like to conduct a simple and short survey on this topic to help researchers understand the sketch of PTLM more quickly and comprehensively. In this short survey, we would provide a simple but comprehensive review of techniques, benchmarks, and methodologies in PTLM. And we would also introduce the applications evaluation of PTLM in this simple survey.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C004",
+      "claim_text": "Prior work reports that ABSTRACT Databases are indispensable in biological and biomedical research, hosting vast amounts of structured and unstructured data, facilitating the organization, retrieval, and analysis of complex data.",
+      "hypothesis_id": "H002",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Evaluation of search-enabled Pre-trained Large Language Models on retrieval tasks for the PubChem Database",
+        "authors": [
+          "Ash Sze",
+          "Soha Hassoun"
+        ],
+        "year": 2024,
+        "doi": "10.1101/2024.08.15.608120",
+        "venue": "",
+        "url": "https://doi.org/10.1101/2024.08.15.608120",
+        "retrieval_source": "crossref",
+        "literature_id": "L004",
+        "evidence_id": "E005",
+        "abstract": "ABSTRACT Databases are indispensable in biological and biomedical research, hosting vast amounts of structured and unstructured data, facilitating the organization, retrieval, and analysis of complex data. Database access, however, remains a manual, tedious, and sometimes overwhelming, task. We investigate in this study the current state of using pre-trained, search-enabled LLMs for data retrieval from biological databases. Equipped with internet search and code generation capabilities, LLMs promise to streamline database access through natural language, expedite search and knowledge retrieval, and provide coherent analytical summaries. As an example database, we focus on evaluating a current search-enabled LLMs (GPT-4o) for retrieval from the PubChem database, a flagship, heavily used database that plays a critical role in biological and biomedical research. As PubChem is an open archival repository, it provides a well-documented programmatic interface that can be exploited through LLM code generation capabilities. We evaluate retrieval tasks for eight common PubChem access protocols that were previously documented. The tasks include identifying interacting genes and proteins, finding drug-like compounds based on structural similarity, retrieving bioactivity data, and locating stereoisomers and isotopomers. We develop a methodology for adopting the protocols into an LLM-prompt, where we supplement the prompt with additional context through iterative prompt refinement as needed. To further evaluate the LLM capabilities, we instruct the LLM to perform the retrieval with and without using programmatic access. We compare the results (referred to as gold and silver answers) when using these retrieval modalities with two traditional retrieval baselines that include running the manual search steps for each reference protocol through the PubChem database web interface, and through the provided PUG (Power-User Gateway) programmatic access. We quantitatively and qualitatively summarize our results, showing that generating programmatic access is more likely to yield the correct answers. We highlight the value and limitations of using current search-based LLMs for database retrieval. We also provide guidance for the future development that can improve the accuracy and reliability of search-based LLMs.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C005",
+      "claim_text": "Prior work reports that GPT-$3$ has attracted lots of attention due to its superior performance across a wide range of NLP tasks, especially with its powerful and versatile in-context few-shot learning ability.",
+      "hypothesis_id": "H003",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "What Makes Good In-Context Examples for GPT-$3$?",
+        "authors": [
+          "Jiachang Liu",
+          "Dinghan Shen",
+          "Yizhe Zhang",
+          "Bill Dolan",
+          "Lawrence Carin",
+          "Weizhu Chen"
+        ],
+        "year": 2021,
+        "doi": "10.48550/arxiv.2101.06804",
+        "venue": "arXiv (Cornell University)",
+        "url": "http://arxiv.org/abs/2101.06804",
+        "retrieval_source": "openalex",
+        "literature_id": "L005",
+        "evidence_id": "E006",
+        "abstract": "GPT-$3$ has attracted lots of attention due to its superior performance across a wide range of NLP tasks, especially with its powerful and versatile in-context few-shot learning ability. Despite its success, we found that the empirical results of GPT-$3$ depend heavily on the choice of in-context examples. In this work, we investigate whether there are more effective strategies for judiciously selecting in-context examples (relative to random sampling) that better leverage GPT-$3$'s few-shot capabilities. Inspired by the recent success of leveraging a retrieval module to augment large-scale neural network models, we propose to retrieve examples that are semantically-similar to a test sample to formulate its corresponding prompt. Intuitively, the in-context examples selected with such a strategy may serve as more informative inputs to unleash GPT-$3$'s extensive knowledge. We evaluate the proposed approach on several natural language understanding and generation benchmarks, where the retrieval-based prompt selection approach consistently outperforms the random baseline. Moreover, it is observed that the sentence encoders fine-tuned on task-related datasets yield even more helpful retrieval results. Notably, significant gains are observed on tasks such as table-to-text generation (41.9% on the ToTTo dataset) and open-domain question answering (45.5% on the NQ dataset). We hope our investigation could help understand the behaviors of GPT-$3$ and large-scale pre-trained LMs in general and enhance their few-shot capabilities.",
+        "snippet": "preprint"
+      }
+    },
+    {
+      "claim_id": "C006",
+      "claim_text": "Prior work reports that This research presents and compares multiple approaches to automate the generation of literature reviews using several Natural Language Processing (NLP) techniques and retrieval-augmented generation (RAG) with a Large Language Model (LLM).",
+      "hypothesis_id": "H003",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Automated Literature Review Using NLP Techniques and LLM-Based Retrieval-Augmented Generation",
+        "authors": [
+          "Nurshat Fateh Ali",
+          "Md. Mahdi Mohtasim",
+          "Shakil Mosharrof",
+          "T. Gopi Krishna"
+        ],
+        "year": 2024,
+        "doi": "",
+        "venue": "arXiv",
+        "url": "http://arxiv.org/abs/2411.18583v1",
+        "retrieval_source": "arxiv",
+        "literature_id": "L006",
+        "evidence_id": "E007",
+        "abstract": "This research presents and compares multiple approaches to automate the generation of literature reviews using several Natural Language Processing (NLP) techniques and retrieval-augmented generation (RAG) with a Large Language Model (LLM). The ever-increasing number of research articles provides a huge challenge for manual literature review. It has resulted in an increased demand for automation. Developing a system capable of automatically generating the literature reviews from only the PDF files as input is the primary objective of this research work. The effectiveness of several Natural Language Processing (NLP) strategies, such as the frequency-based method (spaCy), the transformer model (Simple T5), and retrieval-augmented generation (RAG) with Large Language Model (GPT-3.5-turbo), is evaluated to meet the primary objective. The SciTLDR dataset is chosen for this research experiment and three distinct techniques are utilized to implement three different systems for auto-generating the literature reviews. The ROUGE scores are used for the evaluation of all three systems. Based on the evaluation, the Large Language Model GPT-3.5-turbo achieved the highest ROUGE-1 score, 0.364. The transformer model comes in second place and spaCy is at the last position. Finally, a graphical user interface is created for the best system based on the large language model.",
+        "snippet": ""
+      }
+    }
+  ],
+  "markdown": "# Generated Research Idea Cards\n\nInput paper: Retrieval-Augmented Generation for\n\n## H001: conservative extension\nEvidence status: `citation_backed`\n\nResearch gap: Additionally, providing provenance for their decisions and updating their world knowledge remain open research problems. Pre- trained models with a differentiable access mechanism to explicit non-parametric memory have so far been only investigated for extractive downstream tasks.\n\nNew hypothesis: A conservative next study should test whether techniques or observations from 'LLaMP: Large Language Model Made Powerful for High-fidelity Materials Knowledge Retrieval and Distillation' and 'Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks' improve evidence-grounded work on tasks, pre-trained, language, memory.\n\nWhy novel: It combines two retrieved strands with the input paper's research problem rather than copying either paper.\n\nRequired evidence:\n- Verify that both cited works exist and match metadata.\n- Verify that abstracts or snippets support the claims used to ground the idea.\n- Run a small empirical or literature review check before presenting the idea as a conclusion.\n\nSupporting citations:\n- C001: LLaMP: Large Language Model Made Powerful for High-fidelity Materials Knowledge Retrieval and Distillation (2024), DOI: 10.48550/arxiv.2401.17244\n- C002: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (2020), DOI: missing\n\nRisk or limitation: Novelty is moderate; the idea may be an incremental extension if the cited works already overlap strongly.\n\nTestable prediction: If this idea is valid, then a follow-up study on tasks, pre-trained, language, memory should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.\n\n## H002: cross-disciplinary analogy\nEvidence status: `citation_backed`\n\nResearch gap: Additionally, providing provenance for their decisions and updating their world knowledge remain open research problems. Pre- trained models with a differentiable access mechanism to explicit non-parametric memory have so far been only investigated for extractive downstream tasks.\n\nNew hypothesis: If the mechanisms discussed in 'A Simple Survey of Pre-trained Language Models' transfer across domains, then tasks, pre-trained, language, memory may benefit from a cross-disciplinary evaluation protocol grounded by 'Evaluation of search-enabled Pre-trained Large Language Models on retrieval tasks for the PubChem Database'.\n\nWhy novel: The idea explicitly treats retrieved literature as an analogy source for a different research setting.\n\nRequired evidence:\n- Verify that both cited works exist and match metadata.\n- Verify that abstracts or snippets support the claims used to ground the idea.\n- Run a small empirical or literature review check before presenting the idea as a conclusion.\n\nSupporting citations:\n- C003: A Simple Survey of Pre-trained Language Models (2022), DOI: 10.20944/preprints202208.0238.v1\n- C004: Evaluation of search-enabled Pre-trained Large Language Models on retrieval tasks for the PubChem Database (2024), DOI: 10.1101/2024.08.15.608120\n\nRisk or limitation: The analogy may fail if the source domain assumptions do not hold for the input paper's domain.\n\nTestable prediction: If this idea is valid, then a follow-up study on tasks, pre-trained, language, memory should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.\n\n## H003: high-risk speculative idea\nEvidence status: `citation_backed`\n\nResearch gap: Additionally, providing provenance for their decisions and updating their world knowledge remain open research problems. Pre- trained models with a differentiable access mechanism to explicit non-parametric memory have so far been only investigated for extractive downstream tasks.\n\nNew hypothesis: A higher-risk hypothesis is that the shared signals behind 'What Makes Good In-Context Examples for GPT-$3$?' and 'Automated Literature Review Using NLP Techniques and LLM-Based Retrieval-Augmented Generation' point to a broader latent factor affecting tasks, pre-trained, language, memory.\n\nWhy novel: It proposes a broader latent explanation rather than only applying a known method.\n\nRequired evidence:\n- Verify that both cited works exist and match metadata.\n- Verify that abstracts or snippets support the claims used to ground the idea.\n- Run a small empirical or literature review check before presenting the idea as a conclusion.\n\nSupporting citations:\n- C005: What Makes Good In-Context Examples for GPT-$3$? (2021), DOI: 10.48550/arxiv.2101.06804\n- C006: Automated Literature Review Using NLP Techniques and LLM-Based Retrieval-Augmented Generation (2024), DOI: missing\n\nRisk or limitation: This is speculative and should be treated as Yellow unless stronger evidence is retrieved.\n\nTestable prediction: If this idea is valid, then a follow-up study on tasks, pre-trained, language, memory should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.\n\n## Citation-Backed Claims To Verify\n\n| Claim ID | Hypothesis | Claim | Cited Title | Year | DOI |\n|---|---|---|---|---|---|\n| C001 | H001 | Prior work reports that Reducing hallucination of Large Language Models (LLMs) is imperative for use in the sciences, where reliability and reproducibility are crucial. | LLaMP: Large Language Model Made Powerful for High-fidelity Materials Knowledge Retrieval and Distillation | 2024 | 10.48550/arxiv.2401.17244 |\n| C002 | H001 | Prior work reports that Large pre-trained language models have been shown to store factual knowledge in their parameters, and achieve state-of-the-art results when fine-tuned on downstream NLP tasks. | Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks | 2020 |  |\n| C003 | H002 | Prior work reports that Pre-trained Language Models (PTLM) have remarkable and successful performance in solving lots of NLP tasks nowadays. | A Simple Survey of Pre-trained Language Models | 2022 | 10.20944/preprints202208.0238.v1 |\n| C004 | H002 | Prior work reports that ABSTRACT Databases are indispensable in biological and biomedical research, hosting vast amounts of structured and unstructured data, facilitating the organization, retrieval, and analysis of complex data. | Evaluation of search-enabled Pre-trained Large Language Models on retrieval tasks for the PubChem Database | 2024 | 10.1101/2024.08.15.608120 |\n| C005 | H003 | Prior work reports that GPT-$3$ has attracted lots of attention due to its superior performance across a wide range of NLP tasks, especially with its powerful and versatile in-context few-shot learning ability. | What Makes Good In-Context Examples for GPT-$3$? | 2021 | 10.48550/arxiv.2101.06804 |\n| C006 | H003 | Prior work reports that This research presents and compares multiple approaches to automate the generation of literature reviews using several Natural Language Processing (NLP) techniques and retrieval-augmented generation (RAG) with a Large Language Model (LLM). | Automated Literature Review Using NLP Techniques and LLM-Based Retrieval-Augmented Generation | 2024 |  |",
+  "evidence_id": "E028"
+}

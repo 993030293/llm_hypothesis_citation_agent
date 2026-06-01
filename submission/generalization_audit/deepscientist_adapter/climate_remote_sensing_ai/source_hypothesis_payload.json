@@ -1,0 +1,250 @@
+{
+  "hypotheses": [
+    {
+      "hypothesis_id": "H001",
+      "idea_type": "conservative extension",
+      "evidence_status": "citation_backed",
+      "research_gap": "In this paper, we address some of the opportunities brought by satellite remote sensing imaging and artiﬁcial intelligence (AI) in order to measure climate adaptation of cities automatically. We propose a framework combining AI and simulation which may be useful for extracting indicators from remote-sensing images and may help with predictive estimation of future states of these climate-adaptation-related indicators.",
+      "new_hypothesis": "A conservative next study should test whether techniques or observations from 'satellite address' and 'Governance and Sustainable Development Goals (SDGs) for smart cities' improve evidence-grounded work on climate change, remote sensing, artiﬁcial intelligence, smart cities.",
+      "why_novel": "It combines two retrieved strands with the input paper's research problem rather than copying either paper.",
+      "required_evidence": [
+        "Verify that both cited works exist and match metadata.",
+        "Verify that abstracts or snippets support the claims used to ground the idea.",
+        "Run a small empirical or literature review check before presenting the idea as a conclusion."
+      ],
+      "supporting_citations": [
+        {
+          "claim_id": "C001",
+          "literature_id": "L001",
+          "title": "satellite address",
+          "year": 2011,
+          "doi": "10.1007/springerreference_23987",
+          "evidence_id": "E002",
+          "retrieval_source": "crossref"
+        },
+        {
+          "claim_id": "C002",
+          "literature_id": "L002",
+          "title": "Governance and Sustainable Development Goals (SDGs) for smart cities",
+          "year": 2026,
+          "doi": "10.1016/b978-0-44-326594-5.00010-0",
+          "evidence_id": "E003",
+          "retrieval_source": "crossref"
+        }
+      ],
+      "risk_or_limitation": "Novelty is moderate; the idea may be an incremental extension if the cited works already overlap strongly.",
+      "testable_prediction": "If this idea is valid, then a follow-up study on climate change, remote sensing, artiﬁcial intelligence, smart cities should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.",
+      "citation_claim_ids": [
+        "C001",
+        "C002"
+      ],
+      "hypothesis_text": "A conservative next study should test whether techniques or observations from 'satellite address' and 'Governance and Sustainable Development Goals (SDGs) for smart cities' improve evidence-grounded work on climate change, remote sensing, artiﬁcial intelligence, smart cities."
+    },
+    {
+      "hypothesis_id": "H002",
+      "idea_type": "cross-disciplinary analogy",
+      "evidence_status": "citation_backed",
+      "research_gap": "In this paper, we address some of the opportunities brought by satellite remote sensing imaging and artiﬁcial intelligence (AI) in order to measure climate adaptation of cities automatically. We propose a framework combining AI and simulation which may be useful for extracting indicators from remote-sensing images and may help with predictive estimation of future states of these climate-adaptation-related indicators.",
+      "new_hypothesis": "If the mechanisms discussed in 'Geospatial Intelligence and Remote Sensing for Climate-Smart and Sustainable Agriculture' transfer across domains, then climate change, remote sensing, artiﬁcial intelligence, smart cities may benefit from a cross-disciplinary evaluation protocol grounded by 'Remote Sensing Applications to Climate Change'.",
+      "why_novel": "The idea explicitly treats retrieved literature as an analogy source for a different research setting.",
+      "required_evidence": [
+        "Verify that both cited works exist and match metadata.",
+        "Verify that abstracts or snippets support the claims used to ground the idea.",
+        "Run a small empirical or literature review check before presenting the idea as a conclusion."
+      ],
+      "supporting_citations": [
+        {
+          "claim_id": "C003",
+          "literature_id": "L003",
+          "title": "Geospatial Intelligence and Remote Sensing for Climate-Smart and Sustainable Agriculture",
+          "year": 2025,
+          "doi": "10.70593/978-93-7185-854-0",
+          "evidence_id": "E004",
+          "retrieval_source": "crossref"
+        },
+        {
+          "claim_id": "C004",
+          "literature_id": "L004",
+          "title": "Remote Sensing Applications to Climate Change",
+          "year": 2023,
+          "doi": "10.3390/rs15030747",
+          "evidence_id": "E005",
+          "retrieval_source": "crossref"
+        }
+      ],
+      "risk_or_limitation": "The analogy may fail if the source domain assumptions do not hold for the input paper's domain.",
+      "testable_prediction": "If this idea is valid, then a follow-up study on climate change, remote sensing, artiﬁcial intelligence, smart cities should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.",
+      "citation_claim_ids": [
+        "C003",
+        "C004"
+      ],
+      "hypothesis_text": "If the mechanisms discussed in 'Geospatial Intelligence and Remote Sensing for Climate-Smart and Sustainable Agriculture' transfer across domains, then climate change, remote sensing, artiﬁcial intelligence, smart cities may benefit from a cross-disciplinary evaluation protocol grounded by 'Remote Sensing Applications to Climate Change'."
+    },
+    {
+      "hypothesis_id": "H003",
+      "idea_type": "high-risk speculative idea",
+      "evidence_status": "citation_backed",
+      "research_gap": "In this paper, we address some of the opportunities brought by satellite remote sensing imaging and artiﬁcial intelligence (AI) in order to measure climate adaptation of cities automatically. We propose a framework combining AI and simulation which may be useful for extracting indicators from remote-sensing images and may help with predictive estimation of future states of these climate-adaptation-related indicators.",
+      "new_hypothesis": "A higher-risk hypothesis is that the shared signals behind 'Chapter 14: Applying Remote Sensing for Smart Cities' and 'Smart Cities and Climate Resilience' point to a broader latent factor affecting climate change, remote sensing, artiﬁcial intelligence, smart cities.",
+      "why_novel": "It proposes a broader latent explanation rather than only applying a known method.",
+      "required_evidence": [
+        "Verify that both cited works exist and match metadata.",
+        "Verify that abstracts or snippets support the claims used to ground the idea.",
+        "Run a small empirical or literature review check before presenting the idea as a conclusion."
+      ],
+      "supporting_citations": [
+        {
+          "claim_id": "C005",
+          "literature_id": "L005",
+          "title": "Chapter 14: Applying Remote Sensing for Smart Cities",
+          "year": 2024,
+          "doi": "10.1515/9781501522840-016",
+          "evidence_id": "E006",
+          "retrieval_source": "crossref"
+        },
+        {
+          "claim_id": "C006",
+          "literature_id": "L006",
+          "title": "Smart Cities and Climate Resilience",
+          "year": 2024,
+          "doi": "10.4018/979-8-3693-6522-9.ch021",
+          "evidence_id": "E007",
+          "retrieval_source": "crossref"
+        }
+      ],
+      "risk_or_limitation": "This is speculative and should be treated as Yellow unless stronger evidence is retrieved.",
+      "testable_prediction": "If this idea is valid, then a follow-up study on climate change, remote sensing, artiﬁcial intelligence, smart cities should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.",
+      "citation_claim_ids": [
+        "C005",
+        "C006"
+      ],
+      "hypothesis_text": "A higher-risk hypothesis is that the shared signals behind 'Chapter 14: Applying Remote Sensing for Smart Cities' and 'Smart Cities and Climate Resilience' point to a broader latent factor affecting climate change, remote sensing, artiﬁcial intelligence, smart cities."
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "C001",
+      "claim_text": "Prior work reports that the paper titled 'satellite address' is relevant to the retrieved topic.",
+      "hypothesis_id": "H001",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "satellite address",
+        "authors": [],
+        "year": 2011,
+        "doi": "10.1007/springerreference_23987",
+        "venue": "SpringerReference",
+        "url": "https://doi.org/10.1007/springerreference_23987",
+        "retrieval_source": "crossref",
+        "literature_id": "L001",
+        "evidence_id": "E002",
+        "abstract": "",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C002",
+      "claim_text": "Prior work reports that Governance and Sustainable Development Goals (SDGs) for smart cities",
+      "hypothesis_id": "H001",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Governance and Sustainable Development Goals (SDGs) for smart cities",
+        "authors": [
+          "Manas Pradhan"
+        ],
+        "year": 2026,
+        "doi": "10.1016/b978-0-44-326594-5.00010-0",
+        "venue": "Meeting SDGs in Smart City Infrastructures",
+        "url": "https://doi.org/10.1016/b978-0-44-326594-5.00010-0",
+        "retrieval_source": "crossref",
+        "literature_id": "L002",
+        "evidence_id": "E003",
+        "abstract": "",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C003",
+      "claim_text": "Prior work reports that In the context of global climate change, related threats for food security, and the need for rational land and water resources usage in order to provide environmental sustainability, agricultural sector of Ukrainian economy faces serious challenges.",
+      "hypothesis_id": "H002",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Geospatial Intelligence and Remote Sensing for Climate-Smart and Sustainable Agriculture",
+        "authors": [
+          "Pavlo Lykhovyd"
+        ],
+        "year": 2025,
+        "doi": "10.70593/978-93-7185-854-0",
+        "venue": "",
+        "url": "https://doi.org/10.70593/978-93-7185-854-0",
+        "retrieval_source": "crossref",
+        "literature_id": "L003",
+        "evidence_id": "E004",
+        "abstract": "In the context of global climate change, related threats for food security, and the need for rational land and water resources usage in order to provide environmental sustainability, agricultural sector of Ukrainian economy faces serious challenges. The problems are particularly aggravated in the steppe zone, where unstable weather conditions, lack of natural moisture supply, and soil degradation require the introduction of novel approaches to agricultural production. In this regard, the use of geographic information systems (GIS), remote sensing technologies, and precision farming is essential. These technologies not only allow for dynamic and rapid monitoring of the state of agricultural phytocenoses but also enable the development of scientifically sound strategies for agricultural production management, optimization of resource use, and increased sustainable yields. This monograph summarizes the results of a five-year scientific work. It consists of sections that sequentially cover the stages of research: from theoretical foundations to practical recommendations. The first chapter presents a review of relevant scientific literature and its detailed scientific analysis. The second chapter is devoted to the methodology of scientific work. The third chapter provides details on the developed mathematical models and methods of agroecological zoning of agricultural lands based on remote sensing data. The fourth chapter is devoted to the possibility of remote identification of agricultural crops and the possibilities of crop mapping based on the dynamic characteristics of vegetation indices. The fifth chapter presents information about the main databases and software products developed using the results of the performed study. The conclusions and recommendations are based solely on the results of scientific work that has been tested and implemented in agricultural farms and higher education establishments. The results of the research have significant scientific and practical value. They create the basis for the systematic implementation of digital agriculture, contribute to improving the economic efficiency of agricultural production, optimizing the use of resources, and adapting to climate change. In the long term, this will significantly strengthen Ukraine’s food security and ensure the sustainable development of the national agricultural sector.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C004",
+      "claim_text": "Prior work reports that Climate change research remains a challenging task, as it requires vast quantities of long-term data to investigate the past, present, and future scenarios of Earth’s climate system and other biophysical systems at global to local scales [...]",
+      "hypothesis_id": "H002",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Remote Sensing Applications to Climate Change",
+        "authors": [
+          "Xander Wang"
+        ],
+        "year": 2023,
+        "doi": "10.3390/rs15030747",
+        "venue": "Remote Sensing",
+        "url": "https://doi.org/10.3390/rs15030747",
+        "retrieval_source": "crossref",
+        "literature_id": "L004",
+        "evidence_id": "E005",
+        "abstract": "Climate change research remains a challenging task, as it requires vast quantities of long-term data to investigate the past, present, and future scenarios of Earth’s climate system and other biophysical systems at global to local scales [...]",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C005",
+      "claim_text": "Prior work reports that Chapter 14: Applying Remote Sensing for Smart Cities",
+      "hypothesis_id": "H003",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Chapter 14: Applying Remote Sensing for Smart Cities",
+        "authors": [],
+        "year": 2024,
+        "doi": "10.1515/9781501522840-016",
+        "venue": "Remote Sensing",
+        "url": "https://doi.org/10.1515/9781501522840-016",
+        "retrieval_source": "crossref",
+        "literature_id": "L005",
+        "evidence_id": "E006",
+        "abstract": "",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C006",
+      "claim_text": "Prior work reports that Smart cities integrate digital technology and data to improve urban life, streamline city operations, and secure long-term growth.",
+      "hypothesis_id": "H003",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Smart Cities and Climate Resilience",
+        "authors": [
+          "Rwitabrata Mallick"
+        ],
+        "year": 2024,
+        "doi": "10.4018/979-8-3693-6522-9.ch021",
+        "venue": "Practice, Progress, and Proficiency in Sustainability",
+        "url": "https://doi.org/10.4018/979-8-3693-6522-9.ch021",
+        "retrieval_source": "crossref",
+        "literature_id": "L006",
+        "evidence_id": "E007",
+        "abstract": "Smart cities integrate digital technology and data to improve urban life, streamline city operations, and secure long-term growth. To drastically reduce emissions, cities will need to utilize less energy and make better use of intermittent renewable energy sources. Climate resilience in smart cities reduces climate-related damage and disruption, protects economic activities and lowers recovery costs, preserves ecosystems and biodiversity, protects all community members, particularly vulnerable populations, and promotes sustainable development and resource management. The integration of Smart Cities and Climate Resilience can be accomplished by using data from smart city technologies to guide climate resilience strategies and leveraging smart systems to optimize the use of water, electricity, and other resources under climatic stress. Integrating smart city technology with climate resilience techniques establishes a solid foundation for sustainable and flexible urban development.",
+        "snippet": ""
+      }
+    }
+  ],
+  "markdown": "# Generated Research Idea Cards\n\nInput paper: Remote sensing and AI for building climate adaptation applications\n\n## H001: conservative extension\nEvidence status: `citation_backed`\n\nResearch gap: In this paper, we address some of the opportunities brought by satellite remote sensing imaging and artiﬁcial intelligence (AI) in order to measure climate adaptation of cities automatically. We propose a framework combining AI and simulation which may be useful for extracting indicators from remote-sensing images and may help with predictive estimation of future states of these climate-adaptation-related indicators.\n\nNew hypothesis: A conservative next study should test whether techniques or observations from 'satellite address' and 'Governance and Sustainable Development Goals (SDGs) for smart cities' improve evidence-grounded work on climate change, remote sensing, artiﬁcial intelligence, smart cities.\n\nWhy novel: It combines two retrieved strands with the input paper's research problem rather than copying either paper.\n\nRequired evidence:\n- Verify that both cited works exist and match metadata.\n- Verify that abstracts or snippets support the claims used to ground the idea.\n- Run a small empirical or literature review check before presenting the idea as a conclusion.\n\nSupporting citations:\n- C001: satellite address (2011), DOI: 10.1007/springerreference_23987\n- C002: Governance and Sustainable Development Goals (SDGs) for smart cities (2026), DOI: 10.1016/b978-0-44-326594-5.00010-0\n\nRisk or limitation: Novelty is moderate; the idea may be an incremental extension if the cited works already overlap strongly.\n\nTestable prediction: If this idea is valid, then a follow-up study on climate change, remote sensing, artiﬁcial intelligence, smart cities should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.\n\n## H002: cross-disciplinary analogy\nEvidence status: `citation_backed`\n\nResearch gap: In this paper, we address some of the opportunities brought by satellite remote sensing imaging and artiﬁcial intelligence (AI) in order to measure climate adaptation of cities automatically. We propose a framework combining AI and simulation which may be useful for extracting indicators from remote-sensing images and may help with predictive estimation of future states of these climate-adaptation-related indicators.\n\nNew hypothesis: If the mechanisms discussed in 'Geospatial Intelligence and Remote Sensing for Climate-Smart and Sustainable Agriculture' transfer across domains, then climate change, remote sensing, artiﬁcial intelligence, smart cities may benefit from a cross-disciplinary evaluation protocol grounded by 'Remote Sensing Applications to Climate Change'.\n\nWhy novel: The idea explicitly treats retrieved literature as an analogy source for a different research setting.\n\nRequired evidence:\n- Verify that both cited works exist and match metadata.\n- Verify that abstracts or snippets support the claims used to ground the idea.\n- Run a small empirical or literature review check before presenting the idea as a conclusion.\n\nSupporting citations:\n- C003: Geospatial Intelligence and Remote Sensing for Climate-Smart and Sustainable Agriculture (2025), DOI: 10.70593/978-93-7185-854-0\n- C004: Remote Sensing Applications to Climate Change (2023), DOI: 10.3390/rs15030747\n\nRisk or limitation: The analogy may fail if the source domain assumptions do not hold for the input paper's domain.\n\nTestable prediction: If this idea is valid, then a follow-up study on climate change, remote sensing, artiﬁcial intelligence, smart cities should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.\n\n## H003: high-risk speculative idea\nEvidence status: `citation_backed`\n\nResearch gap: In this paper, we address some of the opportunities brought by satellite remote sensing imaging and artiﬁcial intelligence (AI) in order to measure climate adaptation of cities automatically. We propose a framework combining AI and simulation which may be useful for extracting indicators from remote-sensing images and may help with predictive estimation of future states of these climate-adaptation-related indicators.\n\nNew hypothesis: A higher-risk hypothesis is that the shared signals behind 'Chapter 14: Applying Remote Sensing for Smart Cities' and 'Smart Cities and Climate Resilience' point to a broader latent factor affecting climate change, remote sensing, artiﬁcial intelligence, smart cities.\n\nWhy novel: It proposes a broader latent explanation rather than only applying a known method.\n\nRequired evidence:\n- Verify that both cited works exist and match metadata.\n- Verify that abstracts or snippets support the claims used to ground the idea.\n- Run a small empirical or literature review check before presenting the idea as a conclusion.\n\nSupporting citations:\n- C005: Chapter 14: Applying Remote Sensing for Smart Cities (2024), DOI: 10.1515/9781501522840-016\n- C006: Smart Cities and Climate Resilience (2024), DOI: 10.4018/979-8-3693-6522-9.ch021\n\nRisk or limitation: This is speculative and should be treated as Yellow unless stronger evidence is retrieved.\n\nTestable prediction: If this idea is valid, then a follow-up study on climate change, remote sensing, artiﬁcial intelligence, smart cities should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.\n\n## Citation-Backed Claims To Verify\n\n| Claim ID | Hypothesis | Claim | Cited Title | Year | DOI |\n|---|---|---|---|---|---|\n| C001 | H001 | Prior work reports that the paper titled 'satellite address' is relevant to the retrieved topic. | satellite address | 2011 | 10.1007/springerreference_23987 |\n| C002 | H001 | Prior work reports that Governance and Sustainable Development Goals (SDGs) for smart cities | Governance and Sustainable Development Goals (SDGs) for smart cities | 2026 | 10.1016/b978-0-44-326594-5.00010-0 |\n| C003 | H002 | Prior work reports that In the context of global climate change, related threats for food security, and the need for rational land and water resources usage in order to provide environmental sustainability, agricultural sector of Ukrainian economy faces serious challenges. | Geospatial Intelligence and Remote Sensing for Climate-Smart and Sustainable Agriculture | 2025 | 10.70593/978-93-7185-854-0 |\n| C004 | H002 | Prior work reports that Climate change research remains a challenging task, as it requires vast quantities of long-term data to investigate the past, present, and future scenarios of Earth’s climate system and other biophysical systems at global to local scales [...] | Remote Sensing Applications to Climate Change | 2023 | 10.3390/rs15030747 |\n| C005 | H003 | Prior work reports that Chapter 14: Applying Remote Sensing for Smart Cities | Chapter 14: Applying Remote Sensing for Smart Cities | 2024 | 10.1515/9781501522840-016 |\n| C006 | H003 | Prior work reports that Smart cities integrate digital technology and data to improve urban life, streamline city operations, and secure long-term growth. | Smart Cities and Climate Resilience | 2024 | 10.4018/979-8-3693-6522-9.ch021 |",
+  "evidence_id": "E021"
+}

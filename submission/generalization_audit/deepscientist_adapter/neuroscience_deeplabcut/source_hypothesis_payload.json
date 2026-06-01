@@ -1,0 +1,277 @@
+{
+  "hypotheses": [
+    {
+      "hypothesis_id": "H001",
+      "idea_type": "conservative extension",
+      "evidence_status": "citation_backed",
+      "research_gap": "(1) Training: extract images with distinct postures characteristic of the animal behavior in question. For computational eﬃciency, the region of interest (ROI) should be picked to be as small as possible while containing the behavior in question, which is reaching in the example.",
+      "new_hypothesis": "A conservative next study should test whether techniques or observations from 'Quantitative Systems Pharmacology for Neuroscience Drug Discovery and Development: Current Status, Opportunities, and Challenges' and 'Pupil-DLC: an open-source deep learning pipeline for scalable, markerless tracking of pupil dynamics across conscious and unconscious states' improve evidence-grounded work on neuroscience, behavior, institute, center.",
+      "why_novel": "It combines two retrieved strands with the input paper's research problem rather than copying either paper.",
+      "required_evidence": [
+        "Verify that both cited works exist and match metadata.",
+        "Verify that abstracts or snippets support the claims used to ground the idea.",
+        "Run a small empirical or literature review check before presenting the idea as a conclusion."
+      ],
+      "supporting_citations": [
+        {
+          "claim_id": "C001",
+          "literature_id": "L001",
+          "title": "Quantitative Systems Pharmacology for Neuroscience Drug Discovery and Development: Current Status, Opportunities, and Challenges",
+          "year": 2019,
+          "doi": "10.1002/psp4.12478",
+          "evidence_id": "E022",
+          "retrieval_source": "openalex"
+        },
+        {
+          "claim_id": "C002",
+          "literature_id": "L002",
+          "title": "Pupil-DLC: an open-source deep learning pipeline for scalable, markerless tracking of pupil dynamics across conscious and unconscious states",
+          "year": 2026,
+          "doi": "10.64898/2026.01.18.700183",
+          "evidence_id": "E002",
+          "retrieval_source": "crossref"
+        }
+      ],
+      "risk_or_limitation": "Novelty is moderate; the idea may be an incremental extension if the cited works already overlap strongly.",
+      "testable_prediction": "If this idea is valid, then a follow-up study on neuroscience, behavior, institute, center should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.",
+      "citation_claim_ids": [
+        "C001",
+        "C002"
+      ],
+      "hypothesis_text": "A conservative next study should test whether techniques or observations from 'Quantitative Systems Pharmacology for Neuroscience Drug Discovery and Development: Current Status, Opportunities, and Challenges' and 'Pupil-DLC: an open-source deep learning pipeline for scalable, markerless tracking of pupil dynamics across conscious and unconscious states' improve evidence-grounded work on neuroscience, behavior, institute, center."
+    },
+    {
+      "hypothesis_id": "H002",
+      "idea_type": "cross-disciplinary analogy",
+      "evidence_status": "citation_backed",
+      "research_gap": "(1) Training: extract images with distinct postures characteristic of the animal behavior in question. For computational eﬃciency, the region of interest (ROI) should be picked to be as small as possible while containing the behavior in question, which is reaching in the example.",
+      "new_hypothesis": "If the mechanisms discussed in 'Real-time markerless video tracking of body parts in mice using deep neural networks' transfer across domains, then neuroscience, behavior, institute, center may benefit from a cross-disciplinary evaluation protocol grounded by 'Identités numériques sur facebook : idiolectes et postures en question'.",
+      "why_novel": "The idea explicitly treats retrieved literature as an analogy source for a different research setting.",
+      "required_evidence": [
+        "Verify that both cited works exist and match metadata.",
+        "Verify that abstracts or snippets support the claims used to ground the idea.",
+        "Run a small empirical or literature review check before presenting the idea as a conclusion."
+      ],
+      "supporting_citations": [
+        {
+          "claim_id": "C003",
+          "literature_id": "L003",
+          "title": "Real-time markerless video tracking of body parts in mice using deep neural networks",
+          "year": 2018,
+          "doi": "10.1101/482349",
+          "evidence_id": "E003",
+          "retrieval_source": "crossref"
+        },
+        {
+          "claim_id": "C004",
+          "literature_id": "L004",
+          "title": "Identités numériques sur facebook : idiolectes et postures en question",
+          "year": 2020,
+          "doi": "10.4000/corela.12517",
+          "evidence_id": "E004",
+          "retrieval_source": "crossref"
+        }
+      ],
+      "risk_or_limitation": "The analogy may fail if the source domain assumptions do not hold for the input paper's domain.",
+      "testable_prediction": "If this idea is valid, then a follow-up study on neuroscience, behavior, institute, center should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.",
+      "citation_claim_ids": [
+        "C003",
+        "C004"
+      ],
+      "hypothesis_text": "If the mechanisms discussed in 'Real-time markerless video tracking of body parts in mice using deep neural networks' transfer across domains, then neuroscience, behavior, institute, center may benefit from a cross-disciplinary evaluation protocol grounded by 'Identités numériques sur facebook : idiolectes et postures en question'."
+    },
+    {
+      "hypothesis_id": "H003",
+      "idea_type": "high-risk speculative idea",
+      "evidence_status": "citation_backed",
+      "research_gap": "(1) Training: extract images with distinct postures characteristic of the animal behavior in question. For computational eﬃciency, the region of interest (ROI) should be picked to be as small as possible while containing the behavior in question, which is reaching in the example.",
+      "new_hypothesis": "A higher-risk hypothesis is that the shared signals behind 'Dana-Farber/Harvard Cancer Center' and 'The Modern Mathematics of Deep Learning' point to a broader latent factor affecting neuroscience, behavior, institute, center.",
+      "why_novel": "It proposes a broader latent explanation rather than only applying a known method.",
+      "required_evidence": [
+        "Verify that both cited works exist and match metadata.",
+        "Verify that abstracts or snippets support the claims used to ground the idea.",
+        "Run a small empirical or literature review check before presenting the idea as a conclusion."
+      ],
+      "supporting_citations": [
+        {
+          "claim_id": "C005",
+          "literature_id": "L005",
+          "title": "Dana-Farber/Harvard Cancer Center",
+          "year": 2020,
+          "doi": "10.32388/m0n6zf",
+          "evidence_id": "E023",
+          "retrieval_source": "crossref"
+        },
+        {
+          "claim_id": "C006",
+          "literature_id": "L006",
+          "title": "The Modern Mathematics of Deep Learning",
+          "year": 2021,
+          "doi": "",
+          "evidence_id": "E005",
+          "retrieval_source": "arxiv"
+        }
+      ],
+      "risk_or_limitation": "This is speculative and should be treated as Yellow unless stronger evidence is retrieved.",
+      "testable_prediction": "If this idea is valid, then a follow-up study on neuroscience, behavior, institute, center should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.",
+      "citation_claim_ids": [
+        "C005",
+        "C006"
+      ],
+      "hypothesis_text": "A higher-risk hypothesis is that the shared signals behind 'Dana-Farber/Harvard Cancer Center' and 'The Modern Mathematics of Deep Learning' point to a broader latent factor affecting neuroscience, behavior, institute, center."
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "C001",
+      "claim_text": "Prior work reports that The substantial progress made in the basic sciences of the brain has yet to be adequately translated to successful clinical therapeutics to treat central nervous system (CNS) diseases.",
+      "hypothesis_id": "H001",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Quantitative Systems Pharmacology for Neuroscience Drug Discovery and Development: Current Status, Opportunities, and Challenges",
+        "authors": [
+          "Hugo Geerts",
+          "John P. Wikswo",
+          "Piet H. van der Graaf",
+          "Jane P. F. Bai",
+          "Chris Gaiteri",
+          "David A. Bennett",
+          "Susanne E. Swalley",
+          "Edgar Schuck",
+          "Rima Kaddurah‐Daouk",
+          "Katya Tsaioun",
+          "Mary Ann Pelleymounter"
+        ],
+        "year": 2019,
+        "doi": "10.1002/psp4.12478",
+        "venue": "CPT Pharmacometrics & Systems Pharmacology",
+        "url": "https://doi.org/10.1002/psp4.12478",
+        "retrieval_source": "openalex",
+        "literature_id": "L001",
+        "evidence_id": "E022",
+        "abstract": "The substantial progress made in the basic sciences of the brain has yet to be adequately translated to successful clinical therapeutics to treat central nervous system (CNS) diseases. Possible explanations include the lack of quantitative and validated biomarkers, the subjective nature of many clinical endpoints, and complex pharmacokinetic/pharmacodynamic relationships, but also the possibility that highly selective drugs in the CNS do not reflect the complex interactions of different brain circuits. Although computational systems pharmacology modeling designed to capture essential components of complex biological systems has been increasingly accepted in pharmaceutical research and development for oncology, inflammation, and metabolic disorders, the uptake in the CNS field has been very modest. In this article, a cross-disciplinary group with representatives from academia, pharma, regulatory, and funding agencies make the case that the identification and exploitation of CNS therapeutic targets for drug discovery and development can benefit greatly from a system and network approach that can span the gap between molecular pathways and the neuronal circuits that ultimately regulate brain activity and behavior. The National Institute of Neurological Disorders and Stroke (NINDS), in collaboration with the National Institute on Aging (NIA), National Institute of Mental Health (NIMH), National Institute on Drug Abuse (NIDA), and National Center for Advancing Translational Sciences (NCATS), convened a workshop to explore and evaluate the potential of a quantitative systems pharmacology (QSP) approach to CNS drug discovery and development. The objective of the workshop was to identify the challenges and opportunities of QSP as an approach to accelerate drug discovery and development in the field of CNS disorders. In particular, the workshop examined the potential for computational neuroscience to perform QSP-based interrogation of the mechanism of action for CNS diseases, along with a more accurate and comprehensive method for evaluating drug effects and optimizing the design of clinical trials. Following up on an earlier white paper on the use of QSP in general disease mechanism of action and drug discovery, this report focuses on new applications, opportunities, and the accompanying limitations of QSP as an approach to drug development in the CNS therapeutic area based on the discussions in the workshop with various stakeholders.",
+        "snippet": "article"
+      }
+    },
+    {
+      "claim_id": "C002",
+      "claim_text": "Prior work reports that Abstract Pupil diameter provides a powerful, non-invasive biomarker of brain state, correlating with arousal, attention, cognitive processing, and level of consciousness.",
+      "hypothesis_id": "H001",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Pupil-DLC: an open-source deep learning pipeline for scalable, markerless tracking of pupil dynamics across conscious and unconscious states",
+        "authors": [
+          "Parsa Seyfourian",
+          "Lydia C. Marks",
+          "Leslie D. Claar",
+          "Yasmeen Nahas",
+          "Miles Keating",
+          "Christof Koch",
+          "Irene Rembado"
+        ],
+        "year": 2026,
+        "doi": "10.64898/2026.01.18.700183",
+        "venue": "",
+        "url": "https://doi.org/10.64898/2026.01.18.700183",
+        "retrieval_source": "crossref",
+        "literature_id": "L002",
+        "evidence_id": "E002",
+        "abstract": "Abstract Pupil diameter provides a powerful, non-invasive biomarker of brain state, correlating with arousal, attention, cognitive processing, and level of consciousness. Despite its widespread use, pupillometry remains limited by software tools that lack scalability, robustness, and flexibility across experimental conditions. Here we introduce Pupil-DLC , an open-source, DeepLabCut-based pipeline for scalable, markerless tracking of pupil dynamics. Pupil-DLC is trained on 20,550 manually annotated frames selected from over 130 pupil videos of head-fixed and behaving mice spanning wakefulness to diverse drug-induced states of consciousness, including psychedelics, and anesthesia. The pipeline robustly captures state-dependent pupil dynamics, achieving high agreement with human-annotated ground truth data and outperforming an established automated method in both accuracy and detection reliability, while maintaining computational efficiency. Pupil-DLC incorporates a dual-model framework comprising a General Model (GM) for high-throughput analysis of infra-red recorded mouse pupils and an Individual Model (IM) tailored for session-specific optimization, as well as interpretable confidence metrics that enable principled trade-offs between accuracy and data retention. Notably, the model generalizes without retraining to human infrared pupil recordings and, with retraining, extends to human videos acquired under diverse daylight and camera conditions, enabling cross-species pupillometry. Pupil-DLC provides a flexible, reproducible platform for quantifying pupil-linked brain state dynamics across experimental paradigms and species.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C003",
+      "claim_text": "Prior work reports that ABSTRACT Markerless and accurate tracking of mouse movement is of interest to many biomedical, pharmaceutical, and behavioral science applications.",
+      "hypothesis_id": "H002",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Real-time markerless video tracking of body parts in mice using deep neural networks",
+        "authors": [
+          "Brandon Forys",
+          "Dongsheng Xiao",
+          "Pankaj Gupta",
+          "Jamie D Boyd",
+          "Timothy H Murphy"
+        ],
+        "year": 2018,
+        "doi": "10.1101/482349",
+        "venue": "",
+        "url": "https://doi.org/10.1101/482349",
+        "retrieval_source": "crossref",
+        "literature_id": "L003",
+        "evidence_id": "E003",
+        "abstract": "ABSTRACT Markerless and accurate tracking of mouse movement is of interest to many biomedical, pharmaceutical, and behavioral science applications. The additional capability of tracking body parts in real-time with minimal latency opens up the possibility of manipulating motor feedback, allowing detailed explorations of the neural basis for behavioral control. Here we describe a system capable of tracking specific movements in mice at a frame rate of 30.3 Hz. To achieve these results, we adapt DeepLabCut – a robust movement-tracking deep neural network framework – for real-time tracking of body movements in mice. We estimate paw movements of mice in real time and demonstrate the concept of movement-triggered optogenetic stimulation by flashing a USB-CGPIO controlled LED that is triggered when real time analysis of movement exceeds a pre-set threshold. The mean time delay between movement initiation and LED flash was 93.44 ms, a latency sufficient for applying behaviorally-triggered feedback. This manuscript presents the rationale and details of the algorithms employed and shows implementation of the system using behaving mice. This system lays the groundwork for a behavior-triggered ‘closed loop’ brain-machine interface with optogenetic stimulation of specific brain regions for feedback.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C004",
+      "claim_text": "Prior work reports that Dans cette contribution, je m’applique à décrire un profil Facebook particulier à partir de mon expérience de terrain ethnographique des réseaux sociaux et selon des critères socio-énonciatifs.",
+      "hypothesis_id": "H002",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Identités numériques sur facebook : idiolectes et postures en question",
+        "authors": [
+          "Laurence Rosier"
+        ],
+        "year": 2020,
+        "doi": "10.4000/corela.12517",
+        "venue": "Corela",
+        "url": "https://doi.org/10.4000/corela.12517",
+        "retrieval_source": "crossref",
+        "literature_id": "L004",
+        "evidence_id": "E004",
+        "abstract": "Dans cette contribution, je m’applique à décrire un profil Facebook particulier à partir de mon expérience de terrain ethnographique des réseaux sociaux et selon des critères socio-énonciatifs. Je puise dans les travaux d’Alain Rabatel différentes notions dont la distinction entre ethos montré et éthos dit, ainsi que celle d’idiolecte (2005) envisagé dans ses rapports avec la représentation de l’autre et dans une dialectique individualité/socialité. Je mobilise également celle de posture (telle que développée par Meizoz 2009, Maingueneau 2009, Rosier 2011) car elle permet de scruter la co-construction d’une image de l’internaute par des moyens polysémiotiques, inscrits dans une chronologie longue et interactive. Mais la scénographie technologique et énonciative de FB telle que pratiquée par l’énonciateur de mon corpus échoue à lui attribuer clairement un point de vue postural.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C005",
+      "claim_text": "Prior work reports that Dana-Farber/Harvard Cancer Center",
+      "hypothesis_id": "H003",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Dana-Farber/Harvard Cancer Center",
+        "authors": [
+          "National Cancer Institute"
+        ],
+        "year": 2020,
+        "doi": "10.32388/m0n6zf",
+        "venue": "Definitions",
+        "url": "https://doi.org/10.32388/m0n6zf",
+        "retrieval_source": "crossref",
+        "literature_id": "L005",
+        "evidence_id": "E023",
+        "abstract": "",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C006",
+      "claim_text": "Prior work reports that We describe the new field of mathematical analysis of deep learning.",
+      "hypothesis_id": "H003",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "The Modern Mathematics of Deep Learning",
+        "authors": [
+          "Julius Berner",
+          "Philipp Grohs",
+          "Gitta Kutyniok",
+          "Philipp Petersen"
+        ],
+        "year": 2021,
+        "doi": "",
+        "venue": "arXiv",
+        "url": "http://arxiv.org/abs/2105.04026v2",
+        "retrieval_source": "arxiv",
+        "literature_id": "L006",
+        "evidence_id": "E005",
+        "abstract": "We describe the new field of mathematical analysis of deep learning. This field emerged around a list of research questions that were not answered within the classical framework of learning theory. These questions concern: the outstanding generalization power of overparametrized neural networks, the role of depth in deep architectures, the apparent absence of the curse of dimensionality, the surprisingly successful optimization performance despite the non-convexity of the problem, understanding what features are learned, why deep architectures perform exceptionally well in physical problems, and which fine aspects of an architecture affect the behavior of a learning task in which way. We present an overview of modern approaches that yield partial answers to these questions. For selected approaches, we describe the main ideas in more detail.",
+        "snippet": ""
+      }
+    }
+  ],
+  "markdown": "# Generated Research Idea Cards\n\nInput paper: Markerless tracking of user-deﬁned features with deep learning\n\n## H001: conservative extension\nEvidence status: `citation_backed`\n\nResearch gap: (1) Training: extract images with distinct postures characteristic of the animal behavior in question. For computational eﬃciency, the region of interest (ROI) should be picked to be as small as possible while containing the behavior in question, which is reaching in the example.\n\nNew hypothesis: A conservative next study should test whether techniques or observations from 'Quantitative Systems Pharmacology for Neuroscience Drug Discovery and Development: Current Status, Opportunities, and Challenges' and 'Pupil-DLC: an open-source deep learning pipeline for scalable, markerless tracking of pupil dynamics across conscious and unconscious states' improve evidence-grounded work on neuroscience, behavior, institute, center.\n\nWhy novel: It combines two retrieved strands with the input paper's research problem rather than copying either paper.\n\nRequired evidence:\n- Verify that both cited works exist and match metadata.\n- Verify that abstracts or snippets support the claims used to ground the idea.\n- Run a small empirical or literature review check before presenting the idea as a conclusion.\n\nSupporting citations:\n- C001: Quantitative Systems Pharmacology for Neuroscience Drug Discovery and Development: Current Status, Opportunities, and Challenges (2019), DOI: 10.1002/psp4.12478\n- C002: Pupil-DLC: an open-source deep learning pipeline for scalable, markerless tracking of pupil dynamics across conscious and unconscious states (2026), DOI: 10.64898/2026.01.18.700183\n\nRisk or limitation: Novelty is moderate; the idea may be an incremental extension if the cited works already overlap strongly.\n\nTestable prediction: If this idea is valid, then a follow-up study on neuroscience, behavior, institute, center should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.\n\n## H002: cross-disciplinary analogy\nEvidence status: `citation_backed`\n\nResearch gap: (1) Training: extract images with distinct postures characteristic of the animal behavior in question. For computational eﬃciency, the region of interest (ROI) should be picked to be as small as possible while containing the behavior in question, which is reaching in the example.\n\nNew hypothesis: If the mechanisms discussed in 'Real-time markerless video tracking of body parts in mice using deep neural networks' transfer across domains, then neuroscience, behavior, institute, center may benefit from a cross-disciplinary evaluation protocol grounded by 'Identités numériques sur facebook : idiolectes et postures en question'.\n\nWhy novel: The idea explicitly treats retrieved literature as an analogy source for a different research setting.\n\nRequired evidence:\n- Verify that both cited works exist and match metadata.\n- Verify that abstracts or snippets support the claims used to ground the idea.\n- Run a small empirical or literature review check before presenting the idea as a conclusion.\n\nSupporting citations:\n- C003: Real-time markerless video tracking of body parts in mice using deep neural networks (2018), DOI: 10.1101/482349\n- C004: Identités numériques sur facebook : idiolectes et postures en question (2020), DOI: 10.4000/corela.12517\n\nRisk or limitation: The analogy may fail if the source domain assumptions do not hold for the input paper's domain.\n\nTestable prediction: If this idea is valid, then a follow-up study on neuroscience, behavior, institute, center should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.\n\n## H003: high-risk speculative idea\nEvidence status: `citation_backed`\n\nResearch gap: (1) Training: extract images with distinct postures characteristic of the animal behavior in question. For computational eﬃciency, the region of interest (ROI) should be picked to be as small as possible while containing the behavior in question, which is reaching in the example.\n\nNew hypothesis: A higher-risk hypothesis is that the shared signals behind 'Dana-Farber/Harvard Cancer Center' and 'The Modern Mathematics of Deep Learning' point to a broader latent factor affecting neuroscience, behavior, institute, center.\n\nWhy novel: It proposes a broader latent explanation rather than only applying a known method.\n\nRequired evidence:\n- Verify that both cited works exist and match metadata.\n- Verify that abstracts or snippets support the claims used to ground the idea.\n- Run a small empirical or literature review check before presenting the idea as a conclusion.\n\nSupporting citations:\n- C005: Dana-Farber/Harvard Cancer Center (2020), DOI: 10.32388/m0n6zf\n- C006: The Modern Mathematics of Deep Learning (2021), DOI: missing\n\nRisk or limitation: This is speculative and should be treated as Yellow unless stronger evidence is retrieved.\n\nTestable prediction: If this idea is valid, then a follow-up study on neuroscience, behavior, institute, center should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.\n\n## Citation-Backed Claims To Verify\n\n| Claim ID | Hypothesis | Claim | Cited Title | Year | DOI |\n|---|---|---|---|---|---|\n| C001 | H001 | Prior work reports that The substantial progress made in the basic sciences of the brain has yet to be adequately translated to successful clinical therapeutics to treat central nervous system (CNS) diseases. | Quantitative Systems Pharmacology for Neuroscience Drug Discovery and Development: Current Status, Opportunities, and Challenges | 2019 | 10.1002/psp4.12478 |\n| C002 | H001 | Prior work reports that Abstract Pupil diameter provides a powerful, non-invasive biomarker of brain state, correlating with arousal, attention, cognitive processing, and level of consciousness. | Pupil-DLC: an open-source deep learning pipeline for scalable, markerless tracking of pupil dynamics across conscious and unconscious states | 2026 | 10.64898/2026.01.18.700183 |\n| C003 | H002 | Prior work reports that ABSTRACT Markerless and accurate tracking of mouse movement is of interest to many biomedical, pharmaceutical, and behavioral science applications. | Real-time markerless video tracking of body parts in mice using deep neural networks | 2018 | 10.1101/482349 |\n| C004 | H002 | Prior work reports that Dans cette contribution, je m’applique à décrire un profil Facebook particulier à partir de mon expérience de terrain ethnographique des réseaux sociaux et selon des critères socio-énonciatifs. | Identités numériques sur facebook : idiolectes et postures en question | 2020 | 10.4000/corela.12517 |\n| C005 | H003 | Prior work reports that Dana-Farber/Harvard Cancer Center | Dana-Farber/Harvard Cancer Center | 2020 | 10.32388/m0n6zf |\n| C006 | H003 | Prior work reports that We describe the new field of mathematical analysis of deep learning. | The Modern Mathematics of Deep Learning | 2021 |  |",
+  "evidence_id": "E037"
+}

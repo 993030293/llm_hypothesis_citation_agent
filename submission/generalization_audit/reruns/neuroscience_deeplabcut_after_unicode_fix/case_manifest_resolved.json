@@ -1,0 +1,15 @@
+{
+  "generated_at": "2026-05-31T18:02:18+00:00",
+  "cases": [
+    {
+      "case_id": "neuroscience_deeplabcut",
+      "field": "Neuroscience / Behavior",
+      "pdf_url": "https://arxiv.org/abs/1804.03142",
+      "pdf_path": "inputs/generalization_cases/papers/neuroscience_deeplabcut.pdf",
+      "source_note": "Real public arXiv source; downloader resolves abs URL to PDF.",
+      "expected_risk": "normal_real_pdf",
+      "resolved_pdf_path": "C:\\Users\\99303\\git\\llm_hypothesis_citation_agent\\inputs\\generalization_cases\\papers\\neuroscience_deeplabcut.pdf",
+      "resolved_pdf_url": "https://arxiv.org/pdf/1804.03142"
+    }
+  ]
+}

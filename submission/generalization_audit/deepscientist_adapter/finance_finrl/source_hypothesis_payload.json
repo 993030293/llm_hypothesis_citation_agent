@@ -1,0 +1,277 @@
+{
+  "hypotheses": [
+    {
+      "hypothesis_id": "H001",
+      "idea_type": "conservative extension",
+      "evidence_status": "citation_backed",
+      "research_gap": "In this paper, we introduce a DRL library FinRL that facilitates beginners to expose themselves to quantitative ﬁnance and to develop their own stock trading strategies. DRL framework is powerful in solving dynamic decision making problems by learning through interaction with an unknown environment, and thus providing two major advantages - portfo- ∗Equal contribution.",
+      "new_hypothesis": "A conservative next study should test whether techniques or observations from 'FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance' and 'FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance' improve evidence-grounded work on finrl, trading, stock, drl.",
+      "why_novel": "It combines two retrieved strands with the input paper's research problem rather than copying either paper.",
+      "required_evidence": [
+        "Verify that both cited works exist and match metadata.",
+        "Verify that abstracts or snippets support the claims used to ground the idea.",
+        "Run a small empirical or literature review check before presenting the idea as a conclusion."
+      ],
+      "supporting_citations": [
+        {
+          "claim_id": "C001",
+          "literature_id": "L003",
+          "title": "FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance",
+          "year": 2020,
+          "doi": "10.48550/arxiv.2011.09607",
+          "evidence_id": "E004",
+          "retrieval_source": "openalex"
+        },
+        {
+          "claim_id": "C002",
+          "literature_id": "L001",
+          "title": "FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance",
+          "year": 2020,
+          "doi": "10.2139/ssrn.3737257",
+          "evidence_id": "E002",
+          "retrieval_source": "crossref"
+        }
+      ],
+      "risk_or_limitation": "Novelty is moderate; the idea may be an incremental extension if the cited works already overlap strongly.",
+      "testable_prediction": "If this idea is valid, then a follow-up study on finrl, trading, stock, drl should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.",
+      "citation_claim_ids": [
+        "C001",
+        "C002"
+      ],
+      "hypothesis_text": "A conservative next study should test whether techniques or observations from 'FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance' and 'FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance' improve evidence-grounded work on finrl, trading, stock, drl."
+    },
+    {
+      "hypothesis_id": "H002",
+      "idea_type": "cross-disciplinary analogy",
+      "evidence_status": "citation_backed",
+      "research_gap": "In this paper, we introduce a DRL library FinRL that facilitates beginners to expose themselves to quantitative ﬁnance and to develop their own stock trading strategies. DRL framework is powerful in solving dynamic decision making problems by learning through interaction with an unknown environment, and thus providing two major advantages - portfo- ∗Equal contribution.",
+      "new_hypothesis": "If the mechanisms discussed in 'FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance' transfer across domains, then finrl, trading, stock, drl may benefit from a cross-disciplinary evaluation protocol grounded by 'FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance'.",
+      "why_novel": "The idea explicitly treats retrieved literature as an analogy source for a different research setting.",
+      "required_evidence": [
+        "Verify that both cited works exist and match metadata.",
+        "Verify that abstracts or snippets support the claims used to ground the idea.",
+        "Run a small empirical or literature review check before presenting the idea as a conclusion."
+      ],
+      "supporting_citations": [
+        {
+          "claim_id": "C003",
+          "literature_id": "L002",
+          "title": "FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance",
+          "year": 2025,
+          "doi": "10.2139/ssrn.3737859",
+          "evidence_id": "E003",
+          "retrieval_source": "crossref"
+        },
+        {
+          "claim_id": "C004",
+          "literature_id": "L004",
+          "title": "FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance",
+          "year": 2020,
+          "doi": "",
+          "evidence_id": "E005",
+          "retrieval_source": "arxiv"
+        }
+      ],
+      "risk_or_limitation": "The analogy may fail if the source domain assumptions do not hold for the input paper's domain.",
+      "testable_prediction": "If this idea is valid, then a follow-up study on finrl, trading, stock, drl should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.",
+      "citation_claim_ids": [
+        "C003",
+        "C004"
+      ],
+      "hypothesis_text": "If the mechanisms discussed in 'FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance' transfer across domains, then finrl, trading, stock, drl may benefit from a cross-disciplinary evaluation protocol grounded by 'FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance'."
+    },
+    {
+      "hypothesis_id": "H003",
+      "idea_type": "high-risk speculative idea",
+      "evidence_status": "citation_backed",
+      "research_gap": "In this paper, we introduce a DRL library FinRL that facilitates beginners to expose themselves to quantitative ﬁnance and to develop their own stock trading strategies. DRL framework is powerful in solving dynamic decision making problems by learning through interaction with an unknown environment, and thus providing two major advantages - portfo- ∗Equal contribution.",
+      "new_hypothesis": "A higher-risk hypothesis is that the shared signals behind 'FinRL: Deep Reinforcement Learning Framework to Automate Trading in Quantitative Finance' and 'An Overview of Machine Learning, Deep Learning, and Reinforcement Learning-Based Techniques in Quantitative Finance: Recent Progress and Challenges' point to a broader latent factor affecting finrl, trading, stock, drl.",
+      "why_novel": "It proposes a broader latent explanation rather than only applying a known method.",
+      "required_evidence": [
+        "Verify that both cited works exist and match metadata.",
+        "Verify that abstracts or snippets support the claims used to ground the idea.",
+        "Run a small empirical or literature review check before presenting the idea as a conclusion."
+      ],
+      "supporting_citations": [
+        {
+          "claim_id": "C005",
+          "literature_id": "L005",
+          "title": "FinRL: Deep Reinforcement Learning Framework to Automate Trading in Quantitative Finance",
+          "year": 2021,
+          "doi": "",
+          "evidence_id": "E006",
+          "retrieval_source": "arxiv"
+        },
+        {
+          "claim_id": "C006",
+          "literature_id": "L006",
+          "title": "An Overview of Machine Learning, Deep Learning, and Reinforcement Learning-Based Techniques in Quantitative Finance: Recent Progress and Challenges",
+          "year": 2023,
+          "doi": "10.3390/app13031956",
+          "evidence_id": "E007",
+          "retrieval_source": "openalex"
+        }
+      ],
+      "risk_or_limitation": "This is speculative and should be treated as Yellow unless stronger evidence is retrieved.",
+      "testable_prediction": "If this idea is valid, then a follow-up study on finrl, trading, stock, drl should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.",
+      "citation_claim_ids": [
+        "C005",
+        "C006"
+      ],
+      "hypothesis_text": "A higher-risk hypothesis is that the shared signals behind 'FinRL: Deep Reinforcement Learning Framework to Automate Trading in Quantitative Finance' and 'An Overview of Machine Learning, Deep Learning, and Reinforcement Learning-Based Techniques in Quantitative Finance: Recent Progress and Challenges' point to a broader latent factor affecting finrl, trading, stock, drl."
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "C001",
+      "claim_text": "Prior work reports that As deep reinforcement learning (DRL) has been recognized as an effective approach in quantitative finance, getting hands-on experiences is attractive to beginners.",
+      "hypothesis_id": "H001",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance",
+        "authors": [
+          "Xiao-Yang Liu",
+          "Hongyang Yang",
+          "Qian Chen",
+          "Runjia Zhang",
+          "Liuqing Yang",
+          "Bowen Xiao",
+          "Christina Dan Wang"
+        ],
+        "year": 2020,
+        "doi": "10.48550/arxiv.2011.09607",
+        "venue": "arXiv (Cornell University)",
+        "url": "http://arxiv.org/abs/2011.09607",
+        "retrieval_source": "openalex",
+        "literature_id": "L003",
+        "evidence_id": "E004",
+        "abstract": "As deep reinforcement learning (DRL) has been recognized as an effective approach in quantitative finance, getting hands-on experiences is attractive to beginners. However, to train a practical DRL trading agent that decides where to trade, at what price, and what quantity involves error-prone and arduous development and debugging. In this paper, we introduce a DRL library FinRL that facilitates beginners to expose themselves to quantitative finance and to develop their own stock trading strategies. Along with easily-reproducible tutorials, FinRL library allows users to streamline their own developments and to compare with existing schemes easily. Within FinRL, virtual environments are configured with stock market datasets, trading agents are trained with neural networks, and extensive backtesting is analyzed via trading performance. Moreover, it incorporates important trading constraints such as transaction cost, market liquidity and the investor's degree of risk-aversion. FinRL is featured with completeness, hands-on tutorial and reproducibility that favors beginners: (i) at multiple levels of time granularity, FinRL simulates trading environments across various stock markets, including NASDAQ-100, DJIA, S&P 500, HSI, SSE 50, and CSI 300; (ii) organized in a layered architecture with modular structure, FinRL provides fine-tuned state-of-the-art DRL algorithms (DQN, DDPG, PPO, SAC, A2C, TD3, etc.), commonly-used reward functions and standard evaluation baselines to alleviate the debugging workloads and promote the reproducibility, and (iii) being highly extendable, FinRL reserves a complete set of user-import interfaces. Furthermore, we incorporated three application demonstrations, namely single stock trading, multiple stock trading, and portfolio allocation. The FinRL library will be available on Github at link https://github.com/AI4Finance-LLC/FinRL-Library.",
+        "snippet": "preprint"
+      }
+    },
+    {
+      "claim_id": "C002",
+      "claim_text": "Prior work reports that the paper titled 'FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance' is relevant to the retrieved topic.",
+      "hypothesis_id": "H001",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance",
+        "authors": [
+          "Xiao-Yang Liu"
+        ],
+        "year": 2020,
+        "doi": "10.2139/ssrn.3737257",
+        "venue": "SSRN Electronic Journal",
+        "url": "https://doi.org/10.2139/ssrn.3737257",
+        "retrieval_source": "crossref",
+        "literature_id": "L001",
+        "evidence_id": "E002",
+        "abstract": "",
+        "snippet": "article"
+      }
+    },
+    {
+      "claim_id": "C003",
+      "claim_text": "Prior work reports that the paper titled 'FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance' is relevant to the retrieved topic.",
+      "hypothesis_id": "H002",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance",
+        "authors": [
+          "Xiao-Yang Liu",
+          "Hongyang Yang",
+          "Qian Chen",
+          "Runjia Zhang",
+          "Liuqing Yang",
+          "Bowen Xiao",
+          "Christina Wang"
+        ],
+        "year": 2025,
+        "doi": "10.2139/ssrn.3737859",
+        "venue": "SSRN Electronic Journal",
+        "url": "https://doi.org/10.2139/ssrn.3737859",
+        "retrieval_source": "crossref",
+        "literature_id": "L002",
+        "evidence_id": "E003",
+        "abstract": "",
+        "snippet": "article"
+      }
+    },
+    {
+      "claim_id": "C004",
+      "claim_text": "Prior work reports that As deep reinforcement learning (DRL) has been recognized as an effective approach in quantitative finance, getting hands-on experiences is attractive to beginners.",
+      "hypothesis_id": "H002",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance",
+        "authors": [
+          "Xiao-Yang Liu",
+          "Hongyang Yang",
+          "Qian Chen",
+          "Runjia Zhang",
+          "Liuqing Yang",
+          "Bowen Xiao",
+          "Christina Dan Wang"
+        ],
+        "year": 2020,
+        "doi": "",
+        "venue": "arXiv",
+        "url": "http://arxiv.org/abs/2011.09607v2",
+        "retrieval_source": "arxiv",
+        "literature_id": "L004",
+        "evidence_id": "E005",
+        "abstract": "As deep reinforcement learning (DRL) has been recognized as an effective approach in quantitative finance, getting hands-on experiences is attractive to beginners. However, to train a practical DRL trading agent that decides where to trade, at what price, and what quantity involves error-prone and arduous development and debugging. In this paper, we introduce a DRL library FinRL that facilitates beginners to expose themselves to quantitative finance and to develop their own stock trading strategies. Along with easily-reproducible tutorials, FinRL library allows users to streamline their own developments and to compare with existing schemes easily. Within FinRL, virtual environments are configured with stock market datasets, trading agents are trained with neural networks, and extensive backtesting is analyzed via trading performance. Moreover, it incorporates important trading constraints such as transaction cost, market liquidity and the investor's degree of risk-aversion. FinRL is featured with completeness, hands-on tutorial and reproducibility that favors beginners: (i) at multiple levels of time granularity, FinRL simulates trading environments across various stock markets, including NASDAQ-100, DJIA, S&P 500, HSI, SSE 50, and CSI 300; (ii) organized in a layered architecture with modular structure, FinRL provides fine-tuned state-of-the-art DRL algorithms (DQN, DDPG, PPO, SAC, A2C, TD3, etc.), commonly-used reward functions and standard evaluation baselines to alleviate the debugging workloads and promote the reproducibility, and (iii) being highly extendable, FinRL reserves a complete set of user-import interfaces. Furthermore, we incorporated three application demonstrations, namely single stock trading, multiple stock trading, and portfolio allocation. The FinRL library will be available on Github at link https://github.com/AI4Finance-LLC/FinRL-Library.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C005",
+      "claim_text": "Prior work reports that Deep reinforcement learning (DRL) has been envisioned to have a competitive edge in quantitative finance.",
+      "hypothesis_id": "H003",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "FinRL: Deep Reinforcement Learning Framework to Automate Trading in Quantitative Finance",
+        "authors": [
+          "Xiao-Yang Liu",
+          "Hongyang Yang",
+          "Jiechao Gao",
+          "Christina Dan Wang"
+        ],
+        "year": 2021,
+        "doi": "",
+        "venue": "arXiv",
+        "url": "http://arxiv.org/abs/2111.09395v1",
+        "retrieval_source": "arxiv",
+        "literature_id": "L005",
+        "evidence_id": "E006",
+        "abstract": "Deep reinforcement learning (DRL) has been envisioned to have a competitive edge in quantitative finance. However, there is a steep development curve for quantitative traders to obtain an agent that automatically positions to win in the market, namely \\textit{to decide where to trade, at what price} and \\textit{what quantity}, due to the error-prone programming and arduous debugging. In this paper, we present the first open-source framework \\textit{FinRL} as a full pipeline to help quantitative traders overcome the steep learning curve. FinRL is featured with simplicity, applicability and extensibility under the key principles, \\textit{full-stack framework, customization, reproducibility} and \\textit{hands-on tutoring}. Embodied as a three-layer architecture with modular structures, FinRL implements fine-tuned state-of-the-art DRL algorithms and common reward functions, while alleviating the debugging workloads. Thus, we help users pipeline the strategy design at a high turnover rate. At multiple levels of time granularity, FinRL simulates various markets as training environments using historical data and live trading APIs. Being highly extensible, FinRL reserves a set of user-import interfaces and incorporates trading constraints such as market friction, market liquidity and investor's risk-aversion. Moreover, serving as practitioners' stepping stones, typical trading tasks are provided as step-by-step tutorials, e.g., stock trading, portfolio allocation, cryptocurrency trading, etc.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C006",
+      "claim_text": "Prior work reports that Forecasting the behavior of the stock market is a classic but difficult topic, one that has attracted the interest of both economists and computer scientists.",
+      "hypothesis_id": "H003",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "An Overview of Machine Learning, Deep Learning, and Reinforcement Learning-Based Techniques in Quantitative Finance: Recent Progress and Challenges",
+        "authors": [
+          "Santosh Kumar Sahu",
+          "Anil Mokhade",
+          "Neeraj Dhanraj Bokde"
+        ],
+        "year": 2023,
+        "doi": "10.3390/app13031956",
+        "venue": "Applied Sciences",
+        "url": "https://doi.org/10.3390/app13031956",
+        "retrieval_source": "openalex",
+        "literature_id": "L006",
+        "evidence_id": "E007",
+        "abstract": "Forecasting the behavior of the stock market is a classic but difficult topic, one that has attracted the interest of both economists and computer scientists. Over the course of the last couple of decades, researchers have investigated linear models as well as models that are based on machine learning (ML), deep learning (DL), reinforcement learning (RL), and deep reinforcement learning (DRL) in order to create an accurate predictive model. Machine learning algorithms can now extract high-level financial market data patterns. Investors are using deep learning models to anticipate and evaluate stock and foreign exchange markets due to the advantage of artificial intelligence. Recent years have seen a proliferation of the deep reinforcement learning algorithm’s application in algorithmic trading. DRL agents, which combine price prediction and trading signal production, have been used to construct several completely automated trading systems or strategies. Our objective is to enable interested researchers to stay current and easily imitate earlier findings. In this paper, we have worked to explain the utility of Machine Learning, Deep Learning, Reinforcement Learning, and Deep Reinforcement Learning in Quantitative Finance (QF) and the Stock Market. We also outline potential future study paths in this area based on the overview that was presented before.",
+        "snippet": "article"
+      }
+    }
+  ],
+  "markdown": "# Generated Research Idea Cards\n\nInput paper: FinRL: A Deep Reinforcement Learning Library for\n\n## H001: conservative extension\nEvidence status: `citation_backed`\n\nResearch gap: In this paper, we introduce a DRL library FinRL that facilitates beginners to expose themselves to quantitative ﬁnance and to develop their own stock trading strategies. DRL framework is powerful in solving dynamic decision making problems by learning through interaction with an unknown environment, and thus providing two major advantages - portfo- ∗Equal contribution.\n\nNew hypothesis: A conservative next study should test whether techniques or observations from 'FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance' and 'FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance' improve evidence-grounded work on finrl, trading, stock, drl.\n\nWhy novel: It combines two retrieved strands with the input paper's research problem rather than copying either paper.\n\nRequired evidence:\n- Verify that both cited works exist and match metadata.\n- Verify that abstracts or snippets support the claims used to ground the idea.\n- Run a small empirical or literature review check before presenting the idea as a conclusion.\n\nSupporting citations:\n- C001: FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance (2020), DOI: 10.48550/arxiv.2011.09607\n- C002: FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance (2020), DOI: 10.2139/ssrn.3737257\n\nRisk or limitation: Novelty is moderate; the idea may be an incremental extension if the cited works already overlap strongly.\n\nTestable prediction: If this idea is valid, then a follow-up study on finrl, trading, stock, drl should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.\n\n## H002: cross-disciplinary analogy\nEvidence status: `citation_backed`\n\nResearch gap: In this paper, we introduce a DRL library FinRL that facilitates beginners to expose themselves to quantitative ﬁnance and to develop their own stock trading strategies. DRL framework is powerful in solving dynamic decision making problems by learning through interaction with an unknown environment, and thus providing two major advantages - portfo- ∗Equal contribution.\n\nNew hypothesis: If the mechanisms discussed in 'FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance' transfer across domains, then finrl, trading, stock, drl may benefit from a cross-disciplinary evaluation protocol grounded by 'FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance'.\n\nWhy novel: The idea explicitly treats retrieved literature as an analogy source for a different research setting.\n\nRequired evidence:\n- Verify that both cited works exist and match metadata.\n- Verify that abstracts or snippets support the claims used to ground the idea.\n- Run a small empirical or literature review check before presenting the idea as a conclusion.\n\nSupporting citations:\n- C003: FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance (2025), DOI: 10.2139/ssrn.3737859\n- C004: FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance (2020), DOI: missing\n\nRisk or limitation: The analogy may fail if the source domain assumptions do not hold for the input paper's domain.\n\nTestable prediction: If this idea is valid, then a follow-up study on finrl, trading, stock, drl should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.\n\n## H003: high-risk speculative idea\nEvidence status: `citation_backed`\n\nResearch gap: In this paper, we introduce a DRL library FinRL that facilitates beginners to expose themselves to quantitative ﬁnance and to develop their own stock trading strategies. DRL framework is powerful in solving dynamic decision making problems by learning through interaction with an unknown environment, and thus providing two major advantages - portfo- ∗Equal contribution.\n\nNew hypothesis: A higher-risk hypothesis is that the shared signals behind 'FinRL: Deep Reinforcement Learning Framework to Automate Trading in Quantitative Finance' and 'An Overview of Machine Learning, Deep Learning, and Reinforcement Learning-Based Techniques in Quantitative Finance: Recent Progress and Challenges' point to a broader latent factor affecting finrl, trading, stock, drl.\n\nWhy novel: It proposes a broader latent explanation rather than only applying a known method.\n\nRequired evidence:\n- Verify that both cited works exist and match metadata.\n- Verify that abstracts or snippets support the claims used to ground the idea.\n- Run a small empirical or literature review check before presenting the idea as a conclusion.\n\nSupporting citations:\n- C005: FinRL: Deep Reinforcement Learning Framework to Automate Trading in Quantitative Finance (2021), DOI: missing\n- C006: An Overview of Machine Learning, Deep Learning, and Reinforcement Learning-Based Techniques in Quantitative Finance: Recent Progress and Challenges (2023), DOI: 10.3390/app13031956\n\nRisk or limitation: This is speculative and should be treated as Yellow unless stronger evidence is retrieved.\n\nTestable prediction: If this idea is valid, then a follow-up study on finrl, trading, stock, drl should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.\n\n## Citation-Backed Claims To Verify\n\n| Claim ID | Hypothesis | Claim | Cited Title | Year | DOI |\n|---|---|---|---|---|---|\n| C001 | H001 | Prior work reports that As deep reinforcement learning (DRL) has been recognized as an effective approach in quantitative finance, getting hands-on experiences is attractive to beginners. | FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance | 2020 | 10.48550/arxiv.2011.09607 |\n| C002 | H001 | Prior work reports that the paper titled 'FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance' is relevant to the retrieved topic. | FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance | 2020 | 10.2139/ssrn.3737257 |\n| C003 | H002 | Prior work reports that the paper titled 'FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance' is relevant to the retrieved topic. | FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance | 2025 | 10.2139/ssrn.3737859 |\n| C004 | H002 | Prior work reports that As deep reinforcement learning (DRL) has been recognized as an effective approach in quantitative finance, getting hands-on experiences is attractive to beginners. | FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance | 2020 |  |\n| C005 | H003 | Prior work reports that Deep reinforcement learning (DRL) has been envisioned to have a competitive edge in quantitative finance. | FinRL: Deep Reinforcement Learning Framework to Automate Trading in Quantitative Finance | 2021 |  |\n| C006 | H003 | Prior work reports that Forecasting the behavior of the stock market is a classic but difficult topic, one that has attracted the interest of both economists and computer scientists. | An Overview of Machine Learning, Deep Learning, and Reinforcement Learning-Based Techniques in Quantitative Finance: Recent Progress and Challenges | 2023 | 10.3390/app13031956 |",
+  "evidence_id": "E024"
+}

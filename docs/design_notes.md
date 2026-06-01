@@ -12,6 +12,25 @@ research idea cards. Each card shows the research gap, new hypothesis, novelty
 argument, required evidence, supporting citations, limitation, and testable
 prediction.
 
+## Official DeepScientist module framing
+
+The selected base direction is official DeepScientist research-agent behavior.
+The official repository is cloned at `C:\Users\99303\git\DeepScientist-official`.
+DeepScientist provides the research workflow pattern:
+
+```text
+paper reading -> research-gap discovery -> hypothesis generation -> report
+```
+
+This project adds a citation evidence-chain tracking module after hypothesis
+generation. The module takes citation-backed claims, checks whether each cited
+paper exists, validates metadata, checks support from public abstracts/snippets,
+links source evidence IDs and tool calls, and emits Green/Yellow/Red labels.
+
+The adapter entrypoint is `agent/deepscientist_adapter.py`. The official
+DeepScientist helper runner is `scripts/audit_deepscientist_output.py`, which
+can audit a quest directory containing `citation_audit_claims.json`.
+
 ## Self-implemented components
 
 - `agent/pdf_reader.py`: reads the first PDF pages and extracts title, abstract,
@@ -21,6 +40,10 @@ prediction.
   arXiv through project-owned API wrappers.
 - `agent/hypothesis_generator.py`: generates conservative research idea cards
   and citation-backed claims.
+- `agent/deepscientist_adapter.py`: exposes the verifier as a DeepScientist
+  post-hypothesis module with standalone outputs.
+- `agent/evidence_chain_tracer.py`: links claims to retrieval evidence,
+  verification evidence, tool-call IDs, and support categories.
 - `agent/citation_verifier.py`: verifies DOI/title existence, metadata match,
   and support strength.
 - `agent/report_writer.py`: writes the required run artifacts.

@@ -83,22 +83,34 @@ class CitationVerifier:
             raise
 
     def _lookup_citation(self, cited: dict[str, Any]) -> tuple[dict[str, Any] | None, str, str]:
+        lookup_errors: list[str] = []
         doi = clean_text(cited.get("doi"))
         if doi and re.match(r"^10\.\d{4,9}/\S+$", doi, flags=re.IGNORECASE):
-            candidate = self._lookup_crossref_doi(doi)
-            if candidate:
-                return candidate, "crossref_doi", ""
+            try:
+                candidate = self._lookup_crossref_doi(doi)
+                if candidate:
+                    return candidate, "crossref_doi", ""
+            except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, OSError) as exc:
+                lookup_errors.append(f"Crossref DOI lookup failed for {doi}: {exc}")
         elif doi:
             return None, "doi_format_check", f"Invalid DOI format: {doi}"
 
         title = clean_text(cited.get("title"))
         if title:
-            candidate = self._lookup_crossref_title(title)
-            if candidate:
-                return candidate, "crossref_title", ""
-            candidate = self._lookup_openalex_title(title)
-            if candidate:
-                return candidate, "openalex_title", ""
+            try:
+                candidate = self._lookup_crossref_title(title)
+                if candidate:
+                    return candidate, "crossref_title", ""
+            except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, OSError) as exc:
+                lookup_errors.append(f"Crossref title lookup failed for {title}: {exc}")
+            try:
+                candidate = self._lookup_openalex_title(title)
+                if candidate:
+                    return candidate, "openalex_title", ""
+            except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, OSError) as exc:
+                lookup_errors.append(f"OpenAlex title lookup failed for {title}: {exc}")
+        if lookup_errors:
+            return None, "lookup_error", " ".join(lookup_errors)
         return None, "not_found", "No matching citation found through DOI/title lookup."
 
     def _classify_claim_support(
@@ -119,6 +131,23 @@ class CitationVerifier:
             "retrieval_source": clean_text(cited.get("retrieval_source") or lookup_source),
             "url": clean_text(cited.get("url") or (candidate or {}).get("url")),
         }
+        if not candidate and lookup_source == "lookup_error":
+            return {
+                **base,
+                "exists_status": "unknown",
+                "metadata_match_status": "unknown",
+                "support_status": "partial_or_uncertain",
+                "color_label": "Yellow",
+                "reason": lookup_error or "Public API lookup failed, so citation support is inconclusive.",
+                "evidence_id": "",
+                "title_similarity": 0.0,
+                "author_match_score": 0.0,
+                "year_match": False,
+                "support_score": 0.0,
+                "matched_evidence_text": "",
+                "verification_method": lookup_source,
+            }
+
         if not candidate:
             return {
                 **base,

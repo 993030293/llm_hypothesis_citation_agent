@@ -1,0 +1,149 @@
+{
+  "queries": [
+    {
+      "query_id": "Q001",
+      "query": "EvoMarket: A High-Fidelity and Scalable Financial Market Simulator agent-based modeling financial market simulation calibration",
+      "purpose": "Find papers directly related to the input paper topic.",
+      "required_terms": [
+        "agent-based modeling",
+        "financial market simulation",
+        "calibration"
+      ],
+      "source_keywords": [
+        "agent-based modeling",
+        "financial market simulation",
+        "calibration",
+        "scalability",
+        "multi-agent systems",
+        "simulation fidelity"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q002",
+      "query": "agent-based modeling financial market simulation calibration scalability multi-agent systems simulation fidelity",
+      "purpose": "Find thematically related literature from extracted keywords.",
+      "required_terms": [
+        "agent-based modeling",
+        "financial market simulation",
+        "calibration",
+        "scalability"
+      ],
+      "source_keywords": [
+        "agent-based modeling",
+        "financial market simulation",
+        "calibration",
+        "scalability",
+        "multi-agent systems",
+        "simulation fidelity"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q003",
+      "query": "presentsevomarket discrete-event multi-agent financial market simulator designed",
+      "purpose": "Find papers around the research problem or gap.",
+      "required_terms": [
+        "presentsevomarket",
+        "discrete-event",
+        "multi-agent",
+        "financial"
+      ],
+      "source_keywords": [
+        "agent-based modeling",
+        "financial market simulation",
+        "calibration",
+        "scalability",
+        "multi-agent systems",
+        "simulation fidelity"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q004",
+      "query": "agent-based modeling financial market simulation calibration scalability survey review",
+      "purpose": "Find broader review literature for citation grounding.",
+      "required_terms": [
+        "agent-based modeling",
+        "financial market simulation",
+        "calibration"
+      ],
+      "source_keywords": [
+        "agent-based modeling",
+        "financial market simulation",
+        "calibration",
+        "scalability",
+        "multi-agent systems",
+        "simulation fidelity"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q005",
+      "query": "agent-based modeling financial market simulation calibration scalability multi-agent systems method framework",
+      "purpose": "Follow-up method query from initial retrieval results.",
+      "required_terms": [
+        "agent-based modeling",
+        "financial market simulation",
+        "calibration",
+        "scalability"
+      ],
+      "source_keywords": [
+        "agent-based modeling",
+        "financial market simulation",
+        "calibration",
+        "scalability",
+        "multi-agent systems",
+        "simulation fidelity"
+      ],
+      "query_stage": "followup",
+      "query_type": "method-oriented"
+    },
+    {
+      "query_id": "Q006",
+      "query": "agent-based modeling financial market simulation calibration scalability application cross disciplinary",
+      "purpose": "Follow-up application query for cross-disciplinary hypothesis transfer.",
+      "required_terms": [
+        "agent-based modeling",
+        "financial market simulation",
+        "calibration",
+        "scalability"
+      ],
+      "source_keywords": [
+        "agent-based modeling",
+        "financial market simulation",
+        "calibration",
+        "scalability",
+        "multi-agent systems",
+        "simulation fidelity"
+      ],
+      "query_stage": "followup",
+      "query_type": "application-oriented"
+    },
+    {
+      "query_id": "Q007",
+      "query": "agent-based modeling financial market simulation calibration scalability limitations challenge",
+      "purpose": "Follow-up limitation query to surface uncertainty or contradiction.",
+      "required_terms": [
+        "agent-based modeling",
+        "financial market simulation",
+        "calibration",
+        "scalability"
+      ],
+      "source_keywords": [
+        "agent-based modeling",
+        "financial market simulation",
+        "calibration",
+        "scalability",
+        "multi-agent systems",
+        "simulation fidelity"
+      ],
+      "query_stage": "followup",
+      "query_type": "limitation-oriented"
+    }
+  ]
+}

@@ -136,3 +136,27 @@ def test_red_when_citation_not_found(tmp_path: Path) -> None:
     assert row["color_label"] == "Red"
     assert row["exists_status"] == "not_found"
     assert row["verification_method"] == "fixture"
+
+
+def test_yellow_when_public_api_lookup_fails(tmp_path: Path) -> None:
+    verifier = make_verifier(tmp_path)
+    claim = {
+        "claim_id": "C006",
+        "claim_text": "Prior work reports that citation verification supports evidence-grounded writing.",
+        "cited_work": {
+            "title": "Citation Verification for Evidence Grounded Writing",
+            "authors": ["A. Researcher"],
+            "year": 2026,
+            "doi": "10.0000/example",
+        },
+    }
+    row = verifier._classify_claim_support(
+        claim,
+        claim["cited_work"],
+        None,
+        "lookup_error",
+        "Crossref DOI lookup failed: HTTP Error 429: Too Many Requests",
+    )
+    assert row["color_label"] == "Yellow"
+    assert row["exists_status"] == "unknown"
+    assert row["support_status"] == "partial_or_uncertain"

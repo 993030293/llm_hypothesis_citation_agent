@@ -1,0 +1,142 @@
+{
+  "queries": [
+    {
+      "query_id": "Q001",
+      "query": "Large Language Models for Education: A Survey artificial intelligence smart education llms",
+      "purpose": "Find papers directly related to the input paper topic.",
+      "required_terms": [
+        "artificial intelligence",
+        "smart education",
+        "llms"
+      ],
+      "source_keywords": [
+        "artificial intelligence",
+        "smart education",
+        "llms",
+        "applications",
+        "challenges"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q002",
+      "query": "artificial intelligence smart education llms applications challenges",
+      "purpose": "Find thematically related literature from extracted keywords.",
+      "required_terms": [
+        "artificial intelligence",
+        "smart education",
+        "llms",
+        "applications"
+      ],
+      "source_keywords": [
+        "artificial intelligence",
+        "smart education",
+        "llms",
+        "applications",
+        "challenges"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q003",
+      "query": "education university guangzhou china chicago artificial intelligence",
+      "purpose": "Find papers around the research problem or gap.",
+      "required_terms": [
+        "education",
+        "university",
+        "guangzhou",
+        "china"
+      ],
+      "source_keywords": [
+        "artificial intelligence",
+        "smart education",
+        "llms",
+        "applications",
+        "challenges"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q004",
+      "query": "artificial intelligence smart education llms applications survey review",
+      "purpose": "Find broader review literature for citation grounding.",
+      "required_terms": [
+        "artificial intelligence",
+        "smart education",
+        "llms"
+      ],
+      "source_keywords": [
+        "artificial intelligence",
+        "smart education",
+        "llms",
+        "applications",
+        "challenges"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q005",
+      "query": "artificial intelligence smart education llms applications challenges method framework",
+      "purpose": "Follow-up method query from initial retrieval results.",
+      "required_terms": [
+        "artificial intelligence",
+        "smart education",
+        "llms",
+        "applications"
+      ],
+      "source_keywords": [
+        "artificial intelligence",
+        "smart education",
+        "llms",
+        "applications",
+        "challenges"
+      ],
+      "query_stage": "followup",
+      "query_type": "method-oriented"
+    },
+    {
+      "query_id": "Q006",
+      "query": "artificial intelligence smart education llms applications application cross disciplinary",
+      "purpose": "Follow-up application query for cross-disciplinary hypothesis transfer.",
+      "required_terms": [
+        "artificial intelligence",
+        "smart education",
+        "llms",
+        "applications"
+      ],
+      "source_keywords": [
+        "artificial intelligence",
+        "smart education",
+        "llms",
+        "applications",
+        "challenges"
+      ],
+      "query_stage": "followup",
+      "query_type": "application-oriented"
+    },
+    {
+      "query_id": "Q007",
+      "query": "artificial intelligence smart education llms applications limitations challenge",
+      "purpose": "Follow-up limitation query to surface uncertainty or contradiction.",
+      "required_terms": [
+        "artificial intelligence",
+        "smart education",
+        "llms",
+        "applications"
+      ],
+      "source_keywords": [
+        "artificial intelligence",
+        "smart education",
+        "llms",
+        "applications",
+        "challenges"
+      ],
+      "query_stage": "followup",
+      "query_type": "limitation-oriented"
+    }
+  ]
+}

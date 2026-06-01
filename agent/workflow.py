@@ -10,13 +10,14 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from agent.citation_verifier import CitationVerifier
+from agent.evidence_chain_tracer import EvidenceChainTracer
 from agent.hypothesis_generator import HypothesisGenerator
 from agent.literature_search import LiteratureSearcher
 from agent.pdf_reader import PdfReaderTool
 from agent.query_planner import QueryPlanner
 from agent.report_writer import ReportWriter
 from agent.run_logging import EvidenceStore, ToolCallLogger
-from agent.utils import timestamp_id
+from agent.utils import configure_utf8_stdio, timestamp_id
 
 
 def parse_args() -> argparse.Namespace:
@@ -54,6 +55,7 @@ def parse_args() -> argparse.Namespace:
 
 
 def main() -> int:
+    configure_utf8_stdio()
     args = parse_args()
     if args.live_demo:
         args.max_pages = min(args.max_pages, 2)
@@ -89,6 +91,7 @@ def main() -> int:
     searcher = LiteratureSearcher(logger, evidence)
     generator = HypothesisGenerator(logger, evidence)
     verifier = CitationVerifier(logger, evidence)
+    evidence_tracer = EvidenceChainTracer(logger, evidence)
     writer = ReportWriter(logger, evidence)
 
     paper_summary = pdf_reader.read(pdf_path, max_pages=args.max_pages)
@@ -131,6 +134,13 @@ def main() -> int:
     verification_rows = verifier.verify(hypothesis_payload.get("claims", []))
     print(f"[5/7] Citations verified: {len(verification_rows)}")
 
+    evidence_tracer.trace_and_write(
+        run_dir,
+        hypothesis_payload=hypothesis_payload,
+        literature=literature,
+        verification_rows=verification_rows,
+    )
+
     writer.write_all(
         run_dir,
         task=args.task,
@@ -152,6 +162,8 @@ def main() -> int:
         "retrieved_literature.jsonl",
         "generated_hypothesis.md",
         "citation_verification.csv",
+        "evidence_chain.csv",
+        "evidence_chain.md",
         "final_report.md",
         "tool_calls.jsonl",
         "evidence_items.jsonl",

@@ -3,6 +3,7 @@ from __future__ import annotations
 import html
 import json
 import re
+import sys
 from collections import Counter
 from datetime import datetime, timezone
 from difflib import SequenceMatcher
@@ -77,6 +78,19 @@ STOPWORDS = {
 
 def now_iso() -> str:
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
+
+
+def configure_utf8_stdio() -> None:
+    """Prefer UTF-8 console output for PDF titles and metadata on Windows."""
+
+    for stream_name in ("stdout", "stderr"):
+        stream = getattr(sys, stream_name, None)
+        if stream is None or not hasattr(stream, "reconfigure"):
+            continue
+        try:
+            stream.reconfigure(encoding="utf-8", errors="replace")
+        except (OSError, ValueError):
+            pass
 
 
 def timestamp_id() -> str:

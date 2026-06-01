@@ -1,0 +1,191 @@
+{
+  "queries": [
+    {
+      "query_id": "Q001",
+      "query": "Graph Networks as a Universal Machine Learning megnet property crystals",
+      "purpose": "Find papers directly related to the input paper topic.",
+      "required_terms": [
+        "megnet",
+        "property",
+        "crystals"
+      ],
+      "source_keywords": [
+        "megnet",
+        "property",
+        "crystals",
+        "materials",
+        "graph",
+        "set",
+        "energy",
+        "machine",
+        "learning",
+        "new",
+        "prediction",
+        "larger"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q002",
+      "query": "megnet property crystals materials graph set",
+      "purpose": "Find thematically related literature from extracted keywords.",
+      "required_terms": [
+        "megnet",
+        "property",
+        "crystals",
+        "materials"
+      ],
+      "source_keywords": [
+        "megnet",
+        "property",
+        "crystals",
+        "materials",
+        "graph",
+        "set",
+        "energy",
+        "machine",
+        "learning",
+        "new",
+        "prediction",
+        "larger"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q003",
+      "query": "megnet trained crystals formation energies band gaps",
+      "purpose": "Find papers around the research problem or gap.",
+      "required_terms": [
+        "megnet",
+        "trained",
+        "crystals",
+        "formation"
+      ],
+      "source_keywords": [
+        "megnet",
+        "property",
+        "crystals",
+        "materials",
+        "graph",
+        "set",
+        "energy",
+        "machine",
+        "learning",
+        "new",
+        "prediction",
+        "larger"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q004",
+      "query": "megnet property crystals materials survey review",
+      "purpose": "Find broader review literature for citation grounding.",
+      "required_terms": [
+        "megnet",
+        "property",
+        "crystals"
+      ],
+      "source_keywords": [
+        "megnet",
+        "property",
+        "crystals",
+        "materials",
+        "graph",
+        "set",
+        "energy",
+        "machine",
+        "learning",
+        "new",
+        "prediction",
+        "larger"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q005",
+      "query": "megnet property crystals materials graph method framework",
+      "purpose": "Follow-up method query from initial retrieval results.",
+      "required_terms": [
+        "megnet",
+        "property",
+        "crystals",
+        "materials"
+      ],
+      "source_keywords": [
+        "megnet",
+        "property",
+        "crystals",
+        "materials",
+        "graph",
+        "set",
+        "energy",
+        "machine",
+        "learning",
+        "new",
+        "prediction",
+        "larger"
+      ],
+      "query_stage": "followup",
+      "query_type": "method-oriented"
+    },
+    {
+      "query_id": "Q006",
+      "query": "megnet property crystals materials application cross disciplinary",
+      "purpose": "Follow-up application query for cross-disciplinary hypothesis transfer.",
+      "required_terms": [
+        "megnet",
+        "property",
+        "crystals",
+        "materials"
+      ],
+      "source_keywords": [
+        "megnet",
+        "property",
+        "crystals",
+        "materials",
+        "graph",
+        "set",
+        "energy",
+        "machine",
+        "learning",
+        "new",
+        "prediction",
+        "larger"
+      ],
+      "query_stage": "followup",
+      "query_type": "application-oriented"
+    },
+    {
+      "query_id": "Q007",
+      "query": "megnet property crystals materials limitations challenge",
+      "purpose": "Follow-up limitation query to surface uncertainty or contradiction.",
+      "required_terms": [
+        "megnet",
+        "property",
+        "crystals",
+        "materials"
+      ],
+      "source_keywords": [
+        "megnet",
+        "property",
+        "crystals",
+        "materials",
+        "graph",
+        "set",
+        "energy",
+        "machine",
+        "learning",
+        "new",
+        "prediction",
+        "larger"
+      ],
+      "query_stage": "followup",
+      "query_type": "limitation-oriented"
+    }
+  ]
+}

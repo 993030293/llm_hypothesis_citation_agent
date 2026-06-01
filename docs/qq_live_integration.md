@@ -21,7 +21,7 @@ It runs the local workflow and replies with:
 - run directory;
 - Green / Yellow / Red counts;
 - paths to `tool_calls.jsonl`, `retrieved_literature.jsonl`,
-  `citation_verification.csv`, and `final_report.md`;
+  `citation_verification.csv`, `evidence_chain.csv`, and `final_report.md`;
 - a short report excerpt.
 
 It does not require a DeepSeek or OpenAI API key.
@@ -106,6 +106,7 @@ For grading, capture real screenshots or screen recordings showing:
 - `tool_calls.jsonl`;
 - `retrieved_literature.jsonl`;
 - `citation_verification.csv`;
+- `evidence_chain.csv`;
 - `final_report.md`.
 
 Store them under:

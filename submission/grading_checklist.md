@@ -14,8 +14,13 @@ Talking points:
   research idea generation, and citation verification.
 - The key risk is that LLM-generated research ideas may cite nonexistent or
   weakly supporting papers.
-- The system follows a DeepScientist-style pipeline but implements its own
-  local tools for parsing, retrieval, logging, generation, and verification.
+- The project explicitly chooses the official DeepScientist direction. The
+  official repo is cloned at `C:\Users\99303\git\DeepScientist-official`.
+- The added module is a citation evidence-chain tracker inserted after
+  hypothesis generation and before final report writing.
+- The extension implements its own local tools for citation extraction contract,
+  public-API lookup, metadata matching, evidence-chain tracing, logging, and
+  Green/Yellow/Red verification.
 
 ## 2. Function implementation or experiment design, 25 points
 
@@ -25,6 +30,8 @@ Evidence to show:
 - `agent/query_planner.py`
 - `agent/literature_search.py`
 - `agent/hypothesis_generator.py`
+- `agent/deepscientist_adapter.py`
+- `agent/evidence_chain_tracer.py`
 - `agent/citation_verifier.py`
 - `agent/report_writer.py`
 - `agent/qq_demo_bridge.py`
@@ -32,6 +39,9 @@ Evidence to show:
 Talking points:
 
 - The system is not a prompt-only agent.
+- `agent/deepscientist_adapter.py` exposes the verifier as a DeepScientist
+  post-hypothesis module that accepts citation-backed claims.
+- `agent/evidence_chain_tracer.py` links claims to evidence IDs and tool-call IDs.
 - Retrieval uses project-owned wrappers for Crossref and OpenAlex.
 - Search is two-stage: initial queries from the PDF, then follow-up queries
   derived from the first retrieval pass.
@@ -47,12 +57,16 @@ Evidence to show:
 - `submission/evidence/success_case/tool_calls.jsonl`
 - `submission/evidence/success_case/retrieved_literature.jsonl`
 - `submission/evidence/success_case/citation_verification.csv`
+- `submission/evidence/success_case/evidence_chain.csv`
 - `submission/evidence/boundary_case/citation_verification.csv`
+- `docs/official_deepscientist_extension_plan.md`
 
 Talking points:
 
 - The prepared evidence comes from real workflow runs.
 - The commands and expected artifact set are documented.
+- The official DeepScientist extension path is documented, including the
+  `citation_audit_claims.json` contract and audit command.
 - The stress audit tests multiple PDF layouts and independently re-checks
   citation labels online.
 - The teacher can rerun the system from the repository root.

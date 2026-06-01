@@ -1,0 +1,293 @@
+{
+  "hypotheses": [
+    {
+      "hypothesis_id": "H001",
+      "idea_type": "conservative extension",
+      "evidence_status": "citation_backed",
+      "research_gap": "In this paper we aim to start answering this question through an experiment in which we provided access to a popular and powerful general LLM, GPT-4, to students in a large online coding course. To investigate the potential impact of LLMs on students learning to code, we conducted a randomized control trial in which we provided a subset of students in a massive free online coding class with over 8,762 students in 146 countries access to a course-specific interface to GPT-4.",
+      "new_hypothesis": "A conservative next study should test whether techniques or observations from 'The GPT Surprise: Offering Large Language Model Chat in a Massive Coding Class Reduced Engagement but Increased Adopters Exam Performances' and 'Students-Centric Evaluation Survey for Exploring the Impact of LLMs on UML Modeling' improve evidence-grounded work on coding, llms, students, impact.",
+      "why_novel": "It combines two retrieved strands with the input paper's research problem rather than copying either paper.",
+      "required_evidence": [
+        "Verify that both cited works exist and match metadata.",
+        "Verify that abstracts or snippets support the claims used to ground the idea.",
+        "Run a small empirical or literature review check before presenting the idea as a conclusion."
+      ],
+      "supporting_citations": [
+        {
+          "claim_id": "C001",
+          "literature_id": "L001",
+          "title": "The GPT Surprise: Offering Large Language Model Chat in a Massive Coding Class Reduced Engagement but Increased Adopters Exam Performances",
+          "year": 2024,
+          "doi": "10.31219/osf.io/qy8zd",
+          "evidence_id": "E002",
+          "retrieval_source": "crossref"
+        },
+        {
+          "claim_id": "C002",
+          "literature_id": "L002",
+          "title": "Students-Centric Evaluation Survey for Exploring the Impact of LLMs on UML Modeling",
+          "year": 2025,
+          "doi": "10.20944/preprints202505.2054.v1",
+          "evidence_id": "E003",
+          "retrieval_source": "crossref"
+        }
+      ],
+      "risk_or_limitation": "Novelty is moderate; the idea may be an incremental extension if the cited works already overlap strongly.",
+      "testable_prediction": "If this idea is valid, then a follow-up study on coding, llms, students, impact should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.",
+      "citation_claim_ids": [
+        "C001",
+        "C002"
+      ],
+      "hypothesis_text": "A conservative next study should test whether techniques or observations from 'The GPT Surprise: Offering Large Language Model Chat in a Massive Coding Class Reduced Engagement but Increased Adopters Exam Performances' and 'Students-Centric Evaluation Survey for Exploring the Impact of LLMs on UML Modeling' improve evidence-grounded work on coding, llms, students, impact."
+    },
+    {
+      "hypothesis_id": "H002",
+      "idea_type": "cross-disciplinary analogy",
+      "evidence_status": "citation_backed",
+      "research_gap": "In this paper we aim to start answering this question through an experiment in which we provided access to a popular and powerful general LLM, GPT-4, to students in a large online coding course. To investigate the potential impact of LLMs on students learning to code, we conducted a randomized control trial in which we provided a subset of students in a massive free online coding class with over 8,762 students in 146 countries access to a course-specific interface to GPT-4.",
+      "new_hypothesis": "If the mechanisms discussed in 'Artificial intelligence takes center stage: exploring the capabilities and implications of ChatGPT and other AI‐assisted technologies in scientific research and education' transfer across domains, then coding, llms, students, impact may benefit from a cross-disciplinary evaluation protocol grounded by 'The GPT Surprise: Offering Large Language Model Chat in a Massive Coding Class Reduced Engagement But May Increase Adopters' Exam Performances'.",
+      "why_novel": "The idea explicitly treats retrieved literature as an analogy source for a different research setting.",
+      "required_evidence": [
+        "Verify that both cited works exist and match metadata.",
+        "Verify that abstracts or snippets support the claims used to ground the idea.",
+        "Run a small empirical or literature review check before presenting the idea as a conclusion."
+      ],
+      "supporting_citations": [
+        {
+          "claim_id": "C003",
+          "literature_id": "L003",
+          "title": "Artificial intelligence takes center stage: exploring the capabilities and implications of ChatGPT and other AI‐assisted technologies in scientific research and education",
+          "year": 2023,
+          "doi": "10.1111/imcb.12689",
+          "evidence_id": "E005",
+          "retrieval_source": "openalex"
+        },
+        {
+          "claim_id": "C004",
+          "literature_id": "L004",
+          "title": "The GPT Surprise: Offering Large Language Model Chat in a Massive Coding Class Reduced Engagement But May Increase Adopters' Exam Performances",
+          "year": 2025,
+          "doi": "10.1145/3698205.3733960",
+          "evidence_id": "E004",
+          "retrieval_source": "crossref"
+        }
+      ],
+      "risk_or_limitation": "The analogy may fail if the source domain assumptions do not hold for the input paper's domain.",
+      "testable_prediction": "If this idea is valid, then a follow-up study on coding, llms, students, impact should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.",
+      "citation_claim_ids": [
+        "C003",
+        "C004"
+      ],
+      "hypothesis_text": "If the mechanisms discussed in 'Artificial intelligence takes center stage: exploring the capabilities and implications of ChatGPT and other AI‐assisted technologies in scientific research and education' transfer across domains, then coding, llms, students, impact may benefit from a cross-disciplinary evaluation protocol grounded by 'The GPT Surprise: Offering Large Language Model Chat in a Massive Coding Class Reduced Engagement But May Increase Adopters' Exam Performances'."
+    },
+    {
+      "hypothesis_id": "H003",
+      "idea_type": "high-risk speculative idea",
+      "evidence_status": "citation_backed",
+      "research_gap": "In this paper we aim to start answering this question through an experiment in which we provided access to a popular and powerful general LLM, GPT-4, to students in a large online coding course. To investigate the potential impact of LLMs on students learning to code, we conducted a randomized control trial in which we provided a subset of students in a massive free online coding class with over 8,762 students in 146 countries access to a course-specific interface to GPT-4.",
+      "new_hypothesis": "A higher-risk hypothesis is that the shared signals behind 'ChatGPT as a Tool for Medical Education and Clinical Decision-Making on the Wards: Case Study' and 'Diagnosis Coding: Why Services Are Provided (Online Exclusive)' point to a broader latent factor affecting coding, llms, students, impact.",
+      "why_novel": "It proposes a broader latent explanation rather than only applying a known method.",
+      "required_evidence": [
+        "Verify that both cited works exist and match metadata.",
+        "Verify that abstracts or snippets support the claims used to ground the idea.",
+        "Run a small empirical or literature review check before presenting the idea as a conclusion."
+      ],
+      "supporting_citations": [
+        {
+          "claim_id": "C005",
+          "literature_id": "L005",
+          "title": "ChatGPT as a Tool for Medical Education and Clinical Decision-Making on the Wards: Case Study",
+          "year": 2024,
+          "doi": "10.2196/51346",
+          "evidence_id": "E016",
+          "retrieval_source": "openalex"
+        },
+        {
+          "claim_id": "C006",
+          "literature_id": "L006",
+          "title": "Diagnosis Coding: Why Services Are Provided (Online Exclusive)",
+          "year": 2006,
+          "doi": "10.1542/pcco_book029_document005",
+          "evidence_id": "E006",
+          "retrieval_source": "crossref"
+        }
+      ],
+      "risk_or_limitation": "This is speculative and should be treated as Yellow unless stronger evidence is retrieved.",
+      "testable_prediction": "If this idea is valid, then a follow-up study on coding, llms, students, impact should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.",
+      "citation_claim_ids": [
+        "C005",
+        "C006"
+      ],
+      "hypothesis_text": "A higher-risk hypothesis is that the shared signals behind 'ChatGPT as a Tool for Medical Education and Clinical Decision-Making on the Wards: Case Study' and 'Diagnosis Coding: Why Services Are Provided (Online Exclusive)' point to a broader latent factor affecting coding, llms, students, impact."
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "C001",
+      "claim_text": "Prior work reports that Large language models (LLMs) are quickly being adopted in a wide range of learning experiences, especially via ubiquitous and broadly accessible chat interfaces like ChatGPT and Copilot.",
+      "hypothesis_id": "H001",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "The GPT Surprise: Offering Large Language Model Chat in a Massive Coding Class Reduced Engagement but Increased Adopters Exam Performances",
+        "authors": [
+          "Allen Nie",
+          "Yash Chandak",
+          "Miroslav Suzara",
+          "Ali Malik",
+          "Juliette Woodrow",
+          "Matt Peng",
+          "Mehran Sahami",
+          "Emma Brunskill",
+          "Chris Piech"
+        ],
+        "year": 2024,
+        "doi": "10.31219/osf.io/qy8zd",
+        "venue": "",
+        "url": "https://doi.org/10.31219/osf.io/qy8zd",
+        "retrieval_source": "crossref",
+        "literature_id": "L001",
+        "evidence_id": "E002",
+        "abstract": "Large language models (LLMs) are quickly being adopted in a wide range of learning experiences, especially via ubiquitous and broadly accessible chat interfaces like ChatGPT and Copilot. This type of interface is readily available to students and teachers around the world, yet relatively little research has been done to assess the impact of such generic tools on student learning. Coding education is an interesting test case, both because LLMs have strong performance on coding tasks, and because LLM-powered support tools are rapidly becoming part of the workflow of professional software engineers. To help understand the impact of generic LLM use on coding education, we conducted a large-scale randomized control trial with 5,831 students from 146 countries in an online coding class in which we provided some students with access to a chat interface with GPT-4. We estimate positive benefits on exam performance for adopters, the students who used the tool, but over all students, the advertisement of GPT-4 led to a significant average decrease in exam participation. We observe similar decreases in other forms of course engagement. However, this decrease is modulated by the student's country of origin. Offering access to LLMs to students from low human development index countries increased their exam participation rate on average. Our results suggest there may be promising benefits to using LLMs in an introductory coding class, but also potential harms for engagement, which makes their longer term impact on student success unclear. Our work highlights the need for additional investigations to help understand the potential impact of future adoption and integration of LLMs into classrooms.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C002",
+      "claim_text": "Prior work reports that Unified Modeling Language (UML) diagrams are essential tools for visualizing system structure and behavior in software design.",
+      "hypothesis_id": "H001",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Students-Centric Evaluation Survey for Exploring the Impact of LLMs on UML Modeling",
+        "authors": [
+          "Bilal Al-Ahmad",
+          "Anas Alsobeh",
+          "Omar Meqdadi",
+          "Nazimuddin Shaikh",
+          "Md Faisal Kabir"
+        ],
+        "year": 2025,
+        "doi": "10.20944/preprints202505.2054.v1",
+        "venue": "",
+        "url": "https://doi.org/10.20944/preprints202505.2054.v1",
+        "retrieval_source": "crossref",
+        "literature_id": "L002",
+        "evidence_id": "E003",
+        "abstract": "Unified Modeling Language (UML) diagrams are essential tools for visualizing system structure and behavior in software design. With the rise of using Large Language Models (LLMs) in automating various phases of software development, there is growing interest in automating UML diagrams generation. To that end, this study presents an empirical investigation into the effectiveness of LLMs, GPT-4-turbo, in generating structural (Class, Deployment) and behavioral (Use Case, Sequence) UML diagrams. A rule-based prompt engineering was developed to transform domain scenarios, extracted from a widely used UML textbook, into optimized prompts fed to LLMs. Then, UML diagrams were automatically synthesized using PlantUML, and evaluated through a survey of 121 computer science and software engineering students across three U.S. universities. Participants assessed completeness and correctness for both of LLM-assisted and Human-created diagrams by checking various elements for each single UML diagram. Statistical analyses, including paired t-tests, Wilcoxon signed-rank tests, and Pearson correlation, were conducted to validate the results. Findings revealed that LLM-assisted diagrams achieve completeness and correctness scores of 65%, 61.1% for Class diagram, 65.9%, 64.3% for Deployment diagram, 67.1%, 64.2% for Use Case diagram, and 67.7%, 66.2% for Sequence diagram. Whereas, the completeness and correctness for human-created diagrams reported as (79.8%, 76.3%), (70%, 73%), (80.7%, 80.4%), and (73.2%, 72.6%) for Class, Deployment, Use Case, and Sequence diagrams accordingly. Obviously, Class and Use Case diagrams show less similarity comparing to human-created models, while Deployment and Sequence diagrams show stronger alignment.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C003",
+      "claim_text": "Prior work reports that The emergence of large language models (LLMs) and assisted artificial intelligence (AI) technologies have revolutionized the way in which we interact with technology.",
+      "hypothesis_id": "H002",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Artificial intelligence takes center stage: exploring the capabilities and implications of ChatGPT and other AI‐assisted technologies in scientific research and education",
+        "authors": [
+          "Jessica G Borger",
+          "Ashley P. Ng",
+          "Holly Anderton",
+          "George W. Ashdown",
+          "Megan Auld",
+          "Marnie E. Blewitt",
+          "Daniel V. Brown",
+          "Melissa Call",
+          "Peter Collins",
+          "Saskia Freytag",
+          "Leonard C. Harrison",
+          "Eva Hesping",
+          "Jaci Hoysted",
+          "Anna Johnston",
+          "Andrew McInneny",
+          "Phil Tang",
+          "Lachlan Whitehead",
+          "Aaron R. Jex",
+          "Shalin H. Naik"
+        ],
+        "year": 2023,
+        "doi": "10.1111/imcb.12689",
+        "venue": "Immunology and Cell Biology",
+        "url": "https://doi.org/10.1111/imcb.12689",
+        "retrieval_source": "openalex",
+        "literature_id": "L003",
+        "evidence_id": "E005",
+        "abstract": "The emergence of large language models (LLMs) and assisted artificial intelligence (AI) technologies have revolutionized the way in which we interact with technology. A recent symposium at the Walter and Eliza Hall Institute explored the current practical applications of LLMs in medical research and canvassed the emerging ethical, legal and social implications for the use of AI-assisted technologies in the sciences. This paper provides an overview of the symposium's key themes and discussions delivered by diverse speakers, including early career researchers, group leaders, educators and policy-makers highlighting the opportunities and challenges that lie ahead for scientific researchers and educators as we continue to explore the potential of this cutting-edge and emerging technology. The emergence of large language models (LLMs) and assisted artificial intelligence (AI) technologies such as ChatGPT and Bard have revolutionized the way in which we interact with technology. These publicly available LLMs can generate cogent, human-like and human-level responses and have a diverse range of potential applications across diverse knowledge areas, including scientific research and education. However, with such advancements comes a new set of ethical, legal and social implications. Medical research and education are no exceptions, and our organizations must contend with new models of governance and responsibility. A recent Chat-GPT symposium at the Walter and Eliza Hall Medical Research Institute (WEHI)1 explored the current practical applications of LLMs in medical research and canvassed the emerging ethical, legal and social implications for the use of AI-assisted technologies in the sciences. The symposium was led by early career researchers, lab heads, educators and policy-makers, representing the diverse academic landscape within medical research institutes who engage with ChatGPT in their work, who as experts in their fields are learning to navigate the appropriate, efficient and ethical application of AI and LLMs. Together, the speakers sought to provoke discussions within the 500+ in-person and online audience on the use of AI-assisted technologies in scientific research, including its use as an overtly friendly editor of scientific papers and grants, its ability to turn non-coders into bioinformaticians, and its ability to analyze big data at warp speed. In addition to the emergence of AI-driven tools such as Alphafold and protein hallucination, the symposium addressed broader societal implications of using AI-assisted technologies in science, including concerns around the ethics, privacy, confidentiality and security of research data and writing that is entered into the AI-assisted technologies ether. This paper provides an overview of the WEHI Chat-GPT symposium's key themes and discussions, highlighting the opportunities and challenges that lie ahead for scientific researchers and educators as we continue to explore the potential of this cutting-edge and emerging technology. “Artificial intelligence” has certainly captured the popular imagination since the launch of ChatGPT, but models of AI have been used widely in scientific and clinical research for some time.2 Models can drive cars, recognize images and even create synthetic data – but ChatGPT is different in several ways. As a LLM, it is immediately accessible, and interacting with the model is as easy as having an online conversation. Designed to allow users to enter natural language “prompts” to “generate” a human-level response, depending on the nature of the prompt, the output can often surpass the knowledge, expertise and efficiency of the human entering it. This is relevant to many “human”-driven tasks from basic editing and distillation of a topic to complex analysis and collation of dispersed information. Crossing the threshold from science-fiction into reality has required significant technological and financial investment into the development and training of neural network-based models by well-resourced AI technology focused companies and collaborations. GPT4, for example, required significant investment from Microsoft to enable the OpenAI AI startup for the development and evolution to its current form. This highlights the scale of “training” required to produce their predictive text generating model and the important logistical considerations required for model implementation prior to public release, including how such models may interact with societal ethical, legal and social implications considerations. OpenAI has made a splash in the AI Language Network space before. The earlier GPT2 LLM – a text completion neural network launched by OpenAI in 2019 – had “limited” release amid concerns that a full version may be used to create fake news articles or be used for other nefarious purpose.3 The full 1.5B parameter network was released soon after, when their claimed fears turned out to be an overestimation of the network's performance and that its output did not traverse the “uncanny valley” to human-like responses (Figure 1). However, the leap between GPT2 to subsequent iterations of GPT3.5 and most recently GPT4 was stark. It is interesting that while OpenAI has given access to the full model, they have built in several safeguards to mitigate its malicious use, as anyone who has used it has almost certainly come across the phrase “As an AI language model, I can-not…”. Artificial intelligence tools designed for academic researchers have seen significant growth and adoption in recent years. These tools are created to address various challenges faced by researchers, helping them to streamline their work, improve efficiency and enhance the quality of their research. There now exists an expansive toolbox for academic researchers to support writing with inbuilt reference managers, image and video analysis, AI-assisted survey and experimental design platforms as well as plagiarism detectors within education (Table 1). These AI technologies and related tools have revolutionized the academic landscape, making it easier for researchers to tackle complex challenges and to focus more on the creative aspects of their work. While AI can offer tremendous benefits, it is essential for researchers to understand the limitations and potential biases of these tools to ensure the reliability and validity of their research findings. Zotero Mendeley EndNote ChatPDF Scholarcy Explainpaper IBM SPPS R Pandas NumPy Google translate NLTK spaCy OpenCV TensorFlow DALL-E2 Cariyon Microsoft teams Slack Google Workspace Elicit Qualtrics SurveyMonkey Semantic Scholar Iris.ai Research rabbit R Discovery Tableau Power BI Turnitin IThenticate Copyscape The WEHI Chat-GPT symposium identified two broad, overlapping themes to be considered when adopting ChatGPT and related LLM and AI-based tools in scientific and medical research: (1) the wide range of applications for AI in scientific research, communication and education and its potential to improve as well as to confuse; (2) the implications, current challenges and potential future developments in the application of AI to broader academic domains, including ethics, law, security and intelligence, and analyzed these in context of what it will mean to be a scientist in the future. We will now discuss these themes, with consideration of how these LLM and AI-based tools will further impact science and academic domains as they become integrated into widely used word-processing, spreadsheet and multimedia software. The following discussions are to provoke thought and invoke discussions among the readers on these broad themes that as scientists, educators and ethicists we are navigating with limited, but growing, understanding and experience. Expert reviews on these themes can be found in Table 2. Large language models can be applied in various applications across a breadth of scientific and medical research, which is not limited to the work performed at the bench, including the potential for AI-assisted technologies to bridge language barriers in science. Indeed, there is an exciting potential for AI-assisted technologies to improve accessibility and to facilitate collaboration between non-native English speaker scientists from different parts of the world. However, real concerns have been identified around bias and accuracy in text generation, particularly in the context of scientific research where accuracy and objectivity are paramount. Scientific literature is vital in advancing knowledge, but poor readability often poses a significant challenge. This issue goes beyond the use of technical jargon and incorrect English syntax. Common barriers to comprehension in scientific writing include excessive passive voice, long and convoluted sentences and unnecessarily complex language. Poorly written articles can hinder effective communication and impede dissemination of scientific findings within the scientific community and beyond. Additionally, in the increasingly competitive landscape of scientific funding, it is essential to convey the quality of research, its significance and a sense of while In this ChatGPT has as an effective writing ChatGPT can convoluted text and that may hinder a It can and jargon and complex making scientific writing more to This is particularly in where making may The in AI can performance in and scientific The output from a model is language and not scientific While an LLM can generate research and implications, these may be and an human must text and with experts to within their the with which AI can produce poses a real and Additionally, the training access to is limited by its more applications that the LLM to the are by scientists can their and them to focus on the scientific quality of their work while using AI to enhance the readability and accessibility of their As the and scientific research increasingly and the of English language for researchers be English speakers may challenges with limited and a sense of among or In this ChatGPT has as an and LLMs can translate complex sentences in including with different (Figure This in barriers between English as the scientific language and the of that are by scientists around the advancing science, its and communication is an important of a scientist and the scientific community that with English as a language are between scientists, the of a work and effective can be by the broad and potential written communication of diverse as in different LLMs can to bridge the communication of to or can improve context and the that is to complex in are more by English speakers (Figure to basic ChatGPT can as a and in AI can even non-native English speakers to improve their while applications such as AI in ChatGPT is a for non-native English speakers for them to such as in their language. can be used to to ensure ChatGPT as a Microsoft to GPT4 as a and Google to Bard LLM into the Google of LLMs will streamline many These will facilitate AI in such as discussions, and spreadsheet such that non-native English speakers to from the of these AI LLMs have text effective communication is of a most and AI to improve communication will and in the scientific of often of as their In addition to scientific language and can a large of While may have access to writing and that their such are not or AI such as are used with to writing on and for identified GPT4 soon to become of the ChatGPT will become to to writing In this the editing for and will be on and and more what is important – the science. it broader concerns within the education the of that is by the and educators are that will the of academic writing and editing that we are in our However, we to on our writing – with and in and we we and them as A that has had of from a a or ChatGPT will to be by the and educators used will the writing and editing they and that is As LLMs are to or in their use is limited to writing not as a that the required to produce A WEHI ChatGPT to a for an Medical Research and are from and enhance accuracy and the key such as audience and and The was to ChatGPT produce more a and the was of the scientists as of the or as speakers, had no to the or to the for the two relevant their of the on the to improve the of relevant was not by the with scientific or even in for speakers, the accuracy the scientific did not well with the current or future themes, which have been broad, in ChatGPT a with for speakers, and and a the it to and was to and this ChatGPT can a for a it the creative ability to beyond this and to scientific As the and of in science have the for has often the of such to a in experimental large using can be for However, on for such can and communication such as ChatGPT, in on can scientists to analyze their A can their and in natural language and use LLMs to generate the required for their The from GPT3.5 to GPT4 was in the of required to the of a basic with GPT4 a of the with Indeed, in a recent of a was in or these the out that on AI can to in the of The potential of ChatGPT for education was by the model to the the of which in a of the ChatGPT can be to and by a to a language and for the including an of the can enhance the making it more and for other However, to the impact that AI has on learning in a be A consideration is how adopting AI models impact as a We an in of as AI models In the tools the ChatGPT by analysis natural language using an integrated The required set will from writing to comprehension and In the long we from them to on more and creative This in may with and creative focused on The in the of data and is data that to with the of the users have a (1) with researchers who an (2) and work with on the with some platforms which are limited in their application and be of often and be applied to even using the from different of this when an for and are when using training data from different research around the to the of the such as are now and to This has potential for complex for with access to a However, as with many data and analysis is an and even an As such an exciting to users in the and efficient of by at WEHI ChatGPT be used to in generating a or at in the for an data analysis The this for relevant the of using and to the data (Figure The be However, when the image analysis on real it that there are significant limitations that LLMs may to when (Figure example, when to between While we can that not in this may not be to the required It was to for ChatGPT to offer or an to While ChatGPT can a for its performance is as as the knowledge, the of the most the ability to and the and the the limitations in where researchers can generate with or no is into other the image and analysis from ChatGPT to and in using LLMs as of an be a significant of growth in the future. researchers that it is an when writing our as an to for to The emerging within that ChatGPT can have but its be by the In with it is for users to the AI with and to understand and the output In many experts may it easier to the text and to use AI to but such as The of this are particularly for users for English is a language. among as to how ChatGPT is for which on the of ChatGPT can output the is to understand of the to for of the the use of this is a lab scientist with a understanding of the data and the ability to the output of an analysis, ChatGPT can be for or where large of are for ChatGPT the by that and for and ChatGPT can data and be for scientists with experience. The of the symposium focused on the ethical, legal and social implications of using learning and LLMs in our academic work. The around not what we can but what we It the impact that may have on the of scientists and educators and what mean in our work. The discussions explored what be by using these AI platforms what be or at These considerations have ethical, legal and social implications, particularly given that the scientists and with AI will have of and of its As AI to the research landscape, it is essential that we the broader impact of this technology and to use it in research and education. ChatGPT and other emerging learning technologies a significant for However, to ensure that our use of these technologies has that human AI to be to these to the in the full range of and this has a new research. This research is at the of that the AI poses for are to a AI can in two by other to or as an of navigate the of researchers have the application of ethics, a of social scientific research on such an will to design effective However, this research is by the companies that design and as a research community we must on this by the available research from science, and AI research, provides a (Table there is a that AI tools such as ChatGPT will efficiency and allow scientists to focus their on there are concerns of which to be The in or can become of the data that companies such as OpenAI use to their As a that use when There are no on the future use of entered as text into LLM This the potential that on these the is considered a public and is no such as have the use of ChatGPT used it to a this and Microsoft among many companies who at are have or around the use of AI for learning and their of the of academic but they are for the adoption of AI concerns are around data the including that a data and or medical to the OpenAI ChatGPT a to data is by the and must include a with the AI have been and in the use of LLMs and other AI-based in a work that has been by a human and must have a human ChatGPT is an AI language model, it is not of on its but to in or or scientific articles that may become of the ChatGPT data are that may have been used to or AI tools their knowledge or In the of scientific work, this mean a in research and this of adoption by ChatGPT may be of such as the to and have been a of and a use of ChatGPT to produce the of the a of and a these legal concerns with earlier and reliability and the to the is to be and in what to accuracy and and not in way that may or we turn to we and in the have ChatGPT with by the at to to several legal the and at example, the legal are and its of and must be that the use of an AI for a of and ethical such as to the of may be to that ChatGPT can a it be used to is as it is to the of the of the that knowledge, as as of legal of the to which an application may As data used by the GPT4 model have a for more recent will be from its knowledge to other are While this of and can be addressed with the development of future the for now is that will not be by LLMs ChatGPT, with other AI can be However, as with new we must how our is in these and how they be used We to who is our of AI and their as platforms have the potential to use our as or to their We must be that the or other tools we interact with may our or have technical that to data more of security AI is its potential by malicious such as ChatGPT are designed to of this is with or new of as are emerging that can be to The of the of AI tools is a real and In the public and organizations the of that may AI models and that use AI to and AI into or on the by the of the We will to and to on AI-based – this is a new in other of we have a to the and The adoption of ChatGPT, the of technology in human is a to the and of However, many the in this focused on its current limitations and is important to for its use and to technological these limitations not our of the it While may GPT4 from the that it can human-like to it will not be long we our for the with intelligence of The of now and in the is to be different to our of the to the and AI has with that that is a in the evolution of AI can and at large As it to the development of this different of intelligence” may new challenges and to a that will be to to these The in will with the adoption of this technology. IBM has a to in as the that many of the tasks will be by AI in the future. As with AI will become of our and will our It will within our knowledge network as may the ability to and on the as This is not an that has not been to and as such it is to an it not in to most the of AI it is in our we AI we we have a to and their While the emergence of in AI is considered a by most it is a that is of using more that have been explored in science-fiction These broad in focused on the current limitations of and and concerns the potential of academic and These are important we for the that they will be we must how scientists can AI to produce the science. The will be to explore what AI well and how we can use it. what are the of science and has its However, these are our knowledge, understanding and (Figure and can include our expertise in the scientific and expertise within our understanding a of the and knowledge of our the key further and how our and research within in a broad and of that we this for the where is AI and where are AI at and AI can increasingly or human However, AI in understanding this information. AI can create it of in or their However, we may as AI it will further improve in the of and human knowledge as models are further by human such will that will allow of that In further development of AI may an for and and many aspects of their application when can be and The more this the it may be for scientists to or their on their knowledge or as the to can be by the of an AI As will we scientists will a on understanding and of and cutting-edge knowledge, that AI models will to and This can to on how to AI to our work and our However, even we that AI can surpass some human for and knowledge at these essential of human understanding and We not have the of to AI the of to have of the having in the to further our understanding of a The will use AI to and particularly where it and to further our understanding of a given and our we will to be of AI to human to our growth human potential to AI AI-based be to tasks for which we have significant to engage more AI well will allow to produce science. However, it will our who use AI and making to the AI The WEHI ChatGPT symposium was the most at medical research in years. This was a to our understanding of the potential of LLMs. As and are to understand the of these models and how they will work, and two can we how can we for It is that new tools will between the that this is written and the it. Indeed, in the since the Google the model of GPT4, that can access data from Bard can access data from current OpenAI has released new GPT4 with their application to allow to the and other while Microsoft has integrated GPT4 into its This to on what be released in and has Bard to the using it to text for lab It did a However, ChatGPT, Bard can has papers in and in the and was to have been in significant our but A is that LLMs have more limitations use significant are as more of a we to a the to the of such We must that the current iterations have been to generate such that LLMs may for the LLMs may not be to papers or and for the LLMs the generate a design and a and a for the is with new AI tools and applications which to address this As scientists, we are to these tools the more we navigate this we to the or to it with and at our we the use of LLMs in writing and or the nature of what it to be AI can generate and who is the it we that science is the of knowledge and that human scientists are of that we are of knowledge there may be different for to engage their in the future. In the use AI to scientific and for the and The no of writing – writing – and – writing – and – writing – and – – and – – – – – – – – and – – – – – writing – and – writing – and",
+        "snippet": "article"
+      }
+    },
+    {
+      "claim_id": "C004",
+      "claim_text": "Prior work reports that The GPT Surprise: Offering Large Language Model Chat in a Massive Coding Class Reduced Engagement But May Increase Adopters' Exam Performances",
+      "hypothesis_id": "H002",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "The GPT Surprise: Offering Large Language Model Chat in a Massive Coding Class Reduced Engagement But May Increase Adopters' Exam Performances",
+        "authors": [
+          "Allen Nie",
+          "Yash Chandak",
+          "Miroslav Suzara",
+          "Ali Malik",
+          "Juliette Woodrow",
+          "Matt Peng",
+          "Mehran Sahami",
+          "Emma Brunskill",
+          "Chris Piech"
+        ],
+        "year": 2025,
+        "doi": "10.1145/3698205.3733960",
+        "venue": "Proceedings of the Twelfth ACM Conference on Learning @ Scale",
+        "url": "https://doi.org/10.1145/3698205.3733960",
+        "retrieval_source": "crossref",
+        "literature_id": "L004",
+        "evidence_id": "E004",
+        "abstract": "",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C005",
+      "claim_text": "Prior work reports that BACKGROUND: Large language models (LLMs) are computational artificial intelligence systems with advanced natural language processing capabilities that have recently been popularized among health care students and educators due to their ability to provide real-time access to a vast amount of medical knowledge.",
+      "hypothesis_id": "H003",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "ChatGPT as a Tool for Medical Education and Clinical Decision-Making on the Wards: Case Study",
+        "authors": [
+          "Anthony Skryd",
+          "Katharine Lawrence"
+        ],
+        "year": 2024,
+        "doi": "10.2196/51346",
+        "venue": "JMIR Formative Research",
+        "url": "https://doi.org/10.2196/51346",
+        "retrieval_source": "openalex",
+        "literature_id": "L005",
+        "evidence_id": "E016",
+        "abstract": "BACKGROUND: Large language models (LLMs) are computational artificial intelligence systems with advanced natural language processing capabilities that have recently been popularized among health care students and educators due to their ability to provide real-time access to a vast amount of medical knowledge. The adoption of LLM technology into medical education and training has varied, and little empirical evidence exists to support its use in clinical teaching environments. OBJECTIVE: The aim of the study is to identify and qualitatively evaluate potential use cases and limitations of LLM technology for real-time ward-based educational contexts. METHODS: A brief, single-site exploratory evaluation of the publicly available ChatGPT-3.5 (OpenAI) was conducted by implementing the tool into the daily attending rounds of a general internal medicine inpatient service at a large urban academic medical center. ChatGPT was integrated into rounds via both structured and organic use, using the web-based \"chatbot\" style interface to interact with the LLM through conversational free-text and discrete queries. A qualitative approach using phenomenological inquiry was used to identify key insights related to the use of ChatGPT through analysis of ChatGPT conversation logs and associated shorthand notes from the clinical sessions. RESULTS: Identified use cases for ChatGPT integration included addressing medical knowledge gaps through discrete medical knowledge inquiries, building differential diagnoses and engaging dual-process thinking, challenging medical axioms, using cognitive aids to support acute care decision-making, and improving complex care management by facilitating conversations with subspecialties. Potential additional uses included engaging in difficult conversations with patients, exploring ethical challenges and general medical ethics teaching, personal continuing medical education resources, developing ward-based teaching tools, supporting and automating clinical documentation, and supporting productivity and task management. LLM biases, misinformation, ethics, and health equity were identified as areas of concern and potential limitations to clinical and training use. A code of conduct on ethical and appropriate use was also developed to guide team usage on the wards. CONCLUSIONS: Overall, ChatGPT offers a novel tool to enhance ward-based learning through rapid information querying, second-order content exploration, and engaged team discussion regarding generated responses. More research is needed to fully understand contexts for educational use, particularly regarding the risks and limitations of the tool in clinical settings and its impacts on trainee development.",
+        "snippet": "article"
+      }
+    },
+    {
+      "claim_id": "C006",
+      "claim_text": "Prior work reports that Invaluable information for physicians and hospitals from the ICD-9-CM manual including details of the principles of coding and instructions for selecting codes",
+      "hypothesis_id": "H003",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Diagnosis Coding: Why Services Are Provided (Online Exclusive)",
+        "authors": [
+          "American Academy of Pediatrics"
+        ],
+        "year": 2006,
+        "doi": "10.1542/pcco_book029_document005",
+        "venue": "AAP Pediatric Coding Newsletter",
+        "url": "https://doi.org/10.1542/pcco_book029_document005",
+        "retrieval_source": "crossref",
+        "literature_id": "L006",
+        "evidence_id": "E006",
+        "abstract": "Invaluable information for physicians and hospitals from the ICD-9-CM manual including details of the principles of coding and instructions for selecting codes",
+        "snippet": ""
+      }
+    }
+  ],
+  "markdown": "# Generated Research Idea Cards\n\nInput paper: The GPT Surprise: Offering Large Language Model Chat in a Massive Coding Class Reduced Engagement but Increased Adopters Exam Performances\n\n## H001: conservative extension\nEvidence status: `citation_backed`\n\nResearch gap: In this paper we aim to start answering this question through an experiment in which we provided access to a popular and powerful general LLM, GPT-4, to students in a large online coding course. To investigate the potential impact of LLMs on students learning to code, we conducted a randomized control trial in which we provided a subset of students in a massive free online coding class with over 8,762 students in 146 countries access to a course-specific interface to GPT-4.\n\nNew hypothesis: A conservative next study should test whether techniques or observations from 'The GPT Surprise: Offering Large Language Model Chat in a Massive Coding Class Reduced Engagement but Increased Adopters Exam Performances' and 'Students-Centric Evaluation Survey for Exploring the Impact of LLMs on UML Modeling' improve evidence-grounded work on coding, llms, students, impact.\n\nWhy novel: It combines two retrieved strands with the input paper's research problem rather than copying either paper.\n\nRequired evidence:\n- Verify that both cited works exist and match metadata.\n- Verify that abstracts or snippets support the claims used to ground the idea.\n- Run a small empirical or literature review check before presenting the idea as a conclusion.\n\nSupporting citations:\n- C001: The GPT Surprise: Offering Large Language Model Chat in a Massive Coding Class Reduced Engagement but Increased Adopters Exam Performances (2024), DOI: 10.31219/osf.io/qy8zd\n- C002: Students-Centric Evaluation Survey for Exploring the Impact of LLMs on UML Modeling (2025), DOI: 10.20944/preprints202505.2054.v1\n\nRisk or limitation: Novelty is moderate; the idea may be an incremental extension if the cited works already overlap strongly.\n\nTestable prediction: If this idea is valid, then a follow-up study on coding, llms, students, impact should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.\n\n## H002: cross-disciplinary analogy\nEvidence status: `citation_backed`\n\nResearch gap: In this paper we aim to start answering this question through an experiment in which we provided access to a popular and powerful general LLM, GPT-4, to students in a large online coding course. To investigate the potential impact of LLMs on students learning to code, we conducted a randomized control trial in which we provided a subset of students in a massive free online coding class with over 8,762 students in 146 countries access to a course-specific interface to GPT-4.\n\nNew hypothesis: If the mechanisms discussed in 'Artificial intelligence takes center stage: exploring the capabilities and implications of ChatGPT and other AI‐assisted technologies in scientific research and education' transfer across domains, then coding, llms, students, impact may benefit from a cross-disciplinary evaluation protocol grounded by 'The GPT Surprise: Offering Large Language Model Chat in a Massive Coding Class Reduced Engagement But May Increase Adopters' Exam Performances'.\n\nWhy novel: The idea explicitly treats retrieved literature as an analogy source for a different research setting.\n\nRequired evidence:\n- Verify that both cited works exist and match metadata.\n- Verify that abstracts or snippets support the claims used to ground the idea.\n- Run a small empirical or literature review check before presenting the idea as a conclusion.\n\nSupporting citations:\n- C003: Artificial intelligence takes center stage: exploring the capabilities and implications of ChatGPT and other AI‐assisted technologies in scientific research and education (2023), DOI: 10.1111/imcb.12689\n- C004: The GPT Surprise: Offering Large Language Model Chat in a Massive Coding Class Reduced Engagement But May Increase Adopters' Exam Performances (2025), DOI: 10.1145/3698205.3733960\n\nRisk or limitation: The analogy may fail if the source domain assumptions do not hold for the input paper's domain.\n\nTestable prediction: If this idea is valid, then a follow-up study on coding, llms, students, impact should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.\n\n## H003: high-risk speculative idea\nEvidence status: `citation_backed`\n\nResearch gap: In this paper we aim to start answering this question through an experiment in which we provided access to a popular and powerful general LLM, GPT-4, to students in a large online coding course. To investigate the potential impact of LLMs on students learning to code, we conducted a randomized control trial in which we provided a subset of students in a massive free online coding class with over 8,762 students in 146 countries access to a course-specific interface to GPT-4.\n\nNew hypothesis: A higher-risk hypothesis is that the shared signals behind 'ChatGPT as a Tool for Medical Education and Clinical Decision-Making on the Wards: Case Study' and 'Diagnosis Coding: Why Services Are Provided (Online Exclusive)' point to a broader latent factor affecting coding, llms, students, impact.\n\nWhy novel: It proposes a broader latent explanation rather than only applying a known method.\n\nRequired evidence:\n- Verify that both cited works exist and match metadata.\n- Verify that abstracts or snippets support the claims used to ground the idea.\n- Run a small empirical or literature review check before presenting the idea as a conclusion.\n\nSupporting citations:\n- C005: ChatGPT as a Tool for Medical Education and Clinical Decision-Making on the Wards: Case Study (2024), DOI: 10.2196/51346\n- C006: Diagnosis Coding: Why Services Are Provided (Online Exclusive) (2006), DOI: 10.1542/pcco_book029_document005\n\nRisk or limitation: This is speculative and should be treated as Yellow unless stronger evidence is retrieved.\n\nTestable prediction: If this idea is valid, then a follow-up study on coding, llms, students, impact should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.\n\n## Citation-Backed Claims To Verify\n\n| Claim ID | Hypothesis | Claim | Cited Title | Year | DOI |\n|---|---|---|---|---|---|\n| C001 | H001 | Prior work reports that Large language models (LLMs) are quickly being adopted in a wide range of learning experiences, especially via ubiquitous and broadly accessible chat interfaces like ChatGPT and Copilot. | The GPT Surprise: Offering Large Language Model Chat in a Massive Coding Class Reduced Engagement but Increased Adopters Exam Performances | 2024 | 10.31219/osf.io/qy8zd |\n| C002 | H001 | Prior work reports that Unified Modeling Language (UML) diagrams are essential tools for visualizing system structure and behavior in software design. | Students-Centric Evaluation Survey for Exploring the Impact of LLMs on UML Modeling | 2025 | 10.20944/preprints202505.2054.v1 |\n| C003 | H002 | Prior work reports that The emergence of large language models (LLMs) and assisted artificial intelligence (AI) technologies have revolutionized the way in which we interact with technology. | Artificial intelligence takes center stage: exploring the capabilities and implications of ChatGPT and other AI‐assisted technologies in scientific research and education | 2023 | 10.1111/imcb.12689 |\n| C004 | H002 | Prior work reports that The GPT Surprise: Offering Large Language Model Chat in a Massive Coding Class Reduced Engagement But May Increase Adopters' Exam Performances | The GPT Surprise: Offering Large Language Model Chat in a Massive Coding Class Reduced Engagement But May Increase Adopters' Exam Performances | 2025 | 10.1145/3698205.3733960 |\n| C005 | H003 | Prior work reports that BACKGROUND: Large language models (LLMs) are computational artificial intelligence systems with advanced natural language processing capabilities that have recently been popularized among health care students and educators due to their ability to provide real-time access to a vast amount of medical knowledge. | ChatGPT as a Tool for Medical Education and Clinical Decision-Making on the Wards: Case Study | 2024 | 10.2196/51346 |\n| C006 | H003 | Prior work reports that Invaluable information for physicians and hospitals from the ICD-9-CM manual including details of the principles of coding and instructions for selecting codes | Diagnosis Coding: Why Services Are Provided (Online Exclusive) | 2006 | 10.1542/pcco_book029_document005 |",
+  "evidence_id": "E031"
+}

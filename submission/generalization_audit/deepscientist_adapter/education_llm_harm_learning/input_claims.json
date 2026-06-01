@@ -1,0 +1,147 @@
+{
+  "claims": [
+    {
+      "claim_id": "C001",
+      "claim_text": "Prior work reports that Generative artificial intelligence (GenAI) tools, such as large language models (LLMs), generate natural language and other types of content to perform a wide range of tasks.",
+      "hypothesis_id": "H001",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "The promise and challenges of generative AI in education",
+        "authors": [
+          "Michail N. Giannakos",
+          "Roger Azevedo",
+          "Peter Brusilovsky",
+          "Mutlu Cukurova",
+          "Yannis Dimitriadis",
+          "Davinia Hernández‐Leo",
+          "Sanna Järvelä",
+          "Manolis Mavrikis",
+          "Bart Rienties"
+        ],
+        "year": 2024,
+        "doi": "10.1080/0144929x.2024.2394886",
+        "venue": "Behaviour and Information Technology",
+        "url": "https://doi.org/10.1080/0144929x.2024.2394886",
+        "retrieval_source": "openalex",
+        "literature_id": "L001",
+        "evidence_id": "E022",
+        "abstract": "Generative artificial intelligence (GenAI) tools, such as large language models (LLMs), generate natural language and other types of content to perform a wide range of tasks. This represents a significant technological advancement that poses opportunities and challenges to educational research and practice. This commentary brings together contributions from nine experts working in the intersection of learning and technology and presents critical reflections on the opportunities, challenges, and implications related to GenAI technologies in the context of education. Drawing on these contributions, the article provides a synthesis of major opportunities and challenges and provides an agenda for future research in the area of GenAI to support education. In the commentary, it is acknowledged that GenAI’s capabilities can enhance some teaching and learning practices, such as learning design, regulation of learning, automated content, feedback, and assessment. Nevertheless, we also highlight its limitations, potential disruptions, ethical consequences, and potential misuses. The identified avenues for further research include the development of new insights into the roles human experts can play, strong and continuous evidence, human-centric design of technology, necessary policy, and support and competence mechanisms. Overall, we concur with the general skeptical optimism about the use of GenAI tools such as LLMs in education. Moreover, we highlight the danger of hastily adopting GenAI tools in education without deep consideration of the efficacy, ecosystem-level implications, ethics, and pedagogical soundness of such practices.",
+        "snippet": "article"
+      }
+    },
+    {
+      "claim_id": "C002",
+      "claim_text": "Prior work reports that Large language models (LLMs) are artificial intelligence (AI) platforms capable of analyzing and mimicking natural language processing.",
+      "hypothesis_id": "H001",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Large Language Model‐Based Chatbots in Higher Education",
+        "authors": [
+          "Defne Yigci",
+          "Merve Eryılmaz",
+          "Ail K. Yetisen",
+          "Savaş Taşoğlu",
+          "Aydogan Özcan"
+        ],
+        "year": 2024,
+        "doi": "10.1002/aisy.202400429",
+        "venue": "Advanced Intelligent Systems",
+        "url": "https://doi.org/10.1002/aisy.202400429",
+        "retrieval_source": "openalex",
+        "literature_id": "L002",
+        "evidence_id": "E023",
+        "abstract": "Large language models (LLMs) are artificial intelligence (AI) platforms capable of analyzing and mimicking natural language processing. Leveraging deep learning, LLM capabilities have been advanced significantly, giving rise to generative chatbots such as Generative Pre‐trained Transformer (GPT). GPT‐1 was initially released by OpenAI in 2018. ChatGPT's release in 2022 marked a global record of speed in technology uptake, attracting more than 100 million users in two months. Consequently, the utility of LLMs in fields including engineering, healthcare, and education has been explored. The potential of LLM‐based chatbots in higher education has sparked significant interest and ignited debates. LLMs can offer personalized learning experiences and advance asynchronized learning, potentially revolutionizing higher education, but can also undermine academic integrity. Although concerns regarding AI‐generated output accuracy, the spread of misinformation, propagation of biases, and other legal and ethical issues have not been fully addressed yet, several strategies have been implemented to mitigate these limitations. Here, the development of LLMs, properties of LLM‐based chatbots, and potential applications of LLM‐based chatbots in higher education are discussed. Current challenges and concerns associated with AI‐based learning platforms are outlined. The potentials of LLM‐based chatbot use in the context of learning experiences in higher education settings are explored.",
+        "snippet": "article"
+      }
+    },
+    {
+      "claim_id": "C003",
+      "claim_text": "Prior work reports that ChatGPT is a generative language model tool launched by OpenAI on November 30, 2022, enabling the public to converse with a machine on a broad range of topics.",
+      "hypothesis_id": "H002",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "The Role of ChatGPT, Generative Language Models, and Artificial Intelligence in Medical Education: A Conversation With ChatGPT and a Call for Papers",
+        "authors": [
+          "Günther Eysenbach"
+        ],
+        "year": 2023,
+        "doi": "10.2196/46885",
+        "venue": "JMIR Medical Education",
+        "url": "https://doi.org/10.2196/46885",
+        "retrieval_source": "openalex",
+        "literature_id": "L003",
+        "evidence_id": "E002",
+        "abstract": "ChatGPT is a generative language model tool launched by OpenAI on November 30, 2022, enabling the public to converse with a machine on a broad range of topics. In January 2023, ChatGPT reached over 100 million users, making it the fastest-growing consumer application to date. This interview with ChatGPT is part 2 of a larger interview with ChatGPT. It provides a snapshot of the current capabilities of ChatGPT and illustrates the vast potential for medical education, research, and practice but also hints at current problems and limitations. In this conversation with Gunther Eysenbach, the founder and publisher of JMIR Publications, ChatGPT generated some ideas on how to use chatbots in medical education. It also illustrated its capabilities to generate a virtual patient simulation and quizzes for medical students; critiqued a simulated doctor-patient communication and attempts to summarize a research article (which turned out to be fabricated); commented on methods to detect machine-generated text to ensure academic integrity; generated a curriculum for health professionals to learn about artificial intelligence (AI); and helped to draft a call for papers for a new theme issue to be launched in JMIR Medical Education on ChatGPT. The conversation also highlighted the importance of proper \"prompting.\" Although the language generator does make occasional mistakes, it admits these when challenged. The well-known disturbing tendency of large language models to hallucinate became evident when ChatGPT fabricated references. The interview provides a glimpse into the capabilities and limitations of ChatGPT and the future of AI-supported medical education. Due to the impact of this new technology on medical education, JMIR Medical Education is launching a call for papers for a new e-collection and theme issue. The initial draft of the call for papers was entirely machine generated by ChatGPT, but will be edited by the human guest editors of the theme issue.",
+        "snippet": "paratext"
+      }
+    },
+    {
+      "claim_id": "C004",
+      "claim_text": "Prior work reports that Generative artificial intelligence (GAI) large language models (LLMs), like ChatGPT, have become the world's fastest growing applications.",
+      "hypothesis_id": "H002",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Medical education empowered by generative artificial intelligence large language models.",
+        "authors": [
+          "T. Jowsey",
+          "Jessica Stokes-Parish",
+          "Rachelle Singleton",
+          "M. Todorovic"
+        ],
+        "year": 2023,
+        "doi": "10.1016/j.molmed.2023.08.012",
+        "venue": "Trends in Molecular Medicine",
+        "url": "https://www.semanticscholar.org/paper/42cb890415c8da4c3cccc9670cb1557b966b484d",
+        "retrieval_source": "semantic_scholar",
+        "literature_id": "L004",
+        "evidence_id": "E003",
+        "abstract": "Generative artificial intelligence (GAI) large language models (LLMs), like ChatGPT, have become the world's fastest growing applications. Here, we provide useful strategies for educators in medical and health science (M&HS) to integrate GAI-LLMs into learning and teaching practice, ultimately enhancing students' digital capability.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C005",
+      "claim_text": "Prior work reports that This study explores the integration of large language models (LLMs) into educational environments, emphasizing enhanced accessibility, inclusivity, and individualized learning experiences.",
+      "hypothesis_id": "H003",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Integrating Large Language Models into Accessible and Inclusive Education: Access Democratization and Individualized Learning Enhancement Supported by Generative Artificial Intelligence",
+        "authors": [
+          "Inigo Lopez-Gazpio"
+        ],
+        "year": 2025,
+        "doi": "10.3390/info16060473",
+        "venue": "Information",
+        "url": "https://doi.org/10.3390/info16060473",
+        "retrieval_source": "crossref",
+        "literature_id": "L005",
+        "evidence_id": "E004",
+        "abstract": "This study explores the integration of large language models (LLMs) into educational environments, emphasizing enhanced accessibility, inclusivity, and individualized learning experiences. The study evaluates trends in the transformative potential of artificial intelligence (AI) technologies in their capacity to significantly mitigate traditional barriers related to language diversity, learning disabilities, cultural differences, and socioeconomic inequalities. The result of the analysis highlights how LLMs personalize instructional content and dynamically respond to each learner’s educational and emotional needs. The work also advocates for an instructor-guided deployment of LLMs as pedagogical catalysts rather than replacements, emphasizing educators’ role in ethical oversight, cultural sensitivity, and emotional support within AI-enhanced classrooms. Finally, while recognizing concerns regarding data privacy, potential biases, and ethical implications, the study argues that the proactive and responsible integration of LLMs by educators is necessary for democratizing access to education and to foster inclusive learning practices, thereby advancing the effectiveness and equity of contemporary educational frameworks.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C006",
+      "claim_text": "Prior work reports that Summary Background The increasing utilization of large language models (LLMs) in Generative Artificial Intelligence across various medical and dental fields, and specifically orthodontics, raises questions about their accuracy.",
+      "hypothesis_id": "H003",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Evidence-based potential of generative artificial intelligence large language models in orthodontics: a comparative study of ChatGPT, Google Bard, and Microsoft Bing",
+        "authors": [
+          "Miltiadis A. Makrygiannakis",
+          "Kostis Giannakopoulos",
+          "E. Kaklamanos"
+        ],
+        "year": 2024,
+        "doi": "10.1093/ejo/cjae017",
+        "venue": "European Journal of Orthodontics",
+        "url": "https://www.semanticscholar.org/paper/343fb87c28d2040560b03783966638315c09334f",
+        "retrieval_source": "semantic_scholar",
+        "literature_id": "L006",
+        "evidence_id": "E005",
+        "abstract": "Summary Background The increasing utilization of large language models (LLMs) in Generative Artificial Intelligence across various medical and dental fields, and specifically orthodontics, raises questions about their accuracy. Objective This study aimed to assess and compare the answers offered by four LLMs: Google’s Bard, OpenAI’s ChatGPT-3.5, and ChatGPT-4, and Microsoft’s Bing, in response to clinically relevant questions within the field of orthodontics. Materials and methods Ten open-type clinical orthodontics-related questions were posed to the LLMs. The responses provided by the LLMs were assessed on a scale ranging from 0 (minimum) to 10 (maximum) points, benchmarked against robust scientific evidence, including consensus statements and systematic reviews, using a predefined rubric. After a 4-week interval from the initial evaluation, the answers were reevaluated to gauge intra-evaluator reliability. Statistical comparisons were conducted on the scores using Friedman’s and Wilcoxon’s tests to identify the model providing the answers with the most comprehensiveness, scientific accuracy, clarity, and relevance. Results Overall, no statistically significant differences between the scores given by the two evaluators, on both scoring occasions, were detected, so an average score for every LLM was computed. The LLM answers scoring the highest, were those of Microsoft Bing Chat (average score = 7.1), followed by ChatGPT 4 (average score = 4.7), Google Bard (average score = 4.6), and finally ChatGPT 3.5 (average score 3.8). While Microsoft Bing Chat statistically outperformed ChatGPT-3.5 (P-value = 0.017) and Google Bard (P-value = 0.029), as well, and Chat GPT-4 outperformed Chat GPT-3.5 (P-value = 0.011), all models occasionally produced answers with a lack of comprehensiveness, scientific accuracy, clarity, and relevance. Limitations The questions asked were indicative and did not cover the entire field of orthodontics. Conclusions Language models (LLMs) show great potential in supporting evidence-based orthodontics. However, their current limitations pose a potential risk of making incorrect healthcare decisions if utilized without careful consideration. Consequently, these tools cannot serve as a substitute for the orthodontist’s essential critical thinking and comprehensive subject knowledge. For effective integration into practice, further research, clinical validation, and enhancements to the models are essential. Clinicians must be mindful of the limitations of LLMs, as their imprudent utilization could have adverse effects on patient care.",
+        "snippet": ""
+      }
+    }
+  ]
+}

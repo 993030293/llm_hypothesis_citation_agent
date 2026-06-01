@@ -8,6 +8,29 @@ Build a DeepScientist-style research Agent that accepts article PDFs from
 different disciplines, searches for related literature, generates a new research
 idea or hypothesis, and checks whether the cited literature is correct.
 
+## Chosen Project-A framing
+
+This repository now uses the **official DeepScientist repository as the base
+research-agent system** and attaches this project as a citation evidence-chain
+audit extension. The base research-agent pattern is:
+
+```text
+read papers -> find research gaps -> generate hypotheses -> write a report
+```
+
+The added course module is the **Citation Evidence Chain Tracking Module**. It
+is inserted after hypothesis generation and before final report writing:
+
+```text
+Official DeepScientist hypothesis generation
+-> citation-backed claims
+-> citation evidence-chain audit
+-> Green / Yellow / Red audit table
+```
+
+See `docs/official_deepscientist_extension_plan.md` and
+`docs/deepscientist_integration.md` for the module boundary and adapter.
+
 ## Required output behavior
 
 - Green: the cited literature exists and supports the claim.
@@ -17,7 +40,7 @@ idea or hypothesis, and checks whether the cited literature is correct.
 ## Planned structure
 
 - `agent/`: PDF parsing, literature search, hypothesis generation, citation
-  verification, and report writing code.
+  verification, DeepScientist adapter, and report writing code.
 - `inputs/papers/`: local PDFs used for testing and classroom demonstration.
 - `outputs/`: generated run directories, evidence tables, reports, and logs.
 - `docs/`: design notes, presentation runbook, and grading alignment.
@@ -65,6 +88,8 @@ Each run writes a complete artifact set to `outputs/runs/<timestamp>/`:
 - `retrieved_literature.jsonl`
 - `generated_hypothesis.md`
 - `citation_verification.csv`
+- `evidence_chain.csv`
+- `evidence_chain.md`
 - `final_report.md`
 - `tool_calls.jsonl`
 - `evidence_items.jsonl`
@@ -83,6 +108,29 @@ python agent/qq_demo_bridge.py --message "/hypothesis inputs/papers/boundary_dem
 ```
 
 Demo case metadata is stored in `inputs/cases/`.
+
+DeepScientist module adapter:
+
+```powershell
+python agent/deepscientist_adapter.py --claims outputs/runs/<run_id>/generated_claims.json
+```
+
+This audits an existing DeepScientist-style or official DeepScientist `generated_claims.json` file and
+writes standalone module output under `outputs/deepscientist_audits/<timestamp>/`.
+
+Official DeepScientist extension workflow:
+
+```powershell
+python scripts/install_deepscientist_extension.py --deepscientist-root C:\Users\99303\git\DeepScientist-official
+python scripts/audit_deepscientist_output.py --claims outputs/runs/<run_id>/generated_claims.json
+```
+
+For a real official DeepScientist quest, place `citation_audit_claims.json` in
+the quest directory and run:
+
+```powershell
+python scripts/audit_deepscientist_output.py --quest-root "C:\path\to\deepscientist\quest"
+```
 
 ## Real QQ / NapCat interaction
 
@@ -167,6 +215,8 @@ Course-facing evidence is organized under `submission/`:
 - `submission/grading_checklist.md`: rubric-to-evidence mapping.
 - `submission/demo_script.md`: 10-minute demo flow and backup plan.
 - `submission/poster/poster_120x80.pdf`: printable 120 cm x 80 cm poster.
+- `docs/official_deepscientist_extension_plan.md`: official DeepScientist
+  integration plan and commands.
 - `docs/qq_live_integration.md`: real NapCat/OneBot QQ setup.
 - `docs/stress_audit.md`: non-lightweight stress audit and online review guide.
 
