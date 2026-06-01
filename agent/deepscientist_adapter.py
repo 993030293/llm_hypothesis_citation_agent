@@ -160,7 +160,7 @@ class DeepScientistCitationAuditModule:
         }
 
     def audit_claims_file(self, claims_path: Path, *, run_dir: Path | None = None) -> dict[str, Any]:
-        payload = json.loads(claims_path.read_text(encoding="utf-8"))
+        payload = json.loads(claims_path.read_text(encoding="utf-8-sig"))
         claims = payload.get("claims", payload if isinstance(payload, list) else [])
         if not isinstance(claims, list):
             raise ValueError("Claims file must be a list or a JSON object with a 'claims' list.")

@@ -112,7 +112,7 @@ outputs/deepscientist_audits/<timestamp>/
 
 ## Official DeepScientist Mapping
 
-The official integration is:
+The official integration is the primary project route:
 
 ```text
 Official DeepScientist quest
@@ -122,7 +122,8 @@ Official DeepScientist quest
 -> citation_verification.csv + evidence_chain.csv
 ```
 
-The local workflow can still run end to end as a fallback or classroom demo:
+The local workflow can still run end to end as a legacy fallback for debugging,
+but it is no longer the main demonstration route:
 
 ```text
 PDF
@@ -137,12 +138,26 @@ PDF
 The important interpretation for the presentation is:
 
 ```text
-hypothesis_generator:
-  provides a local fallback for the DeepScientist hypothesis generation stage
+official DeepScientist + Claude Code:
+  provides the hypothesis generation stage
 
 deepscientist_adapter + evidence_chain_tracer + citation_verifier:
   are the added module for evidence-chain tracking and citation hallucination checking
 ```
+
+## Path-2 Setup Scripts
+
+Use these commands from the project root:
+
+```powershell
+python scripts/setup_path2_claude.py --force-skill
+python scripts/path2_smoke_test.py
+```
+
+The first command prepares the official DeepScientist + Claude Code runtime and
+installs the `citation-evidence-audit` skill. The second command creates a
+small official DeepScientist quest, uses Claude Code to produce
+`citation_audit_claims.json`, and audits it through this module.
 
 ## LLM Boundary
 

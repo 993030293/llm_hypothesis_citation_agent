@@ -4,5 +4,9 @@ __pycache__/
 outputs/runs/
 outputs/deepscientist_audits/
 outputs/generalization_audits/
+outputs/path2_setup/
+outputs/path2_smoke_tests/
+outputs/tmp_*/
+outputs/tmp_*.json
 qqbot_logs/
 *.log

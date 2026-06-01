@@ -4,9 +4,10 @@ This workspace is for the updated LLM course Project A direction.
 
 ## Goal
 
-Build a DeepScientist-style research Agent that accepts article PDFs from
-different disciplines, searches for related literature, generates a new research
-idea or hypothesis, and checks whether the cited literature is correct.
+Add a verifiable citation evidence-chain audit module to the official
+DeepScientist research agent. DeepScientist/Claude Code produces research
+ideas and citation-backed claims; this repository verifies whether those
+citations exist, match public metadata, and support the generated claims.
 
 ## Chosen Project-A framing
 
@@ -54,7 +55,69 @@ tracking patterns. This new workspace focuses on the revised requirement:
 article PDF input, literature lookup, hypothesis generation, and citation
 verification with red/yellow/green labels.
 
-## Quick start
+## Path 2 Quick Start: Official DeepScientist + Claude Code
+
+This is the primary project route. The local deterministic workflow is retained
+only as legacy fallback; classroom demonstration and teammate reproduction
+should use this official DeepScientist path.
+
+Prerequisites:
+
+- Claude Code is installed and logged in on the local machine.
+- Node.js and npm are available.
+
+Prepare the path-2 environment:
+
+```powershell
+python scripts/setup_path2_claude.py --force-skill
+```
+
+This script:
+
+- checks `claude --version`;
+- verifies Claude Code headless mode with a `HELLO` prompt;
+- installs `@researai/deepscientist` globally if `ds` is missing;
+- installs this repository's `citation-evidence-audit` skill into the official
+  DeepScientist package;
+- runs `ds doctor --runner claude`.
+
+Start official DeepScientist with Claude Code for the live system:
+
+```powershell
+ds --runner claude
+```
+
+Run a path-2 smoke test:
+
+```powershell
+python scripts/path2_smoke_test.py
+```
+
+The smoke test creates an official DeepScientist quest directory under
+`~/DeepScientist/quests/`, uses Claude Code to produce
+`citation_audit_claims.json`, then runs:
+
+```powershell
+python scripts/audit_deepscientist_output.py --quest-root "<quest_root>"
+```
+
+Expected audit outputs:
+
+- `citation_verification.csv`
+- `evidence_chain.csv`
+- `evidence_chain.md`
+- `deepscientist_audit_summary.md`
+- `tool_calls.jsonl`
+- `evidence_items.jsonl`
+
+For a real DeepScientist run, ask DeepScientist/Claude to write
+`citation_audit_claims.json` in the quest root, then audit it:
+
+```powershell
+python scripts/audit_deepscientist_output.py --quest-root "C:\Users\<you>\DeepScientist\quests\<quest_id>"
+```
+
+## Legacy Local Workflow
 
 Install dependencies if needed:
 
@@ -68,7 +131,8 @@ Create local demo PDFs:
 python scripts/create_demo_pdfs.py
 ```
 
-Run the workflow:
+The old local end-to-end workflow remains available for debugging the verifier,
+but it is no longer the primary project route:
 
 ```powershell
 python agent/workflow.py --pdf inputs/papers/success_demo.pdf --task "Generate a new research hypothesis and verify citations"
