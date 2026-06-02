@@ -240,7 +240,10 @@ def overlap_score(left: str, right: str) -> tuple[float, list[str]]:
 def author_last_names(authors: Iterable[str] | None) -> set[str]:
     names: set[str] = set()
     for author in authors or []:
-        parts = re.findall(r"[A-Za-z]+", clean_text(author).lower())
+        text = clean_text(author).lower()
+        if "," in text:
+            text = text.split(",", 1)[0]
+        parts = re.findall(r"[A-Za-z]+", text)
         if parts:
             names.add(parts[-1])
     return names

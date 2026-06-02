@@ -4,10 +4,16 @@ from pathlib import Path
 
 from agent.citation_verifier import CitationVerifier
 from agent.run_logging import EvidenceStore, ToolCallLogger
+from agent.utils import author_last_names
 
 
 def make_verifier(tmp_path: Path) -> CitationVerifier:
     return CitationVerifier(ToolCallLogger(tmp_path), EvidenceStore(tmp_path))
+
+
+def test_author_last_names_handles_last_comma_initial_format() -> None:
+    assert author_last_names(["Mascioli, C.", "Gu, A.", "Wang, Y."]) == {"mascioli", "gu", "wang"}
+    assert author_last_names(["Patrick Lewis", "Ethan Perez"]) == {"lewis", "perez"}
 
 
 def test_green_when_metadata_and_abstract_support(tmp_path: Path) -> None:
