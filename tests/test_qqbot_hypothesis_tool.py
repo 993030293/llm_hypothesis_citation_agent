@@ -23,11 +23,19 @@ def test_parse_preflight_from_file_segment() -> None:
     assert command.pdf_path == Path("C:/tmp/paper.pdf")
 
 
+def test_parse_auditquest_id() -> None:
+    command = parse_qq_command("/auditquest 003")
+    assert command is not None
+    assert command.action == "auditquest"
+    assert command.quest_root == Path.home() / "DeepScientist" / "quests" / "003"
+
+
 def test_handle_help_returns_commands() -> None:
     response = asyncio.run(handle_qq_text("/help"))
     assert response is not None
     assert "/hypothesis" in response
     assert "/preflight" in response
+    assert "/auditquest" in response
 
 
 def test_parse_onebot_text_event() -> None:

@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 class HypothesisCommand:
     action: str
     pdf_path: Path | None = None
+    quest_root: Path | None = None
     task: str = "QQ live demo: generate a research hypothesis and verify citations"
     live_demo: bool = False
     inject_bad_citation: bool = False
@@ -38,6 +39,10 @@ def parse_qq_command(text: str, file_paths: list[str] | None = None) -> Hypothes
     if command in {"/preflight", "preflight"}:
         pdf = _path_from_parts(parts[1:], file_paths)
         return HypothesisCommand(action="preflight", pdf_path=pdf)
+    if command in {"/auditquest", "/audit", "auditquest"}:
+        quest = _quest_from_parts(parts[1:])
+        dry_run = "--dry-run" in {part.lower() for part in parts[1:]}
+        return HypothesisCommand(action="auditquest", quest_root=quest, dry_run=dry_run)
     if command not in {"/hypothesis", "/hyp", "hypothesis"}:
         return None
 
@@ -54,6 +59,23 @@ def parse_qq_command(text: str, file_paths: list[str] | None = None) -> Hypothes
         inject_bad_citation=inject_bad,
         dry_run=dry_run,
     )
+
+
+def _quest_from_parts(parts: list[str]) -> Path | None:
+    for part in parts:
+        if part.startswith("--"):
+            continue
+        candidate = part.strip().strip('"')
+        if not candidate:
+            continue
+        path = Path(candidate).expanduser()
+        if path.is_absolute():
+            return path
+        direct = (Path.home() / "DeepScientist" / "quests" / candidate).resolve()
+        if direct.exists() or re.fullmatch(r"[A-Za-z0-9._-]+", candidate):
+            return direct
+        return (ROOT / candidate).resolve()
+    return None
 
 
 def _path_from_parts(parts: list[str], file_paths: list[str] | None) -> Path | None:
@@ -160,8 +182,69 @@ async def run_hypothesis(command: HypothesisCommand, timeout_seconds: int = 240)
     return _format_run_response(run_dir, command.live_demo, stdout)
 
 
+async def run_auditquest(command: HypothesisCommand, timeout_seconds: int = 360) -> str:
+    if command.quest_root is None:
+        return _help_text("Missing DeepScientist quest id or quest root.")
+    if not command.quest_root.exists():
+        return (
+            f"DeepScientist quest not found: {command.quest_root}\n"
+            "Use a quest id like `/auditquest 003`, or an absolute quest path."
+        )
+    claims_path = _find_claims_file(command.quest_root)
+    if claims_path is None:
+        return (
+            f"citation_audit_claims.json not found under: {command.quest_root}\n"
+            "Ask DeepScientist to generate citation_audit_claims.json first."
+        )
+
+    cmd = [
+        sys.executable,
+        str(ROOT / "scripts" / "audit_deepscientist_output.py"),
+        "--quest-root",
+        str(command.quest_root),
+    ]
+    if command.dry_run:
+        return "Command to run:\n" + " ".join(cmd)
+
+    proc = await asyncio.create_subprocess_exec(
+        *cmd,
+        cwd=str(ROOT),
+        stdout=asyncio.subprocess.PIPE,
+        stderr=asyncio.subprocess.PIPE,
+    )
+    try:
+        stdout_b, stderr_b = await asyncio.wait_for(proc.communicate(), timeout=timeout_seconds)
+    except asyncio.TimeoutError:
+        proc.kill()
+        await proc.wait()
+        return f"DeepScientist citation audit timed out: {command.quest_root}"
+
+    stdout = stdout_b.decode("utf-8", errors="replace")
+    stderr = stderr_b.decode("utf-8", errors="replace")
+    if proc.returncode != 0:
+        return (
+            "DeepScientist citation audit failed\n"
+            f"Quest root: {command.quest_root}\n"
+            f"Claims file: {claims_path}\n"
+            f"returncode: {proc.returncode}\n"
+            f"stderr:\n{_tail(stderr)}"
+        )
+
+    run_dir = _parse_audit_run_dir(stdout)
+    if run_dir is None:
+        return "Audit finished, but no audit run directory was parsed.\n" + _tail(stdout)
+    return _format_auditquest_response(command.quest_root, claims_path, run_dir, stdout)
+
+
 def _parse_run_dir(stdout: str) -> Path | None:
     matches = re.findall(r"Run dir:\s+(.+)", stdout)
+    if not matches:
+        return None
+    return Path(matches[-1].strip())
+
+
+def _parse_audit_run_dir(stdout: str) -> Path | None:
+    matches = re.findall(r"Run directory:\s+(.+)", stdout)
     if not matches:
         return None
     return Path(matches[-1].strip())
@@ -190,6 +273,44 @@ def _format_run_response(run_dir: Path, live_demo: bool, stdout: str) -> str:
         "Workflow status:\n"
         f"{_workflow_status(stdout)}"
     )
+
+
+def _format_auditquest_response(quest_root: Path, claims_path: Path, run_dir: Path, stdout: str) -> str:
+    counts = _read_label_counts(run_dir / "citation_verification.csv")
+    citation_summary = _citation_summary(run_dir / "citation_verification.csv", limit=6)
+    summary_excerpt = _report_excerpt(run_dir / "deepscientist_audit_summary.md")
+    return (
+        "DeepScientist Citation Audit completed\n"
+        f"Quest root: {quest_root}\n"
+        f"Claims file: {claims_path}\n"
+        f"Audit directory: {run_dir}\n"
+        f"Green={counts.get('Green', 0)} Yellow={counts.get('Yellow', 0)} Red={counts.get('Red', 0)}\n\n"
+        "Files to show in class:\n"
+        f"- {run_dir / 'tool_calls.jsonl'}\n"
+        f"- {run_dir / 'evidence_items.jsonl'}\n"
+        f"- {run_dir / 'citation_verification.csv'}\n"
+        f"- {run_dir / 'evidence_chain.csv'}\n"
+        f"- {run_dir / 'deepscientist_audit_summary.md'}\n\n"
+        "Citation verification rows:\n"
+        f"{citation_summary}\n\n"
+        "Audit excerpt:\n"
+        f"{summary_excerpt}\n\n"
+        "Console summary:\n"
+        f"{_tail(stdout, 700)}"
+    )
+
+
+def _find_claims_file(quest_root: Path) -> Path | None:
+    names = ("citation_audit_claims.json", "generated_claims.json", "deepscientist_claims.json", "claims.json")
+    for name in names:
+        path = quest_root / name
+        if path.exists():
+            return path
+    for name in names:
+        matches = sorted(quest_root.rglob(name), key=lambda item: len(item.parts))
+        if matches:
+            return matches[0]
+    return None
 
 
 def _read_label_counts(csv_path: Path) -> dict[str, int]:
@@ -269,11 +390,13 @@ def _help_text(prefix: str | None = None) -> str:
         [
             "Hypothesis Citation Agent QQ commands:",
             "/preflight inputs/papers/teacher_live.pdf",
+            "/auditquest 003",
             "/hypothesis inputs/papers/success_demo.pdf",
             "/hypothesis inputs/papers/boundary_demo.pdf --bad",
             "/hypothesis inputs/papers/teacher_live.pdf --live",
             "",
             "Notes:",
+            "- /auditquest audits citation_audit_claims.json from an official DeepScientist quest.",
             "- --live is for teacher-supplied PDFs and uses faster settings.",
             "- --bad injects one intentionally invalid citation to demonstrate Red.",
             "- The reply returns a run directory and Green/Yellow/Red counts.",
@@ -290,6 +413,8 @@ async def handle_qq_text(text: str, file_paths: list[str] | None = None) -> str 
         return _help_text()
     if command.action == "preflight":
         return await run_preflight(command.pdf_path)
+    if command.action == "auditquest":
+        return await run_auditquest(command)
     if command.action == "hypothesis":
         return await run_hypothesis(command)
     return _help_text("Unknown command.")

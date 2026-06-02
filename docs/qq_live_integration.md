@@ -11,18 +11,30 @@ responds to these commands:
 ```text
 /help
 /preflight inputs/papers/teacher_live.pdf
+/auditquest 003
 /hypothesis inputs/papers/success_demo.pdf
 /hypothesis inputs/papers/boundary_demo.pdf --bad
 /hypothesis inputs/papers/teacher_live.pdf --live
 ```
 
-It runs the local workflow and replies with:
+`/hypothesis` runs the local workflow and replies with:
 
 - run directory;
 - Green / Yellow / Red counts;
 - paths to `tool_calls.jsonl`, `retrieved_literature.jsonl`,
   `citation_verification.csv`, `evidence_chain.csv`, and `final_report.md`;
 - a short report excerpt.
+
+`/auditquest` runs the official DeepScientist path-2 audit for an existing
+quest that already contains `citation_audit_claims.json`, and replies with:
+
+- quest root;
+- audit directory;
+- Green / Yellow / Red counts;
+- paths to `tool_calls.jsonl`, `evidence_items.jsonl`,
+  `citation_verification.csv`, `evidence_chain.csv`, and
+  `deepscientist_audit_summary.md`;
+- a short citation table preview.
 
 It does not require a DeepSeek or OpenAI API key.
 
@@ -72,6 +84,12 @@ close the old bot process before starting this one.
 ## QQ demo commands
 
 Send these from another QQ account to the bot account.
+
+Official DeepScientist path-2 audit:
+
+```text
+/auditquest 003
+```
 
 Success case:
 
