@@ -71,16 +71,34 @@ class CitationVerifier:
             )
             return row
         except Exception as exc:
+            row = self._unexpected_error_row(claim, cited, exc)
+            evidence_id = self.evidence.record(
+                source_type="citation_verification_error",
+                source="verification_error",
+                content_snippet=row["reason"],
+                category="citation_verification",
+                tool_call_id=call_id,
+                locator=cited.get("doi") or cited.get("title"),
+                url=cited.get("url"),
+                metadata={
+                    "claim_id": claim.get("claim_id"),
+                    "color_label": row["color_label"],
+                    "metadata_match_status": row["metadata_match_status"],
+                    "support_status": row["support_status"],
+                },
+            )
+            row["evidence_id"] = evidence_id
             self.logger.log(
                 tool_call_id=call_id,
                 tool_name="citation_verifier.verify_citation",
                 inputs={"claim_id": claim.get("claim_id"), "cited_title": cited.get("title"), "doi": cited.get("doi")},
                 status="error",
-                output_summary="Citation verification crashed.",
+                output_summary=f"{claim.get('claim_id')} labeled Yellow after verifier error: {exc}",
                 started_at=started,
                 error=str(exc),
+                outputs={"evidence_id": evidence_id},
             )
-            raise
+            return row
 
     def _lookup_citation(self, cited: dict[str, Any]) -> tuple[dict[str, Any] | None, str, str]:
         lookup_errors: list[str] = []
@@ -301,17 +319,28 @@ class CitationVerifier:
         items = payload.get("results", [])
         if not items:
             return None
-        item = items[0]
+        item = items[0] if isinstance(items[0], dict) else {}
+        primary_location = item.get("primary_location") or {}
+        if not isinstance(primary_location, dict):
+            primary_location = {}
+        source = primary_location.get("source") or {}
+        if not isinstance(source, dict):
+            source = {}
+        authors = []
+        authorships = item.get("authorships") if isinstance(item.get("authorships"), list) else []
+        for authorship in authorships:
+            if not isinstance(authorship, dict):
+                continue
+            author = authorship.get("author") or {}
+            if isinstance(author, dict):
+                authors.append(clean_text(author.get("display_name")))
         candidate = {
             "title": clean_text(item.get("title") or item.get("display_name")),
-            "authors": [
-                clean_text(authorship.get("author", {}).get("display_name"))
-                for authorship in item.get("authorships", [])
-            ],
+            "authors": authors,
             "year": item.get("publication_year"),
             "doi": clean_text(item.get("doi")).replace("https://doi.org/", ""),
-            "venue": clean_text((item.get("primary_location") or {}).get("source", {}).get("display_name")),
-            "url": clean_text((item.get("primary_location") or {}).get("landing_page_url") or item.get("id")),
+            "venue": clean_text(source.get("display_name")),
+            "url": clean_text(primary_location.get("landing_page_url") or item.get("id")),
             "abstract": self._openalex_abstract(item.get("abstract_inverted_index")),
             "snippet": clean_text(item.get("type")),
         }
@@ -348,3 +377,27 @@ class CitationVerifier:
         if not candidate:
             return ""
         return clean_text(f"{candidate.get('title','')} {candidate.get('abstract') or candidate.get('snippet','')}")
+
+    def _unexpected_error_row(self, claim: dict[str, Any], cited: dict[str, Any], exc: Exception) -> dict[str, Any]:
+        return {
+            "claim_id": claim.get("claim_id", ""),
+            "claim_text": clean_text(claim.get("claim_text")),
+            "cited_title": clean_text(cited.get("title")),
+            "cited_authors": "; ".join(cited.get("authors") or []),
+            "cited_year": cited.get("year") or "",
+            "doi": clean_text(cited.get("doi")),
+            "retrieval_source": clean_text(cited.get("retrieval_source") or "verification_error"),
+            "exists_status": "unknown",
+            "metadata_match_status": "unknown",
+            "support_status": "partial_or_uncertain",
+            "color_label": "Yellow",
+            "reason": f"Citation verification failed unexpectedly and requires manual review: {exc}",
+            "evidence_id": "",
+            "url": clean_text(cited.get("url")),
+            "title_similarity": 0.0,
+            "author_match_score": 0.0,
+            "year_match": False,
+            "support_score": 0.0,
+            "matched_evidence_text": "",
+            "verification_method": "verification_error",
+        }

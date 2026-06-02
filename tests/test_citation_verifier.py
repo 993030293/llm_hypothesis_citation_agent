@@ -160,3 +160,46 @@ def test_yellow_when_public_api_lookup_fails(tmp_path: Path) -> None:
     assert row["color_label"] == "Yellow"
     assert row["exists_status"] == "unknown"
     assert row["support_status"] == "partial_or_uncertain"
+
+
+def test_openalex_title_lookup_handles_null_source(tmp_path: Path) -> None:
+    verifier = make_verifier(tmp_path)
+
+    def fake_request_json(_url: str) -> dict:
+        return {
+            "results": [
+                {
+                    "title": "Citation Verification for Scientific Writing",
+                    "authorships": [{"author": {"display_name": "A. Researcher"}}],
+                    "publication_year": 2024,
+                    "doi": "https://doi.org/10.0000/example",
+                    "primary_location": {"source": None, "landing_page_url": "https://example.test/paper"},
+                    "abstract_inverted_index": {"Citation": [0], "verification": [1], "works": [2]},
+                    "type": "article",
+                }
+            ]
+        }
+
+    verifier._request_json = fake_request_json  # type: ignore[method-assign]
+    candidate = verifier._lookup_openalex_title("Citation Verification for Scientific Writing")
+    assert candidate is not None
+    assert candidate["venue"] == ""
+    assert candidate["url"] == "https://example.test/paper"
+
+
+def test_verifier_error_becomes_yellow_instead_of_crashing(tmp_path: Path) -> None:
+    verifier = make_verifier(tmp_path)
+    claim = {
+        "claim_id": "C007",
+        "claim_text": "Boundary claim.",
+        "cited_work": {"title": "Some Paper", "authors": ["A. Researcher"], "year": 2024},
+    }
+
+    def broken_lookup(_cited: dict):
+        raise AttributeError("unexpected provider shape")
+
+    verifier._lookup_citation = broken_lookup  # type: ignore[method-assign]
+    row = verifier.verify_one(claim)
+    assert row["color_label"] == "Yellow"
+    assert row["verification_method"] == "verification_error"
+    assert "manual review" in row["reason"]
