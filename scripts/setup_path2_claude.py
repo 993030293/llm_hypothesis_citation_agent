@@ -79,6 +79,19 @@ def main() -> int:
     if ds_help["returncode"] != 0:
         return finish(report_dir, results, 4, "`ds --help` failed.")
 
+    probe_patch = run([sys.executable, str(ROOT / "scripts" / "patch_deepscientist_claude_probe.py")], timeout_seconds=120)
+    results["steps"].append(step("patch_deepscientist_claude_probe", probe_patch))
+    if probe_patch["returncode"] != 0:
+        return finish(report_dir, results, 4, "Failed to patch DeepScientist Claude startup probe compatibility.")
+
+    configure_claude = run(
+        [sys.executable, str(ROOT / "scripts" / "configure_deepscientist_claude_runner.py")],
+        timeout_seconds=120,
+    )
+    results["steps"].append(step("configure_deepscientist_claude_runner", configure_claude))
+    if configure_claude["returncode"] != 0:
+        return finish(report_dir, results, 4, "Failed to enable Claude runner in DeepScientist config.")
+
     ds_root = resolve_global_deepscientist_root()
     results["deepscientist_root"] = str(ds_root) if ds_root else ""
     if not ds_root:

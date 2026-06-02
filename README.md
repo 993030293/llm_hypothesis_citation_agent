@@ -77,6 +77,8 @@ This script:
 - checks `claude --version`;
 - verifies Claude Code headless mode with a `HELLO` prompt;
 - installs `@researai/deepscientist` globally if `ds` is missing;
+- patches the local DeepScientist Claude startup probe for Windows-compatible
+  `--tools=` handling when needed;
 - installs this repository's `citation-evidence-audit` skill into the official
   DeepScientist package;
 - runs `ds doctor --runner claude`.

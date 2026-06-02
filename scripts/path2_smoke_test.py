@@ -8,6 +8,7 @@ import shutil
 import subprocess
 import sys
 import time
+import uuid
 from pathlib import Path
 from typing import Any
 
@@ -24,12 +25,22 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
     stamp = time.strftime("%Y%m%d_%H%M%S")
-    quest_id = args.quest_id or f"path2-smoke-citation-audit-{stamp}"
+    quest_id = args.quest_id or f"p2smoke-{uuid.uuid4().hex[:8]}"
     smoke_dir = Path(args.output_root) / stamp
     smoke_dir.mkdir(parents=True, exist_ok=True)
     quest_root = Path.home() / "DeepScientist" / "quests" / quest_id
+    if quest_root.exists() and not args.keep_existing_quest:
+        if args.quest_id:
+            return fail(smoke_dir, f"Quest already exists: {quest_root}. Use --keep-existing-quest or a different --quest-id.")
+        for _attempt in range(10):
+            quest_id = f"p2smoke-{uuid.uuid4().hex[:8]}"
+            quest_root = Path.home() / "DeepScientist" / "quests" / quest_id
+            if not quest_root.exists():
+                break
+        else:
+            return fail(smoke_dir, "Could not allocate a fresh DeepScientist smoke-test quest id.")
 
-    if not quest_root.exists() or not args.keep_existing_quest:
+    if not quest_root.exists():
         goal = (
             "Path2 smoke test: create citation-backed claims for a citation hallucination audit. "
             "The audit module will verify Green/Yellow/Red labels after DeepScientist/Claude output."

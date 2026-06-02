@@ -51,6 +51,7 @@ The setup script checks:
 - Claude Code CLI;
 - Claude Code headless prompt execution;
 - global `ds` DeepScientist CLI;
+- local DeepScientist Claude startup probe compatibility on Windows;
 - installation of the `citation-evidence-audit` skill;
 - `ds doctor --runner claude`.
 
@@ -65,6 +66,19 @@ Start the official DeepScientist live system with Claude Code:
 ```powershell
 ds --runner claude
 ```
+
+If DeepScientist shows "selected runner (Claude Code) did not pass its startup
+probe", run:
+
+```powershell
+python scripts/patch_deepscientist_claude_probe.py
+python scripts/setup_path2_claude.py --force-skill
+ds --runner claude
+```
+
+The patch only changes the local DeepScientist startup probe command from
+`--tools ""` to `--tools=` and makes Windows temporary-directory cleanup tolerant
+of transient file locks.
 
 ## Teammate Setup
 
