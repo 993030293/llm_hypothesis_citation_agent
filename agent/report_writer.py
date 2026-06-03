@@ -168,13 +168,14 @@ class ReportWriter:
         ]
         for query in queries:
             lines.append(
-                f"| {query['query_id']} | {query.get('query_stage', 'initial')} | {query.get('query_type', '')} | "
-                f"{self._cell(query['query'])} | {self._cell(query['purpose'])} |"
+                f"| {query.get('query_id', '?')} | {query.get('query_stage', 'initial')} | {query.get('query_type', '')} | "
+                f"{self._cell(query.get('query', ''))} | {self._cell(query.get('purpose', query.get('query_type', 'literature_search')))} |"
             )
 
         lines.extend(["", "## Generated Research Ideas", ""])
         for hypothesis in hypotheses:
-            lines.append(f"### {hypothesis['hypothesis_id']}: {hypothesis.get('idea_type', 'idea')}")
+            hid = hypothesis.get("hypothesis_id", "H???")
+            lines.append(f"### {hid}: {hypothesis.get('idea_type', 'idea')}")
             lines.append(f"Evidence status: `{hypothesis.get('evidence_status', 'unknown')}`")
             lines.append("")
             lines.append(f"Research gap: {clean_text(hypothesis.get('research_gap'))}")

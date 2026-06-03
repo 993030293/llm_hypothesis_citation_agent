@@ -119,26 +119,29 @@ For a real DeepScientist run, ask DeepScientist/Claude to write
 python scripts/audit_deepscientist_output.py --quest-root "C:\Users\<you>\DeepScientist\quests\<quest_id>"
 ```
 
-## Legacy Local Workflow
+## DeepSeek LLM Agent WorkFlow (主推路线)
 
-Install dependencies if needed:
+该路线实现了完全由 LLM (DeepSeek) 驱动的 Function Calling 代理。模型主动阅读 PDF，利用工具搜索文献，生成假说并强制附带 Evidence ID 证据链，最终给出绿/黄/红分析。这完美契合 Project A 的高分要求（自主工具调用、证据链溯源、非 Prompt 限定）。
 
+**准备环境：**
 ```powershell
 pip install -r requirements.txt
+$env:DEEPSEEK_API_KEY="你的_DeepSeek_API_Key"
 ```
 
-Create local demo PDFs:
-
-```powershell
-python scripts/create_demo_pdfs.py
-```
-
-The old local end-to-end workflow remains available for debugging the verifier,
-but it is no longer the primary project route:
+运行基础测试流程并审计引文证据：
 
 ```powershell
 python agent/workflow.py --pdf inputs/papers/success_demo.pdf --task "Generate a new research hypothesis and verify citations"
 ```
+
+如果想要看到边界测试（幻觉/错误引用被拦截变红）：
+
+```powershell
+python agent/workflow.py --pdf inputs/papers/success_demo.pdf --inject-bad-citation
+```
+
+系统将主动调用 `agent/literature_search.py` 接口查询真实 DOI 并输出验证表格及 Markdown 报告，展示 `Evidence-ID` 锚点和绿/黄/红分级结论。
 
 The default live-demo providers are Crossref and OpenAlex. Optional providers
 can be enabled with `--providers "crossref,openalex,semantic_scholar,arxiv"`.
@@ -166,14 +169,24 @@ For a boundary demonstration with one explicitly invalid citation:
 python agent/workflow.py --pdf inputs/papers/boundary_demo.pdf --task "Generate a boundary-case hypothesis and verify citations" --inject-bad-citation
 ```
 
-QQ-style demo adapter:
+## QQ/WeChat 交互演示 (QQ Bot)
+
+启动 QQ 机器人，接收科研任务：
 
 ```powershell
-python agent/qq_demo_bridge.py --message "/hypothesis inputs/papers/success_demo.pdf"
-python agent/qq_demo_bridge.py --message "/hypothesis inputs/papers/boundary_demo.pdf --bad"
+python qqbot/main.py
 ```
 
-Demo case metadata is stored in `inputs/cases/`.
+在 QQ 群内发送指令：
+`/hypothesis inputs/papers/success_demo.pdf`
+`/hypothesis inputs/papers/success_demo.pdf --bad`
+
+机器人将实时拉取 DeepSeek ，完成工具检索和事实核查，发送详细包含“标红/标黄/标绿”以及 Evidence ID 表格的科研审计报告，直观展示证据链溯源前后的体验对比。
+
+### 关于“三色判定”设计
+- 🟢 **绿色**：已有材料明确支持的结论
+- 🟡 **黄色**：由模型合理推断但未被直接证明的内容
+- 🔴 **红色**：证据不足、幻觉、或引用错误的边界案例
 
 DeepScientist module adapter:
 

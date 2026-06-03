@@ -195,8 +195,10 @@ class LiteratureSearcher:
         row.setdefault("selection_reason", "")
 
     def _request_json(self, url: str) -> dict[str, Any]:
+        proxy_handler = urllib.request.ProxyHandler({})
+        opener = urllib.request.build_opener(proxy_handler)
         request = urllib.request.Request(url, headers={"User-Agent": self.USER_AGENT, "Accept": "application/json"})
-        with urllib.request.urlopen(request, timeout=self.timeout_seconds) as response:
+        with opener.open(request, timeout=self.timeout_seconds) as response:
             charset = response.headers.get_content_charset() or "utf-8"
             return json.loads(response.read().decode(charset))
 

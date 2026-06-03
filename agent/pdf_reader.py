@@ -16,7 +16,7 @@ class PdfReaderTool:
         self.logger = logger
         self.evidence = evidence
 
-    def read(self, pdf_path: Path, max_pages: int = 3) -> dict[str, Any]:
+    def read(self, pdf_path: Path, max_pages: int = 999) -> dict[str, Any]:
         call_id = self.logger.next_id()
         started = time.perf_counter()
         try:
@@ -44,7 +44,7 @@ class PdfReaderTool:
                 "research_problem": research_problem,
                 "page_count": page_count,
                 "pages_read": pages_to_read,
-                "text_excerpt": text[:4000],
+                "text_excerpt": text[:8000],
                 "extraction_warning": "" if text else "No extractable text found in first pages.",
             }
             evidence_id = self.evidence.record(
@@ -132,7 +132,7 @@ class PdfReaderTool:
             lower = sentence.lower()
             if any(signal in lower for signal in signals):
                 selected.append(sentence)
-            if len(selected) >= 2:
+            if len(selected) >= 4:
                 break
         if selected:
             return clean_text(" ".join(selected))[:1000]

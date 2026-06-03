@@ -2,6 +2,7 @@ __pycache__/
 *.pyc
 .pytest_cache/
 outputs/runs/
+outputs/stress_audits/
 outputs/deepscientist_audits/
 outputs/generalization_audits/
 outputs/path2_setup/
@@ -10,3 +11,5 @@ outputs/tmp_*/
 outputs/tmp_*.json
 qqbot_logs/
 *.log
+.env
+credentials.json

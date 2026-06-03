@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import sys
+import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -17,7 +18,7 @@ from agent.pdf_reader import PdfReaderTool
 from agent.query_planner import QueryPlanner
 from agent.report_writer import ReportWriter
 from agent.run_logging import EvidenceStore, ToolCallLogger
-from agent.utils import configure_utf8_stdio, timestamp_id
+from agent.utils import configure_utf8_stdio, timestamp_id, write_json
 
 
 def parse_args() -> argparse.Namespace:
@@ -28,7 +29,7 @@ def parse_args() -> argparse.Namespace:
         default="Generate a new research hypothesis and verify citations",
         help="Free-form task description",
     )
-    parser.add_argument("--max-pages", type=int, default=3, help="PDF pages to read")
+    parser.add_argument("--max-pages", type=int, default=999, help="PDF pages to read (default: all pages)")
     parser.add_argument("--max-queries", type=int, default=5, help="Maximum literature search queries")
     parser.add_argument("--max-followup-queries", type=int, default=4, help="Maximum second-stage follow-up queries")
     parser.add_argument("--disable-followup", action="store_true", help="Disable second-stage follow-up query retrieval")
@@ -56,6 +57,7 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     configure_utf8_stdio()
+    start_time = time.perf_counter()
     args = parse_args()
     if args.live_demo:
         args.max_pages = min(args.max_pages, 2)
@@ -86,54 +88,45 @@ def main() -> int:
         print("Mode:     live-demo defaults (2 pages, 1 seed query, no follow-up, 1 result/provider/query)")
     print("=" * 72)
 
+    timings = {}
+
     pdf_reader = PdfReaderTool(logger, evidence)
     query_planner = QueryPlanner(logger)
     searcher = LiteratureSearcher(logger, evidence)
-    generator = HypothesisGenerator(logger, evidence)
+    generator = HypothesisGenerator(logger, evidence, searcher=searcher)
     verifier = CitationVerifier(logger, evidence)
     evidence_tracer = EvidenceChainTracer(logger, evidence)
     writer = ReportWriter(logger, evidence)
 
+    t0 = time.perf_counter()
     paper_summary = pdf_reader.read(pdf_path, max_pages=args.max_pages)
-    print(f"[1/7] PDF parsed: {paper_summary.get('title')}")
+    timings["1_pdf_parse"] = round(time.perf_counter() - t0, 2)
+    print(f"[1/7] PDF parsed: {paper_summary.get('title')} ({timings['1_pdf_parse']}s)")
     if args.live_demo and len(paper_summary.get("text_excerpt", "")) < 200:
         print("WARNING: live-demo PDF has very little extractable text. Explain this limitation if results are weak.")
 
-    queries = query_planner.plan(paper_summary, max_queries=args.max_queries)
-    print(f"[2/7] Initial search queries generated: {len(queries)}")
-
-    providers = [provider.strip() for provider in args.providers.split(",") if provider.strip()]
-    initial_literature = searcher.search(queries, providers, max_results_per_query=args.max_results_per_query)
-    literature = initial_literature
-    followup_queries = []
-    if not args.disable_followup and args.max_followup_queries > 0:
-        followup_queries = query_planner.plan_followup(
-            paper_summary,
-            queries,
-            initial_literature,
-            max_queries=args.max_followup_queries,
-        )
-        if followup_queries:
-            followup_literature = searcher.search(
-                followup_queries,
-                providers,
-                max_results_per_query=args.max_results_per_query,
-            )
-            literature = searcher.combine_records([initial_literature, followup_literature])
-    queries = queries + followup_queries
-    print(f"[3/7] Literature records retrieved: {len(literature)}")
-
-    hypothesis_payload = generator.generate(
+    # We now let the LLM agent proactively plan queries and call the search tool.
+    t0 = time.perf_counter()
+    print(f"[2/7] Agent is thinking and searching literature based on the paper...")
+    hypothesis_payload = generator.generate_with_agent(
         paper_summary,
-        literature,
         max_hypotheses=args.max_hypotheses,
         inject_bad_citation=args.inject_bad_citation,
+        providers=[p.strip() for p in args.providers.split(",") if p.strip()]
     )
+    timings["2_3_agent_search_generate"] = round(time.perf_counter() - t0, 2)
+    literature = hypothesis_payload.get("literature", [])
+    queries = hypothesis_payload.get("queries", [])
+    print(f"[3/7] Agent retrieved {len(literature)} records and finalized ideas.")
+
     print(f"[4/7] Research idea cards generated: {len(hypothesis_payload.get('hypotheses', []))}")
 
+    t0 = time.perf_counter()
     verification_rows = verifier.verify(hypothesis_payload.get("claims", []))
-    print(f"[5/7] Citations verified: {len(verification_rows)}")
+    timings["5_citation_verify"] = round(time.perf_counter() - t0, 2)
+    print(f"[5/7] Citations verified: {len(verification_rows)} ({timings['5_citation_verify']}s)")
 
+    t0 = time.perf_counter()
     evidence_tracer.trace_and_write(
         run_dir,
         hypothesis_payload=hypothesis_payload,
@@ -151,8 +144,14 @@ def main() -> int:
         hypothesis_payload=hypothesis_payload,
         verification_rows=verification_rows,
     )
-    print("[6/7] Reports written")
-    print("[7/7] Workflow complete")
+    timings["6_7_report"] = round(time.perf_counter() - t0, 2)
+    total_time = round(time.perf_counter() - start_time, 2)
+    timings["total"] = total_time
+
+    write_json(run_dir / "workflow_timing.json", {"timings_seconds": timings})
+
+    print(f"[6/7] Reports written ({timings['6_7_report']}s)")
+    print(f"[7/7] Workflow complete — total time: {total_time}s")
     print("")
     print("Outputs:")
     for name in [
@@ -167,6 +166,7 @@ def main() -> int:
         "final_report.md",
         "tool_calls.jsonl",
         "evidence_items.jsonl",
+        "workflow_timing.json",
     ]:
         print(f"  {run_dir / name}")
     return 0
