@@ -1,0 +1,2 @@
+﻿artifact_complete,case_id,discipline,green,layout_type,pdf_path,preflight_readiness,red,retrieved_literature_count,returncode,run_dir,tool_error_count,workflow_status,yellow
+True,keywords_before_abstract,finance,0,keywords_before_abstract,C:\Users\99303\git\llm_hypothesis_citation_agent\inputs\stress_cases\papers\keywords_before_abstract.pdf,usable_with_caution,0,1,0,C:\Users\99303\git\llm_hypothesis_citation_agent\outputs\stress_audits\20260530_163219\runs\keywords_before_abstract,0,success,1
