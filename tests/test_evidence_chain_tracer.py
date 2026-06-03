@@ -5,7 +5,7 @@ from agent.evidence_chain_tracer import build_evidence_chain_rows, support_categ
 
 def test_support_category_mapping() -> None:
     assert support_category_from_color("Green") == "directly_supported"
-    assert support_category_from_color("Yellow") == "reasonable_inference_or_uncertain"
+    assert support_category_from_color("Yellow") == "partial_or_uncertain_requires_review"
     assert support_category_from_color("Red") == "insufficient_or_unsupported"
 
 

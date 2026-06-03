@@ -147,7 +147,7 @@ def support_category_from_color(color_label: str) -> str:
     if normalized == "green":
         return "directly_supported"
     if normalized == "yellow":
-        return "reasonable_inference_or_uncertain"
+        return "partial_or_uncertain_requires_review"
     return "insufficient_or_unsupported"
 
 
@@ -175,7 +175,7 @@ def render_evidence_chain_markdown(rows: list[dict[str, Any]]) -> str:
             "## Category Meaning",
             "",
             "- `directly_supported`: the cited literature exists, metadata matches, and available abstract/snippet supports the claim.",
-            "- `reasonable_inference_or_uncertain`: the cited literature exists, but support is partial or requires manual review.",
+            "- `partial_or_uncertain_requires_review`: the cited literature exists, but support is partial, abstract/snippet evidence is insufficient, or manual review is required.",
             "- `insufficient_or_unsupported`: the citation is missing, mismatched, or unsupported by available evidence.",
         ]
     )

@@ -99,7 +99,7 @@ def test_yellow_when_existing_paper_has_no_abstract(tmp_path: Path) -> None:
     assert row["support_status"] == "partial_or_uncertain"
 
 
-def test_red_when_year_mismatches_public_record(tmp_path: Path) -> None:
+def test_yellow_when_year_mismatches_otherwise_matching_public_record(tmp_path: Path) -> None:
     verifier = make_verifier(tmp_path)
     claim = {
         "claim_id": "C005",
@@ -120,8 +120,8 @@ def test_red_when_year_mismatches_public_record(tmp_path: Path) -> None:
         "abstract": "Retrieval augmented generation improves factual grounding for knowledge intensive tasks.",
     }
     row = verifier._classify_claim_support(claim, claim["cited_work"], candidate, "fixture", "")
-    assert row["color_label"] == "Red"
-    assert row["metadata_match_status"] == "mismatch"
+    assert row["color_label"] == "Yellow"
+    assert row["metadata_match_status"] == "partial_match"
     assert row["year_match"] is False
 
 

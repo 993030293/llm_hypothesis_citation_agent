@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 import time
 import urllib.error
@@ -245,10 +246,14 @@ class CitationVerifier:
         status = "mismatch"
         if cited_doi and candidate_doi and cited_doi != candidate_doi:
             reason = "DOI resolves to a different record."
-        elif not year_match:
-            reason = f"Year mismatch: cited {cited_year}, public record {candidate_year}."
         elif not author_match:
             reason = "Author metadata does not overlap with the public record."
+        elif title_score >= 0.86 and author_match and doi_match and not year_match:
+            status = "partial_match"
+            reason = (
+                f"Year mismatch: cited {cited_year}, public record {candidate_year}. "
+                "The title/authors/DOI point to the same public record, so this requires manual metadata review."
+            )
         elif title_score >= 0.86 and year_match and author_match and doi_match:
             status = "match"
             reason = f"Metadata matches public record (title similarity {title_score:.2f})."
@@ -278,168 +283,160 @@ class CitationVerifier:
             return None
 
     def _support_assessment(self, claim_text: str, candidate: dict[str, Any]) -> dict[str, Any]:
-        evidence_text = clean_text(
-            f"{candidate.get('title','')}. {candidate.get('abstract') or candidate.get('snippet','')}"
-        )
-        has_metadata = bool(clean_text(candidate.get("abstract") or candidate.get("snippet")))
-        matched_text = self._best_evidence_text(claim_text, candidate)
-        paper_doi = candidate.get("doi", "")
+        deterministic = self._deterministic_support_assessment(claim_text, candidate)
+        if not (os.environ.get("DEEPSEEK_API_KEY") or os.environ.get("OPENAI_API_KEY")):
+            return deterministic
 
-        paper_doi_str = f"论文 DOI: {paper_doi}\n" if paper_doi else ""
+        llm_result = self._llm_support_assessment(claim_text, candidate)
+        if not llm_result:
+            return deterministic
 
-        if has_metadata:
-            intro = (
-                f"结论 (Claim): {claim_text}\n"
-                f"证据文本 (Evidence): {evidence_text}\n\n"
-            )
-        else:
-            intro = (
-                f"结论 (Claim): {claim_text}\n"
-                f"{paper_doi_str}"
-                "注意：当前 API 未返回该文献的摘要，你需要先用 `fetch_abstract` 工具获取摘要，再进行判断。\n\n"
-            )
-
-        prompt = (
-            "你是一个严厉的学术事实核查大模型。请判断提供的'证据文本'是否直接且明确地支持了'结论'。\n\n"
-            f"{intro}"
-            "判断规则：\n"
-            "1. 若证据明确具有对应的逻辑或数据支持结论，状态为 'supports'。\n"
-            "2. 若证据在主题上相关，但仅仅是模型的发散推断，没有直接证据覆盖，状态为 'partial_or_uncertain'。\n"
-            "3. 若证据与结论完全不相关、出现自相矛盾、或者属于捏造，状态定为 'not_supported'。\n"
-            "4. 如果你尝试 fetch_abstract 后仍然没有摘要，才返回 partial_or_uncertain。\n\n"
-            "你有以下工具可用：\n"
-            "  - fetch_abstract：通过 DOI 从 Semantic Scholar 获取论文摘要\n"
-            "  - calculate_overlap：计算 claim 与 evidence 的词汇重叠度\n"
-            "建议先尝试 fetch_abstract（如果没有可用摘要），再用 calculate_overlap 辅助判断。\n"
-            "请注意：你必须调用工具（fetch_abstract / calculate_overlap）来辅助判断，或者直接返回 JSON。\n"
-            "严禁输出解释性文字——如果不用工具，就直接输出下面格式的 JSON，不要输出其他任何内容：\n"
-            '{"status": "supports或partial_or_uncertain或not_supported", "reason": "你的中文详细打分理由"}'
-        )
-
-        messages = [{"role": "user", "content": prompt}]
-
-        tools = [
-            {
-                "type": "function",
-                "function": {
-                    "name": "fetch_abstract",
-                    "description": "通过 DOI 从 Semantic Scholar 获取论文摘要。当 API 未返回摘要时调用此工具。",
-                    "parameters": {
-                        "type": "object",
-                        "properties": {
-                            "doi": {"type": "string", "description": "论文 DOI，例如 10.1234/abc567"}
-                        },
-                        "required": ["doi"]
-                    }
-                }
-            },
-            {
-                "type": "function",
-                "function": {
-                    "name": "calculate_overlap",
-                    "description": "计算学术结论（Claim）与原文证据（Evidence）之间的词汇重合度和字符串相似度。辅助判断它们是否存在直接包含关系。",
-                    "parameters": {
-                        "type": "object",
-                        "properties": {
-                            "text1": {"type": "string", "description": "要比较的文本段落1"},
-                            "text2": {"type": "string", "description": "要比较的文本段落2"}
-                        },
-                        "required": ["text1", "text2"]
-                    }
-                }
+        # Public metadata and deterministic text evidence remain the authority.
+        # The LLM may downgrade a risky claim, but it cannot upgrade weak rule
+        # evidence into Green support by itself.
+        if llm_result["support_status"] == "not_supported":
+            return {
+                **deterministic,
+                "support_status": "not_supported",
+                "support_reason": (
+                    f"{deterministic['support_reason']} "
+                    f"LLM reviewer also flagged no support: {llm_result['support_reason']}"
+                ),
+                "support_score": 0.0,
             }
-        ]
-
-        try:
-            from agent.llm_client import call_llm
-            from agent.utils import overlap_score, similarity
-
-            # 最大允许三次交互（fetch_abstract → calculate_overlap → 最终判断）
-            for _ in range(3):
-                resp = call_llm(messages, tools=tools, temperature=0.0)
-                messages.append(resp)
-
-                if resp.get("tool_calls"):
-                    for tc in resp["tool_calls"]:
-                        if tc["function"]["name"] == "fetch_abstract":
-                            args = json.loads(tc["function"]["arguments"])
-                            doi = args.get("doi", paper_doi)
-                            abstract = self._fetch_abstract(doi)
-                            if abstract:
-                                tool_result = json.dumps({"abstract": abstract}, ensure_ascii=False)
-                            else:
-                                tool_result = json.dumps({"abstract": None, "error": "Semantic Scholar 也未找到该文献的摘要"}, ensure_ascii=False)
-                            messages.append({
-                                "role": "tool",
-                                "tool_call_id": tc["id"],
-                                "content": tool_result
-                            })
-                        elif tc["function"]["name"] == "calculate_overlap":
-                            args = json.loads(tc["function"]["arguments"])
-                            t1 = args.get("text1", "")
-                            t2 = args.get("text2", "")
-                            score, shared = overlap_score(t1, t2)
-                            sim = similarity(t1, t2)
-                            tool_result = json.dumps({
-                                "overlap_score": round(score, 3),
-                                "shared_keywords": shared[:10],
-                                "string_similarity": round(sim, 3)
-                            }, ensure_ascii=False)
-                            messages.append({
-                                "role": "tool",
-                                "tool_call_id": tc["id"],
-                                "content": tool_result
-                            })
-                    continue  # 工具调用完成，继续向大模型请求下一步
-
-                # 如果没有工具调用且是普通文本
-                content_text = resp.get("content", "").strip()
-                # 检查是否已经有 JSON 了
-                if re.search(r'\{.*\}', content_text, re.DOTALL):
-                    break  # 包含 JSON，跳出循环去解析
-                # 没有 JSON 且没有工具调用：强制提醒调用工具
-                messages.append({
-                    "role": "user",
-                    "content": "请直接调用 fetch_abstract 工具获取摘要，或直接输出 JSON 结果。不要输出解释性文字。"
-                })
-                continue
-
-            # 找到最后一个有实际内容的 assistant 回复
-            content = ""
-            for msg in reversed(messages):
-                if msg.get("role") == "assistant" and msg.get("content", "").strip():
-                    content = msg["content"].strip()
-                    break
-            if not content:
-                content = '{"status": "partial_or_uncertain", "reason": "LLM未能返回有效判决内容，回退为不确定"}'
-            if content.startswith("```json"):
-                content = content[7:]
-            if content.startswith("```"):
-                content = content[3:]
-            if content.endswith("```"):
-                content = content[:-3]
-            content = content.strip()
-            if not content:
-                content = '{"status": "partial_or_uncertain", "reason": "LLM未能返回有效判决内容，回退为不确定"}'
-            json_match = re.search(r'\{.*\}', content, re.DOTALL)
-            if json_match:
-                content = json_match.group()
-            res = json.loads(content)
-            status = res.get("status", "partial_or_uncertain")
-            reason = f"[模型判决] {res.get('reason', '经交叉复核判断')}"
-        except Exception as e:
-            import logging
-            logger = logging.getLogger("hypothesis_qqbot.verifier")
-            logger.warning("LLM judge failed, raw content[:200]=%s, error=%s", content[:200] if content else "(empty)", e)
-            status = "partial_or_uncertain"
-            reason = f"大模型裁判调用失败回退: {e}"
-
+        if deterministic["support_status"] == "supports" and llm_result["support_status"] == "supports":
+            return {
+                **deterministic,
+                "support_reason": f"{deterministic['support_reason']} LLM reviewer agreed: {llm_result['support_reason']}",
+            }
+        if deterministic["support_status"] == "supports" and llm_result["support_status"] == "partial_or_uncertain":
+            return {
+                **deterministic,
+                "support_status": "partial_or_uncertain",
+                "support_reason": (
+                    f"{deterministic['support_reason']} "
+                    f"LLM reviewer was uncertain: {llm_result['support_reason']}"
+                ),
+                "support_score": min(0.5, deterministic["support_score"]),
+            }
         return {
-            "support_status": status,
-            "support_reason": reason,
-            "support_score": 1.0 if status == "supports" else (0.5 if status == "partial_or_uncertain" else 0.0),
+            **deterministic,
+            "support_reason": (
+                f"{deterministic['support_reason']} "
+                "LLM reviewer did not provide enough independent evidence to upgrade the label."
+            ),
+        }
+
+    def _deterministic_support_assessment(self, claim_text: str, candidate: dict[str, Any]) -> dict[str, Any]:
+        evidence_body = clean_text(candidate.get("abstract") or candidate.get("snippet"))
+        evidence_text = clean_text(f"{candidate.get('title', '')}. {evidence_body}")
+        matched_text = self._best_evidence_text(claim_text, candidate)
+        if not evidence_body:
+            return {
+                "support_status": "partial_or_uncertain",
+                "support_reason": (
+                    "The citation exists, but public APIs did not provide an abstract/snippet detailed enough "
+                    "to verify concrete support."
+                ),
+                "support_score": 0.0,
+                "matched_evidence_text": matched_text,
+            }
+
+        score, shared = overlap_score(claim_text, evidence_text)
+        text_similarity = similarity(claim_text, evidence_text)
+        unsupported_terms = self._unsupported_strong_claim_terms(claim_text, evidence_text)
+        if unsupported_terms:
+            return {
+                "support_status": "partial_or_uncertain",
+                "support_reason": (
+                    "The citation is topically related, but the available abstract/snippet does not back the "
+                    f"strong claim term(s): {', '.join(unsupported_terms)}. "
+                    f"overlap={score:.2f}; shared={', '.join(shared[:8]) or 'none'}."
+                ),
+                "support_score": round(min(score, 0.5), 3),
+                "matched_evidence_text": matched_text,
+            }
+        if score >= 0.32 or text_similarity >= 0.42:
+            return {
+                "support_status": "supports",
+                "support_reason": (
+                    "Available title/abstract/snippet gives concrete textual support "
+                    f"(overlap={score:.2f}, similarity={text_similarity:.2f}; "
+                    f"shared={', '.join(shared[:8]) or 'none'})."
+                ),
+                "support_score": round(max(score, text_similarity), 3),
+                "matched_evidence_text": matched_text,
+            }
+        if score >= 0.12 or text_similarity >= 0.2:
+            return {
+                "support_status": "partial_or_uncertain",
+                "support_reason": (
+                    "The citation is related, but the available title/abstract/snippet only partially supports "
+                    f"the claim (overlap={score:.2f}, similarity={text_similarity:.2f})."
+                ),
+                "support_score": round(max(score, text_similarity), 3),
+                "matched_evidence_text": matched_text,
+            }
+        return {
+            "support_status": "not_supported",
+            "support_reason": (
+                "The available title/abstract/snippet does not support the claim "
+                f"(overlap={score:.2f}, similarity={text_similarity:.2f})."
+            ),
+            "support_score": round(max(score, text_similarity), 3),
             "matched_evidence_text": matched_text,
         }
+
+    def _unsupported_strong_claim_terms(self, claim_text: str, evidence_text: str) -> list[str]:
+        claim_lower = clean_text(claim_text).lower()
+        evidence_lower = clean_text(evidence_text).lower()
+        strong_terms = [
+            "fully solves",
+            "solves",
+            "eliminates",
+            "guarantees",
+            "proves",
+            "always",
+            "never",
+            "complete solution",
+            "完全解决",
+            "彻底解决",
+            "保证",
+        ]
+        return [term for term in strong_terms if term in claim_lower and term not in evidence_lower]
+
+    def _llm_support_assessment(self, claim_text: str, candidate: dict[str, Any]) -> dict[str, Any] | None:
+        evidence_text = clean_text(
+            f"{candidate.get('title', '')}. {candidate.get('abstract') or candidate.get('snippet', '')}"
+        )
+        matched_text = self._best_evidence_text(claim_text, candidate)
+        prompt = (
+            "You are a strict academic citation checker. Return only JSON with keys status and reason. "
+            "status must be one of supports, partial_or_uncertain, not_supported. "
+            "Only mark supports when the evidence text directly supports the claim.\n\n"
+            f"Claim: {claim_text}\n"
+            f"Evidence text: {evidence_text}\n"
+        )
+        try:
+            from agent.llm_client import call_llm
+
+            response = call_llm([{"role": "user", "content": prompt}], temperature=0.0)
+            content = clean_text(response.get("content"))
+            match = re.search(r"\{.*\}", content, flags=re.DOTALL)
+            if match:
+                content = match.group(0)
+            payload = json.loads(content)
+            status = clean_text(payload.get("status"))
+            if status not in {"supports", "partial_or_uncertain", "not_supported"}:
+                return None
+            return {
+                "support_status": status,
+                "support_reason": clean_text(payload.get("reason")) or "LLM reviewer returned no reason.",
+                "support_score": 1.0 if status == "supports" else (0.5 if status == "partial_or_uncertain" else 0.0),
+                "matched_evidence_text": matched_text,
+            }
+        except Exception:
+            return None
 
     def _best_evidence_text(self, claim_text: str, candidate: dict[str, Any]) -> str:
         text = clean_text(candidate.get("abstract") or candidate.get("snippet") or candidate.get("title"))
@@ -563,3 +560,4 @@ class CitationVerifier:
             "matched_evidence_text": "",
             "verification_method": "verification_error",
         }
+
