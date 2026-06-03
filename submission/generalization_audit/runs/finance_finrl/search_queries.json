@@ -1,0 +1,191 @@
+{
+  "queries": [
+    {
+      "query_id": "Q001",
+      "query": "FinRL: A Deep Reinforcement Learning Library for finrl trading stock",
+      "purpose": "Find papers directly related to the input paper topic.",
+      "required_terms": [
+        "finrl",
+        "trading",
+        "stock"
+      ],
+      "source_keywords": [
+        "finrl",
+        "trading",
+        "stock",
+        "drl",
+        "library",
+        "deep",
+        "quantitative",
+        "nance",
+        "reinforcement",
+        "learning",
+        "hands-on",
+        "what"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q002",
+      "query": "finrl trading stock drl library deep",
+      "purpose": "Find thematically related literature from extracted keywords.",
+      "required_terms": [
+        "finrl",
+        "trading",
+        "stock",
+        "drl"
+      ],
+      "source_keywords": [
+        "finrl",
+        "trading",
+        "stock",
+        "drl",
+        "library",
+        "deep",
+        "quantitative",
+        "nance",
+        "reinforcement",
+        "learning",
+        "hands-on",
+        "what"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q003",
+      "query": "drl introduce library finrl facilitates beginners expose",
+      "purpose": "Find papers around the research problem or gap.",
+      "required_terms": [
+        "drl",
+        "introduce",
+        "library",
+        "finrl"
+      ],
+      "source_keywords": [
+        "finrl",
+        "trading",
+        "stock",
+        "drl",
+        "library",
+        "deep",
+        "quantitative",
+        "nance",
+        "reinforcement",
+        "learning",
+        "hands-on",
+        "what"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q004",
+      "query": "finrl trading stock drl survey review",
+      "purpose": "Find broader review literature for citation grounding.",
+      "required_terms": [
+        "finrl",
+        "trading",
+        "stock"
+      ],
+      "source_keywords": [
+        "finrl",
+        "trading",
+        "stock",
+        "drl",
+        "library",
+        "deep",
+        "quantitative",
+        "nance",
+        "reinforcement",
+        "learning",
+        "hands-on",
+        "what"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q005",
+      "query": "finrl trading stock drl library method framework",
+      "purpose": "Follow-up method query from initial retrieval results.",
+      "required_terms": [
+        "finrl",
+        "trading",
+        "stock",
+        "drl"
+      ],
+      "source_keywords": [
+        "finrl",
+        "trading",
+        "stock",
+        "drl",
+        "library",
+        "deep",
+        "quantitative",
+        "nance",
+        "reinforcement",
+        "learning",
+        "hands-on",
+        "what"
+      ],
+      "query_stage": "followup",
+      "query_type": "method-oriented"
+    },
+    {
+      "query_id": "Q006",
+      "query": "finrl trading stock drl application cross disciplinary",
+      "purpose": "Follow-up application query for cross-disciplinary hypothesis transfer.",
+      "required_terms": [
+        "finrl",
+        "trading",
+        "stock",
+        "drl"
+      ],
+      "source_keywords": [
+        "finrl",
+        "trading",
+        "stock",
+        "drl",
+        "library",
+        "deep",
+        "quantitative",
+        "nance",
+        "reinforcement",
+        "learning",
+        "hands-on",
+        "what"
+      ],
+      "query_stage": "followup",
+      "query_type": "application-oriented"
+    },
+    {
+      "query_id": "Q007",
+      "query": "finrl trading stock drl limitations challenge",
+      "purpose": "Follow-up limitation query to surface uncertainty or contradiction.",
+      "required_terms": [
+        "finrl",
+        "trading",
+        "stock",
+        "drl"
+      ],
+      "source_keywords": [
+        "finrl",
+        "trading",
+        "stock",
+        "drl",
+        "library",
+        "deep",
+        "quantitative",
+        "nance",
+        "reinforcement",
+        "learning",
+        "hands-on",
+        "what"
+      ],
+      "query_stage": "followup",
+      "query_type": "limitation-oriented"
+    }
+  ]
+}

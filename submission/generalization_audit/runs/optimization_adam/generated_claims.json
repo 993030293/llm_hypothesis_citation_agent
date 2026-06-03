@@ -1,0 +1,261 @@
+{
+  "hypotheses": [
+    {
+      "hypothesis_id": "H001",
+      "idea_type": "conservative extension",
+      "evidence_status": "citation_backed",
+      "research_gap": "The method is straightforward to implement, is computationally efﬁcient, has little memory requirements, is invariant to diagonal rescaling of the gradients, and is well suited for problems that are large in terms of data and/or parameters. The method is also appropriate for non-stationary objectives and problems with very noisy and/or sparse gradients.",
+      "new_hypothesis": "A conservative next study should test whether techniques or observations from 'On Convergence of Adam for Stochastic Optimization under Relaxed Assumptions' and 'Convergence and Dynamical Behavior of the ADAM Algorithm for Nonconvex Stochastic Optimization' improve evidence-grounded work on optimization, stochastic, adam, objective.",
+      "why_novel": "It combines two retrieved strands with the input paper's research problem rather than copying either paper.",
+      "required_evidence": [
+        "Verify that both cited works exist and match metadata.",
+        "Verify that abstracts or snippets support the claims used to ground the idea.",
+        "Run a small empirical or literature review check before presenting the idea as a conclusion."
+      ],
+      "supporting_citations": [
+        {
+          "claim_id": "C001",
+          "literature_id": "L001",
+          "title": "On Convergence of Adam for Stochastic Optimization under Relaxed Assumptions",
+          "year": 2024,
+          "doi": "10.52202/079017-0346",
+          "evidence_id": "E002",
+          "retrieval_source": "crossref"
+        },
+        {
+          "claim_id": "C002",
+          "literature_id": "L002",
+          "title": "Convergence and Dynamical Behavior of the ADAM Algorithm for Nonconvex Stochastic Optimization",
+          "year": 2021,
+          "doi": "10.1137/19m1263443",
+          "evidence_id": "E003",
+          "retrieval_source": "crossref"
+        }
+      ],
+      "risk_or_limitation": "Novelty is moderate; the idea may be an incremental extension if the cited works already overlap strongly.",
+      "testable_prediction": "If this idea is valid, then a follow-up study on optimization, stochastic, adam, objective should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.",
+      "citation_claim_ids": [
+        "C001",
+        "C002"
+      ],
+      "hypothesis_text": "A conservative next study should test whether techniques or observations from 'On Convergence of Adam for Stochastic Optimization under Relaxed Assumptions' and 'Convergence and Dynamical Behavior of the ADAM Algorithm for Nonconvex Stochastic Optimization' improve evidence-grounded work on optimization, stochastic, adam, objective."
+    },
+    {
+      "hypothesis_id": "H002",
+      "idea_type": "cross-disciplinary analogy",
+      "evidence_status": "citation_backed",
+      "research_gap": "The method is straightforward to implement, is computationally efﬁcient, has little memory requirements, is invariant to diagonal rescaling of the gradients, and is well suited for problems that are large in terms of data and/or parameters. The method is also appropriate for non-stationary objectives and problems with very noisy and/or sparse gradients.",
+      "new_hypothesis": "If the mechanisms discussed in 'Accelerated Driving-Training-Based Optimization for Solving Constrained Bi-Objective Stochastic Optimization Problems' transfer across domains, then optimization, stochastic, adam, objective may benefit from a cross-disciplinary evaluation protocol grounded by 'An accelerate Prediction Strategy for Dynamic Multi-Objective Optimization'.",
+      "why_novel": "The idea explicitly treats retrieved literature as an analogy source for a different research setting.",
+      "required_evidence": [
+        "Verify that both cited works exist and match metadata.",
+        "Verify that abstracts or snippets support the claims used to ground the idea.",
+        "Run a small empirical or literature review check before presenting the idea as a conclusion."
+      ],
+      "supporting_citations": [
+        {
+          "claim_id": "C003",
+          "literature_id": "L003",
+          "title": "Accelerated Driving-Training-Based Optimization for Solving Constrained Bi-Objective Stochastic Optimization Problems",
+          "year": 2024,
+          "doi": "10.3390/math12121863",
+          "evidence_id": "E004",
+          "retrieval_source": "crossref"
+        },
+        {
+          "claim_id": "C004",
+          "literature_id": "L004",
+          "title": "An accelerate Prediction Strategy for Dynamic Multi-Objective Optimization",
+          "year": 2024,
+          "doi": "",
+          "evidence_id": "E005",
+          "retrieval_source": "arxiv"
+        }
+      ],
+      "risk_or_limitation": "The analogy may fail if the source domain assumptions do not hold for the input paper's domain.",
+      "testable_prediction": "If this idea is valid, then a follow-up study on optimization, stochastic, adam, objective should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.",
+      "citation_claim_ids": [
+        "C003",
+        "C004"
+      ],
+      "hypothesis_text": "If the mechanisms discussed in 'Accelerated Driving-Training-Based Optimization for Solving Constrained Bi-Objective Stochastic Optimization Problems' transfer across domains, then optimization, stochastic, adam, objective may benefit from a cross-disciplinary evaluation protocol grounded by 'An accelerate Prediction Strategy for Dynamic Multi-Objective Optimization'."
+    },
+    {
+      "hypothesis_id": "H003",
+      "idea_type": "high-risk speculative idea",
+      "evidence_status": "citation_backed",
+      "research_gap": "The method is straightforward to implement, is computationally efﬁcient, has little memory requirements, is invariant to diagonal rescaling of the gradients, and is well suited for problems that are large in terms of data and/or parameters. The method is also appropriate for non-stationary objectives and problems with very noisy and/or sparse gradients.",
+      "new_hypothesis": "A higher-risk hypothesis is that the shared signals behind 'On the solution existence and stability of polynomial optimization problems' and 'Stochastic (Approximate) Proximal Point Methods: Convergence, Optimality, and Adaptivity' point to a broader latent factor affecting optimization, stochastic, adam, objective.",
+      "why_novel": "It proposes a broader latent explanation rather than only applying a known method.",
+      "required_evidence": [
+        "Verify that both cited works exist and match metadata.",
+        "Verify that abstracts or snippets support the claims used to ground the idea.",
+        "Run a small empirical or literature review check before presenting the idea as a conclusion."
+      ],
+      "supporting_citations": [
+        {
+          "claim_id": "C005",
+          "literature_id": "L005",
+          "title": "On the solution existence and stability of polynomial optimization problems",
+          "year": 2018,
+          "doi": "",
+          "evidence_id": "E006",
+          "retrieval_source": "arxiv"
+        },
+        {
+          "claim_id": "C006",
+          "literature_id": "L006",
+          "title": "Stochastic (Approximate) Proximal Point Methods: Convergence, Optimality, and Adaptivity",
+          "year": 2018,
+          "doi": "",
+          "evidence_id": "E007",
+          "retrieval_source": "arxiv"
+        }
+      ],
+      "risk_or_limitation": "This is speculative and should be treated as Yellow unless stronger evidence is retrieved.",
+      "testable_prediction": "If this idea is valid, then a follow-up study on optimization, stochastic, adam, objective should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.",
+      "citation_claim_ids": [
+        "C005",
+        "C006"
+      ],
+      "hypothesis_text": "A higher-risk hypothesis is that the shared signals behind 'On the solution existence and stability of polynomial optimization problems' and 'Stochastic (Approximate) Proximal Point Methods: Convergence, Optimality, and Adaptivity' point to a broader latent factor affecting optimization, stochastic, adam, objective."
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "C001",
+      "claim_text": "Prior work reports that On Convergence of Adam for Stochastic Optimization under Relaxed Assumptions",
+      "hypothesis_id": "H001",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "On Convergence of Adam for Stochastic Optimization under Relaxed Assumptions",
+        "authors": [
+          "Yusu Hong",
+          "Junhong Lin"
+        ],
+        "year": 2024,
+        "doi": "10.52202/079017-0346",
+        "venue": "Advances in Neural Information Processing Systems 37",
+        "url": "https://doi.org/10.52202/079017-0346",
+        "retrieval_source": "crossref",
+        "literature_id": "L001",
+        "evidence_id": "E002",
+        "abstract": "",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C002",
+      "claim_text": "Prior work reports that Convergence and Dynamical Behavior of the ADAM Algorithm for Nonconvex Stochastic Optimization",
+      "hypothesis_id": "H001",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Convergence and Dynamical Behavior of the ADAM Algorithm for Nonconvex Stochastic Optimization",
+        "authors": [
+          "Anas Barakat",
+          "Pascal Bianchi"
+        ],
+        "year": 2021,
+        "doi": "10.1137/19m1263443",
+        "venue": "SIAM Journal on Optimization",
+        "url": "https://doi.org/10.1137/19m1263443",
+        "retrieval_source": "crossref",
+        "literature_id": "L002",
+        "evidence_id": "E003",
+        "abstract": "",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C003",
+      "claim_text": "Prior work reports that The constrained bi-objective stochastic optimization problem (CBSOP) considers the optimization problem with stochastic bi-objective functions subject to deterministic constraints.",
+      "hypothesis_id": "H002",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Accelerated Driving-Training-Based Optimization for Solving Constrained Bi-Objective Stochastic Optimization Problems",
+        "authors": [
+          "Shih-Cheng Horng",
+          "Shieh-Shing Lin"
+        ],
+        "year": 2024,
+        "doi": "10.3390/math12121863",
+        "venue": "Mathematics",
+        "url": "https://doi.org/10.3390/math12121863",
+        "retrieval_source": "crossref",
+        "literature_id": "L003",
+        "evidence_id": "E004",
+        "abstract": "The constrained bi-objective stochastic optimization problem (CBSOP) considers the optimization problem with stochastic bi-objective functions subject to deterministic constraints. The CBSOP is part of a set of hard combinatorial optimization problems regarding time complexity. Ordinal optimization (OO) theory provides a commonly recognized structure to handle hard combinatorial optimization problems. Although OO theory may solve hard combinatorial optimization problems quickly, the deterministic constraints will critically influence computing performance. This work presents a metaheuristic approach that combines driving-training-based optimization (DTBO) with ordinal optimization (OO), abbreviated as DTOO, to solve the CBSOP with a large design space. The DTOO approach comprises three major components: the surrogate model, diversification, and intensification. In the surrogate model, the regularized minimal-energy tensor product with cubic Hermite splines is utilized as a fitness estimation of design. In diversification, an accelerated driving-training-based optimization is presented to determine N remarkable designs from the design space. In intensification, a reinforced optimal computing budget allocation is used to find an extraordinary design from the N remarkable designs. The DTOO approach is applied to a medical resource allocation problem in the emergency department. Simulation results obtained by the DTOO approach are compared with three heuristic approaches to examine the performance of the DTOO approach. Test results show that the DTOO approach obtains an extraordinary design with higher solution quality and computational efficiency than the three heuristic approaches.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C004",
+      "claim_text": "Prior work reports that This paper addresses the challenge of dynamic multi-objective optimization problems (DMOPs) by introducing novel approaches for accelerating prediction strategies within the evolutionary algorithm framework.",
+      "hypothesis_id": "H002",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "An accelerate Prediction Strategy for Dynamic Multi-Objective Optimization",
+        "authors": [
+          "Ru Lei",
+          "Lin Li",
+          "Rustam Stolkin",
+          "Bin Feng"
+        ],
+        "year": 2024,
+        "doi": "",
+        "venue": "arXiv",
+        "url": "http://arxiv.org/abs/2410.05787v2",
+        "retrieval_source": "arxiv",
+        "literature_id": "L004",
+        "evidence_id": "E005",
+        "abstract": "This paper addresses the challenge of dynamic multi-objective optimization problems (DMOPs) by introducing novel approaches for accelerating prediction strategies within the evolutionary algorithm framework. Since the objectives of DMOPs evolve over time, both the Pareto optimal set (PS) and the Pareto optimal front (PF) are dynamic. To effectively track the changes in the PS and PF in both decision and objective spaces, we propose an adaptive prediction strategy that incorporates second-order derivatives to predict and adjust the algorithms search behavior. This strategy enhances the algorithm's ability to anticipate changes in the environment, allowing for more efficient population re-initialization. We evaluate the performance of the proposed method against four state-of-the-art algorithms using standard DMOPs benchmark problems. Experimental results demonstrate that the proposed approach significantly outperforms the other algorithms across most test problems.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C005",
+      "claim_text": "Prior work reports that This paper introduces and investigates a regularity condition in the asymptotic sense for optimization problems whose objective functions are polynomial.",
+      "hypothesis_id": "H003",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "On the solution existence and stability of polynomial optimization problems",
+        "authors": [
+          "Vu Trung Hieu"
+        ],
+        "year": 2018,
+        "doi": "",
+        "venue": "arXiv",
+        "url": "http://arxiv.org/abs/1808.06100v6",
+        "retrieval_source": "arxiv",
+        "literature_id": "L005",
+        "evidence_id": "E006",
+        "abstract": "This paper introduces and investigates a regularity condition in the asymptotic sense for optimization problems whose objective functions are polynomial. Under this regularity condition, the normalization argument in asymptotic analysis enables us to see the solution existence as well as the solution stability of these problems. We prove a Frank-Wolfe type theorem for regular optimization problems and an Eaves type theorem for non-regular pseudoconvex optimization problems. Moreover, we show results on the stability such as upper semicontinuity and local upper-Hölder stability of the solution map of polynomial optimization problems. At the end of the paper, we discuss the genericity of the regularity condition.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C006",
+      "claim_text": "Prior work reports that We develop model-based methods for solving stochastic convex optimization problems, introducing the approximate-proximal point, or aProx, family, which includes stochastic subgradient, proximal point, and bundle methods.",
+      "hypothesis_id": "H003",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Stochastic (Approximate) Proximal Point Methods: Convergence, Optimality, and Adaptivity",
+        "authors": [
+          "Hilal Asi",
+          "John C. Duchi"
+        ],
+        "year": 2018,
+        "doi": "",
+        "venue": "arXiv",
+        "url": "http://arxiv.org/abs/1810.05633v2",
+        "retrieval_source": "arxiv",
+        "literature_id": "L006",
+        "evidence_id": "E007",
+        "abstract": "We develop model-based methods for solving stochastic convex optimization problems, introducing the approximate-proximal point, or aProx, family, which includes stochastic subgradient, proximal point, and bundle methods. When the modeling approaches we propose are appropriately accurate, the methods enjoy stronger convergence and robustness guarantees than classical approaches, even though the model-based methods typically add little to no computational overhead over stochastic subgradient methods. For example, we show that improved models converge with probability 1 and enjoy optimal asymptotic normality results under weak assumptions; these methods are also adaptive to a natural class of what we term easy optimization problems, achieving linear convergence under appropriate strong growth conditions on the objective. Our substantial experimental investigation shows the advantages of more accurate modeling over standard subgradient methods across many smooth and non-smooth optimization problems.",
+        "snippet": ""
+      }
+    }
+  ],
+  "markdown": "# Generated Research Idea Cards\n\nInput paper: Adam: A Method for Stochastic Optimization\n\n## H001: conservative extension\nEvidence status: `citation_backed`\n\nResearch gap: The method is straightforward to implement, is computationally efﬁcient, has little memory requirements, is invariant to diagonal rescaling of the gradients, and is well suited for problems that are large in terms of data and/or parameters. The method is also appropriate for non-stationary objectives and problems with very noisy and/or sparse gradients.\n\nNew hypothesis: A conservative next study should test whether techniques or observations from 'On Convergence of Adam for Stochastic Optimization under Relaxed Assumptions' and 'Convergence and Dynamical Behavior of the ADAM Algorithm for Nonconvex Stochastic Optimization' improve evidence-grounded work on optimization, stochastic, adam, objective.\n\nWhy novel: It combines two retrieved strands with the input paper's research problem rather than copying either paper.\n\nRequired evidence:\n- Verify that both cited works exist and match metadata.\n- Verify that abstracts or snippets support the claims used to ground the idea.\n- Run a small empirical or literature review check before presenting the idea as a conclusion.\n\nSupporting citations:\n- C001: On Convergence of Adam for Stochastic Optimization under Relaxed Assumptions (2024), DOI: 10.52202/079017-0346\n- C002: Convergence and Dynamical Behavior of the ADAM Algorithm for Nonconvex Stochastic Optimization (2021), DOI: 10.1137/19m1263443\n\nRisk or limitation: Novelty is moderate; the idea may be an incremental extension if the cited works already overlap strongly.\n\nTestable prediction: If this idea is valid, then a follow-up study on optimization, stochastic, adam, objective should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.\n\n## H002: cross-disciplinary analogy\nEvidence status: `citation_backed`\n\nResearch gap: The method is straightforward to implement, is computationally efﬁcient, has little memory requirements, is invariant to diagonal rescaling of the gradients, and is well suited for problems that are large in terms of data and/or parameters. The method is also appropriate for non-stationary objectives and problems with very noisy and/or sparse gradients.\n\nNew hypothesis: If the mechanisms discussed in 'Accelerated Driving-Training-Based Optimization for Solving Constrained Bi-Objective Stochastic Optimization Problems' transfer across domains, then optimization, stochastic, adam, objective may benefit from a cross-disciplinary evaluation protocol grounded by 'An accelerate Prediction Strategy for Dynamic Multi-Objective Optimization'.\n\nWhy novel: The idea explicitly treats retrieved literature as an analogy source for a different research setting.\n\nRequired evidence:\n- Verify that both cited works exist and match metadata.\n- Verify that abstracts or snippets support the claims used to ground the idea.\n- Run a small empirical or literature review check before presenting the idea as a conclusion.\n\nSupporting citations:\n- C003: Accelerated Driving-Training-Based Optimization for Solving Constrained Bi-Objective Stochastic Optimization Problems (2024), DOI: 10.3390/math12121863\n- C004: An accelerate Prediction Strategy for Dynamic Multi-Objective Optimization (2024), DOI: missing\n\nRisk or limitation: The analogy may fail if the source domain assumptions do not hold for the input paper's domain.\n\nTestable prediction: If this idea is valid, then a follow-up study on optimization, stochastic, adam, objective should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.\n\n## H003: high-risk speculative idea\nEvidence status: `citation_backed`\n\nResearch gap: The method is straightforward to implement, is computationally efﬁcient, has little memory requirements, is invariant to diagonal rescaling of the gradients, and is well suited for problems that are large in terms of data and/or parameters. The method is also appropriate for non-stationary objectives and problems with very noisy and/or sparse gradients.\n\nNew hypothesis: A higher-risk hypothesis is that the shared signals behind 'On the solution existence and stability of polynomial optimization problems' and 'Stochastic (Approximate) Proximal Point Methods: Convergence, Optimality, and Adaptivity' point to a broader latent factor affecting optimization, stochastic, adam, objective.\n\nWhy novel: It proposes a broader latent explanation rather than only applying a known method.\n\nRequired evidence:\n- Verify that both cited works exist and match metadata.\n- Verify that abstracts or snippets support the claims used to ground the idea.\n- Run a small empirical or literature review check before presenting the idea as a conclusion.\n\nSupporting citations:\n- C005: On the solution existence and stability of polynomial optimization problems (2018), DOI: missing\n- C006: Stochastic (Approximate) Proximal Point Methods: Convergence, Optimality, and Adaptivity (2018), DOI: missing\n\nRisk or limitation: This is speculative and should be treated as Yellow unless stronger evidence is retrieved.\n\nTestable prediction: If this idea is valid, then a follow-up study on optimization, stochastic, adam, objective should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.\n\n## Citation-Backed Claims To Verify\n\n| Claim ID | Hypothesis | Claim | Cited Title | Year | DOI |\n|---|---|---|---|---|---|\n| C001 | H001 | Prior work reports that On Convergence of Adam for Stochastic Optimization under Relaxed Assumptions | On Convergence of Adam for Stochastic Optimization under Relaxed Assumptions | 2024 | 10.52202/079017-0346 |\n| C002 | H001 | Prior work reports that Convergence and Dynamical Behavior of the ADAM Algorithm for Nonconvex Stochastic Optimization | Convergence and Dynamical Behavior of the ADAM Algorithm for Nonconvex Stochastic Optimization | 2021 | 10.1137/19m1263443 |\n| C003 | H002 | Prior work reports that The constrained bi-objective stochastic optimization problem (CBSOP) considers the optimization problem with stochastic bi-objective functions subject to deterministic constraints. | Accelerated Driving-Training-Based Optimization for Solving Constrained Bi-Objective Stochastic Optimization Problems | 2024 | 10.3390/math12121863 |\n| C004 | H002 | Prior work reports that This paper addresses the challenge of dynamic multi-objective optimization problems (DMOPs) by introducing novel approaches for accelerating prediction strategies within the evolutionary algorithm framework. | An accelerate Prediction Strategy for Dynamic Multi-Objective Optimization | 2024 |  |\n| C005 | H003 | Prior work reports that This paper introduces and investigates a regularity condition in the asymptotic sense for optimization problems whose objective functions are polynomial. | On the solution existence and stability of polynomial optimization problems | 2018 |  |\n| C006 | H003 | Prior work reports that We develop model-based methods for solving stochastic convex optimization problems, introducing the approximate-proximal point, or aProx, family, which includes stochastic subgradient, proximal point, and bundle methods. | Stochastic (Approximate) Proximal Point Methods: Convergence, Optimality, and Adaptivity | 2018 |  |",
+  "evidence_id": "E034"
+}

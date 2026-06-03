@@ -1,0 +1,267 @@
+{
+  "hypotheses": [
+    {
+      "hypothesis_id": "H001",
+      "idea_type": "conservative extension",
+      "evidence_status": "citation_backed",
+      "research_gap": "Provided proper attribution is provided, Google hereby grants permission to reproduce the tables and figures in this paper solely for use in journalistic or scholarly works. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely.",
+      "new_hypothesis": "A conservative next study should test whether techniques or observations from 'Columbine’s Challenge: A Call to Pay Attention to Our Students' and 'Dilated Neighborhood Attention Transformer' improve evidence-grounded work on google, attention, our, com.",
+      "why_novel": "It combines two retrieved strands with the input paper's research problem rather than copying either paper.",
+      "required_evidence": [
+        "Verify that both cited works exist and match metadata.",
+        "Verify that abstracts or snippets support the claims used to ground the idea.",
+        "Run a small empirical or literature review check before presenting the idea as a conclusion."
+      ],
+      "supporting_citations": [
+        {
+          "claim_id": "C001",
+          "literature_id": "L001",
+          "title": "Columbine’s Challenge: A Call to Pay Attention to Our Students",
+          "year": 1999,
+          "doi": "10.58680/vm19992276",
+          "evidence_id": "E021",
+          "retrieval_source": "crossref"
+        },
+        {
+          "claim_id": "C002",
+          "literature_id": "L002",
+          "title": "Dilated Neighborhood Attention Transformer",
+          "year": 2022,
+          "doi": "",
+          "evidence_id": "E002",
+          "retrieval_source": "arxiv"
+        }
+      ],
+      "risk_or_limitation": "Novelty is moderate; the idea may be an incremental extension if the cited works already overlap strongly.",
+      "testable_prediction": "If this idea is valid, then a follow-up study on google, attention, our, com should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.",
+      "citation_claim_ids": [
+        "C001",
+        "C002"
+      ],
+      "hypothesis_text": "A conservative next study should test whether techniques or observations from 'Columbine’s Challenge: A Call to Pay Attention to Our Students' and 'Dilated Neighborhood Attention Transformer' improve evidence-grounded work on google, attention, our, com."
+    },
+    {
+      "hypothesis_id": "H002",
+      "idea_type": "cross-disciplinary analogy",
+      "evidence_status": "citation_backed",
+      "research_gap": "Provided proper attribution is provided, Google hereby grants permission to reproduce the tables and figures in this paper solely for use in journalistic or scholarly works. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely.",
+      "new_hypothesis": "If the mechanisms discussed in 'Review of deep learning: concepts, CNN architectures, challenges, applications, future directions' transfer across domains, then google, attention, our, com may benefit from a cross-disciplinary evaluation protocol grounded by 'Limitations in our knowledge of the Sun’s variability and impact on stratospheric ozone'.",
+      "why_novel": "The idea explicitly treats retrieved literature as an analogy source for a different research setting.",
+      "required_evidence": [
+        "Verify that both cited works exist and match metadata.",
+        "Verify that abstracts or snippets support the claims used to ground the idea.",
+        "Run a small empirical or literature review check before presenting the idea as a conclusion."
+      ],
+      "supporting_citations": [
+        {
+          "claim_id": "C003",
+          "literature_id": "L003",
+          "title": "Review of deep learning: concepts, CNN architectures, challenges, applications, future directions",
+          "year": 2021,
+          "doi": "10.1186/s40537-021-00444-8",
+          "evidence_id": "E003",
+          "retrieval_source": "openalex"
+        },
+        {
+          "claim_id": "C004",
+          "literature_id": "L004",
+          "title": "Limitations in our knowledge of the Sun’s variability and impact on stratospheric ozone",
+          "year": 2016,
+          "doi": "10.37207/cra.1.1",
+          "evidence_id": "E022",
+          "retrieval_source": "crossref"
+        }
+      ],
+      "risk_or_limitation": "The analogy may fail if the source domain assumptions do not hold for the input paper's domain.",
+      "testable_prediction": "If this idea is valid, then a follow-up study on google, attention, our, com should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.",
+      "citation_claim_ids": [
+        "C003",
+        "C004"
+      ],
+      "hypothesis_text": "If the mechanisms discussed in 'Review of deep learning: concepts, CNN architectures, challenges, applications, future directions' transfer across domains, then google, attention, our, com may benefit from a cross-disciplinary evaluation protocol grounded by 'Limitations in our knowledge of the Sun’s variability and impact on stratospheric ozone'."
+    },
+    {
+      "hypothesis_id": "H003",
+      "idea_type": "high-risk speculative idea",
+      "evidence_status": "citation_backed",
+      "research_gap": "Provided proper attribution is provided, Google hereby grants permission to reproduce the tables and figures in this paper solely for use in journalistic or scholarly works. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely.",
+      "new_hypothesis": "A higher-risk hypothesis is that the shared signals behind 'Which academic search systems are suitable for systematic reviews or meta‐analyses? Evaluating retrieval qualities of Google Scholar, PubMed, and 26 other resources' and 'Dual Cross-Attention for Medical Image Segmentation' point to a broader latent factor affecting google, attention, our, com.",
+      "why_novel": "It proposes a broader latent explanation rather than only applying a known method.",
+      "required_evidence": [
+        "Verify that both cited works exist and match metadata.",
+        "Verify that abstracts or snippets support the claims used to ground the idea.",
+        "Run a small empirical or literature review check before presenting the idea as a conclusion."
+      ],
+      "supporting_citations": [
+        {
+          "claim_id": "C005",
+          "literature_id": "L005",
+          "title": "Which academic search systems are suitable for systematic reviews or meta‐analyses? Evaluating retrieval qualities of Google Scholar, PubMed, and 26 other resources",
+          "year": 2019,
+          "doi": "10.1002/jrsm.1378",
+          "evidence_id": "E023",
+          "retrieval_source": "openalex"
+        },
+        {
+          "claim_id": "C006",
+          "literature_id": "L006",
+          "title": "Dual Cross-Attention for Medical Image Segmentation",
+          "year": 2023,
+          "doi": "",
+          "evidence_id": "E024",
+          "retrieval_source": "arxiv"
+        }
+      ],
+      "risk_or_limitation": "This is speculative and should be treated as Yellow unless stronger evidence is retrieved.",
+      "testable_prediction": "If this idea is valid, then a follow-up study on google, attention, our, com should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.",
+      "citation_claim_ids": [
+        "C005",
+        "C006"
+      ],
+      "hypothesis_text": "A higher-risk hypothesis is that the shared signals behind 'Which academic search systems are suitable for systematic reviews or meta‐analyses? Evaluating retrieval qualities of Google Scholar, PubMed, and 26 other resources' and 'Dual Cross-Attention for Medical Image Segmentation' point to a broader latent factor affecting google, attention, our, com."
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "C001",
+      "claim_text": "Prior work reports that Presents a call to action to all adults who impact the lives of students to make the time to pay attention to students, encourage their strengths, promote their learning, and model considerate and pro-social behavior—to notice them and talk to them.",
+      "hypothesis_id": "H001",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Columbine’s Challenge: A Call to Pay Attention to Our Students",
+        "authors": [
+          "Robin Stern"
+        ],
+        "year": 1999,
+        "doi": "10.58680/vm19992276",
+        "venue": "Voices from the Middle",
+        "url": "https://doi.org/10.58680/vm19992276",
+        "retrieval_source": "crossref",
+        "literature_id": "L001",
+        "evidence_id": "E021",
+        "abstract": "Presents a call to action to all adults who impact the lives of students to make the time to pay attention to students, encourage their strengths, promote their learning, and model considerate and pro-social behavior—to notice them and talk to them.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C002",
+      "claim_text": "Prior work reports that Transformers are quickly becoming one of the most heavily applied deep learning architectures across modalities, domains, and tasks.",
+      "hypothesis_id": "H001",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Dilated Neighborhood Attention Transformer",
+        "authors": [
+          "Ali Hassani",
+          "Humphrey Shi"
+        ],
+        "year": 2022,
+        "doi": "",
+        "venue": "arXiv",
+        "url": "http://arxiv.org/abs/2209.15001v3",
+        "retrieval_source": "arxiv",
+        "literature_id": "L002",
+        "evidence_id": "E002",
+        "abstract": "Transformers are quickly becoming one of the most heavily applied deep learning architectures across modalities, domains, and tasks. In vision, on top of ongoing efforts into plain transformers, hierarchical transformers have also gained significant attention, thanks to their performance and easy integration into existing frameworks. These models typically employ localized attention mechanisms, such as the sliding-window Neighborhood Attention (NA) or Swin Transformer's Shifted Window Self Attention. While effective at reducing self attention's quadratic complexity, local attention weakens two of the most desirable properties of self attention: long range inter-dependency modeling, and global receptive field. In this paper, we introduce Dilated Neighborhood Attention (DiNA), a natural, flexible and efficient extension to NA that can capture more global context and expand receptive fields exponentially at no additional cost. NA's local attention and DiNA's sparse global attention complement each other, and therefore we introduce Dilated Neighborhood Attention Transformer (DiNAT), a new hierarchical vision transformer built upon both. DiNAT variants enjoy significant improvements over strong baselines such as NAT, Swin, and ConvNeXt. Our large model is faster and ahead of its Swin counterpart by 1.6% box AP in COCO object detection, 1.4% mask AP in COCO instance segmentation, and 1.4% mIoU in ADE20K semantic segmentation. Paired with new frameworks, our large variant is the new state of the art panoptic segmentation model on COCO (58.5 PQ) and ADE20K (49.4 PQ), and instance segmentation model on Cityscapes (45.1 AP) and ADE20K (35.4 AP) (no extra data). It also matches the state of the art specialized semantic segmentation models on ADE20K (58.1 mIoU), and ranks second on Cityscapes (84.5 mIoU) (no extra data).",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C003",
+      "claim_text": "Prior work reports that In the last few years, the deep learning (DL) computing paradigm has been deemed the Gold Standard in the machine learning (ML) community.",
+      "hypothesis_id": "H002",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Review of deep learning: concepts, CNN architectures, challenges, applications, future directions",
+        "authors": [
+          "Laith Alzubaidi",
+          "Jinglan Zhang",
+          "Amjad J. Humaidi",
+          "Ayad Q. Al-Dujaili",
+          "Ye Duan",
+          "Omran Al-Shamma",
+          "José Santamaría",
+          "Mohammed A. Fadhel",
+          "Muthana Al‐Amidie",
+          "Laith Farhan"
+        ],
+        "year": 2021,
+        "doi": "10.1186/s40537-021-00444-8",
+        "venue": "Journal Of Big Data",
+        "url": "https://doi.org/10.1186/s40537-021-00444-8",
+        "retrieval_source": "openalex",
+        "literature_id": "L003",
+        "evidence_id": "E003",
+        "abstract": "In the last few years, the deep learning (DL) computing paradigm has been deemed the Gold Standard in the machine learning (ML) community. Moreover, it has gradually become the most widely used computational approach in the field of ML, thus achieving outstanding results on several complex cognitive tasks, matching or even beating those provided by human performance. One of the benefits of DL is the ability to learn massive amounts of data. The DL field has grown fast in the last few years and it has been extensively used to successfully address a wide range of traditional applications. More importantly, DL has outperformed well-known ML techniques in many domains, e.g., cybersecurity, natural language processing, bioinformatics, robotics and control, and medical information processing, among many others. Despite it has been contributed several works reviewing the State-of-the-Art on DL, all of them only tackled one aspect of the DL, which leads to an overall lack of knowledge about it. Therefore, in this contribution, we propose using a more holistic approach in order to provide a more suitable starting point from which to develop a full understanding of DL. Specifically, this review attempts to provide a more comprehensive survey of the most important aspects of DL and including those enhancements recently added to the field. In particular, this paper outlines the importance of DL, presents the types of DL techniques and networks. It then presents convolutional neural networks (CNNs) which the most utilized DL network type and describes the development of CNNs architectures together with their main features, e.g., starting with the AlexNet network and closing with the High-Resolution network (HR.Net). Finally, we further present the challenges and suggested solutions to help researchers understand the existing research gaps. It is followed by a list of the major DL applications. Computational tools including FPGA, GPU, and CPU are summarized along with a description of their influence on DL. The paper ends with the evolution matrix, benchmark datasets, and summary and conclusion.",
+        "snippet": "article"
+      }
+    },
+    {
+      "claim_id": "C004",
+      "claim_text": "Prior work reports that Changes in the Sun over the 11-year solar cycle modify the amount of ozone in the atmosphere over the tropics above 20 km.",
+      "hypothesis_id": "H002",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Limitations in our knowledge of the Sun’s variability and impact on stratospheric ozone",
+        "authors": [
+          "William Thomas Ball"
+        ],
+        "year": 2016,
+        "doi": "10.37207/cra.1.1",
+        "venue": "Climanosco Research Articles",
+        "url": "https://doi.org/10.37207/cra.1.1",
+        "retrieval_source": "crossref",
+        "literature_id": "L004",
+        "evidence_id": "E022",
+        "abstract": "Changes in the Sun over the 11-year solar cycle modify the amount of ozone in the atmosphere over the tropics above 20 km. It is thought that the temperature change resulting from the induced variations of ozone may lead to an impact on the surface climate. Knowing by how much the solar ultraviolet light changes over the cycle is key to understanding the size of that influence. We provide a new model dataset of solar irradiance variability and compare it to the standard model used in climate studies, and to solar observations. We have shown that our model agrees better with an older instrument observing solar irradiance than the standard solar model for climate, though the two solar models and the older observations display much lower solar cycle variability than more recent observations. We discuss the differences and the uncertainties in the measurements. We also demonstrate that the true effect of solar ultraviolet changes on ozone is highly uncertain. This is important to be aware of since our understanding of the Sun’s impact on climate depends, in part, on getting the solar cycle changes in the ultraviolet correct.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C005",
+      "claim_text": "Prior work reports that Rigorous evidence identification is essential for systematic reviews and meta-analyses (evidence syntheses) because the sample selection of relevant studies determines a review's outcome, validity, and explanatory power.",
+      "hypothesis_id": "H003",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Which academic search systems are suitable for systematic reviews or meta‐analyses? Evaluating retrieval qualities of Google Scholar, PubMed, and 26 other resources",
+        "authors": [
+          "Michael Gusenbauer",
+          "Neal Haddaway"
+        ],
+        "year": 2019,
+        "doi": "10.1002/jrsm.1378",
+        "venue": "Research Synthesis Methods",
+        "url": "https://doi.org/10.1002/jrsm.1378",
+        "retrieval_source": "openalex",
+        "literature_id": "L005",
+        "evidence_id": "E023",
+        "abstract": "Rigorous evidence identification is essential for systematic reviews and meta-analyses (evidence syntheses) because the sample selection of relevant studies determines a review's outcome, validity, and explanatory power. Yet, the search systems allowing access to this evidence provide varying levels of precision, recall, and reproducibility and also demand different levels of effort. To date, it remains unclear which search systems are most appropriate for evidence synthesis and why. Advice on which search engines and bibliographic databases to choose for systematic searches is limited and lacking systematic, empirical performance assessments. This study investigates and compares the systematic search qualities of 28 widely used academic search systems, including Google Scholar, PubMed, and Web of Science. A novel, query-based method tests how well users are able to interact and retrieve records with each system. The study is the first to show the extent to which search systems can effectively and efficiently perform (Boolean) searches with regards to precision, recall, and reproducibility. We found substantial differences in the performance of search systems, meaning that their usability in systematic searches varies. Indeed, only half of the search systems analyzed and only a few Open Access databases can be recommended for evidence syntheses without adding substantial caveats. Particularly, our findings demonstrate why Google Scholar is inappropriate as principal search system. We call for database owners to recognize the requirements of evidence synthesis and for academic journals to reassess quality requirements for systematic reviews. Our findings aim to support researchers in conducting better searches for better evidence synthesis.",
+        "snippet": "article"
+      }
+    },
+    {
+      "claim_id": "C006",
+      "claim_text": "Prior work reports that We propose Dual Cross-Attention (DCA), a simple yet effective attention module that is able to enhance skip-connections in U-Net-based architectures for medical image segmentation.",
+      "hypothesis_id": "H003",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Dual Cross-Attention for Medical Image Segmentation",
+        "authors": [
+          "Gorkem Can Ates",
+          "Prasoon Mohan",
+          "Emrah Celik"
+        ],
+        "year": 2023,
+        "doi": "",
+        "venue": "arXiv",
+        "url": "http://arxiv.org/abs/2303.17696v1",
+        "retrieval_source": "arxiv",
+        "literature_id": "L006",
+        "evidence_id": "E024",
+        "abstract": "We propose Dual Cross-Attention (DCA), a simple yet effective attention module that is able to enhance skip-connections in U-Net-based architectures for medical image segmentation. DCA addresses the semantic gap between encoder and decoder features by sequentially capturing channel and spatial dependencies across multi-scale encoder features. First, the Channel Cross-Attention (CCA) extracts global channel-wise dependencies by utilizing cross-attention across channel tokens of multi-scale encoder features. Then, the Spatial Cross-Attention (SCA) module performs cross-attention to capture spatial dependencies across spatial tokens. Finally, these fine-grained encoder features are up-sampled and connected to their corresponding decoder parts to form the skip-connection scheme. Our proposed DCA module can be integrated into any encoder-decoder architecture with skip-connections such as U-Net and its variants. We test our DCA module by integrating it into six U-Net-based architectures such as U-Net, V-Net, R2Unet, ResUnet++, DoubleUnet and MultiResUnet. Our DCA module shows Dice Score improvements up to 2.05% on GlaS, 2.74% on MoNuSeg, 1.37% on CVC-ClinicDB, 1.12% on Kvasir-Seg and 1.44% on Synapse datasets. Our codes are available at: https://github.com/gorkemcanates/Dual-Cross-Attention",
+        "snippet": ""
+      }
+    }
+  ],
+  "markdown": "# Generated Research Idea Cards\n\nInput paper: Provided proper attribution is provided, Google hereby grants permission to\n\n## H001: conservative extension\nEvidence status: `citation_backed`\n\nResearch gap: Provided proper attribution is provided, Google hereby grants permission to reproduce the tables and figures in this paper solely for use in journalistic or scholarly works. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely.\n\nNew hypothesis: A conservative next study should test whether techniques or observations from 'Columbine’s Challenge: A Call to Pay Attention to Our Students' and 'Dilated Neighborhood Attention Transformer' improve evidence-grounded work on google, attention, our, com.\n\nWhy novel: It combines two retrieved strands with the input paper's research problem rather than copying either paper.\n\nRequired evidence:\n- Verify that both cited works exist and match metadata.\n- Verify that abstracts or snippets support the claims used to ground the idea.\n- Run a small empirical or literature review check before presenting the idea as a conclusion.\n\nSupporting citations:\n- C001: Columbine’s Challenge: A Call to Pay Attention to Our Students (1999), DOI: 10.58680/vm19992276\n- C002: Dilated Neighborhood Attention Transformer (2022), DOI: missing\n\nRisk or limitation: Novelty is moderate; the idea may be an incremental extension if the cited works already overlap strongly.\n\nTestable prediction: If this idea is valid, then a follow-up study on google, attention, our, com should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.\n\n## H002: cross-disciplinary analogy\nEvidence status: `citation_backed`\n\nResearch gap: Provided proper attribution is provided, Google hereby grants permission to reproduce the tables and figures in this paper solely for use in journalistic or scholarly works. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely.\n\nNew hypothesis: If the mechanisms discussed in 'Review of deep learning: concepts, CNN architectures, challenges, applications, future directions' transfer across domains, then google, attention, our, com may benefit from a cross-disciplinary evaluation protocol grounded by 'Limitations in our knowledge of the Sun’s variability and impact on stratospheric ozone'.\n\nWhy novel: The idea explicitly treats retrieved literature as an analogy source for a different research setting.\n\nRequired evidence:\n- Verify that both cited works exist and match metadata.\n- Verify that abstracts or snippets support the claims used to ground the idea.\n- Run a small empirical or literature review check before presenting the idea as a conclusion.\n\nSupporting citations:\n- C003: Review of deep learning: concepts, CNN architectures, challenges, applications, future directions (2021), DOI: 10.1186/s40537-021-00444-8\n- C004: Limitations in our knowledge of the Sun’s variability and impact on stratospheric ozone (2016), DOI: 10.37207/cra.1.1\n\nRisk or limitation: The analogy may fail if the source domain assumptions do not hold for the input paper's domain.\n\nTestable prediction: If this idea is valid, then a follow-up study on google, attention, our, com should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.\n\n## H003: high-risk speculative idea\nEvidence status: `citation_backed`\n\nResearch gap: Provided proper attribution is provided, Google hereby grants permission to reproduce the tables and figures in this paper solely for use in journalistic or scholarly works. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely.\n\nNew hypothesis: A higher-risk hypothesis is that the shared signals behind 'Which academic search systems are suitable for systematic reviews or meta‐analyses? Evaluating retrieval qualities of Google Scholar, PubMed, and 26 other resources' and 'Dual Cross-Attention for Medical Image Segmentation' point to a broader latent factor affecting google, attention, our, com.\n\nWhy novel: It proposes a broader latent explanation rather than only applying a known method.\n\nRequired evidence:\n- Verify that both cited works exist and match metadata.\n- Verify that abstracts or snippets support the claims used to ground the idea.\n- Run a small empirical or literature review check before presenting the idea as a conclusion.\n\nSupporting citations:\n- C005: Which academic search systems are suitable for systematic reviews or meta‐analyses? Evaluating retrieval qualities of Google Scholar, PubMed, and 26 other resources (2019), DOI: 10.1002/jrsm.1378\n- C006: Dual Cross-Attention for Medical Image Segmentation (2023), DOI: missing\n\nRisk or limitation: This is speculative and should be treated as Yellow unless stronger evidence is retrieved.\n\nTestable prediction: If this idea is valid, then a follow-up study on google, attention, our, com should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.\n\n## Citation-Backed Claims To Verify\n\n| Claim ID | Hypothesis | Claim | Cited Title | Year | DOI |\n|---|---|---|---|---|---|\n| C001 | H001 | Prior work reports that Presents a call to action to all adults who impact the lives of students to make the time to pay attention to students, encourage their strengths, promote their learning, and model considerate and pro-social behavior—to notice them and talk to them. | Columbine’s Challenge: A Call to Pay Attention to Our Students | 1999 | 10.58680/vm19992276 |\n| C002 | H001 | Prior work reports that Transformers are quickly becoming one of the most heavily applied deep learning architectures across modalities, domains, and tasks. | Dilated Neighborhood Attention Transformer | 2022 |  |\n| C003 | H002 | Prior work reports that In the last few years, the deep learning (DL) computing paradigm has been deemed the Gold Standard in the machine learning (ML) community. | Review of deep learning: concepts, CNN architectures, challenges, applications, future directions | 2021 | 10.1186/s40537-021-00444-8 |\n| C004 | H002 | Prior work reports that Changes in the Sun over the 11-year solar cycle modify the amount of ozone in the atmosphere over the tropics above 20 km. | Limitations in our knowledge of the Sun’s variability and impact on stratospheric ozone | 2016 | 10.37207/cra.1.1 |\n| C005 | H003 | Prior work reports that Rigorous evidence identification is essential for systematic reviews and meta-analyses (evidence syntheses) because the sample selection of relevant studies determines a review's outcome, validity, and explanatory power. | Which academic search systems are suitable for systematic reviews or meta‐analyses? Evaluating retrieval qualities of Google Scholar, PubMed, and 26 other resources | 2019 | 10.1002/jrsm.1378 |\n| C006 | H003 | Prior work reports that We propose Dual Cross-Attention (DCA), a simple yet effective attention module that is able to enhance skip-connections in U-Net-based architectures for medical image segmentation. | Dual Cross-Attention for Medical Image Segmentation | 2023 |  |",
+  "evidence_id": "E037"
+}

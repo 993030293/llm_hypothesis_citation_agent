@@ -1,0 +1,13 @@
+{
+  "case_id": "scanned_or_low_text",
+  "pdf_path": "inputs\\stress_cases\\papers\\scanned_or_low_text.pdf",
+  "source_type": "synthetic_parser_stress_fixture",
+  "source_note": "Generated locally to test PDF layout and extraction behavior; not claimed as a real published paper.",
+  "discipline": "unknown",
+  "layout_type": "scanned_or_low_text",
+  "expected_keyword_source": "missing",
+  "expected_keywords": [],
+  "expected_readiness": "risky",
+  "online_audit": false,
+  "demo_command": "python agent/workflow.py --pdf inputs\\stress_cases\\papers\\scanned_or_low_text.pdf --task \"Stress audit case scanned_or_low_text\""
+}

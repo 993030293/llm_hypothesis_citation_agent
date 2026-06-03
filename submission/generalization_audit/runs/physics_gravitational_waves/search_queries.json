@@ -1,0 +1,191 @@
+{
+  "queries": [
+    {
+      "query_id": "Q001",
+      "query": "Observation of Gravitational Waves from a Binary Black Hole Merger black hole waves",
+      "purpose": "Find papers directly related to the input paper topic.",
+      "required_terms": [
+        "black",
+        "hole",
+        "waves"
+      ],
+      "source_keywords": [
+        "black",
+        "hole",
+        "waves",
+        "gravitational",
+        "gravitational-wave",
+        "merger",
+        "binary",
+        "signal",
+        "observation",
+        "collaboration",
+        "published",
+        "observed"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q002",
+      "query": "black hole waves gravitational gravitational-wave merger",
+      "purpose": "Find thematically related literature from extracted keywords.",
+      "required_terms": [
+        "black",
+        "hole",
+        "waves",
+        "gravitational"
+      ],
+      "source_keywords": [
+        "black",
+        "hole",
+        "waves",
+        "gravitational",
+        "gravitational-wave",
+        "merger",
+        "binary",
+        "signal",
+        "observation",
+        "collaboration",
+        "published",
+        "observed"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q003",
+      "query": "investigate extensions related evidence around observation gravitational",
+      "purpose": "Find papers around the research problem or gap.",
+      "required_terms": [
+        "investigate",
+        "extensions",
+        "related",
+        "evidence"
+      ],
+      "source_keywords": [
+        "black",
+        "hole",
+        "waves",
+        "gravitational",
+        "gravitational-wave",
+        "merger",
+        "binary",
+        "signal",
+        "observation",
+        "collaboration",
+        "published",
+        "observed"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q004",
+      "query": "black hole waves gravitational survey review",
+      "purpose": "Find broader review literature for citation grounding.",
+      "required_terms": [
+        "black",
+        "hole",
+        "waves"
+      ],
+      "source_keywords": [
+        "black",
+        "hole",
+        "waves",
+        "gravitational",
+        "gravitational-wave",
+        "merger",
+        "binary",
+        "signal",
+        "observation",
+        "collaboration",
+        "published",
+        "observed"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q005",
+      "query": "black hole waves gravitational gravitational-wave method framework",
+      "purpose": "Follow-up method query from initial retrieval results.",
+      "required_terms": [
+        "black",
+        "hole",
+        "waves",
+        "gravitational"
+      ],
+      "source_keywords": [
+        "black",
+        "hole",
+        "waves",
+        "gravitational",
+        "gravitational-wave",
+        "merger",
+        "binary",
+        "signal",
+        "observation",
+        "collaboration",
+        "published",
+        "observed"
+      ],
+      "query_stage": "followup",
+      "query_type": "method-oriented"
+    },
+    {
+      "query_id": "Q006",
+      "query": "black hole waves gravitational application cross disciplinary",
+      "purpose": "Follow-up application query for cross-disciplinary hypothesis transfer.",
+      "required_terms": [
+        "black",
+        "hole",
+        "waves",
+        "gravitational"
+      ],
+      "source_keywords": [
+        "black",
+        "hole",
+        "waves",
+        "gravitational",
+        "gravitational-wave",
+        "merger",
+        "binary",
+        "signal",
+        "observation",
+        "collaboration",
+        "published",
+        "observed"
+      ],
+      "query_stage": "followup",
+      "query_type": "application-oriented"
+    },
+    {
+      "query_id": "Q007",
+      "query": "black hole waves gravitational limitations challenge",
+      "purpose": "Follow-up limitation query to surface uncertainty or contradiction.",
+      "required_terms": [
+        "black",
+        "hole",
+        "waves",
+        "gravitational"
+      ],
+      "source_keywords": [
+        "black",
+        "hole",
+        "waves",
+        "gravitational",
+        "gravitational-wave",
+        "merger",
+        "binary",
+        "signal",
+        "observation",
+        "collaboration",
+        "published",
+        "observed"
+      ],
+      "query_stage": "followup",
+      "query_type": "limitation-oriented"
+    }
+  ]
+}

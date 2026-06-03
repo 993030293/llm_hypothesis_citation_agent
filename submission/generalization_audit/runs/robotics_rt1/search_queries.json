@@ -1,0 +1,191 @@
+{
+  "queries": [
+    {
+      "query_id": "Q001",
+      "query": "Preprint robotics alex julian",
+      "purpose": "Find papers directly related to the input paper topic.",
+      "required_terms": [
+        "robotics",
+        "alex",
+        "julian"
+      ],
+      "source_keywords": [
+        "robotics",
+        "alex",
+        "julian",
+        "kalashnikov",
+        "google",
+        "datasets",
+        "tasks",
+        "either",
+        "robotic",
+        "preprint",
+        "transformer",
+        "real"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q002",
+      "query": "robotics alex julian kalashnikov google datasets",
+      "purpose": "Find thematically related literature from extracted keywords.",
+      "required_terms": [
+        "robotics",
+        "alex",
+        "julian",
+        "kalashnikov"
+      ],
+      "source_keywords": [
+        "robotics",
+        "alex",
+        "julian",
+        "kalashnikov",
+        "google",
+        "datasets",
+        "tasks",
+        "either",
+        "robotic",
+        "preprint",
+        "transformer",
+        "real"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q003",
+      "query": "right class dubbed robotics transformer exhibits promising",
+      "purpose": "Find papers around the research problem or gap.",
+      "required_terms": [
+        "right",
+        "class",
+        "dubbed",
+        "robotics"
+      ],
+      "source_keywords": [
+        "robotics",
+        "alex",
+        "julian",
+        "kalashnikov",
+        "google",
+        "datasets",
+        "tasks",
+        "either",
+        "robotic",
+        "preprint",
+        "transformer",
+        "real"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q004",
+      "query": "robotics alex julian kalashnikov survey review",
+      "purpose": "Find broader review literature for citation grounding.",
+      "required_terms": [
+        "robotics",
+        "alex",
+        "julian"
+      ],
+      "source_keywords": [
+        "robotics",
+        "alex",
+        "julian",
+        "kalashnikov",
+        "google",
+        "datasets",
+        "tasks",
+        "either",
+        "robotic",
+        "preprint",
+        "transformer",
+        "real"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q005",
+      "query": "robotics alex julian kalashnikov google method framework",
+      "purpose": "Follow-up method query from initial retrieval results.",
+      "required_terms": [
+        "robotics",
+        "alex",
+        "julian",
+        "kalashnikov"
+      ],
+      "source_keywords": [
+        "robotics",
+        "alex",
+        "julian",
+        "kalashnikov",
+        "google",
+        "datasets",
+        "tasks",
+        "either",
+        "robotic",
+        "preprint",
+        "transformer",
+        "real"
+      ],
+      "query_stage": "followup",
+      "query_type": "method-oriented"
+    },
+    {
+      "query_id": "Q006",
+      "query": "robotics alex julian kalashnikov application cross disciplinary",
+      "purpose": "Follow-up application query for cross-disciplinary hypothesis transfer.",
+      "required_terms": [
+        "robotics",
+        "alex",
+        "julian",
+        "kalashnikov"
+      ],
+      "source_keywords": [
+        "robotics",
+        "alex",
+        "julian",
+        "kalashnikov",
+        "google",
+        "datasets",
+        "tasks",
+        "either",
+        "robotic",
+        "preprint",
+        "transformer",
+        "real"
+      ],
+      "query_stage": "followup",
+      "query_type": "application-oriented"
+    },
+    {
+      "query_id": "Q007",
+      "query": "robotics alex julian kalashnikov limitations challenge",
+      "purpose": "Follow-up limitation query to surface uncertainty or contradiction.",
+      "required_terms": [
+        "robotics",
+        "alex",
+        "julian",
+        "kalashnikov"
+      ],
+      "source_keywords": [
+        "robotics",
+        "alex",
+        "julian",
+        "kalashnikov",
+        "google",
+        "datasets",
+        "tasks",
+        "either",
+        "robotic",
+        "preprint",
+        "transformer",
+        "real"
+      ],
+      "query_stage": "followup",
+      "query_type": "limitation-oriented"
+    }
+  ]
+}

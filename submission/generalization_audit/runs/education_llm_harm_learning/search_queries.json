@@ -1,0 +1,142 @@
+{
+  "queries": [
+    {
+      "query_id": "Q001",
+      "query": "TBD generative artificial intelligence large language models education",
+      "purpose": "Find papers directly related to the input paper topic.",
+      "required_terms": [
+        "generative artificial intelligence",
+        "large language models",
+        "education"
+      ],
+      "source_keywords": [
+        "generative artificial intelligence",
+        "large language models",
+        "education",
+        "learning",
+        "technology management"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q002",
+      "query": "generative artificial intelligence large language models education learning technology management",
+      "purpose": "Find thematically related literature from extracted keywords.",
+      "required_terms": [
+        "generative artificial intelligence",
+        "large language models",
+        "education",
+        "learning"
+      ],
+      "source_keywords": [
+        "generative artificial intelligence",
+        "large language models",
+        "education",
+        "learning",
+        "technology management"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q003",
+      "query": "llms learning students unsupervised observe widen gap",
+      "purpose": "Find papers around the research problem or gap.",
+      "required_terms": [
+        "llms",
+        "learning",
+        "students",
+        "unsupervised"
+      ],
+      "source_keywords": [
+        "generative artificial intelligence",
+        "large language models",
+        "education",
+        "learning",
+        "technology management"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q004",
+      "query": "generative artificial intelligence large language models education learning survey review",
+      "purpose": "Find broader review literature for citation grounding.",
+      "required_terms": [
+        "generative artificial intelligence",
+        "large language models",
+        "education"
+      ],
+      "source_keywords": [
+        "generative artificial intelligence",
+        "large language models",
+        "education",
+        "learning",
+        "technology management"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q005",
+      "query": "generative artificial intelligence large language models education learning technology management method framework",
+      "purpose": "Follow-up method query from initial retrieval results.",
+      "required_terms": [
+        "generative artificial intelligence",
+        "large language models",
+        "education",
+        "learning"
+      ],
+      "source_keywords": [
+        "generative artificial intelligence",
+        "large language models",
+        "education",
+        "learning",
+        "technology management"
+      ],
+      "query_stage": "followup",
+      "query_type": "method-oriented"
+    },
+    {
+      "query_id": "Q006",
+      "query": "generative artificial intelligence large language models education learning application cross disciplinary",
+      "purpose": "Follow-up application query for cross-disciplinary hypothesis transfer.",
+      "required_terms": [
+        "generative artificial intelligence",
+        "large language models",
+        "education",
+        "learning"
+      ],
+      "source_keywords": [
+        "generative artificial intelligence",
+        "large language models",
+        "education",
+        "learning",
+        "technology management"
+      ],
+      "query_stage": "followup",
+      "query_type": "application-oriented"
+    },
+    {
+      "query_id": "Q007",
+      "query": "generative artificial intelligence large language models education learning limitations challenge",
+      "purpose": "Follow-up limitation query to surface uncertainty or contradiction.",
+      "required_terms": [
+        "generative artificial intelligence",
+        "large language models",
+        "education",
+        "learning"
+      ],
+      "source_keywords": [
+        "generative artificial intelligence",
+        "large language models",
+        "education",
+        "learning",
+        "technology management"
+      ],
+      "query_stage": "followup",
+      "query_type": "limitation-oriented"
+    }
+  ]
+}

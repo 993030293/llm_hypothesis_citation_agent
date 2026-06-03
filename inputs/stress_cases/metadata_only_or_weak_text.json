@@ -1,0 +1,15 @@
+{
+  "case_id": "metadata_only_or_weak_text",
+  "pdf_path": "inputs\\stress_cases\\papers\\metadata_only_or_weak_text.pdf",
+  "source_type": "synthetic_parser_stress_fixture",
+  "source_note": "Generated locally to test PDF layout and extraction behavior; not claimed as a real published paper.",
+  "discipline": "engineering",
+  "layout_type": "metadata_only_or_weak_text",
+  "expected_keyword_source": "inferred",
+  "expected_keywords": [
+    "sensor calibration"
+  ],
+  "expected_readiness": "usable_with_caution",
+  "online_audit": true,
+  "demo_command": "python agent/workflow.py --pdf inputs\\stress_cases\\papers\\metadata_only_or_weak_text.pdf --task \"Stress audit case metadata_only_or_weak_text\""
+}

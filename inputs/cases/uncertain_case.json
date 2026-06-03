@@ -1,0 +1,14 @@
+{
+  "case_id": "uncertain_case",
+  "purpose": "Demonstrate that an existing paper with insufficient abstract/snippet support is labeled Yellow.",
+  "input_pdf": "inputs/papers/boundary_demo.pdf",
+  "expected_labels": ["Yellow"],
+  "demo_command": "python agent/workflow.py --pdf inputs/papers/boundary_demo.pdf --task \"Generate an uncertain-support hypothesis and verify citations\" --providers crossref --max-queries 1 --max-followup-queries 0",
+  "expected_artifacts": [
+    "tool_calls.jsonl",
+    "retrieved_literature.jsonl",
+    "citation_verification.csv",
+    "final_report.md"
+  ]
+}
+

@@ -1,0 +1,250 @@
+{
+  "hypotheses": [
+    {
+      "hypothesis_id": "H001",
+      "idea_type": "conservative extension",
+      "evidence_status": "citation_backed",
+      "research_gap": "In this paper, we present a model class, dubbed Robotics Transformer, that exhibits promising scalable model properties. The two main challenges lie in assembling the right dataset and designing the right model.",
+      "new_hypothesis": "A conservative next study should test whether techniques or observations from 'Diagnosing Non-Intermittent Anomalies in Reinforcement Learning Policy Executions (Short Paper)' and 'Fraser, Julian Alexander, (Alex), (born 23 July 1959), Principal, ifs University College, since 2015' improve evidence-grounded work on robotics, alex, julian, kalashnikov.",
+      "why_novel": "It combines two retrieved strands with the input paper's research problem rather than copying either paper.",
+      "required_evidence": [
+        "Verify that both cited works exist and match metadata.",
+        "Verify that abstracts or snippets support the claims used to ground the idea.",
+        "Run a small empirical or literature review check before presenting the idea as a conclusion."
+      ],
+      "supporting_citations": [
+        {
+          "claim_id": "C001",
+          "literature_id": "L001",
+          "title": "Diagnosing Non-Intermittent Anomalies in Reinforcement Learning Policy Executions (Short Paper)",
+          "year": 2017,
+          "doi": "10.4230/oasics.dx.2024.16",
+          "evidence_id": "E002",
+          "retrieval_source": "openalex"
+        },
+        {
+          "claim_id": "C002",
+          "literature_id": "L002",
+          "title": "Fraser, Julian Alexander, (Alex), (born 23 July 1959), Principal, ifs University College, since 2015",
+          "year": 2007,
+          "doi": "10.1093/ww/9780199540884.013.u29831",
+          "evidence_id": "E003",
+          "retrieval_source": "crossref"
+        }
+      ],
+      "risk_or_limitation": "Novelty is moderate; the idea may be an incremental extension if the cited works already overlap strongly.",
+      "testable_prediction": "If this idea is valid, then a follow-up study on robotics, alex, julian, kalashnikov should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.",
+      "citation_claim_ids": [
+        "C001",
+        "C002"
+      ],
+      "hypothesis_text": "A conservative next study should test whether techniques or observations from 'Diagnosing Non-Intermittent Anomalies in Reinforcement Learning Policy Executions (Short Paper)' and 'Fraser, Julian Alexander, (Alex), (born 23 July 1959), Principal, ifs University College, since 2015' improve evidence-grounded work on robotics, alex, julian, kalashnikov."
+    },
+    {
+      "hypothesis_id": "H002",
+      "idea_type": "cross-disciplinary analogy",
+      "evidence_status": "citation_backed",
+      "research_gap": "In this paper, we present a model class, dubbed Robotics Transformer, that exhibits promising scalable model properties. The two main challenges lie in assembling the right dataset and designing the right model.",
+      "new_hypothesis": "If the mechanisms discussed in 'Fraser, Julian Alexander, (Alex), (born 23 July 1959), Chief Executive, London Institute of Banking & Finance (formerly ifs University College), since 2015' transfer across domains, then robotics, alex, julian, kalashnikov may benefit from a cross-disciplinary evaluation protocol grounded by 'Installations and exhibits'.",
+      "why_novel": "The idea explicitly treats retrieved literature as an analogy source for a different research setting.",
+      "required_evidence": [
+        "Verify that both cited works exist and match metadata.",
+        "Verify that abstracts or snippets support the claims used to ground the idea.",
+        "Run a small empirical or literature review check before presenting the idea as a conclusion."
+      ],
+      "supporting_citations": [
+        {
+          "claim_id": "C003",
+          "literature_id": "L003",
+          "title": "Fraser, Julian Alexander, (Alex), (born 23 July 1959), Chief Executive, London Institute of Banking & Finance (formerly ifs University College), since 2015",
+          "year": 2007,
+          "doi": "10.1093/ww/9780199540884.013.29831",
+          "evidence_id": "E004",
+          "retrieval_source": "crossref"
+        },
+        {
+          "claim_id": "C004",
+          "literature_id": "L004",
+          "title": "Installations and exhibits",
+          "year": 2021,
+          "doi": "10.5040/9781350927988.178",
+          "evidence_id": "E005",
+          "retrieval_source": "crossref"
+        }
+      ],
+      "risk_or_limitation": "The analogy may fail if the source domain assumptions do not hold for the input paper's domain.",
+      "testable_prediction": "If this idea is valid, then a follow-up study on robotics, alex, julian, kalashnikov should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.",
+      "citation_claim_ids": [
+        "C003",
+        "C004"
+      ],
+      "hypothesis_text": "If the mechanisms discussed in 'Fraser, Julian Alexander, (Alex), (born 23 July 1959), Chief Executive, London Institute of Banking & Finance (formerly ifs University College), since 2015' transfer across domains, then robotics, alex, julian, kalashnikov may benefit from a cross-disciplinary evaluation protocol grounded by 'Installations and exhibits'."
+    },
+    {
+      "hypothesis_id": "H003",
+      "idea_type": "high-risk speculative idea",
+      "evidence_status": "citation_backed",
+      "research_gap": "In this paper, we present a model class, dubbed Robotics Transformer, that exhibits promising scalable model properties. The two main challenges lie in assembling the right dataset and designing the right model.",
+      "new_hypothesis": "A higher-risk hypothesis is that the shared signals behind 'Installations and exhibits' and 'Embodied AI with Foundation Models for Mobile Service Robots: A Systematic Review' point to a broader latent factor affecting robotics, alex, julian, kalashnikov.",
+      "why_novel": "It proposes a broader latent explanation rather than only applying a known method.",
+      "required_evidence": [
+        "Verify that both cited works exist and match metadata.",
+        "Verify that abstracts or snippets support the claims used to ground the idea.",
+        "Run a small empirical or literature review check before presenting the idea as a conclusion."
+      ],
+      "supporting_citations": [
+        {
+          "claim_id": "C005",
+          "literature_id": "L005",
+          "title": "Installations and exhibits",
+          "year": 2021,
+          "doi": "10.5040/9781350927964.62",
+          "evidence_id": "E006",
+          "retrieval_source": "crossref"
+        },
+        {
+          "claim_id": "C006",
+          "literature_id": "L006",
+          "title": "Embodied AI with Foundation Models for Mobile Service Robots: A Systematic Review",
+          "year": 2025,
+          "doi": "",
+          "evidence_id": "E007",
+          "retrieval_source": "arxiv"
+        }
+      ],
+      "risk_or_limitation": "This is speculative and should be treated as Yellow unless stronger evidence is retrieved.",
+      "testable_prediction": "If this idea is valid, then a follow-up study on robotics, alex, julian, kalashnikov should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.",
+      "citation_claim_ids": [
+        "C005",
+        "C006"
+      ],
+      "hypothesis_text": "A higher-risk hypothesis is that the shared signals behind 'Installations and exhibits' and 'Embodied AI with Foundation Models for Mobile Service Robots: A Systematic Review' point to a broader latent factor affecting robotics, alex, julian, kalashnikov."
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "C001",
+      "claim_text": "Prior work reports that Due to the safety risks and training sample inefficiency, it is often preferred to develop controllers in simulation.",
+      "hypothesis_id": "H001",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Diagnosing Non-Intermittent Anomalies in Reinforcement Learning Policy Executions (Short Paper)",
+        "authors": [
+          "Natan, Avraham",
+          "Stern, Roni",
+          "Kalech, Meir"
+        ],
+        "year": 2017,
+        "doi": "10.4230/oasics.dx.2024.16",
+        "venue": "arXiv (Cornell University)",
+        "url": "http://arxiv.org/abs/1707.06347",
+        "retrieval_source": "openalex",
+        "literature_id": "L001",
+        "evidence_id": "E002",
+        "abstract": "Due to the safety risks and training sample inefficiency, it is often preferred to develop controllers in simulation. However, minor differences between the simulation and the real world can cause a significant sim-to-real gap. This gap can reduce the effectiveness of the developed controller. In this paper, we examine a case study of transferring an octorotor reinforcement learning controller from simulation to the real world. First, we quantify the effectiveness of the real-world transfer by examining safety metrics. We find that although there is a noticeable (around 100%) increase in deviation in real flights, this deviation may not be considered unsafe, as it will be within > 2m safety corridors. Then, we estimate the densities of the measurement distributions and compare the Jensen-Shannon divergences of simulated and real measurements. From this, we show that the vehicle’s orientation is significantly different between simulated and real flights. We attribute this to a different flight mode in real flights where the vehicle turns to face the next waypoint. We also find that the reinforcement learning controller actions appear to correctly counteract disturbance forces. Then, we analyze the errors of a measurement autoencoder and state transition model neural network applied to real data. We find that these models further reinforce the difference between the simulated and real attitude control, showing the errors directly on the flight paths. Finally, we discuss important lessons learned in the sim-to-real transfer of our controller.",
+        "snippet": "preprint"
+      }
+    },
+    {
+      "claim_id": "C002",
+      "claim_text": "Prior work reports that Fraser, Julian Alexander, (Alex), (born 23 July 1959), Principal, ifs University College, since 2015",
+      "hypothesis_id": "H001",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Fraser, Julian Alexander, (Alex), (born 23 July 1959), Principal, ifs University College, since 2015",
+        "authors": [],
+        "year": 2007,
+        "doi": "10.1093/ww/9780199540884.013.u29831",
+        "venue": "Who's Who",
+        "url": "https://doi.org/10.1093/ww/9780199540884.013.u29831",
+        "retrieval_source": "crossref",
+        "literature_id": "L002",
+        "evidence_id": "E003",
+        "abstract": "",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C003",
+      "claim_text": "Prior work reports that Fraser, Julian Alexander, (Alex), (born 23 July 1959), Chief Executive, London Institute of Banking & Finance (formerly ifs University College), since 2015",
+      "hypothesis_id": "H002",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Fraser, Julian Alexander, (Alex), (born 23 July 1959), Chief Executive, London Institute of Banking & Finance (formerly ifs University College), since 2015",
+        "authors": [],
+        "year": 2007,
+        "doi": "10.1093/ww/9780199540884.013.29831",
+        "venue": "Who's Who",
+        "url": "https://doi.org/10.1093/ww/9780199540884.013.29831",
+        "retrieval_source": "crossref",
+        "literature_id": "L003",
+        "evidence_id": "E004",
+        "abstract": "",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C004",
+      "claim_text": "Prior work reports that the paper titled 'Installations and exhibits' is relevant to the retrieved topic.",
+      "hypothesis_id": "H002",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Installations and exhibits",
+        "authors": [],
+        "year": 2021,
+        "doi": "10.5040/9781350927988.178",
+        "venue": "Cite Them Right online - Chicago",
+        "url": "https://doi.org/10.5040/9781350927988.178",
+        "retrieval_source": "crossref",
+        "literature_id": "L004",
+        "evidence_id": "E005",
+        "abstract": "",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C005",
+      "claim_text": "Prior work reports that the paper titled 'Installations and exhibits' is relevant to the retrieved topic.",
+      "hypothesis_id": "H003",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Installations and exhibits",
+        "authors": [],
+        "year": 2021,
+        "doi": "10.5040/9781350927964.62",
+        "venue": "Cite Them Right online - Harvard",
+        "url": "https://doi.org/10.5040/9781350927964.62",
+        "retrieval_source": "crossref",
+        "literature_id": "L005",
+        "evidence_id": "E006",
+        "abstract": "",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C006",
+      "claim_text": "Prior work reports that Rapid advancements in foundation models, including Large Language Models, Vision-Language Models, Multimodal Large Language Models, and Vision-Language-Action Models, have opened new avenues for embodied AI in mobile service robotics.",
+      "hypothesis_id": "H003",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Embodied AI with Foundation Models for Mobile Service Robots: A Systematic Review",
+        "authors": [
+          "Matthew Lisondra",
+          "Beno Benhabib",
+          "Goldie Nejat"
+        ],
+        "year": 2025,
+        "doi": "",
+        "venue": "arXiv",
+        "url": "http://arxiv.org/abs/2505.20503v2",
+        "retrieval_source": "arxiv",
+        "literature_id": "L006",
+        "evidence_id": "E007",
+        "abstract": "Rapid advancements in foundation models, including Large Language Models, Vision-Language Models, Multimodal Large Language Models, and Vision-Language-Action Models, have opened new avenues for embodied AI in mobile service robotics. By combining foundation models with the principles of embodied AI, where intelligent systems perceive, reason, and act through physical interaction, mobile service robots can achieve more flexible understanding, adaptive behavior, and robust task execution in dynamic real-world environments. Despite this progress, embodied AI for mobile service robots continues to face fundamental challenges related to the translation of natural language instructions into executable robot actions, multimodal perception in human-centered environments, uncertainty estimation for safe decision-making, and computational constraints for real-time onboard deployment. In this paper, we present the first systematic review focused specifically on the integration of foundation models in mobile service robotics. We analyze how recent advances in foundation models address these core challenges through language-conditioned control, multimodal sensor fusion, uncertainty-aware reasoning, and efficient model scaling. We further examine real-world applications in domestic assistance, healthcare, and service automation, highlighting how foundation models enable context-aware, socially responsive, and generalizable robot behaviors. Beyond technical considerations, we discuss ethical, societal, and human-interaction implications associated with deploying foundation model-enabled service robots in human environments. Finally, we outline future research directions emphasizing reliability and lifelong adaptation, privacy-aware and resource-constrained deployment, and governance and human-in-the-loop frameworks required for safe, scalable, and trustworthy mobile service robotics.",
+        "snippet": ""
+      }
+    }
+  ],
+  "markdown": "# Generated Research Idea Cards\n\nInput paper: Preprint\n\n## H001: conservative extension\nEvidence status: `citation_backed`\n\nResearch gap: In this paper, we present a model class, dubbed Robotics Transformer, that exhibits promising scalable model properties. The two main challenges lie in assembling the right dataset and designing the right model.\n\nNew hypothesis: A conservative next study should test whether techniques or observations from 'Diagnosing Non-Intermittent Anomalies in Reinforcement Learning Policy Executions (Short Paper)' and 'Fraser, Julian Alexander, (Alex), (born 23 July 1959), Principal, ifs University College, since 2015' improve evidence-grounded work on robotics, alex, julian, kalashnikov.\n\nWhy novel: It combines two retrieved strands with the input paper's research problem rather than copying either paper.\n\nRequired evidence:\n- Verify that both cited works exist and match metadata.\n- Verify that abstracts or snippets support the claims used to ground the idea.\n- Run a small empirical or literature review check before presenting the idea as a conclusion.\n\nSupporting citations:\n- C001: Diagnosing Non-Intermittent Anomalies in Reinforcement Learning Policy Executions (Short Paper) (2017), DOI: 10.4230/oasics.dx.2024.16\n- C002: Fraser, Julian Alexander, (Alex), (born 23 July 1959), Principal, ifs University College, since 2015 (2007), DOI: 10.1093/ww/9780199540884.013.u29831\n\nRisk or limitation: Novelty is moderate; the idea may be an incremental extension if the cited works already overlap strongly.\n\nTestable prediction: If this idea is valid, then a follow-up study on robotics, alex, julian, kalashnikov should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.\n\n## H002: cross-disciplinary analogy\nEvidence status: `citation_backed`\n\nResearch gap: In this paper, we present a model class, dubbed Robotics Transformer, that exhibits promising scalable model properties. The two main challenges lie in assembling the right dataset and designing the right model.\n\nNew hypothesis: If the mechanisms discussed in 'Fraser, Julian Alexander, (Alex), (born 23 July 1959), Chief Executive, London Institute of Banking & Finance (formerly ifs University College), since 2015' transfer across domains, then robotics, alex, julian, kalashnikov may benefit from a cross-disciplinary evaluation protocol grounded by 'Installations and exhibits'.\n\nWhy novel: The idea explicitly treats retrieved literature as an analogy source for a different research setting.\n\nRequired evidence:\n- Verify that both cited works exist and match metadata.\n- Verify that abstracts or snippets support the claims used to ground the idea.\n- Run a small empirical or literature review check before presenting the idea as a conclusion.\n\nSupporting citations:\n- C003: Fraser, Julian Alexander, (Alex), (born 23 July 1959), Chief Executive, London Institute of Banking & Finance (formerly ifs University College), since 2015 (2007), DOI: 10.1093/ww/9780199540884.013.29831\n- C004: Installations and exhibits (2021), DOI: 10.5040/9781350927988.178\n\nRisk or limitation: The analogy may fail if the source domain assumptions do not hold for the input paper's domain.\n\nTestable prediction: If this idea is valid, then a follow-up study on robotics, alex, julian, kalashnikov should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.\n\n## H003: high-risk speculative idea\nEvidence status: `citation_backed`\n\nResearch gap: In this paper, we present a model class, dubbed Robotics Transformer, that exhibits promising scalable model properties. The two main challenges lie in assembling the right dataset and designing the right model.\n\nNew hypothesis: A higher-risk hypothesis is that the shared signals behind 'Installations and exhibits' and 'Embodied AI with Foundation Models for Mobile Service Robots: A Systematic Review' point to a broader latent factor affecting robotics, alex, julian, kalashnikov.\n\nWhy novel: It proposes a broader latent explanation rather than only applying a known method.\n\nRequired evidence:\n- Verify that both cited works exist and match metadata.\n- Verify that abstracts or snippets support the claims used to ground the idea.\n- Run a small empirical or literature review check before presenting the idea as a conclusion.\n\nSupporting citations:\n- C005: Installations and exhibits (2021), DOI: 10.5040/9781350927964.62\n- C006: Embodied AI with Foundation Models for Mobile Service Robots: A Systematic Review (2025), DOI: missing\n\nRisk or limitation: This is speculative and should be treated as Yellow unless stronger evidence is retrieved.\n\nTestable prediction: If this idea is valid, then a follow-up study on robotics, alex, julian, kalashnikov should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.\n\n## Citation-Backed Claims To Verify\n\n| Claim ID | Hypothesis | Claim | Cited Title | Year | DOI |\n|---|---|---|---|---|---|\n| C001 | H001 | Prior work reports that Due to the safety risks and training sample inefficiency, it is often preferred to develop controllers in simulation. | Diagnosing Non-Intermittent Anomalies in Reinforcement Learning Policy Executions (Short Paper) | 2017 | 10.4230/oasics.dx.2024.16 |\n| C002 | H001 | Prior work reports that Fraser, Julian Alexander, (Alex), (born 23 July 1959), Principal, ifs University College, since 2015 | Fraser, Julian Alexander, (Alex), (born 23 July 1959), Principal, ifs University College, since 2015 | 2007 | 10.1093/ww/9780199540884.013.u29831 |\n| C003 | H002 | Prior work reports that Fraser, Julian Alexander, (Alex), (born 23 July 1959), Chief Executive, London Institute of Banking & Finance (formerly ifs University College), since 2015 | Fraser, Julian Alexander, (Alex), (born 23 July 1959), Chief Executive, London Institute of Banking & Finance (formerly ifs University College), since 2015 | 2007 | 10.1093/ww/9780199540884.013.29831 |\n| C004 | H002 | Prior work reports that the paper titled 'Installations and exhibits' is relevant to the retrieved topic. | Installations and exhibits | 2021 | 10.5040/9781350927988.178 |\n| C005 | H003 | Prior work reports that the paper titled 'Installations and exhibits' is relevant to the retrieved topic. | Installations and exhibits | 2021 | 10.5040/9781350927964.62 |\n| C006 | H003 | Prior work reports that Rapid advancements in foundation models, including Large Language Models, Vision-Language Models, Multimodal Large Language Models, and Vision-Language-Action Models, have opened new avenues for embodied AI in mobile service robotics. | Embodied AI with Foundation Models for Mobile Service Robots: A Systematic Review | 2025 |  |",
+  "evidence_id": "E023"
+}

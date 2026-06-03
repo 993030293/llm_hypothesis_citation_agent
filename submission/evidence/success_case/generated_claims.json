@@ -1,0 +1,95 @@
+{
+  "hypotheses": [
+    {
+      "hypothesis_id": "H001",
+      "idea_type": "conservative extension",
+      "evidence_status": "citation_backed",
+      "research_gap": "Large language models can produce fluent scientific prose, but they often fail to ground claims in verifiable sources. This paper investigates retrieval augmented generation, citation verification, and evidence tracking as a workflow for improving factual grounding in scientific writing.",
+      "new_hypothesis": "A conservative next study should test whether techniques or observations from 'Text Data Augmentation for Deep Learning' and 'A Comparative Study of Retrieval-Augmented Generation, Graph Retrieval-Augmented Generation, and Fine-Tuned Large Language Models for Fire Engineering Knowledge Retrieval' improve evidence-grounded work on retrieval augmented generation, large language models, citation verification, scientific writing.",
+      "why_novel": "It combines two retrieved strands with the input paper's research problem rather than copying either paper.",
+      "required_evidence": [
+        "Verify that both cited works exist and match metadata.",
+        "Verify that abstracts or snippets support the claims used to ground the idea.",
+        "Run a small empirical or literature review check before presenting the idea as a conclusion."
+      ],
+      "supporting_citations": [
+        {
+          "claim_id": "C001",
+          "literature_id": "L001",
+          "title": "Text Data Augmentation for Deep Learning",
+          "year": 2021,
+          "doi": "10.1186/s40537-021-00492-0",
+          "evidence_id": "E002",
+          "retrieval_source": "openalex"
+        },
+        {
+          "claim_id": "C002",
+          "literature_id": "L002",
+          "title": "A Comparative Study of Retrieval-Augmented Generation, Graph Retrieval-Augmented Generation, and Fine-Tuned Large Language Models for Fire Engineering Knowledge Retrieval",
+          "year": 2025,
+          "doi": "10.2139/ssrn.5253805",
+          "evidence_id": "E003",
+          "retrieval_source": "crossref"
+        }
+      ],
+      "risk_or_limitation": "Novelty is moderate; the idea may be an incremental extension if the cited works already overlap strongly.",
+      "testable_prediction": "If this idea is valid, then a follow-up study on retrieval augmented generation, large language models, citation verification, scientific writing should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.",
+      "citation_claim_ids": [
+        "C001",
+        "C002"
+      ],
+      "hypothesis_text": "A conservative next study should test whether techniques or observations from 'Text Data Augmentation for Deep Learning' and 'A Comparative Study of Retrieval-Augmented Generation, Graph Retrieval-Augmented Generation, and Fine-Tuned Large Language Models for Fire Engineering Knowledge Retrieval' improve evidence-grounded work on retrieval augmented generation, large language models, citation verification, scientific writing."
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "C001",
+      "claim_text": "Prior work reports that Natural Language Processing (NLP) is one of the most captivating applications of Deep Learning.",
+      "hypothesis_id": "H001",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Text Data Augmentation for Deep Learning",
+        "authors": [
+          "Connor Shorten",
+          "Taghi M. Khoshgoftaar",
+          "Borko Furht"
+        ],
+        "year": 2021,
+        "doi": "10.1186/s40537-021-00492-0",
+        "venue": "Journal Of Big Data",
+        "url": "https://doi.org/10.1186/s40537-021-00492-0",
+        "retrieval_source": "openalex",
+        "literature_id": "L001",
+        "evidence_id": "E002",
+        "abstract": "Natural Language Processing (NLP) is one of the most captivating applications of Deep Learning. In this survey, we consider how the Data Augmentation training strategy can aid in its development. We begin with the major motifs of Data Augmentation summarized into strengthening local decision boundaries, brute force training, causality and counterfactual examples, and the distinction between meaning and form. We follow these motifs with a concrete list of augmentation frameworks that have been developed for text data. Deep Learning generally struggles with the measurement of generalization and characterization of overfitting. We highlight studies that cover how augmentations can construct test sets for generalization. NLP is at an early stage in applying Data Augmentation compared to Computer Vision. We highlight the key differences and promising ideas that have yet to be tested in NLP. For the sake of practical implementation, we describe tools that facilitate Data Augmentation such as the use of consistency regularization, controllers, and offline and online augmentation pipelines, to preview a few. Finally, we discuss interesting topics around Data Augmentation in NLP such as task-specific augmentations, the use of prior knowledge in self-supervised learning versus Data Augmentation, intersections with transfer and multi-task learning, and ideas for AI-GAs (AI-Generating Algorithms). We hope this paper inspires further research interest in Text Data Augmentation.",
+        "snippet": "article"
+      }
+    },
+    {
+      "claim_id": "C002",
+      "claim_text": "Prior work reports that A Comparative Study of Retrieval-Augmented Generation, Graph Retrieval-Augmented Generation, and Fine-Tuned Large Language Models for Fire Engineering Knowledge Retrieval",
+      "hypothesis_id": "H001",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "A Comparative Study of Retrieval-Augmented Generation, Graph Retrieval-Augmented Generation, and Fine-Tuned Large Language Models for Fire Engineering Knowledge Retrieval",
+        "authors": [
+          "Xingzhuo Xue",
+          "Guowei Zhang",
+          "Liming Jiang",
+          "Chunyuan Liu"
+        ],
+        "year": 2025,
+        "doi": "10.2139/ssrn.5253805",
+        "venue": "",
+        "url": "https://doi.org/10.2139/ssrn.5253805",
+        "retrieval_source": "crossref",
+        "literature_id": "L002",
+        "evidence_id": "E003",
+        "abstract": "",
+        "snippet": ""
+      }
+    }
+  ],
+  "markdown": "# Generated Research Idea Cards\n\nInput paper: Retrieval Augmented Generation for Evidence Grounded Scientific Writing\n\n## H001: conservative extension\nEvidence status: `citation_backed`\n\nResearch gap: Large language models can produce fluent scientific prose, but they often fail to ground claims in verifiable sources. This paper investigates retrieval augmented generation, citation verification, and evidence tracking as a workflow for improving factual grounding in scientific writing.\n\nNew hypothesis: A conservative next study should test whether techniques or observations from 'Text Data Augmentation for Deep Learning' and 'A Comparative Study of Retrieval-Augmented Generation, Graph Retrieval-Augmented Generation, and Fine-Tuned Large Language Models for Fire Engineering Knowledge Retrieval' improve evidence-grounded work on retrieval augmented generation, large language models, citation verification, scientific writing.\n\nWhy novel: It combines two retrieved strands with the input paper's research problem rather than copying either paper.\n\nRequired evidence:\n- Verify that both cited works exist and match metadata.\n- Verify that abstracts or snippets support the claims used to ground the idea.\n- Run a small empirical or literature review check before presenting the idea as a conclusion.\n\nSupporting citations:\n- C001: Text Data Augmentation for Deep Learning (2021), DOI: 10.1186/s40537-021-00492-0\n- C002: A Comparative Study of Retrieval-Augmented Generation, Graph Retrieval-Augmented Generation, and Fine-Tuned Large Language Models for Fire Engineering Knowledge Retrieval (2025), DOI: 10.2139/ssrn.5253805\n\nRisk or limitation: Novelty is moderate; the idea may be an incremental extension if the cited works already overlap strongly.\n\nTestable prediction: If this idea is valid, then a follow-up study on retrieval augmented generation, large language models, citation verification, scientific writing should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.\n\n## Citation-Backed Claims To Verify\n\n| Claim ID | Hypothesis | Claim | Cited Title | Year | DOI |\n|---|---|---|---|---|---|\n| C001 | H001 | Prior work reports that Natural Language Processing (NLP) is one of the most captivating applications of Deep Learning. | Text Data Augmentation for Deep Learning | 2021 | 10.1186/s40537-021-00492-0 |\n| C002 | H001 | Prior work reports that A Comparative Study of Retrieval-Augmented Generation, Graph Retrieval-Augmented Generation, and Fine-Tuned Large Language Models for Fire Engineering Knowledge Retrieval | A Comparative Study of Retrieval-Augmented Generation, Graph Retrieval-Augmented Generation, and Fine-Tuned Large Language Models for Fire Engineering Knowledge Retrieval | 2025 | 10.2139/ssrn.5253805 |",
+  "evidence_id": "E004"
+}

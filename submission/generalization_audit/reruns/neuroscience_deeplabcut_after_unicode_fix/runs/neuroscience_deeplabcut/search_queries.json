@@ -1,0 +1,191 @@
+{
+  "queries": [
+    {
+      "query_id": "Q001",
+      "query": "Markerless tracking of user-deﬁned features with deep learning neuroscience behavior institute",
+      "purpose": "Find papers directly related to the input paper topic.",
+      "required_terms": [
+        "neuroscience",
+        "behavior",
+        "institute"
+      ],
+      "source_keywords": [
+        "neuroscience",
+        "behavior",
+        "institute",
+        "center",
+        "harvard",
+        "usa",
+        "tracking",
+        "mathis",
+        "ubingen",
+        "university",
+        "brain",
+        "markerless"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q002",
+      "query": "neuroscience behavior institute center harvard usa",
+      "purpose": "Find thematically related literature from extracted keywords.",
+      "required_terms": [
+        "neuroscience",
+        "behavior",
+        "institute",
+        "center"
+      ],
+      "source_keywords": [
+        "neuroscience",
+        "behavior",
+        "institute",
+        "center",
+        "harvard",
+        "usa",
+        "tracking",
+        "mathis",
+        "ubingen",
+        "university",
+        "brain",
+        "markerless"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q003",
+      "query": "behavior question training extract images distinct postures",
+      "purpose": "Find papers around the research problem or gap.",
+      "required_terms": [
+        "behavior",
+        "question",
+        "training",
+        "extract"
+      ],
+      "source_keywords": [
+        "neuroscience",
+        "behavior",
+        "institute",
+        "center",
+        "harvard",
+        "usa",
+        "tracking",
+        "mathis",
+        "ubingen",
+        "university",
+        "brain",
+        "markerless"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q004",
+      "query": "neuroscience behavior institute center survey review",
+      "purpose": "Find broader review literature for citation grounding.",
+      "required_terms": [
+        "neuroscience",
+        "behavior",
+        "institute"
+      ],
+      "source_keywords": [
+        "neuroscience",
+        "behavior",
+        "institute",
+        "center",
+        "harvard",
+        "usa",
+        "tracking",
+        "mathis",
+        "ubingen",
+        "university",
+        "brain",
+        "markerless"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q005",
+      "query": "neuroscience behavior institute center harvard method framework",
+      "purpose": "Follow-up method query from initial retrieval results.",
+      "required_terms": [
+        "neuroscience",
+        "behavior",
+        "institute",
+        "center"
+      ],
+      "source_keywords": [
+        "neuroscience",
+        "behavior",
+        "institute",
+        "center",
+        "harvard",
+        "usa",
+        "tracking",
+        "mathis",
+        "ubingen",
+        "university",
+        "brain",
+        "markerless"
+      ],
+      "query_stage": "followup",
+      "query_type": "method-oriented"
+    },
+    {
+      "query_id": "Q006",
+      "query": "neuroscience behavior institute center application cross disciplinary",
+      "purpose": "Follow-up application query for cross-disciplinary hypothesis transfer.",
+      "required_terms": [
+        "neuroscience",
+        "behavior",
+        "institute",
+        "center"
+      ],
+      "source_keywords": [
+        "neuroscience",
+        "behavior",
+        "institute",
+        "center",
+        "harvard",
+        "usa",
+        "tracking",
+        "mathis",
+        "ubingen",
+        "university",
+        "brain",
+        "markerless"
+      ],
+      "query_stage": "followup",
+      "query_type": "application-oriented"
+    },
+    {
+      "query_id": "Q007",
+      "query": "neuroscience behavior institute center limitations challenge",
+      "purpose": "Follow-up limitation query to surface uncertainty or contradiction.",
+      "required_terms": [
+        "neuroscience",
+        "behavior",
+        "institute",
+        "center"
+      ],
+      "source_keywords": [
+        "neuroscience",
+        "behavior",
+        "institute",
+        "center",
+        "harvard",
+        "usa",
+        "tracking",
+        "mathis",
+        "ubingen",
+        "university",
+        "brain",
+        "markerless"
+      ],
+      "query_stage": "followup",
+      "query_type": "limitation-oriented"
+    }
+  ]
+}

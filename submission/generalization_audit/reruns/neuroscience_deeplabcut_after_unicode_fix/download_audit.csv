@@ -1,0 +1,2 @@
+﻿case_id,field,pdf_url,resolved_url,pdf_path,status,bytes,reason
+neuroscience_deeplabcut,Neuroscience / Behavior,https://arxiv.org/abs/1804.03142,https://arxiv.org/pdf/1804.03142,C:\Users\99303\git\llm_hypothesis_citation_agent\inputs\generalization_cases\papers\neuroscience_deeplabcut.pdf,skipped_existing,24599064,PDF already exists.

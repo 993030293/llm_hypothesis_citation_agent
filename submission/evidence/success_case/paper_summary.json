@@ -1,0 +1,18 @@
+{
+  "source_pdf": "C:\\Users\\99303\\git\\llm_hypothesis_citation_agent\\inputs\\papers\\success_demo.pdf",
+  "title": "Retrieval Augmented Generation for Evidence Grounded Scientific Writing",
+  "abstract": "Large language models can produce fluent scientific prose, but they often fail to ground claims in verifiable sources. This paper investigates retrieval augmented generation, citation verification, and evidence tracking as a workflow for improving factual grounding in scientific writing.",
+  "keywords": [
+    "retrieval augmented generation",
+    "large language models",
+    "citation verification",
+    "scientific writing",
+    "evidence tracking"
+  ],
+  "research_problem": "Large language models can produce fluent scientific prose, but they often fail to ground claims in verifiable sources. This paper investigates retrieval augmented generation, citation verification, and evidence tracking as a workflow for improving factual grounding in scientific writing.",
+  "page_count": 1,
+  "pages_read": 1,
+  "text_excerpt": "Retrieval Augmented Generation for Evidence Grounded Scientific Writing Abstract. Large language models can produce fluent scientific prose, but they often fail to ground claims in verifiable sources. This paper investigates retrieval augmented generation, citation verification, and evidence tracking as a workflow for improving factual grounding in scientific writing. Keywords: retrieval augmented generation; large language models; citation verification; scientific writing; evidence tracking Introduction. The research problem is that generated scientific hypotheses need both creative synthesis and careful reference checking. We propose studying whether a tool-based workflow can retrieve related literature, generate conservative research ideas, and label citations according to whether public metadata and abstracts support the claim. The expected contribution is an auditable pipeline that logs tool calls, stores retrieved literature, and produces a citation verification table for human review.",
+  "extraction_warning": "",
+  "evidence_id": "E001"
+}

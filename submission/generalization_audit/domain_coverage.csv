@@ -1,0 +1,16 @@
+﻿artifact_complete,case_count,completed_cases,field,green,red,yellow
+1,1,1,Boundary Case,4,2,1
+1,1,1,Climate / Remote Sensing,3,0,3
+1,1,1,Education,5,0,1
+1,1,1,Education / HCI,3,3,0
+1,1,1,Education / Social Science,5,0,1
+1,1,1,Finance / Simulation,5,1,0
+1,1,1,Materials Science,6,0,0
+1,1,1,Medical AI,4,2,0
+1,1,1,NLP / AI,3,3,0
+1,1,1,NLP / RAG,3,3,0
+1,1,1,Neuroscience / Behavior,3,2,1
+1,1,1,Optimization / ML,1,3,2
+1,1,1,Physics,3,3,0
+1,1,1,Quantitative Finance,3,1,2
+1,1,1,Robotics,1,1,4

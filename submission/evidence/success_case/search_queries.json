@@ -1,0 +1,23 @@
+{
+  "queries": [
+    {
+      "query_id": "Q001",
+      "query": "Retrieval Augmented Generation for Evidence Grounded Scientific Writing retrieval augmented generation large language models citation verification",
+      "purpose": "Find papers directly related to the input paper topic.",
+      "required_terms": [
+        "retrieval augmented generation",
+        "large language models",
+        "citation verification"
+      ],
+      "source_keywords": [
+        "retrieval augmented generation",
+        "large language models",
+        "citation verification",
+        "scientific writing",
+        "evidence tracking"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    }
+  ]
+}

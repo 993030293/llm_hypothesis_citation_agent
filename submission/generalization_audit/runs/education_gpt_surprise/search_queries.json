@@ -1,0 +1,191 @@
+{
+  "queries": [
+    {
+      "query_id": "Q001",
+      "query": "The GPT Surprise: Offering Large Language Model Chat in a Massive Coding Class Reduced Engagement but Increased Adopters Exam Performances coding llms students",
+      "purpose": "Find papers directly related to the input paper topic.",
+      "required_terms": [
+        "coding",
+        "llms",
+        "students"
+      ],
+      "source_keywords": [
+        "coding",
+        "llms",
+        "students",
+        "impact",
+        "exam",
+        "chat",
+        "class",
+        "engagement",
+        "student",
+        "education",
+        "language",
+        "potential"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q002",
+      "query": "coding llms students impact exam chat",
+      "purpose": "Find thematically related literature from extracted keywords.",
+      "required_terms": [
+        "coding",
+        "llms",
+        "students",
+        "impact"
+      ],
+      "source_keywords": [
+        "coding",
+        "llms",
+        "students",
+        "impact",
+        "exam",
+        "chat",
+        "class",
+        "engagement",
+        "student",
+        "education",
+        "language",
+        "potential"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q003",
+      "query": "students provided access gpt-4 online coding aim",
+      "purpose": "Find papers around the research problem or gap.",
+      "required_terms": [
+        "students",
+        "provided",
+        "access",
+        "gpt-4"
+      ],
+      "source_keywords": [
+        "coding",
+        "llms",
+        "students",
+        "impact",
+        "exam",
+        "chat",
+        "class",
+        "engagement",
+        "student",
+        "education",
+        "language",
+        "potential"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q004",
+      "query": "coding llms students impact survey review",
+      "purpose": "Find broader review literature for citation grounding.",
+      "required_terms": [
+        "coding",
+        "llms",
+        "students"
+      ],
+      "source_keywords": [
+        "coding",
+        "llms",
+        "students",
+        "impact",
+        "exam",
+        "chat",
+        "class",
+        "engagement",
+        "student",
+        "education",
+        "language",
+        "potential"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q005",
+      "query": "coding llms students impact exam method framework",
+      "purpose": "Follow-up method query from initial retrieval results.",
+      "required_terms": [
+        "coding",
+        "llms",
+        "students",
+        "impact"
+      ],
+      "source_keywords": [
+        "coding",
+        "llms",
+        "students",
+        "impact",
+        "exam",
+        "chat",
+        "class",
+        "engagement",
+        "student",
+        "education",
+        "language",
+        "potential"
+      ],
+      "query_stage": "followup",
+      "query_type": "method-oriented"
+    },
+    {
+      "query_id": "Q006",
+      "query": "coding llms students impact application cross disciplinary",
+      "purpose": "Follow-up application query for cross-disciplinary hypothesis transfer.",
+      "required_terms": [
+        "coding",
+        "llms",
+        "students",
+        "impact"
+      ],
+      "source_keywords": [
+        "coding",
+        "llms",
+        "students",
+        "impact",
+        "exam",
+        "chat",
+        "class",
+        "engagement",
+        "student",
+        "education",
+        "language",
+        "potential"
+      ],
+      "query_stage": "followup",
+      "query_type": "application-oriented"
+    },
+    {
+      "query_id": "Q007",
+      "query": "coding llms students impact limitations challenge",
+      "purpose": "Follow-up limitation query to surface uncertainty or contradiction.",
+      "required_terms": [
+        "coding",
+        "llms",
+        "students",
+        "impact"
+      ],
+      "source_keywords": [
+        "coding",
+        "llms",
+        "students",
+        "impact",
+        "exam",
+        "chat",
+        "class",
+        "engagement",
+        "student",
+        "education",
+        "language",
+        "potential"
+      ],
+      "query_stage": "followup",
+      "query_type": "limitation-oriented"
+    }
+  ]
+}

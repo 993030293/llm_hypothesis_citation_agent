@@ -1,0 +1,149 @@
+{
+  "queries": [
+    {
+      "query_id": "Q001",
+      "query": "Remote sensing and AI for building climate adaptation applications climate change remote sensing artiﬁcial intelligence",
+      "purpose": "Find papers directly related to the input paper topic.",
+      "required_terms": [
+        "climate change",
+        "remote sensing",
+        "artiﬁcial intelligence"
+      ],
+      "source_keywords": [
+        "climate change",
+        "remote sensing",
+        "artiﬁcial intelligence",
+        "smart cities",
+        "sustainable",
+        "development goals (sdgs)"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q002",
+      "query": "climate change remote sensing artiﬁcial intelligence smart cities sustainable development goals (sdgs)",
+      "purpose": "Find thematically related literature from extracted keywords.",
+      "required_terms": [
+        "climate change",
+        "remote sensing",
+        "artiﬁcial intelligence",
+        "smart cities"
+      ],
+      "source_keywords": [
+        "climate change",
+        "remote sensing",
+        "artiﬁcial intelligence",
+        "smart cities",
+        "sustainable",
+        "development goals (sdgs)"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q003",
+      "query": "may indicators address some opportunities brought satellite",
+      "purpose": "Find papers around the research problem or gap.",
+      "required_terms": [
+        "may",
+        "indicators",
+        "address",
+        "some"
+      ],
+      "source_keywords": [
+        "climate change",
+        "remote sensing",
+        "artiﬁcial intelligence",
+        "smart cities",
+        "sustainable",
+        "development goals (sdgs)"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q004",
+      "query": "climate change remote sensing artiﬁcial intelligence smart cities survey review",
+      "purpose": "Find broader review literature for citation grounding.",
+      "required_terms": [
+        "climate change",
+        "remote sensing",
+        "artiﬁcial intelligence"
+      ],
+      "source_keywords": [
+        "climate change",
+        "remote sensing",
+        "artiﬁcial intelligence",
+        "smart cities",
+        "sustainable",
+        "development goals (sdgs)"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q005",
+      "query": "climate change remote sensing artiﬁcial intelligence smart cities sustainable method framework",
+      "purpose": "Follow-up method query from initial retrieval results.",
+      "required_terms": [
+        "climate change",
+        "remote sensing",
+        "artiﬁcial intelligence",
+        "smart cities"
+      ],
+      "source_keywords": [
+        "climate change",
+        "remote sensing",
+        "artiﬁcial intelligence",
+        "smart cities",
+        "sustainable",
+        "development goals (sdgs)"
+      ],
+      "query_stage": "followup",
+      "query_type": "method-oriented"
+    },
+    {
+      "query_id": "Q006",
+      "query": "climate change remote sensing artiﬁcial intelligence smart cities application cross disciplinary",
+      "purpose": "Follow-up application query for cross-disciplinary hypothesis transfer.",
+      "required_terms": [
+        "climate change",
+        "remote sensing",
+        "artiﬁcial intelligence",
+        "smart cities"
+      ],
+      "source_keywords": [
+        "climate change",
+        "remote sensing",
+        "artiﬁcial intelligence",
+        "smart cities",
+        "sustainable",
+        "development goals (sdgs)"
+      ],
+      "query_stage": "followup",
+      "query_type": "application-oriented"
+    },
+    {
+      "query_id": "Q007",
+      "query": "climate change remote sensing artiﬁcial intelligence smart cities limitations challenge",
+      "purpose": "Follow-up limitation query to surface uncertainty or contradiction.",
+      "required_terms": [
+        "climate change",
+        "remote sensing",
+        "artiﬁcial intelligence",
+        "smart cities"
+      ],
+      "source_keywords": [
+        "climate change",
+        "remote sensing",
+        "artiﬁcial intelligence",
+        "smart cities",
+        "sustainable",
+        "development goals (sdgs)"
+      ],
+      "query_stage": "followup",
+      "query_type": "limitation-oriented"
+    }
+  ]
+}

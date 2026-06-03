@@ -1,0 +1,142 @@
+{
+  "queries": [
+    {
+      "query_id": "Q001",
+      "query": "Ambiguous Cross Domain Hypothesis Generation with Citation Risk hypothesis generation citation risk metadata matching",
+      "purpose": "Find papers directly related to the input paper topic.",
+      "required_terms": [
+        "hypothesis generation",
+        "citation risk",
+        "metadata matching"
+      ],
+      "source_keywords": [
+        "hypothesis generation",
+        "citation risk",
+        "metadata matching",
+        "literature search",
+        "boundary cases"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q002",
+      "query": "hypothesis generation citation risk metadata matching literature search boundary cases",
+      "purpose": "Find thematically related literature from extracted keywords.",
+      "required_terms": [
+        "hypothesis generation",
+        "citation risk",
+        "metadata matching",
+        "literature search"
+      ],
+      "source_keywords": [
+        "hypothesis generation",
+        "citation risk",
+        "metadata matching",
+        "literature search",
+        "boundary cases"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q003",
+      "query": "cross domain hypothesis generation ambiguous citation risk",
+      "purpose": "Find papers around the research problem or gap.",
+      "required_terms": [
+        "cross",
+        "domain",
+        "hypothesis",
+        "generation"
+      ],
+      "source_keywords": [
+        "hypothesis generation",
+        "citation risk",
+        "metadata matching",
+        "literature search",
+        "boundary cases"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q004",
+      "query": "hypothesis generation citation risk metadata matching literature search survey review",
+      "purpose": "Find broader review literature for citation grounding.",
+      "required_terms": [
+        "hypothesis generation",
+        "citation risk",
+        "metadata matching"
+      ],
+      "source_keywords": [
+        "hypothesis generation",
+        "citation risk",
+        "metadata matching",
+        "literature search",
+        "boundary cases"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q005",
+      "query": "hypothesis generation citation risk metadata matching literature search boundary cases method framework",
+      "purpose": "Follow-up method query from initial retrieval results.",
+      "required_terms": [
+        "hypothesis generation",
+        "citation risk",
+        "metadata matching",
+        "literature search"
+      ],
+      "source_keywords": [
+        "hypothesis generation",
+        "citation risk",
+        "metadata matching",
+        "literature search",
+        "boundary cases"
+      ],
+      "query_stage": "followup",
+      "query_type": "method-oriented"
+    },
+    {
+      "query_id": "Q006",
+      "query": "hypothesis generation citation risk metadata matching literature search application cross disciplinary",
+      "purpose": "Follow-up application query for cross-disciplinary hypothesis transfer.",
+      "required_terms": [
+        "hypothesis generation",
+        "citation risk",
+        "metadata matching",
+        "literature search"
+      ],
+      "source_keywords": [
+        "hypothesis generation",
+        "citation risk",
+        "metadata matching",
+        "literature search",
+        "boundary cases"
+      ],
+      "query_stage": "followup",
+      "query_type": "application-oriented"
+    },
+    {
+      "query_id": "Q007",
+      "query": "hypothesis generation citation risk metadata matching literature search limitations challenge",
+      "purpose": "Follow-up limitation query to surface uncertainty or contradiction.",
+      "required_terms": [
+        "hypothesis generation",
+        "citation risk",
+        "metadata matching",
+        "literature search"
+      ],
+      "source_keywords": [
+        "hypothesis generation",
+        "citation risk",
+        "metadata matching",
+        "literature search",
+        "boundary cases"
+      ],
+      "query_stage": "followup",
+      "query_type": "limitation-oriented"
+    }
+  ]
+}

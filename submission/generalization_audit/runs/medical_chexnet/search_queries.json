@@ -1,0 +1,191 @@
+{
+  "queries": [
+    {
+      "query_id": "Q001",
+      "query": "CheXNet: Radiologist-Level Pneumonia Detection on Chest X-Rays with Deep Learning chexnet chest pneumonia",
+      "purpose": "Find papers directly related to the input paper topic.",
+      "required_terms": [
+        "chexnet",
+        "chest",
+        "pneumonia"
+      ],
+      "source_keywords": [
+        "chexnet",
+        "chest",
+        "pneumonia",
+        "radiologists",
+        "x-rays",
+        "diseases",
+        "detect",
+        "practicing",
+        "layer",
+        "x-ray",
+        "convolutional",
+        "neural"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q002",
+      "query": "chexnet chest pneumonia radiologists x-rays diseases",
+      "purpose": "Find thematically related literature from extracted keywords.",
+      "required_terms": [
+        "chexnet",
+        "chest",
+        "pneumonia",
+        "radiologists"
+      ],
+      "source_keywords": [
+        "chexnet",
+        "chest",
+        "pneumonia",
+        "radiologists",
+        "x-rays",
+        "diseases",
+        "detect",
+        "practicing",
+        "layer",
+        "x-ray",
+        "convolutional",
+        "neural"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q003",
+      "query": "problem pneumonia binary ormulation detection task classi",
+      "purpose": "Find papers around the research problem or gap.",
+      "required_terms": [
+        "problem",
+        "pneumonia",
+        "binary",
+        "ormulation"
+      ],
+      "source_keywords": [
+        "chexnet",
+        "chest",
+        "pneumonia",
+        "radiologists",
+        "x-rays",
+        "diseases",
+        "detect",
+        "practicing",
+        "layer",
+        "x-ray",
+        "convolutional",
+        "neural"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q004",
+      "query": "chexnet chest pneumonia radiologists survey review",
+      "purpose": "Find broader review literature for citation grounding.",
+      "required_terms": [
+        "chexnet",
+        "chest",
+        "pneumonia"
+      ],
+      "source_keywords": [
+        "chexnet",
+        "chest",
+        "pneumonia",
+        "radiologists",
+        "x-rays",
+        "diseases",
+        "detect",
+        "practicing",
+        "layer",
+        "x-ray",
+        "convolutional",
+        "neural"
+      ],
+      "query_stage": "initial",
+      "query_type": "seed"
+    },
+    {
+      "query_id": "Q005",
+      "query": "chexnet chest pneumonia radiologists x-rays method framework",
+      "purpose": "Follow-up method query from initial retrieval results.",
+      "required_terms": [
+        "chexnet",
+        "chest",
+        "pneumonia",
+        "radiologists"
+      ],
+      "source_keywords": [
+        "chexnet",
+        "chest",
+        "pneumonia",
+        "radiologists",
+        "x-rays",
+        "diseases",
+        "detect",
+        "practicing",
+        "layer",
+        "x-ray",
+        "convolutional",
+        "neural"
+      ],
+      "query_stage": "followup",
+      "query_type": "method-oriented"
+    },
+    {
+      "query_id": "Q006",
+      "query": "chexnet chest pneumonia radiologists application cross disciplinary",
+      "purpose": "Follow-up application query for cross-disciplinary hypothesis transfer.",
+      "required_terms": [
+        "chexnet",
+        "chest",
+        "pneumonia",
+        "radiologists"
+      ],
+      "source_keywords": [
+        "chexnet",
+        "chest",
+        "pneumonia",
+        "radiologists",
+        "x-rays",
+        "diseases",
+        "detect",
+        "practicing",
+        "layer",
+        "x-ray",
+        "convolutional",
+        "neural"
+      ],
+      "query_stage": "followup",
+      "query_type": "application-oriented"
+    },
+    {
+      "query_id": "Q007",
+      "query": "chexnet chest pneumonia radiologists limitations challenge",
+      "purpose": "Follow-up limitation query to surface uncertainty or contradiction.",
+      "required_terms": [
+        "chexnet",
+        "chest",
+        "pneumonia",
+        "radiologists"
+      ],
+      "source_keywords": [
+        "chexnet",
+        "chest",
+        "pneumonia",
+        "radiologists",
+        "x-rays",
+        "diseases",
+        "detect",
+        "practicing",
+        "layer",
+        "x-ray",
+        "convolutional",
+        "neural"
+      ],
+      "query_stage": "followup",
+      "query_type": "limitation-oriented"
+    }
+  ]
+}

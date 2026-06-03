@@ -1,0 +1,278 @@
+{
+  "hypotheses": [
+    {
+      "hypothesis_id": "H001",
+      "idea_type": "conservative extension",
+      "evidence_status": "citation_backed",
+      "research_gap": "Ambiguous Cross Domain Hypothesis Generation with Citation Risk Abstract. Cross domain hypothesis generation often combines partial signals from multiple disciplines.",
+      "new_hypothesis": "A conservative next study should test whether techniques or observations from 'Cases of citation' and 'iTunes and citation metadata.' improve evidence-grounded work on hypothesis generation, citation risk, metadata matching, literature search.",
+      "why_novel": "It combines two retrieved strands with the input paper's research problem rather than copying either paper.",
+      "required_evidence": [
+        "Verify that both cited works exist and match metadata.",
+        "Verify that abstracts or snippets support the claims used to ground the idea.",
+        "Run a small empirical or literature review check before presenting the idea as a conclusion."
+      ],
+      "supporting_citations": [
+        {
+          "claim_id": "C001",
+          "literature_id": "L001",
+          "title": "Cases of citation",
+          "year": 2024,
+          "doi": "10.7765/9781526173195.00008",
+          "evidence_id": "E002",
+          "retrieval_source": "crossref"
+        },
+        {
+          "claim_id": "C002",
+          "literature_id": "L002",
+          "title": "iTunes and citation metadata.",
+          "year": 2007,
+          "doi": "10.59350/1jren-qwn76",
+          "evidence_id": "E018",
+          "retrieval_source": "crossref"
+        }
+      ],
+      "risk_or_limitation": "Novelty is moderate; the idea may be an incremental extension if the cited works already overlap strongly.",
+      "testable_prediction": "If this idea is valid, then a follow-up study on hypothesis generation, citation risk, metadata matching, literature search should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.",
+      "citation_claim_ids": [
+        "C001",
+        "C002"
+      ],
+      "hypothesis_text": "A conservative next study should test whether techniques or observations from 'Cases of citation' and 'iTunes and citation metadata.' improve evidence-grounded work on hypothesis generation, citation risk, metadata matching, literature search."
+    },
+    {
+      "hypothesis_id": "H002",
+      "idea_type": "cross-disciplinary analogy",
+      "evidence_status": "citation_backed",
+      "research_gap": "Ambiguous Cross Domain Hypothesis Generation with Citation Risk Abstract. Cross domain hypothesis generation often combines partial signals from multiple disciplines.",
+      "new_hypothesis": "If the mechanisms discussed in 'iTunes and citation metadata.' transfer across domains, then hypothesis generation, citation risk, metadata matching, literature search may benefit from a cross-disciplinary evaluation protocol grounded by 'Virtual Communities as Contributors for Digital Objects Metadata Generation'.",
+      "why_novel": "The idea explicitly treats retrieved literature as an analogy source for a different research setting.",
+      "required_evidence": [
+        "Verify that both cited works exist and match metadata.",
+        "Verify that abstracts or snippets support the claims used to ground the idea.",
+        "Run a small empirical or literature review check before presenting the idea as a conclusion."
+      ],
+      "supporting_citations": [
+        {
+          "claim_id": "C003",
+          "literature_id": "L003",
+          "title": "iTunes and citation metadata.",
+          "year": 2007,
+          "doi": "10.59350/sqf4z-mmp59",
+          "evidence_id": "E019",
+          "retrieval_source": "crossref"
+        },
+        {
+          "claim_id": "C004",
+          "literature_id": "L004",
+          "title": "Virtual Communities as Contributors for Digital Objects Metadata Generation",
+          "year": 2012,
+          "doi": "10.4018/978-1-4666-0312-7.ch004",
+          "evidence_id": "E020",
+          "retrieval_source": "crossref"
+        }
+      ],
+      "risk_or_limitation": "The analogy may fail if the source domain assumptions do not hold for the input paper's domain.",
+      "testable_prediction": "If this idea is valid, then a follow-up study on hypothesis generation, citation risk, metadata matching, literature search should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.",
+      "citation_claim_ids": [
+        "C003",
+        "C004"
+      ],
+      "hypothesis_text": "If the mechanisms discussed in 'iTunes and citation metadata.' transfer across domains, then hypothesis generation, citation risk, metadata matching, literature search may benefit from a cross-disciplinary evaluation protocol grounded by 'Virtual Communities as Contributors for Digital Objects Metadata Generation'."
+    },
+    {
+      "hypothesis_id": "H003",
+      "idea_type": "high-risk speculative idea",
+      "evidence_status": "citation_backed",
+      "research_gap": "Ambiguous Cross Domain Hypothesis Generation with Citation Risk Abstract. Cross domain hypothesis generation often combines partial signals from multiple disciplines.",
+      "new_hypothesis": "A higher-risk hypothesis is that the shared signals behind 'Cross-Model Memorization Thresholds in Citation Generation: Evidence from Field-Level Cloze on Bibliographic Records' and 'Literature Meets Data: A Synergistic Approach to Hypothesis Generation' point to a broader latent factor affecting hypothesis generation, citation risk, metadata matching, literature search.",
+      "why_novel": "It proposes a broader latent explanation rather than only applying a known method.",
+      "required_evidence": [
+        "Verify that both cited works exist and match metadata.",
+        "Verify that abstracts or snippets support the claims used to ground the idea.",
+        "Run a small empirical or literature review check before presenting the idea as a conclusion."
+      ],
+      "supporting_citations": [
+        {
+          "claim_id": "C005",
+          "literature_id": "L005",
+          "title": "Cross-Model Memorization Thresholds in Citation Generation: Evidence from Field-Level Cloze on Bibliographic Records",
+          "year": 2026,
+          "doi": "10.21203/rs.3.rs-9733633/v1",
+          "evidence_id": "E003",
+          "retrieval_source": "crossref"
+        },
+        {
+          "claim_id": "C006",
+          "literature_id": "L006",
+          "title": "Literature Meets Data: A Synergistic Approach to Hypothesis Generation",
+          "year": 2024,
+          "doi": "",
+          "evidence_id": "E021",
+          "retrieval_source": "arxiv"
+        }
+      ],
+      "risk_or_limitation": "This is speculative and should be treated as Yellow unless stronger evidence is retrieved.",
+      "testable_prediction": "If this idea is valid, then a follow-up study on hypothesis generation, citation risk, metadata matching, literature search should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.",
+      "citation_claim_ids": [
+        "C005",
+        "C006"
+      ],
+      "hypothesis_text": "A higher-risk hypothesis is that the shared signals behind 'Cross-Model Memorization Thresholds in Citation Generation: Evidence from Field-Level Cloze on Bibliographic Records' and 'Literature Meets Data: A Synergistic Approach to Hypothesis Generation' point to a broader latent factor affecting hypothesis generation, citation risk, metadata matching, literature search."
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "C001",
+      "claim_text": "Prior work reports that the paper titled 'Cases of citation' is relevant to the retrieved topic.",
+      "hypothesis_id": "H001",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Cases of citation",
+        "authors": [
+          "Michael Green",
+          "Matthew Holman",
+          "Chloë Julius"
+        ],
+        "year": 2024,
+        "doi": "10.7765/9781526173195.00008",
+        "venue": "Cases of citation",
+        "url": "https://doi.org/10.7765/9781526173195.00008",
+        "retrieval_source": "crossref",
+        "literature_id": "L001",
+        "evidence_id": "E002",
+        "abstract": "",
+        "snippet": "On literature in art"
+      }
+    },
+    {
+      "claim_id": "C002",
+      "claim_text": "Prior work reports that Stumbled across a really nice paper (Why can't I manage academic papers like MP3s?) while reading commentary on Tim O'Reilley's post about FreeBase.",
+      "hypothesis_id": "H001",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "iTunes and citation metadata.",
+        "authors": [
+          "Roderic Page"
+        ],
+        "year": 2007,
+        "doi": "10.59350/1jren-qwn76",
+        "venue": "",
+        "url": "https://doi.org/10.59350/1jren-qwn76",
+        "retrieval_source": "crossref",
+        "literature_id": "L002",
+        "evidence_id": "E018",
+        "abstract": "Stumbled across a really nice paper (Why can't I manage academic papers like MP3s?) while reading commentary on Tim O'Reilley's post about FreeBase. In response to Danny Ayer's post, Tim O'Reilly wrote Howison and Goodrum make some interesting points, especially about how easy it is to get (or create) metadata for a CD, especially when compared to handling academic literature.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C003",
+      "claim_text": "Prior work reports that Stumbled across a really nice paper (Why can't I manage academic papers like MP3s?) while reading commentary on Tim O'Reilley's post about FreeBase.",
+      "hypothesis_id": "H002",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "iTunes and citation metadata.",
+        "authors": [
+          "Roderic Page"
+        ],
+        "year": 2007,
+        "doi": "10.59350/sqf4z-mmp59",
+        "venue": "",
+        "url": "https://doi.org/10.59350/sqf4z-mmp59",
+        "retrieval_source": "crossref",
+        "literature_id": "L003",
+        "evidence_id": "E019",
+        "abstract": "Stumbled across a really nice paper (Why can't I manage academic papers like MP3s?) while reading commentary on Tim O'Reilley's post about FreeBase. In response to Danny Ayer's post, Tim O'Reilly wrote Howison and Goodrum make some interesting points, especially about how easy it is to get (or create) metadata for a CD, especially when compared to handling academic literature.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C004",
+      "claim_text": "Prior work reports that Description of online digital content is currently extremely necessary to facilitate a diverse amount of resource sharing over the internet.",
+      "hypothesis_id": "H002",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Virtual Communities as Contributors for Digital Objects Metadata Generation",
+        "authors": [
+          "Joana Sócrates Dantas",
+          "Regina Melo Silveira"
+        ],
+        "year": 2012,
+        "doi": "10.4018/978-1-4666-0312-7.ch004",
+        "venue": "Virtual Community Participation and Motivation",
+        "url": "https://doi.org/10.4018/978-1-4666-0312-7.ch004",
+        "retrieval_source": "crossref",
+        "literature_id": "L004",
+        "evidence_id": "E020",
+        "abstract": "Description of online digital content is currently extremely necessary to facilitate a diverse amount of resource sharing over the internet. Many times, content is shared and reused within a virtual community. Virtual communities tend to have their own specific needs of resources, and tend to use a specific vocabulary to describe content. Members of virtual communities also tend to have specific motivations for participating and sharing information and knowledge with other members. In this chapter, the authors discuss the benefits of community members generating content description by analyzing the current literature on the matter. Then, the authors present two studies they have held where they assess the metadata generated by users of an IPTV system and by members of two different virtual communities.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C005",
+      "claim_text": "Prior work reports that Abstract Large language models (LLMs) reproduce some bibliographic records verbatim while fabricating others, with reproduction probability scaling in pretraining frequency and citation count as the standard proxy.",
+      "hypothesis_id": "H003",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Cross-Model Memorization Thresholds in Citation Generation: Evidence from Field-Level Cloze on Bibliographic Records",
+        "authors": [
+          "Junichiro Niimi"
+        ],
+        "year": 2026,
+        "doi": "10.21203/rs.3.rs-9733633/v1",
+        "venue": "",
+        "url": "https://doi.org/10.21203/rs.3.rs-9733633/v1",
+        "retrieval_source": "crossref",
+        "literature_id": "L005",
+        "evidence_id": "E003",
+        "abstract": "Abstract Large language models (LLMs) reproduce some bibliographic records verbatim while fabricating others, with reproduction probability scaling in pretraining frequency and citation count as the standard proxy. A prior study reports GPT-4.1's first-author memorization begins near 90 citations on a model-chosen test set, leaving generalizability open. We sample 1,118 computer science and 1,079 oncology papers from OpenAlex, stratified by citation count, and run a field-level cloze task on eight bibliographic fields with strict binary scoring. Seven conditions are evaluated: three frontier flash-class models (Gemini 3 Flash Preview, GPT-5.4-mini, DeepSeek V4-Flash), the full-tier GPT-5.4, and their reasoning-enabled variants. The field hierarchy replicates across conditions. The first-author inflection spans 87–502 citations in computer science across Gemini, DeepSeek, and full-tier GPT-5.4, with GPT-5.4-mini a further decade higher at ∼1,500, a one-to-two-order-of-magnitude range. The outlier is the mini tier, not the GPT family or open/closed status. Reasoning is neutral for Gemini, adverse for DeepSeek, but substantially helpful for GPT-5.4-mini, shifting its curve left by nearly a decade: reaching records direct decoding cannot, not adding knowledge. The same hierarchy, mini outlier, and order-of-magnitude spread recur on oncology at uniformly lower recovery. Memorization thresholds are model-, mode-, and domain-specific, not universal.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C006",
+      "claim_text": "Prior work reports that AI holds promise for transforming scientific processes, including hypothesis generation.",
+      "hypothesis_id": "H003",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Literature Meets Data: A Synergistic Approach to Hypothesis Generation",
+        "authors": [
+          "Haokun Liu",
+          "Yangqiaoyu Zhou",
+          "Mingxuan Li",
+          "Chenfei Yuan",
+          "Chenhao Tan"
+        ],
+        "year": 2024,
+        "doi": "",
+        "venue": "arXiv",
+        "url": "http://arxiv.org/abs/2410.17309v3",
+        "retrieval_source": "arxiv",
+        "literature_id": "L006",
+        "evidence_id": "E021",
+        "abstract": "AI holds promise for transforming scientific processes, including hypothesis generation. Prior work on hypothesis generation can be broadly categorized into theory-driven and data-driven approaches. While both have proven effective in generating novel and plausible hypotheses, it remains an open question whether they can complement each other. To address this, we develop the first method that combines literature-based insights with data to perform LLM-powered hypothesis generation. We apply our method on five different datasets and demonstrate that integrating literature and data outperforms other baselines (8.97\\% over few-shot, 15.75\\% over literature-based alone, and 3.37\\% over data-driven alone). Additionally, we conduct the first human evaluation to assess the utility of LLM-generated hypotheses in assisting human decision-making on two challenging tasks: deception detection and AI generated content detection. Our results show that human accuracy improves significantly by 7.44\\% and 14.19\\% on these tasks, respectively. These findings suggest that integrating literature-based and data-driven approaches provides a comprehensive and nuanced framework for hypothesis generation and could open new avenues for scientific inquiry.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C007",
+      "claim_text": "Boundary-case claim: this deliberately invalid citation is included to demonstrate Red labeling when a cited work cannot be found.",
+      "hypothesis_id": "H_BOUNDARY",
+      "claim_role": "bad_citation_boundary_case",
+      "cited_work": {
+        "title": "Clearly Nonexistent Citation Verification Paper for Boundary Demo",
+        "authors": [
+          "No Such Author"
+        ],
+        "year": 2099,
+        "doi": "INTENTIONALLY_INVALID_DOI_FOR_DEMO",
+        "venue": "",
+        "url": "",
+        "retrieval_source": "manual_boundary_case"
+      }
+    }
+  ],
+  "markdown": "# Generated Research Idea Cards\n\nInput paper: Ambiguous Cross Domain Hypothesis Generation with Citation Risk\n\n## H001: conservative extension\nEvidence status: `citation_backed`\n\nResearch gap: Ambiguous Cross Domain Hypothesis Generation with Citation Risk Abstract. Cross domain hypothesis generation often combines partial signals from multiple disciplines.\n\nNew hypothesis: A conservative next study should test whether techniques or observations from 'Cases of citation' and 'iTunes and citation metadata.' improve evidence-grounded work on hypothesis generation, citation risk, metadata matching, literature search.\n\nWhy novel: It combines two retrieved strands with the input paper's research problem rather than copying either paper.\n\nRequired evidence:\n- Verify that both cited works exist and match metadata.\n- Verify that abstracts or snippets support the claims used to ground the idea.\n- Run a small empirical or literature review check before presenting the idea as a conclusion.\n\nSupporting citations:\n- C001: Cases of citation (2024), DOI: 10.7765/9781526173195.00008\n- C002: iTunes and citation metadata. (2007), DOI: 10.59350/1jren-qwn76\n\nRisk or limitation: Novelty is moderate; the idea may be an incremental extension if the cited works already overlap strongly.\n\nTestable prediction: If this idea is valid, then a follow-up study on hypothesis generation, citation risk, metadata matching, literature search should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.\n\n## H002: cross-disciplinary analogy\nEvidence status: `citation_backed`\n\nResearch gap: Ambiguous Cross Domain Hypothesis Generation with Citation Risk Abstract. Cross domain hypothesis generation often combines partial signals from multiple disciplines.\n\nNew hypothesis: If the mechanisms discussed in 'iTunes and citation metadata.' transfer across domains, then hypothesis generation, citation risk, metadata matching, literature search may benefit from a cross-disciplinary evaluation protocol grounded by 'Virtual Communities as Contributors for Digital Objects Metadata Generation'.\n\nWhy novel: The idea explicitly treats retrieved literature as an analogy source for a different research setting.\n\nRequired evidence:\n- Verify that both cited works exist and match metadata.\n- Verify that abstracts or snippets support the claims used to ground the idea.\n- Run a small empirical or literature review check before presenting the idea as a conclusion.\n\nSupporting citations:\n- C003: iTunes and citation metadata. (2007), DOI: 10.59350/sqf4z-mmp59\n- C004: Virtual Communities as Contributors for Digital Objects Metadata Generation (2012), DOI: 10.4018/978-1-4666-0312-7.ch004\n\nRisk or limitation: The analogy may fail if the source domain assumptions do not hold for the input paper's domain.\n\nTestable prediction: If this idea is valid, then a follow-up study on hypothesis generation, citation risk, metadata matching, literature search should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.\n\n## H003: high-risk speculative idea\nEvidence status: `citation_backed`\n\nResearch gap: Ambiguous Cross Domain Hypothesis Generation with Citation Risk Abstract. Cross domain hypothesis generation often combines partial signals from multiple disciplines.\n\nNew hypothesis: A higher-risk hypothesis is that the shared signals behind 'Cross-Model Memorization Thresholds in Citation Generation: Evidence from Field-Level Cloze on Bibliographic Records' and 'Literature Meets Data: A Synergistic Approach to Hypothesis Generation' point to a broader latent factor affecting hypothesis generation, citation risk, metadata matching, literature search.\n\nWhy novel: It proposes a broader latent explanation rather than only applying a known method.\n\nRequired evidence:\n- Verify that both cited works exist and match metadata.\n- Verify that abstracts or snippets support the claims used to ground the idea.\n- Run a small empirical or literature review check before presenting the idea as a conclusion.\n\nSupporting citations:\n- C005: Cross-Model Memorization Thresholds in Citation Generation: Evidence from Field-Level Cloze on Bibliographic Records (2026), DOI: 10.21203/rs.3.rs-9733633/v1\n- C006: Literature Meets Data: A Synergistic Approach to Hypothesis Generation (2024), DOI: missing\n\nRisk or limitation: This is speculative and should be treated as Yellow unless stronger evidence is retrieved.\n\nTestable prediction: If this idea is valid, then a follow-up study on hypothesis generation, citation risk, metadata matching, literature search should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.\n\n## Citation-Backed Claims To Verify\n\n| Claim ID | Hypothesis | Claim | Cited Title | Year | DOI |\n|---|---|---|---|---|---|\n| C001 | H001 | Prior work reports that the paper titled 'Cases of citation' is relevant to the retrieved topic. | Cases of citation | 2024 | 10.7765/9781526173195.00008 |\n| C002 | H001 | Prior work reports that Stumbled across a really nice paper (Why can't I manage academic papers like MP3s?) while reading commentary on Tim O'Reilley's post about FreeBase. | iTunes and citation metadata. | 2007 | 10.59350/1jren-qwn76 |\n| C003 | H002 | Prior work reports that Stumbled across a really nice paper (Why can't I manage academic papers like MP3s?) while reading commentary on Tim O'Reilley's post about FreeBase. | iTunes and citation metadata. | 2007 | 10.59350/sqf4z-mmp59 |\n| C004 | H002 | Prior work reports that Description of online digital content is currently extremely necessary to facilitate a diverse amount of resource sharing over the internet. | Virtual Communities as Contributors for Digital Objects Metadata Generation | 2012 | 10.4018/978-1-4666-0312-7.ch004 |\n| C005 | H003 | Prior work reports that Abstract Large language models (LLMs) reproduce some bibliographic records verbatim while fabricating others, with reproduction probability scaling in pretraining frequency and citation count as the standard proxy. | Cross-Model Memorization Thresholds in Citation Generation: Evidence from Field-Level Cloze on Bibliographic Records | 2026 | 10.21203/rs.3.rs-9733633/v1 |\n| C006 | H003 | Prior work reports that AI holds promise for transforming scientific processes, including hypothesis generation. | Literature Meets Data: A Synergistic Approach to Hypothesis Generation | 2024 |  |\n| C007 | H_BOUNDARY | Boundary-case claim: this deliberately invalid citation is included to demonstrate Red labeling when a cited work cannot be found. | Clearly Nonexistent Citation Verification Paper for Boundary Demo | 2099 | INTENTIONALLY_INVALID_DOI_FOR_DEMO |\n\nNote: the boundary-case citation is intentionally invalid and should be labeled Red.",
+  "evidence_id": "E031"
+}

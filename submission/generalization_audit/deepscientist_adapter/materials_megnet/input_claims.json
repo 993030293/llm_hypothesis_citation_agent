@@ -1,0 +1,148 @@
+{
+  "claims": [
+    {
+      "claim_id": "C001",
+      "claim_text": "Prior work reports that Graph networks are a new machine learning (ML) paradigm that supports both relational reasoning and combinatorial generalization.",
+      "hypothesis_id": "H001",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Graph Networks as a Universal Machine Learning Framework for Molecules and Crystals",
+        "authors": [
+          "Chi Chen",
+          "Weike Ye",
+          "Yunxing Zuo",
+          "Zheng Chen",
+          "Shyue Ping Ong"
+        ],
+        "year": 2019,
+        "doi": "10.1021/acs.chemmater.9b01294",
+        "venue": "Chemistry of Materials",
+        "url": "https://doi.org/10.1021/acs.chemmater.9b01294",
+        "retrieval_source": "openalex",
+        "literature_id": "L001",
+        "evidence_id": "E002",
+        "abstract": "Graph networks are a new machine learning (ML) paradigm that supports both relational reasoning and combinatorial generalization. Here, we develop universal MatErials Graph Network (MEGNet) models for accurate property prediction in both molecules and crystals. We demonstrate that the MEGNet models outperform prior ML models such as the SchNet in 11 out of 13 properties of the QM9 molecule data set. Similarly, we show that MEGNet models trained on ∼60 000 crystals in the Materials Project substantially outperform prior ML models in the prediction of the formation energies, band gaps, and elastic moduli of crystals, achieving better than density functional theory accuracy over a much larger data set. We present two new strategies to address data limitations common in materials science and chemistry. First, we demonstrate a physically intuitive approach to unify four separate molecular MEGNet models for the internal energy at 0 K and room temperature, enthalpy, and Gibbs free energy into a single free energy MEGNet model by incorporating the temperature, pressure, and entropy as global state inputs. Second, we show that the learned element embeddings in MEGNet models encode periodic chemical trends and can be transfer-learned from a property model trained on a larger data set (formation energies) to improve property models with smaller amounts of data (band gaps and elastic moduli).",
+        "snippet": "article"
+      }
+    },
+    {
+      "claim_id": "C002",
+      "claim_text": "Prior work reports that Abstract Modern deep learning-driven generative models have made it possible to design millions of hypothetical materials.",
+      "hypothesis_id": "H001",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "DenseGNN: universal and scalable deeper graph neural networks for high-performance property prediction in crystals and molecules",
+        "authors": [
+          "Hong Wang",
+          "Hongwei Du",
+          "Jian Hui",
+          "lanting zhang"
+        ],
+        "year": 2024,
+        "doi": "10.21203/rs.3.rs-4173966/v1",
+        "venue": "",
+        "url": "https://doi.org/10.21203/rs.3.rs-4173966/v1",
+        "retrieval_source": "crossref",
+        "literature_id": "L002",
+        "evidence_id": "E003",
+        "abstract": "Abstract Modern deep learning-driven generative models have made it possible to design millions of hypothetical materials. However, to sift through these candidate materials and identify promising new materials, we need fast and accurate models for predicting material properties. Graph neural networks (GNNs) have emerged as a current research hotspot due to their ability to directly operate on the graph representations of molecules and materials, enabling comprehensively capturing key information and exhibiting outstanding performance in predicting material properties. Nevertheless, GNNs still face several key problems in practical applications: firstly, existing nested graph network strategies, while able to incorporate critical structural information such as bond angles, significantly increase the number of trainable parameters in the model, leading to a substantial rise in training costs; secondly, extending GNN models to broader fields such as molecules, crystalline materials, and catalysis, as well as adapting to small datasets, remains a challenge; finally, the scalability of GNN models are limited by the over-smoothing problem. To address these problems, we propose the DenseGNN model, which combines dense connectivity network (DCN), hierarchical node-edge-graph residual networks (HSN), and Local structure Order Parameters Embedding (LOPE) strategies, aiming to create a universal, scalable and efficient GNN model. We have achieved state-of-the-art (SOAT) performance on multiple datasets including JARVIS-DFT, Materials Project, QM9, Lipop, FreeSolv, ESOL, and OC22, demonstrating the generality and scalability of our approach. By fusing DCN and LOPE strategies into GNN models in the fields of computer, crystal materials, and molecules, we have significantly enhanced the performance of models such as GIN, Schnet, and Hamnet on material datasets like Matbench. The LOPE strategy optimizes the embedding representation of atoms, enabling our model to train efficiently at a minimal level of edge connections, significantly reducing computational costs, shortening the time required to train large GNNs, while maintaining accuracy. Our technique not only supports the construction of deeper GNNs, avoiding performance degradation problems seen in other models, but is also applicable to a wide range of applications requiring large deep learning models. Furthermore, our study demonstrates that by utilizing structural embeddings from pre-trained models, our model not only outperforms other GNNs in crystal structure distinguishment, but also approaches the standard X-ray diffraction (XRD) method.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C003",
+      "claim_text": "Prior work reports that Organic semiconductors (OSCs) can exhibit polymorphism, which may impact the physichochemical properties of the material, including the bandgap.",
+      "hypothesis_id": "H002",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Examining the Influence of Graph Representation on Property Prediction of Polymorphic Organic Molecular Crystals",
+        "authors": [
+          "Dana O'Connor",
+          "Paola Buitrago"
+        ],
+        "year": 2025,
+        "doi": "10.26434/chemrxiv-2025-9xjh5",
+        "venue": "",
+        "url": "https://doi.org/10.26434/chemrxiv-2025-9xjh5",
+        "retrieval_source": "crossref",
+        "literature_id": "L003",
+        "evidence_id": "E004",
+        "abstract": "Organic semiconductors (OSCs) can exhibit polymorphism, which may impact the physichochemical properties of the material, including the bandgap. With the advent of machine learning, graph neural networks have been used to predict the bandgap of OSCs. However, these frameworks struggle with differentiating between polymorphs. Here, we examine the performance of two graph representations, one including incorporation of angular information and one including only edge and node information, on two datasets, the Organic Materials Database (OMDB) and Organic Crystals in Electronic and Light-Oriented Technologies (OCELOT). We find that incorporating angle featurization improves the performance of the model on both databases. We also test the models on two cases: the polymorphs of 5-methyl-2-[(2-nitrophenyl)amino]-3-thiophenecarbonitrile (ROY) and an augmented version of the PAH101 dataset. We find that angular featurization significantly improves the ability of the model to differentiate between polymorphs in the prediction of the bandgap.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C004",
+      "claim_text": "Prior work reports that Bragg band gaps of phononic crystals generally, but not always, open at Brillouin zone boundaries.",
+      "hypothesis_id": "H002",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Formation of Bragg Band Gaps in Anisotropic Phononic Crystals Analyzed With the Empty Lattice Model",
+        "authors": [
+          "Yan-Feng Wang",
+          "Alexei Maznev",
+          "Vincent Laude"
+        ],
+        "year": 2016,
+        "doi": "10.3390/cryst6050052",
+        "venue": "Crystals",
+        "url": "https://doi.org/10.3390/cryst6050052",
+        "retrieval_source": "crossref",
+        "literature_id": "L004",
+        "evidence_id": "E005",
+        "abstract": "Bragg band gaps of phononic crystals generally, but not always, open at Brillouin zone boundaries. The commonly accepted explanation stems from the empty lattice model: assuming a small material contrast between the constituents of the unit cell, avoided crossings in the phononic band structure appear at frequencies and wavenumbers corresponding to band intersections; for scalar waves the lowest intersections coincide with boundaries of the first Brillouin zone. However, if a phononic crystal contains elastically anisotropic materials, its overall symmetry is not dictated solely by the lattice symmetry. We construct an empty lattice model for phononic crystals made of isotropic and anisotropic materials, based on their slowness curves. We find that, in the anisotropic case, avoided crossings generally do not appear at the boundaries of traditionally defined Brillouin zones. Furthermore, the Bragg “planes” which give rise to phononic band gaps, are generally not flat planes but curved surfaces. The same is found to be the case for avoided crossings between shear (transverse) and longitudinal bands in the isotropic case.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C005",
+      "claim_text": "Prior work reports that Material representations that are compatible with machine learning models play a key role in developing models that exhibit high accuracy for property prediction.",
+      "hypothesis_id": "H003",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Orbital Graph Convolutional Neural Network for Material Property Prediction",
+        "authors": [
+          "Mohammadreza Karamad",
+          "Rishikesh Magar",
+          "Yuting Shi",
+          "Samira Siahrostami",
+          "Ian D. Gates",
+          "Amir Barati Farimani"
+        ],
+        "year": 2020,
+        "doi": "",
+        "venue": "arXiv",
+        "url": "http://arxiv.org/abs/2008.06415v1",
+        "retrieval_source": "arxiv",
+        "literature_id": "L005",
+        "evidence_id": "E008",
+        "abstract": "Material representations that are compatible with machine learning models play a key role in developing models that exhibit high accuracy for property prediction. Atomic orbital interactions are one of the important factors that govern the properties of crystalline materials, from which the local chemical environments of atoms is inferred. Therefore, to develop robust machine learningmodels for material properties prediction, it is imperative to include features representing such chemical attributes. Here, we propose the Orbital Graph Convolutional Neural Network (OGCNN), a crystal graph convolutional neural network framework that includes atomic orbital interaction features that learns material properties in a robust way. In addition, we embedded an encoder-decoder network into the OGCNN enabling it to learn important features among basic atomic (elemental features), orbital-orbital interactions, and topological features. We examined the performance of this model on a broad range of crystalline material data to predict different properties. We benchmarked the performance of the OGCNN model with that of: 1) the crystal graph convolutional neural network (CGCNN), 2) other state-of-the-art descriptors for material representations including Many-body Tensor Representation (MBTR) and the Smooth Overlap of Atomic Positions (SOAP), and 3) other conventional regression machine learning algorithms where different crystal featurization methods have been used. We find that OGCNN significantly outperforms them. The OGCNN model with high predictive accuracy can be used to discover new materials among the immense phase and compound spaces of materials",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C006",
+      "claim_text": "Prior work reports that Abstract One of the most exciting tools that have entered the material science toolbox in recent years is machine learning.",
+      "hypothesis_id": "H003",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Recent advances and applications of machine learning in solid-state materials science",
+        "authors": [
+          "Jonathan Schmidt",
+          "Mário R. G. Marques",
+          "Silvana Botti",
+          "Miguel A. L. Marques"
+        ],
+        "year": 2019,
+        "doi": "10.1038/s41524-019-0221-0",
+        "venue": "npj Computational Materials",
+        "url": "https://doi.org/10.1038/s41524-019-0221-0",
+        "retrieval_source": "openalex",
+        "literature_id": "L006",
+        "evidence_id": "E006",
+        "abstract": "Abstract One of the most exciting tools that have entered the material science toolbox in recent years is machine learning. This collection of statistical methods has already proved to be capable of considerably speeding up both fundamental and applied research. At present, we are witnessing an explosion of works that develop and apply machine learning to solid-state systems. We provide a comprehensive overview and analysis of the most recent research in this topic. As a starting point, we introduce machine learning principles, algorithms, descriptors, and databases in materials science. We continue with the description of different machine learning approaches for the discovery of stable materials and the prediction of their crystal structure. Then we discuss research in numerous quantitative structure–property relationships and various approaches for the replacement of first-principle methods by machine learning. We review how active learning and surrogate-based optimization can be applied to improve the rational design process and related examples of applications. Two major questions are always the interpretability of and the physical understanding gained from machine learning models. We consider therefore the different facets of interpretability and their importance in materials science. Finally, we propose solutions and future research paths for various challenges in computational materials science.",
+        "snippet": "article"
+      }
+    }
+  ]
+}

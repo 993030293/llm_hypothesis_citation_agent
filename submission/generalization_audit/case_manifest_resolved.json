@@ -1,0 +1,159 @@
+{
+  "generated_at": "2026-05-31T17:49:58+00:00",
+  "cases": [
+    {
+      "case_id": "ai_transformer_attention",
+      "field": "NLP / AI",
+      "pdf_url": "https://arxiv.org/pdf/1706.03762",
+      "pdf_path": "inputs/generalization_cases/papers/ai_transformer_attention.pdf",
+      "source_note": "Real public arXiv PDF: Attention Is All You Need.",
+      "expected_risk": "normal_real_pdf",
+      "resolved_pdf_path": "C:\\Users\\99303\\git\\llm_hypothesis_citation_agent\\inputs\\generalization_cases\\papers\\ai_transformer_attention.pdf",
+      "resolved_pdf_url": "https://arxiv.org/pdf/1706.03762"
+    },
+    {
+      "case_id": "ai_rag_knowledge_nlp",
+      "field": "NLP / RAG",
+      "pdf_url": "https://arxiv.org/pdf/2005.11401",
+      "pdf_path": "inputs/generalization_cases/papers/ai_rag_knowledge_nlp.pdf",
+      "source_note": "Real public arXiv PDF: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.",
+      "expected_risk": "normal_real_pdf",
+      "resolved_pdf_path": "C:\\Users\\99303\\git\\llm_hypothesis_citation_agent\\inputs\\generalization_cases\\papers\\ai_rag_knowledge_nlp.pdf",
+      "resolved_pdf_url": "https://arxiv.org/pdf/2005.11401"
+    },
+    {
+      "case_id": "medical_chexnet",
+      "field": "Medical AI",
+      "pdf_url": "https://arxiv.org/pdf/1711.05225",
+      "pdf_path": "inputs/generalization_cases/papers/medical_chexnet.pdf",
+      "source_note": "Real public arXiv PDF: CheXNet.",
+      "expected_risk": "normal_real_pdf",
+      "resolved_pdf_path": "C:\\Users\\99303\\git\\llm_hypothesis_citation_agent\\inputs\\generalization_cases\\papers\\medical_chexnet.pdf",
+      "resolved_pdf_url": "https://arxiv.org/pdf/1711.05225"
+    },
+    {
+      "case_id": "finance_finrl",
+      "field": "Quantitative Finance",
+      "pdf_url": "https://arxiv.org/pdf/2011.09607",
+      "pdf_path": "inputs/generalization_cases/papers/finance_finrl.pdf",
+      "source_note": "Real public arXiv PDF: FinRL.",
+      "expected_risk": "normal_real_pdf",
+      "resolved_pdf_path": "C:\\Users\\99303\\git\\llm_hypothesis_citation_agent\\inputs\\generalization_cases\\papers\\finance_finrl.pdf",
+      "resolved_pdf_url": "https://arxiv.org/pdf/2011.09607"
+    },
+    {
+      "case_id": "physics_gravitational_waves",
+      "field": "Physics",
+      "pdf_url": "https://arxiv.org/pdf/1602.03837",
+      "pdf_path": "inputs/generalization_cases/papers/physics_gravitational_waves.pdf",
+      "source_note": "Real public arXiv PDF: GW150914.",
+      "expected_risk": "normal_real_pdf",
+      "resolved_pdf_path": "C:\\Users\\99303\\git\\llm_hypothesis_citation_agent\\inputs\\generalization_cases\\papers\\physics_gravitational_waves.pdf",
+      "resolved_pdf_url": "https://arxiv.org/pdf/1602.03837"
+    },
+    {
+      "case_id": "materials_megnet",
+      "field": "Materials Science",
+      "pdf_url": "https://arxiv.org/abs/1812.05055",
+      "pdf_path": "inputs/generalization_cases/papers/materials_megnet.pdf",
+      "source_note": "Real public arXiv source; downloader resolves abs URL to PDF.",
+      "expected_risk": "normal_real_pdf",
+      "resolved_pdf_path": "C:\\Users\\99303\\git\\llm_hypothesis_citation_agent\\inputs\\generalization_cases\\papers\\materials_megnet.pdf",
+      "resolved_pdf_url": "https://arxiv.org/pdf/1812.05055"
+    },
+    {
+      "case_id": "neuroscience_deeplabcut",
+      "field": "Neuroscience / Behavior",
+      "pdf_url": "https://arxiv.org/abs/1804.03142",
+      "pdf_path": "inputs/generalization_cases/papers/neuroscience_deeplabcut.pdf",
+      "source_note": "Real public arXiv source; downloader resolves abs URL to PDF.",
+      "expected_risk": "normal_real_pdf",
+      "resolved_pdf_path": "C:\\Users\\99303\\git\\llm_hypothesis_citation_agent\\inputs\\generalization_cases\\papers\\neuroscience_deeplabcut.pdf",
+      "resolved_pdf_url": "https://arxiv.org/pdf/1804.03142"
+    },
+    {
+      "case_id": "robotics_rt1",
+      "field": "Robotics",
+      "pdf_url": "https://arxiv.org/abs/2212.06817",
+      "pdf_path": "inputs/generalization_cases/papers/robotics_rt1.pdf",
+      "source_note": "Real public arXiv source; downloader resolves abs URL to PDF.",
+      "expected_risk": "normal_real_pdf",
+      "resolved_pdf_path": "C:\\Users\\99303\\git\\llm_hypothesis_citation_agent\\inputs\\generalization_cases\\papers\\robotics_rt1.pdf",
+      "resolved_pdf_url": "https://arxiv.org/pdf/2212.06817"
+    },
+    {
+      "case_id": "climate_remote_sensing_ai",
+      "field": "Climate / Remote Sensing",
+      "pdf_url": "https://arxiv.org/abs/2107.02693",
+      "pdf_path": "inputs/generalization_cases/papers/climate_remote_sensing_ai.pdf",
+      "source_note": "Real public arXiv source; downloader resolves abs URL to PDF.",
+      "expected_risk": "normal_real_pdf",
+      "resolved_pdf_path": "C:\\Users\\99303\\git\\llm_hypothesis_citation_agent\\inputs\\generalization_cases\\papers\\climate_remote_sensing_ai.pdf",
+      "resolved_pdf_url": "https://arxiv.org/pdf/2107.02693"
+    },
+    {
+      "case_id": "education_llm_survey",
+      "field": "Education",
+      "pdf_url": "https://arxiv.org/abs/2405.13001",
+      "pdf_path": "inputs/generalization_cases/papers/education_llm_survey.pdf",
+      "source_note": "Real public arXiv source; downloader resolves abs URL to PDF.",
+      "expected_risk": "normal_real_pdf",
+      "resolved_pdf_path": "C:\\Users\\99303\\git\\llm_hypothesis_citation_agent\\inputs\\generalization_cases\\papers\\education_llm_survey.pdf",
+      "resolved_pdf_url": "https://arxiv.org/pdf/2405.13001"
+    },
+    {
+      "case_id": "education_gpt_surprise",
+      "field": "Education / Social Science",
+      "pdf_url": "https://arxiv.org/abs/2407.09975",
+      "pdf_path": "inputs/generalization_cases/papers/education_gpt_surprise.pdf",
+      "source_note": "Real public arXiv source; downloader resolves abs URL to PDF.",
+      "expected_risk": "normal_real_pdf",
+      "resolved_pdf_path": "C:\\Users\\99303\\git\\llm_hypothesis_citation_agent\\inputs\\generalization_cases\\papers\\education_gpt_surprise.pdf",
+      "resolved_pdf_url": "https://arxiv.org/pdf/2407.09975"
+    },
+    {
+      "case_id": "education_llm_harm_learning",
+      "field": "Education / HCI",
+      "pdf_url": "https://arxiv.org/abs/2409.09047",
+      "pdf_path": "inputs/generalization_cases/papers/education_llm_harm_learning.pdf",
+      "source_note": "Real public arXiv source; downloader resolves abs URL to PDF.",
+      "expected_risk": "normal_real_pdf",
+      "resolved_pdf_path": "C:\\Users\\99303\\git\\llm_hypothesis_citation_agent\\inputs\\generalization_cases\\papers\\education_llm_harm_learning.pdf",
+      "resolved_pdf_url": "https://arxiv.org/pdf/2409.09047"
+    },
+    {
+      "case_id": "optimization_adam",
+      "field": "Optimization / ML",
+      "pdf_url": "https://arxiv.org/abs/1412.6980",
+      "pdf_path": "inputs/generalization_cases/papers/optimization_adam.pdf",
+      "source_note": "Real public arXiv source; downloader resolves abs URL to PDF.",
+      "expected_risk": "normal_real_pdf",
+      "resolved_pdf_path": "C:\\Users\\99303\\git\\llm_hypothesis_citation_agent\\inputs\\generalization_cases\\papers\\optimization_adam.pdf",
+      "resolved_pdf_url": "https://arxiv.org/pdf/1412.6980"
+    },
+    {
+      "case_id": "existing_finance_evomarket",
+      "field": "Finance / Simulation",
+      "pdf_url": "local:inputs/papers/EvoMarket.pdf",
+      "pdf_path": "inputs/papers/EvoMarket.pdf",
+      "source_note": "Existing real local PDF already used in live testing.",
+      "expected_risk": "keywords_before_abstract_two_column",
+      "local_existing_pdf": true,
+      "resolved_pdf_path": "C:\\Users\\99303\\git\\llm_hypothesis_citation_agent\\inputs\\papers\\EvoMarket.pdf",
+      "resolved_pdf_url": "C:\\Users\\99303\\git\\llm_hypothesis_citation_agent\\inputs\\papers\\EvoMarket.pdf"
+    },
+    {
+      "case_id": "boundary_bad_citation",
+      "field": "Boundary Case",
+      "pdf_url": "local:inputs/papers/boundary_demo.pdf",
+      "pdf_path": "inputs/papers/boundary_demo.pdf",
+      "source_note": "Local boundary PDF with an intentionally invalid citation injected by workflow.",
+      "expected_risk": "expected_red_boundary",
+      "local_existing_pdf": true,
+      "inject_bad_citation": true,
+      "expected_red": true,
+      "resolved_pdf_path": "C:\\Users\\99303\\git\\llm_hypothesis_citation_agent\\inputs\\papers\\boundary_demo.pdf",
+      "resolved_pdf_url": "C:\\Users\\99303\\git\\llm_hypothesis_citation_agent\\inputs\\papers\\boundary_demo.pdf"
+    }
+  ]
+}

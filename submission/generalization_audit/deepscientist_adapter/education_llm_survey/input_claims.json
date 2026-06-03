@@ -1,0 +1,141 @@
+{
+  "claims": [
+    {
+      "claim_id": "C001",
+      "claim_text": "Prior work reports that Rapid urbanisation has intensified the need for sustainable solutions to address challenges in urban infrastructure, climate change, and resource constraints.",
+      "hypothesis_id": "H001",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Artificial Intelligence-Enabled Metaverse for Sustainable Smart Cities: Technologies, Applications, Challenges, and Future Directions",
+        "authors": [
+          "Zita Lifelo",
+          "Jianguo Ding",
+          "Huansheng Ning",
+          "Qurat-ul-Ain",
+          "Sahraoui Dhelim"
+        ],
+        "year": 2024,
+        "doi": "10.3390/electronics13244874",
+        "venue": "Electronics",
+        "url": "https://www.semanticscholar.org/paper/d7caccd6632a4cfc64371f25fe1e437c708cd572",
+        "retrieval_source": "semantic_scholar",
+        "literature_id": "L001",
+        "evidence_id": "E020",
+        "abstract": "Rapid urbanisation has intensified the need for sustainable solutions to address challenges in urban infrastructure, climate change, and resource constraints. This study reveals that Artificial Intelligence (AI)-enabled metaverse offers transformative potential for developing sustainable smart cities. AI techniques, such as machine learning, deep learning, generative AI (GAI), and large language models (LLMs), enhance the metaverse’s capabilities in data analysis, urban decision making, and personalised user experiences. The study further examines how these advanced AI models facilitate key metaverse technologies such as big data analytics, natural language processing (NLP), computer vision, digital twins, Internet of Things (IoT), Edge AI, and 5G/6G networks. Applications across various smart city domains—environment, mobility, energy, health, governance, and economy, and real-world use cases of virtual cities like Singapore, Seoul, and Lisbon are presented, demonstrating AI’s effectiveness in the metaverse for smart cities. However, AI-enabled metaverse in smart cities presents challenges related to data acquisition and management, privacy, security, interoperability, scalability, and ethical considerations. These challenges’ societal and technological implications are discussed, highlighting the need for robust data governance frameworks and AI ethics guidelines. Future directions emphasise advancing AI model architectures and algorithms, enhancing privacy and security measures, promoting ethical AI practices, addressing performance measures, and fostering stakeholder collaboration. By addressing these challenges, the full potential of AI-enabled metaverse can be harnessed to enhance sustainability, adaptability, and livability in smart cities.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C002",
+      "claim_text": "Prior work reports that ChatGPT is an artificial intelligence (AI)-based conversational large language model (LLM).",
+      "hypothesis_id": "H001",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "ChatGPT Utility in Healthcare Education, Research, and Practice: Systematic Review on the Promising Perspectives and Valid Concerns",
+        "authors": [
+          "Malik Sallam"
+        ],
+        "year": 2023,
+        "doi": "10.3390/healthcare11060887",
+        "venue": "Healthcare",
+        "url": "https://doi.org/10.3390/healthcare11060887",
+        "retrieval_source": "openalex",
+        "literature_id": "L002",
+        "evidence_id": "E021",
+        "abstract": "ChatGPT is an artificial intelligence (AI)-based conversational large language model (LLM). The potential applications of LLMs in health care education, research, and practice could be promising if the associated valid concerns are proactively examined and addressed. The current systematic review aimed to investigate the utility of ChatGPT in health care education, research, and practice and to highlight its potential limitations. Using the PRIMSA guidelines, a systematic search was conducted to retrieve English records in PubMed/MEDLINE and Google Scholar (published research or preprints) that examined ChatGPT in the context of health care education, research, or practice. A total of 60 records were eligible for inclusion. Benefits of ChatGPT were cited in 51/60 (85.0%) records and included: (1) improved scientific writing and enhancing research equity and versatility; (2) utility in health care research (efficient analysis of datasets, code generation, literature reviews, saving time to focus on experimental design, and drug discovery and development); (3) benefits in health care practice (streamlining the workflow, cost saving, documentation, personalized medicine, and improved health literacy); and (4) benefits in health care education including improved personalized learning and the focus on critical thinking and problem-based learning. Concerns regarding ChatGPT use were stated in 58/60 (96.7%) records including ethical, copyright, transparency, and legal issues, the risk of bias, plagiarism, lack of originality, inaccurate content with risk of hallucination, limited knowledge, incorrect citations, cybersecurity issues, and risk of infodemics. The promising applications of ChatGPT can induce paradigm shifts in health care education, research, and practice. However, the embrace of this AI chatbot should be conducted with extreme caution considering its potential limitations. As it currently stands, ChatGPT does not qualify to be listed as an author in scientific articles unless the ICMJE/COPE guidelines are revised or amended. An initiative involving all stakeholders in health care education, research, and practice is urgently needed. This will help to set a code of ethics to guide the responsible use of ChatGPT among other LLMs in health care and academia.",
+        "snippet": "review"
+      }
+    },
+    {
+      "claim_id": "C003",
+      "claim_text": "Prior work reports that Abstract As generative artificial intelligence (AI) tools and large language models (LLMs)-powered applications develop rapidly in the era of algorithms, it should be integrated thoughtfully to enhance English as a Foreign Language (EFL) teaching and learning without replacing learners’ critical thinking (CT).",
+      "hypothesis_id": "H002",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "How do generative artificial intelligence (AI) tools and large language models (LLMs) influence language learners’ critical thinking in EFL education? A systematic review",
+        "authors": [
+          "Jing Liu",
+          "Ahmad Johari Bin Sihes",
+          "Ye Lu"
+        ],
+        "year": 2025,
+        "doi": "10.1186/s40561-025-00406-0",
+        "venue": "Smart Learning Environments",
+        "url": "https://doi.org/10.1186/s40561-025-00406-0",
+        "retrieval_source": "crossref",
+        "literature_id": "L003",
+        "evidence_id": "E002",
+        "abstract": "Abstract As generative artificial intelligence (AI) tools and large language models (LLMs)-powered applications develop rapidly in the era of algorithms, it should be integrated thoughtfully to enhance English as a Foreign Language (EFL) teaching and learning without replacing learners’ critical thinking (CT). This study systematically analyzes the impact of generative AI tools and LLMs on language learners’ CT in EFL education using the PRISMA (Preferred Reporting Items for Systematic Reviews and Meta-Analyses) framework to identify, evaluate, and synthesize relevant studies from 2022 to 2025. A thorough review of 15 selected studies focuses on generative AI tools and LLMs’ dual nature, research methods, main focuses, theory and models, limitations and challenges, and future directions in the field based on Web of Science (WoS), SCOPUS, ERIC, ProQuest, and Google Scholar. The findings identified generative AI tools and LLMs possessed both the potential to nurture and the risk of hindering CT in EFL education. 66.67% of studies reported generative AI tools and LLMs’ positive role in CT, while 33.33% of studies reported its negative role in CT. Furthermore, 3 types of research methods, 3 key themes of research focus, and 4 groups of theoretical perspectives were examined. However, 4 kinds of limitations in this field remain, including research scope, user dependency, generative AI reliability, and pedagogical integration. Future research can focus on assessing long-term effects, broadening research scope, promoting responsible AI use, and refining pedagogical strategies. Finally, Limitations, implications and future direction of this study were discussed.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C004",
+      "claim_text": "Prior work reports that ChatGPT is the world’s most advanced chatbot thus far.",
+      "hypothesis_id": "H002",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "ChatGPT: Bullshit spewer or the end of traditional assessments in higher education?",
+        "authors": [
+          "Jürgen Rudolph",
+          "Samson Tan",
+          "Shannon Tan"
+        ],
+        "year": 2023,
+        "doi": "10.37074/jalt.2023.6.1.9",
+        "venue": "Journal of Applied Learning & Teaching",
+        "url": "https://doi.org/10.37074/jalt.2023.6.1.9",
+        "retrieval_source": "openalex",
+        "literature_id": "L004",
+        "evidence_id": "E022",
+        "abstract": "ChatGPT is the world’s most advanced chatbot thus far. Unlike other chatbots, it can create impressive prose within seconds, and it has created much hype and doomsday predictions when it comes to student assessment in higher education and a host of other matters. ChatGPT is a state-of-the-art language model (a variant of OpenAI’s Generative Pretrained Transformer (GPT) language model) designed to generate text that can be indistinguishable from text written by humans. It can engage in conversation with users in a seemingly natural and intuitive way. In this article, we briefly tell the story of OpenAI, the organisation behind ChatGPT. We highlight the fundamental change from a not-for-profit organisation to a commercial business model. In terms of our methods, we conducted an extensive literature review and experimented with this artificial intelligence (AI) software. Our literature review shows our review to be amongst the first peer-reviewed academic journal articles to explore ChatGPT and its relevance for higher education (especially assessment, learning and teaching). After a description of ChatGPT’s functionality and a summary of its strengths and limitations, we focus on the technology’s implications for higher education and discuss what is the future of learning, teaching and assessment in higher education in the context of AI chatbots such as ChatGPT. We position ChatGPT in the context of current Artificial Intelligence in Education (AIEd) research, discuss student-facing, teacher-facing and system-facing applications, and analyse opportunities and threats. We conclude the article with recommendations for students, teachers and higher education institutions. Many of them focus on assessment.",
+        "snippet": "article"
+      }
+    },
+    {
+      "claim_id": "C005",
+      "claim_text": "Prior work reports that In recent years, there has been a stimulating discussion on how artificial intelligence (AI) can support the science and engineering of intelligent educational applications.",
+      "hypothesis_id": "H003",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Experts' View on Challenges and Needs for Fairness in Artificial Intelligence for Education",
+        "authors": [
+          "Gianni Fenu",
+          "Roberta Galici",
+          "Mirko Marras"
+        ],
+        "year": 2022,
+        "doi": "",
+        "venue": "arXiv",
+        "url": "http://arxiv.org/abs/2207.01490v1",
+        "retrieval_source": "arxiv",
+        "literature_id": "L005",
+        "evidence_id": "E003",
+        "abstract": "In recent years, there has been a stimulating discussion on how artificial intelligence (AI) can support the science and engineering of intelligent educational applications. Many studies in the field are proposing actionable data mining pipelines and machine-learning models driven by learning-related data. The potential of these pipelines and models to amplify unfairness for certain categories of students is however receiving increasing attention. If AI applications are to have a positive impact on education, it is crucial that their design considers fairness at every step. Through anonymous surveys and interviews with experts (researchers and practitioners) who have published their research at top-tier educational conferences in the last year, we conducted the first expert-driven systematic investigation on the challenges and needs for addressing fairness throughout the development of educational systems based on AI. We identified common and diverging views about the challenges and the needs faced by educational technologies experts in practice, that lead the community to have a clear understanding on the main questions raising doubts in this topic. Based on these findings, we highlighted directions that will facilitate the ongoing research towards fairer AI for education.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C006",
+      "claim_text": "Prior work reports that Explainable Artificial Intelligence and Trust in Smart Applications: Definition, Evolution and Challenges",
+      "hypothesis_id": "H003",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Explainable Artificial Intelligence and Trust in Smart Applications: Definition, Evolution and Challenges",
+        "authors": [
+          "Hatem Mosa",
+          "Qasem Abu Al-Haija"
+        ],
+        "year": 2026,
+        "doi": "10.1007/978-3-031-97007-8_1",
+        "venue": "Explainable Artificial Intelligence for Trustworthy Decisions in Smart Applications",
+        "url": "https://doi.org/10.1007/978-3-031-97007-8_1",
+        "retrieval_source": "crossref",
+        "literature_id": "L006",
+        "evidence_id": "E004",
+        "abstract": "",
+        "snippet": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+[
+  {
+    "success_type": "引文验证",
+    "compiled_at": "2026-06-04 01:38:29",
+    "occurrences": 3,
+    "summary": "DOI 10.1016/j.psychres.2023.115334 通过 crossref_doi 找到且摘要直接支持结论",
+    "examples": [
+      "claim=C002, provider=crossref_doi",
+      "claim=C003, provider=crossref_doi",
+      "claim=C005, provider=crossref_doi"
+    ]
+  }
+]

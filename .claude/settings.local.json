@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/Eric_/Desktop/LLM/**)",
+      "Bash(cp -r \"llm_hypothesis_citation_agent-main/\" \"llm_hypothesis_citation_agent_temp/\")",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(python -c ' *)",
+      "Bash(git branch *)",
+      "Bash(git commit *)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\Eric_\\Desktop\\LLM\\llm_hypothesis_citation_agent_temp"
+    ]
+  }
+}

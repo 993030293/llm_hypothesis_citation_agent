@@ -1,0 +1,270 @@
+{
+  "hypotheses": [
+    {
+      "hypothesis_id": "H001",
+      "idea_type": "conservative extension",
+      "evidence_status": "citation_backed",
+      "research_gap": "This paper presentsEvoMarket, a discrete-event, multi-agent financial market simulator designed for intervention-oriented experiments in multi-asset and cross-day environments. Rigorous study of such mechanisms is challenging because many questions of interest are inherentlycounterfac- tual[11].",
+      "new_hypothesis": "A conservative next study should test whether techniques or observations from 'Integrating LLM in Agent-Based Social Simulation: Opportunities and Challenges' and 'Multi-agent modeling and simulation of a stock market' improve evidence-grounded work on agent-based modeling, financial market simulation, calibration, scalability.",
+      "why_novel": "It combines two retrieved strands with the input paper's research problem rather than copying either paper.",
+      "required_evidence": [
+        "Verify that both cited works exist and match metadata.",
+        "Verify that abstracts or snippets support the claims used to ground the idea.",
+        "Run a small empirical or literature review check before presenting the idea as a conclusion."
+      ],
+      "supporting_citations": [
+        {
+          "claim_id": "C001",
+          "literature_id": "L001",
+          "title": "Integrating LLM in Agent-Based Social Simulation: Opportunities and Challenges",
+          "year": 2025,
+          "doi": "10.48550/arXiv.2507.19364",
+          "evidence_id": "E002",
+          "retrieval_source": "semantic_scholar"
+        },
+        {
+          "claim_id": "C002",
+          "literature_id": "L002",
+          "title": "Multi-agent modeling and simulation of a stock market",
+          "year": 2018,
+          "doi": "10.21511/imfi.15(4).2018.10",
+          "evidence_id": "E003",
+          "retrieval_source": "crossref"
+        }
+      ],
+      "risk_or_limitation": "Novelty is moderate; the idea may be an incremental extension if the cited works already overlap strongly.",
+      "testable_prediction": "If this idea is valid, then a follow-up study on agent-based modeling, financial market simulation, calibration, scalability should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.",
+      "citation_claim_ids": [
+        "C001",
+        "C002"
+      ],
+      "hypothesis_text": "A conservative next study should test whether techniques or observations from 'Integrating LLM in Agent-Based Social Simulation: Opportunities and Challenges' and 'Multi-agent modeling and simulation of a stock market' improve evidence-grounded work on agent-based modeling, financial market simulation, calibration, scalability."
+    },
+    {
+      "hypothesis_id": "H002",
+      "idea_type": "cross-disciplinary analogy",
+      "evidence_status": "citation_backed",
+      "research_gap": "This paper presentsEvoMarket, a discrete-event, multi-agent financial market simulator designed for intervention-oriented experiments in multi-asset and cross-day environments. Rigorous study of such mechanisms is challenging because many questions of interest are inherentlycounterfac- tual[11].",
+      "new_hypothesis": "If the mechanisms discussed in 'EvoMarket: A High-Fidelity and Scalable Financial Market Simulator' transfer across domains, then agent-based modeling, financial market simulation, calibration, scalability may benefit from a cross-disciplinary evaluation protocol grounded by 'DEPLOYERS: An agent based modeling tool for multi country real world data'.",
+      "why_novel": "The idea explicitly treats retrieved literature as an analogy source for a different research setting.",
+      "required_evidence": [
+        "Verify that both cited works exist and match metadata.",
+        "Verify that abstracts or snippets support the claims used to ground the idea.",
+        "Run a small empirical or literature review check before presenting the idea as a conclusion."
+      ],
+      "supporting_citations": [
+        {
+          "claim_id": "C003",
+          "literature_id": "L003",
+          "title": "EvoMarket: A High-Fidelity and Scalable Financial Market Simulator",
+          "year": 2026,
+          "doi": "",
+          "evidence_id": "E004",
+          "retrieval_source": "openalex"
+        },
+        {
+          "claim_id": "C004",
+          "literature_id": "L004",
+          "title": "DEPLOYERS: An agent based modeling tool for multi country real world data",
+          "year": 2024,
+          "doi": "",
+          "evidence_id": "E005",
+          "retrieval_source": "semantic_scholar"
+        }
+      ],
+      "risk_or_limitation": "The analogy may fail if the source domain assumptions do not hold for the input paper's domain.",
+      "testable_prediction": "If this idea is valid, then a follow-up study on agent-based modeling, financial market simulation, calibration, scalability should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.",
+      "citation_claim_ids": [
+        "C003",
+        "C004"
+      ],
+      "hypothesis_text": "If the mechanisms discussed in 'EvoMarket: A High-Fidelity and Scalable Financial Market Simulator' transfer across domains, then agent-based modeling, financial market simulation, calibration, scalability may benefit from a cross-disciplinary evaluation protocol grounded by 'DEPLOYERS: An agent based modeling tool for multi country real world data'."
+    },
+    {
+      "hypothesis_id": "H003",
+      "idea_type": "high-risk speculative idea",
+      "evidence_status": "citation_backed",
+      "research_gap": "This paper presentsEvoMarket, a discrete-event, multi-agent financial market simulator designed for intervention-oriented experiments in multi-asset and cross-day environments. Rigorous study of such mechanisms is challenging because many questions of interest are inherentlycounterfac- tual[11].",
+      "new_hypothesis": "A higher-risk hypothesis is that the shared signals behind 'Alleviating Nonidentifiability: A High-Fidelity Calibration Objective for Financial Market Simulation With Multivariate Time Series Data' and 'Competitive dynamics in a multi-sided mobile payment platform market: an agent-based modeling perspective' point to a broader latent factor affecting agent-based modeling, financial market simulation, calibration, scalability.",
+      "why_novel": "It proposes a broader latent explanation rather than only applying a known method.",
+      "required_evidence": [
+        "Verify that both cited works exist and match metadata.",
+        "Verify that abstracts or snippets support the claims used to ground the idea.",
+        "Run a small empirical or literature review check before presenting the idea as a conclusion."
+      ],
+      "supporting_citations": [
+        {
+          "claim_id": "C005",
+          "literature_id": "L005",
+          "title": "Alleviating Nonidentifiability: A High-Fidelity Calibration Objective for Financial Market Simulation With Multivariate Time Series Data",
+          "year": 2024,
+          "doi": "10.1109/TCSS.2025.3574236",
+          "evidence_id": "E006",
+          "retrieval_source": "semantic_scholar"
+        },
+        {
+          "claim_id": "C006",
+          "literature_id": "L006",
+          "title": "Competitive dynamics in a multi-sided mobile payment platform market: an agent-based modeling perspective",
+          "year": 2024,
+          "doi": "10.1108/ijbm-11-2023-0610",
+          "evidence_id": "E007",
+          "retrieval_source": "semantic_scholar"
+        }
+      ],
+      "risk_or_limitation": "This is speculative and should be treated as Yellow unless stronger evidence is retrieved.",
+      "testable_prediction": "If this idea is valid, then a follow-up study on agent-based modeling, financial market simulation, calibration, scalability should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.",
+      "citation_claim_ids": [
+        "C005",
+        "C006"
+      ],
+      "hypothesis_text": "A higher-risk hypothesis is that the shared signals behind 'Alleviating Nonidentifiability: A High-Fidelity Calibration Objective for Financial Market Simulation With Multivariate Time Series Data' and 'Competitive dynamics in a multi-sided mobile payment platform market: an agent-based modeling perspective' point to a broader latent factor affecting agent-based modeling, financial market simulation, calibration, scalability."
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "C001",
+      "claim_text": "Prior work reports that This position paper examines the use of Large Language Models (LLMs) in social simulation, analyzing their potential and limitations from a computational social science perspective.",
+      "hypothesis_id": "H001",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Integrating LLM in Agent-Based Social Simulation: Opportunities and Challenges",
+        "authors": [
+          "P. Taillandier",
+          "Jean-Daniel Zucker",
+          "A. Grignard",
+          "B. Gaudou",
+          "N. Huynh",
+          "A. Drogoul"
+        ],
+        "year": 2025,
+        "doi": "10.48550/arXiv.2507.19364",
+        "venue": "arXiv.org",
+        "url": "https://www.semanticscholar.org/paper/363636e14d23fefba385847824e0c7719de180c3",
+        "retrieval_source": "semantic_scholar",
+        "literature_id": "L001",
+        "evidence_id": "E002",
+        "abstract": "This position paper examines the use of Large Language Models (LLMs) in social simulation, analyzing their potential and limitations from a computational social science perspective. We first review recent findings on LLMs'ability to replicate key aspects of human cognition, including Theory of Mind reasoning and social inference, while identifying persistent limitations such as cognitive biases, lack of grounded understanding, and behavioral inconsistencies. We then survey emerging applications of LLMs in multi-agent simulation frameworks, examining system architectures, scalability, and validation strategies. Projects such as Generative Agents (Smallville) and AgentSociety are analyzed with respect to their empirical grounding and methodological design. Particular attention is given to the challenges of behavioral fidelity, calibration, and reproducibility in large-scale LLM-driven simulations. Finally, we distinguish between contexts where LLM-based agents provide operational value-such as interactive simulations and serious games-and contexts where their use raises epistemic concerns, particularly in explanatory or predictive modeling. We argue that hybrid approaches integrating LLMs into established agent-based modeling platforms such as GAMA and NetLogo may offer a promising compromise between expressive flexibility and analytical transparency. Building on this analysis, we outline a conceptual research direction termed Hybrid Constitutional Architectures, which proposes a stratified integration of classical agent-based models (ABMs), small language models (SLMs), and LLMs within established platforms such as GAMA and NetLogo.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C002",
+      "claim_text": "Prior work reports that The stock market represents complex systems where multiple agents interact.",
+      "hypothesis_id": "H001",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Multi-agent modeling and simulation of a stock market",
+        "authors": [
+          "Mohamed Amine Souissi",
+          "Khalid Bensaid",
+          "Rachid Ellaia"
+        ],
+        "year": 2018,
+        "doi": "10.21511/imfi.15(4).2018.10",
+        "venue": "Investment Management and Financial Innovations",
+        "url": "https://doi.org/10.21511/imfi.15(4).2018.10",
+        "retrieval_source": "crossref",
+        "literature_id": "L002",
+        "evidence_id": "E003",
+        "abstract": "The stock market represents complex systems where multiple agents interact. The complexity of the environment in the financial markets in general has encouraged the use of modeling by multi-agent platforms and particularly in the case of the stock market.In this paper, an agent-based simulation model is proposed to study the behavior of the volume of market transactions. The model is based on the case of a single asset and three types of investor agents. Each investor can be a zero intelligent trader, fundamentalist trader or traders using historical information in the decision making process. The goal of the study is to simulate the behavior of a stock market according to the different considered endogenous and exogenous variables.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C003",
+      "claim_text": "Prior work reports that High-fidelity, scalable market simulation is a key instrument for mechanism evaluation, stress testing, and counterfactual policy analysis.",
+      "hypothesis_id": "H002",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "EvoMarket: A High-Fidelity and Scalable Financial Market Simulator",
+        "authors": [
+          "Muyao Zhong",
+          "Zhenhua Yang",
+          "Yuxiang Liu",
+          "Ke Tang",
+          "Peng Yang"
+        ],
+        "year": 2026,
+        "doi": "",
+        "venue": "arXiv (Cornell University)",
+        "url": "https://arxiv.org/abs/2604.18046",
+        "retrieval_source": "openalex",
+        "literature_id": "L003",
+        "evidence_id": "E004",
+        "abstract": "High-fidelity, scalable market simulation is a key instrument for mechanism evaluation, stress testing, and counterfactual policy analysis. Yet existing simulators rarely achieve \\emph{mechanism fidelity} beyond single-asset intraday settings, \\emph{microstructure fidelity} against historical limit order books (LOB), and \\emph{computational tractability} at market scale in a single system. This paper presents \\textit{EvoMarket}, a discrete-event, multi-agent financial market simulator designed for intervention-oriented experiments in multi-asset and cross-day environments. EvoMarket couples a high-throughput execution core (optimized LOB data structures, hierarchical scheduling under propagation delays, and asynchronous per-asset matching) with explicit institutional mechanisms (market calendars, opening call auctions, price limits, and T+1 settlement). To avoid expensive black-box calibration, EvoMarket introduces an Oracle-guided in-run self-calibration mechanism that interprets microstructure discrepancy as missing order flow and synthesizes corrective orders at recording checkpoints. Experiments on China A-share order-flow and LOB data show close replay alignment over five trading days, fidelity gains from budgeted in-run calibration across depth levels, broad agent order-space coverage, and scalable performance under increasing input order rates and market breadth. We further demonstrate cross-asset linkage and event-study style intervention evaluation that produces structured dependence and interpretable event-time responses.",
+        "snippet": "article"
+      }
+    },
+    {
+      "claim_id": "C004",
+      "claim_text": "Prior work reports that We present recent progress in the design and development of DEPLOYERS, an agent-based macroeconomics modeling (ABM) framework, capable to deploy and simulate a full economic system (individual workers, goods and services firms, government, central and private banks, financial market, external sectors) whose structure and activity analysis reproduce the desired calibration data, that can be, for example a Social Accounting Matrix (SAM) or a Supply",
+      "hypothesis_id": "H002",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "DEPLOYERS: An agent based modeling tool for multi country real world data",
+        "authors": [
+          "M. Jaraíz",
+          "R. Pinacho"
+        ],
+        "year": 2024,
+        "doi": "",
+        "venue": "",
+        "url": "https://www.semanticscholar.org/paper/2cf135b05692fd7a0d7b6f02acf094e877d8bea9",
+        "retrieval_source": "semantic_scholar",
+        "literature_id": "L004",
+        "evidence_id": "E005",
+        "abstract": "We present recent progress in the design and development of DEPLOYERS, an agent-based macroeconomics modeling (ABM) framework, capable to deploy and simulate a full economic system (individual workers, goods and services firms, government, central and private banks, financial market, external sectors) whose structure and activity analysis reproduce the desired calibration data, that can be, for example a Social Accounting Matrix (SAM) or a Supply-Use Table (SUT) or an Input-Output Table (IOT).Here we extend our previous work to a multi-country version and show an example using data from a 46-countries 64-sectors FIGARO Inter-Country IOT. The simulation of each country runs on a separate thread or CPU core to simulate the activity of one step (month, week, or day) and then interacts (updates imports, exports, transfer) with that country's foreign partners, and proceeds to the next step. This interaction can be chosen to be aggregated (a single row and column IO account) or disaggregated (64 rows and columns) with each partner. A typical run simulates thousands of individuals and firms engaged in their monthly activity and then records the results, much like a survey of the country's economic system. This data can then be subjected to, for example, an Input-Output analysis to find out the sources of observed stylized effects as a function of time in the detailed and realistic modeling environment that can be easily implemented in an ABM framework.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C005",
+      "claim_text": "Prior work reports that The nonidentifiability (NI) issue has been frequently reported in social simulation works, where different parameters of an agent-based simulation model yield indistinguishable simulated time series data under certain discrepancy metrics.",
+      "hypothesis_id": "H003",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Alleviating Nonidentifiability: A High-Fidelity Calibration Objective for Financial Market Simulation With Multivariate Time Series Data",
+        "authors": [
+          "Chenkai Wang",
+          "Junji Ren",
+          "Peng Yang"
+        ],
+        "year": 2024,
+        "doi": "10.1109/TCSS.2025.3574236",
+        "venue": "IEEE Transactions on Computational Social Systems",
+        "url": "https://www.semanticscholar.org/paper/47cd816614f4564c26b1aeb7936177da82547813",
+        "retrieval_source": "semantic_scholar",
+        "literature_id": "L005",
+        "evidence_id": "E006",
+        "abstract": "The nonidentifiability (NI) issue has been frequently reported in social simulation works, where different parameters of an agent-based simulation model yield indistinguishable simulated time series data under certain discrepancy metrics. This issue largely undermines the simulation fidelity yet lacks dedicated investigations. This article theoretically demonstrates that incorporating multiple time series data features during the model calibration phase can exponentially alleviate NI as the number of features increases. To implement this theoretical finding, a maximization-based aggregation function is proposed based on existing discrepancy metrics to form a new calibration objective function. For verification, the task of calibrating the financial market simulation (FMS), a typical yet complex social simulation, is considered. Empirical studies confirm the significant improvements in alleviating the NI of calibration tasks. Furthermore, as a model-agnostic method, it achieves much higher simulation fidelity of the chosen FMS model on both synthetic and real market data. Moreover, it is both theoretically and empirically analyzed that as long as the features are selected and not linearly correlated, they can contribute to alleviation, which demonstrates the robustness of the proposed objective. Hence, this article is expected to provide not only a rigorous understanding of NI in social simulation but also an off-the-shelf high-fidelity calibration objective function for FMS.",
+        "snippet": ""
+      }
+    },
+    {
+      "claim_id": "C006",
+      "claim_text": "Prior work reports that PurposeThe purpose of this research is to develop a comprehensive model to better understand competitive dynamics between mobile payment providers in a multi-sided market featuring customers and merchants.",
+      "hypothesis_id": "H003",
+      "claim_role": "supporting_literature_claim",
+      "cited_work": {
+        "title": "Competitive dynamics in a multi-sided mobile payment platform market: an agent-based modeling perspective",
+        "authors": [
+          "M. Zaffar",
+          "Ram L. Kumar",
+          "Kexin Zhao"
+        ],
+        "year": 2024,
+        "doi": "10.1108/ijbm-11-2023-0610",
+        "venue": "International Journal of Bank Marketing",
+        "url": "https://www.semanticscholar.org/paper/95bdc53a860341d49d680dd0a630f0ca7ebee046",
+        "retrieval_source": "semantic_scholar",
+        "literature_id": "L006",
+        "evidence_id": "E007",
+        "abstract": "PurposeThe purpose of this research is to develop a comprehensive model to better understand competitive dynamics between mobile payment providers in a multi-sided market featuring customers and merchants. This is undertaken by modeling customers performing financial transactions with merchants while two mobile payment systems (MPS) providers deploy different strategies to compete for market share.Design/methodology/approachThe authors developed an agent-based simulation model using the NetLogo environment. The simulation featured two competing platform providers, 1,000 customer agents and 50 merchant agents. Past research, interviews and surveys were conducted to accurately model the behavior of the agents. Each simulation run lasted for 50 time periods. A total of 1,024 experimental conditions were designed to model different competitive environments, and 50 replications were conducted for a total of 51,200 experiments.FindingsThe simulation model provides insight into MPS platform providers’ competitive strategies by simultaneously modelling socioeconomic interactions between customers, merchants and MPS.Research limitations/implicationsFrom a methodological perspective, the paper contributes a comprehensive model that can be used to study competitive dynamics between competing platforms in a multi-sided market. From the perspective of competitive strategies, the results show that pricing alone is not sufficient to influence MPS diffusion. Interactions between pricing, customers’ risk perception, perceived security and ease of use of the platform create unexpected same-side and cross-side network effects, which affect MPS diffusion.Practical implicationsWhile pricing remains a crucial lever for MPS to compete for market share, they should focus on enhancing customers’ and merchants’ trust and reduce their risk perception. This can be done through the improvement of the user experience of their platform, development of educational materials and marketing campaigns that address concerns around security, data breaches and perceived risk.Originality/valueThe paper is a direct response to a recent call for action on studying competition between MPS platforms by simultaneously modelling the socio-economic behavior of heterogeneous consumers and merchants. The proposed agent-based simulation model can be used to provide insights into competitive strategies and as a building block for subsequent research in this area.",
+        "snippet": ""
+      }
+    }
+  ],
+  "markdown": "# Generated Research Idea Cards\n\nInput paper: EvoMarket: A High-Fidelity and Scalable Financial Market Simulator\n\n## H001: conservative extension\nEvidence status: `citation_backed`\n\nResearch gap: This paper presentsEvoMarket, a discrete-event, multi-agent financial market simulator designed for intervention-oriented experiments in multi-asset and cross-day environments. Rigorous study of such mechanisms is challenging because many questions of interest are inherentlycounterfac- tual[11].\n\nNew hypothesis: A conservative next study should test whether techniques or observations from 'Integrating LLM in Agent-Based Social Simulation: Opportunities and Challenges' and 'Multi-agent modeling and simulation of a stock market' improve evidence-grounded work on agent-based modeling, financial market simulation, calibration, scalability.\n\nWhy novel: It combines two retrieved strands with the input paper's research problem rather than copying either paper.\n\nRequired evidence:\n- Verify that both cited works exist and match metadata.\n- Verify that abstracts or snippets support the claims used to ground the idea.\n- Run a small empirical or literature review check before presenting the idea as a conclusion.\n\nSupporting citations:\n- C001: Integrating LLM in Agent-Based Social Simulation: Opportunities and Challenges (2025), DOI: 10.48550/arXiv.2507.19364\n- C002: Multi-agent modeling and simulation of a stock market (2018), DOI: 10.21511/imfi.15(4).2018.10\n\nRisk or limitation: Novelty is moderate; the idea may be an incremental extension if the cited works already overlap strongly.\n\nTestable prediction: If this idea is valid, then a follow-up study on agent-based modeling, financial market simulation, calibration, scalability should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.\n\n## H002: cross-disciplinary analogy\nEvidence status: `citation_backed`\n\nResearch gap: This paper presentsEvoMarket, a discrete-event, multi-agent financial market simulator designed for intervention-oriented experiments in multi-asset and cross-day environments. Rigorous study of such mechanisms is challenging because many questions of interest are inherentlycounterfac- tual[11].\n\nNew hypothesis: If the mechanisms discussed in 'EvoMarket: A High-Fidelity and Scalable Financial Market Simulator' transfer across domains, then agent-based modeling, financial market simulation, calibration, scalability may benefit from a cross-disciplinary evaluation protocol grounded by 'DEPLOYERS: An agent based modeling tool for multi country real world data'.\n\nWhy novel: The idea explicitly treats retrieved literature as an analogy source for a different research setting.\n\nRequired evidence:\n- Verify that both cited works exist and match metadata.\n- Verify that abstracts or snippets support the claims used to ground the idea.\n- Run a small empirical or literature review check before presenting the idea as a conclusion.\n\nSupporting citations:\n- C003: EvoMarket: A High-Fidelity and Scalable Financial Market Simulator (2026), DOI: missing\n- C004: DEPLOYERS: An agent based modeling tool for multi country real world data (2024), DOI: missing\n\nRisk or limitation: The analogy may fail if the source domain assumptions do not hold for the input paper's domain.\n\nTestable prediction: If this idea is valid, then a follow-up study on agent-based modeling, financial market simulation, calibration, scalability should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.\n\n## H003: high-risk speculative idea\nEvidence status: `citation_backed`\n\nResearch gap: This paper presentsEvoMarket, a discrete-event, multi-agent financial market simulator designed for intervention-oriented experiments in multi-asset and cross-day environments. Rigorous study of such mechanisms is challenging because many questions of interest are inherentlycounterfac- tual[11].\n\nNew hypothesis: A higher-risk hypothesis is that the shared signals behind 'Alleviating Nonidentifiability: A High-Fidelity Calibration Objective for Financial Market Simulation With Multivariate Time Series Data' and 'Competitive dynamics in a multi-sided mobile payment platform market: an agent-based modeling perspective' point to a broader latent factor affecting agent-based modeling, financial market simulation, calibration, scalability.\n\nWhy novel: It proposes a broader latent explanation rather than only applying a known method.\n\nRequired evidence:\n- Verify that both cited works exist and match metadata.\n- Verify that abstracts or snippets support the claims used to ground the idea.\n- Run a small empirical or literature review check before presenting the idea as a conclusion.\n\nSupporting citations:\n- C005: Alleviating Nonidentifiability: A High-Fidelity Calibration Objective for Financial Market Simulation With Multivariate Time Series Data (2024), DOI: 10.1109/TCSS.2025.3574236\n- C006: Competitive dynamics in a multi-sided mobile payment platform market: an agent-based modeling perspective (2024), DOI: 10.1108/ijbm-11-2023-0610\n\nRisk or limitation: This is speculative and should be treated as Yellow unless stronger evidence is retrieved.\n\nTestable prediction: If this idea is valid, then a follow-up study on agent-based modeling, financial market simulation, calibration, scalability should show measurable improvement or a clearer explanatory pattern compared with the input paper's baseline framing.\n\n## Citation-Backed Claims To Verify\n\n| Claim ID | Hypothesis | Claim | Cited Title | Year | DOI |\n|---|---|---|---|---|---|\n| C001 | H001 | Prior work reports that This position paper examines the use of Large Language Models (LLMs) in social simulation, analyzing their potential and limitations from a computational social science perspective. | Integrating LLM in Agent-Based Social Simulation: Opportunities and Challenges | 2025 | 10.48550/arXiv.2507.19364 |\n| C002 | H001 | Prior work reports that The stock market represents complex systems where multiple agents interact. | Multi-agent modeling and simulation of a stock market | 2018 | 10.21511/imfi.15(4).2018.10 |\n| C003 | H002 | Prior work reports that High-fidelity, scalable market simulation is a key instrument for mechanism evaluation, stress testing, and counterfactual policy analysis. | EvoMarket: A High-Fidelity and Scalable Financial Market Simulator | 2026 |  |\n| C004 | H002 | Prior work reports that We present recent progress in the design and development of DEPLOYERS, an agent-based macroeconomics modeling (ABM) framework, capable to deploy and simulate a full economic system (individual workers, goods and services firms, government, central and private banks, financial market, external sectors) whose structure and activity analysis reproduce the desired calibration data, that can be, for example a Social Accounting Matrix (SAM) or a Supply | DEPLOYERS: An agent based modeling tool for multi country real world data | 2024 |  |\n| C005 | H003 | Prior work reports that The nonidentifiability (NI) issue has been frequently reported in social simulation works, where different parameters of an agent-based simulation model yield indistinguishable simulated time series data under certain discrepancy metrics. | Alleviating Nonidentifiability: A High-Fidelity Calibration Objective for Financial Market Simulation With Multivariate Time Series Data | 2024 | 10.1109/TCSS.2025.3574236 |\n| C006 | H003 | Prior work reports that PurposeThe purpose of this research is to develop a comprehensive model to better understand competitive dynamics between mobile payment providers in a multi-sided market featuring customers and merchants. | Competitive dynamics in a multi-sided mobile payment platform market: an agent-based modeling perspective | 2024 | 10.1108/ijbm-11-2023-0610 |",
+  "evidence_id": "E031"
+}

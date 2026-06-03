@@ -1,0 +1,19 @@
+{
+  "case_id": "success_case",
+  "purpose": "Demonstrate a normal run where at least one retrieved citation can be verified as Green.",
+  "input_pdf": "inputs/papers/success_demo.pdf",
+  "expected_labels": ["Green"],
+  "demo_command": "python agent/workflow.py --pdf inputs/papers/success_demo.pdf --task \"Generate a new research hypothesis and verify citations\"",
+  "expected_artifacts": [
+    "input_task.md",
+    "paper_summary.json",
+    "search_queries.json",
+    "retrieved_literature.jsonl",
+    "generated_hypothesis.md",
+    "citation_verification.csv",
+    "final_report.md",
+    "tool_calls.jsonl",
+    "evidence_items.jsonl"
+  ]
+}
+
