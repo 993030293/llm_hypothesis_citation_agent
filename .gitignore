@@ -7,6 +7,7 @@ outputs/deepscientist_audits/
 outputs/generalization_audits/
 outputs/path2_setup/
 outputs/path2_smoke_tests/
+outputs/param_optimization/
 outputs/tmp_*/
 outputs/tmp_*.json
 qqbot_logs/

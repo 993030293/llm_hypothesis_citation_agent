@@ -23,6 +23,7 @@ from agent.utils import (
     split_sentences,
     write_jsonl,
 )
+from agent.verifier_params import load_verifier_params
 
 
 class CitationVerifier:
@@ -44,6 +45,8 @@ class CitationVerifier:
         fulltext_evidence: list[dict[str, Any]] | None = None,
         run_dir: Path | str | None = None,
         providers: list[str] | None = None,
+        verifier_params: dict[str, Any] | None = None,
+        verifier_params_path: Path | str | None = None,
     ):
         self.logger = logger
         self.evidence = evidence
@@ -51,6 +54,10 @@ class CitationVerifier:
         self.fulltext_evidence = fulltext_evidence or []
         self.run_dir = Path(run_dir) if run_dir else None
         self.providers = providers or ["crossref", "openalex", "semantic_scholar", "arxiv"]
+        self.params = load_verifier_params(
+            verifier_params_path or os.environ.get("CITATION_VERIFIER_PARAMS"),
+            verifier_params,
+        )
         self.provider_rows: list[dict[str, Any]] = []
         self.version_rows: list[dict[str, Any]] = []
         self.paragraph_support_matches: list[dict[str, Any]] = []
@@ -268,9 +275,13 @@ class CitationVerifier:
         green_gate_passed = (
             metadata_status == "match"
             and support_status == "supports"
+            and float(support.get("support_score") or 0.0) >= float(self.params["support_score_green_min"])
             and bool(clean_text(support.get("supporting_sentence")))
-            and support.get("support_source_type") != "input_pdf_fulltext"
-            and (source_agreement_count >= 2 or authoritative_doi_lookup)
+            and (
+                bool(self.params["allow_input_pdf_fulltext_green"])
+                or support.get("support_source_type") != "input_pdf_fulltext"
+            )
+            and (source_agreement_count >= int(self.params["green_min_source_agreement"]) or authoritative_doi_lookup)
             and version_match_status != "version_year_mismatch"
         )
 
@@ -319,7 +330,11 @@ class CitationVerifier:
         cited_authors = author_last_names(cited.get("authors"))
         candidate_authors = author_last_names(candidate.get("authors"))
         author_score = author_match_score(cited.get("authors"), candidate.get("authors"))
-        author_match = not cited_authors or not candidate_authors or author_score > 0
+        author_match = (
+            not cited_authors
+            or not candidate_authors
+            or author_score > float(self.params["author_min_match_score"])
+        )
         cited_doi = clean_text(cited.get("doi")).lower()
         candidate_doi = clean_text(candidate.get("doi")).lower()
         doi_match = not cited_doi or not candidate_doi or cited_doi == candidate_doi
@@ -329,23 +344,23 @@ class CitationVerifier:
         if cited_doi and candidate_doi and cited_doi != candidate_doi:
             reason = "DOI resolves to a different record."
             error_type = "doi_metadata_mismatch"
-        elif title_score < 0.55:
+        elif title_score < float(self.params["title_mismatch_threshold"]):
             reason = f"Title does not match public record (title similarity {title_score:.2f})."
             error_type = "title_mismatch"
         elif not author_match:
             reason = "Author metadata does not overlap with the public record."
             error_type = "author_mismatch"
-        elif title_score >= 0.86 and author_match and doi_match and not year_match:
+        elif title_score >= float(self.params["title_match_threshold"]) and author_match and doi_match and not year_match:
             status = "partial_match"
             reason = (
                 f"Year mismatch: cited {cited_year}, public record {candidate_year}. "
                 "The title/authors/DOI point to the same public record, so this requires manual metadata review."
             )
             error_type = "year_mismatch_requires_review"
-        elif title_score >= 0.86 and year_match and author_match and doi_match:
+        elif title_score >= float(self.params["title_match_threshold"]) and year_match and author_match and doi_match:
             status = "match"
             reason = f"Metadata matches public record (title similarity {title_score:.2f})."
-        elif title_score >= 0.65 and doi_match:
+        elif title_score >= float(self.params["title_partial_threshold"]) and doi_match:
             status = "partial_match"
             reason = f"Metadata partially matches; title similarity {title_score:.2f}."
             error_type = "provider_disagreement"
@@ -413,7 +428,10 @@ class CitationVerifier:
                 "support_source_type": best["source_type"],
                 "error_type": "claim_too_strong",
             }
-        if score >= 0.32 or text_similarity >= 0.42:
+        if (
+            score >= float(self.params["support_green_overlap_threshold"])
+            or text_similarity >= float(self.params["support_green_similarity_threshold"])
+        ):
             return {
                 "support_status": "supports",
                 "support_reason": (
@@ -428,7 +446,10 @@ class CitationVerifier:
                 "support_source_type": best["source_type"],
                 "error_type": "",
             }
-        if score >= 0.12 or text_similarity >= 0.2:
+        if (
+            score >= float(self.params["support_partial_overlap_threshold"])
+            or text_similarity >= float(self.params["support_partial_similarity_threshold"])
+        ):
             return {
                 "support_status": "partial_or_uncertain",
                 "support_reason": (
@@ -569,10 +590,15 @@ class CitationVerifier:
             elif self._arxiv_id(cited.get("url") or cited.get("doi")) and self._arxiv_id(cited.get("url") or cited.get("doi")) == self._arxiv_id(candidate.get("url") or candidate.get("doi")):
                 rule = "arxiv_id_exact"
                 score = 1.8
-            elif title_score >= 0.92 and author_score > 0:
+            elif title_score >= float(self.params["version_title_author_threshold"]) and author_score > 0:
                 rule = "title_author_high_similarity"
                 score = 1.5 + author_score
-            elif title_score >= 0.86 and year_delta is not None and year_delta <= 2 and self._looks_like_preprint(candidate):
+            elif (
+                title_score >= float(self.params["version_preprint_title_threshold"])
+                and year_delta is not None
+                and year_delta <= int(self.params["version_year_delta_max"])
+                and self._looks_like_preprint(candidate)
+            ):
                 rule = "preprint_journal_version_similarity"
                 score = 1.2
             scored.append((score, candidate, rule))

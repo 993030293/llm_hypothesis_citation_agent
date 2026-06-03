@@ -53,6 +53,11 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Add an explicitly invalid boundary-case citation to demonstrate Red labeling.",
     )
+    parser.add_argument(
+        "--verifier-params",
+        default=None,
+        help="Optional JSON verifier parameter file. Defaults can also be set with CITATION_VERIFIER_PARAMS.",
+    )
     return parser.parse_args()
 
 
@@ -97,7 +102,13 @@ def main() -> int:
     searcher = LiteratureSearcher(logger, evidence)
     generator = HypothesisGenerator(logger, evidence, searcher=searcher)
     providers = [p.strip() for p in args.providers.split(",") if p.strip()]
-    verifier = CitationVerifier(logger, evidence, run_dir=run_dir, providers=providers)
+    verifier = CitationVerifier(
+        logger,
+        evidence,
+        run_dir=run_dir,
+        providers=providers,
+        verifier_params_path=args.verifier_params,
+    )
     evidence_tracer = EvidenceChainTracer(logger, evidence)
     writer = ReportWriter(logger, evidence)
 
