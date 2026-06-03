@@ -12,13 +12,14 @@ if str(ROOT) not in sys.path:
 
 from agent.citation_verifier import CitationVerifier
 from agent.evidence_chain_tracer import EvidenceChainTracer
+from agent.fulltext_evidence import FullTextEvidenceExtractor
 from agent.hypothesis_generator import HypothesisGenerator
 from agent.literature_search import LiteratureSearcher
 from agent.pdf_reader import PdfReaderTool
 from agent.query_planner import QueryPlanner
 from agent.report_writer import ReportWriter
 from agent.run_logging import EvidenceStore, ToolCallLogger
-from agent.utils import configure_utf8_stdio, timestamp_id, write_json
+from agent.utils import configure_utf8_stdio, timestamp_id, write_json, write_jsonl
 
 
 def parse_args() -> argparse.Namespace:
@@ -91,10 +92,12 @@ def main() -> int:
     timings = {}
 
     pdf_reader = PdfReaderTool(logger, evidence)
+    fulltext_extractor = FullTextEvidenceExtractor(logger, evidence)
     query_planner = QueryPlanner(logger)
     searcher = LiteratureSearcher(logger, evidence)
     generator = HypothesisGenerator(logger, evidence, searcher=searcher)
-    verifier = CitationVerifier(logger, evidence)
+    providers = [p.strip() for p in args.providers.split(",") if p.strip()]
+    verifier = CitationVerifier(logger, evidence, run_dir=run_dir, providers=providers)
     evidence_tracer = EvidenceChainTracer(logger, evidence)
     writer = ReportWriter(logger, evidence)
 
@@ -105,6 +108,13 @@ def main() -> int:
     if args.live_demo and len(paper_summary.get("text_excerpt", "")) < 200:
         print("WARNING: live-demo PDF has very little extractable text. Explain this limitation if results are weak.")
 
+    t0 = time.perf_counter()
+    fulltext_rows = fulltext_extractor.extract(pdf_path, max_pages=args.max_pages)
+    write_jsonl(run_dir / "fulltext_evidence.jsonl", fulltext_rows)
+    verifier.fulltext_evidence = fulltext_rows
+    timings["1b_fulltext_evidence"] = round(time.perf_counter() - t0, 2)
+    print(f"[1b/7] Fulltext evidence extracted: {len(fulltext_rows)} sentences ({timings['1b_fulltext_evidence']}s)")
+
     # We now let the LLM agent proactively plan queries and call the search tool.
     t0 = time.perf_counter()
     print(f"[2/7] Agent is thinking and searching literature based on the paper...")
@@ -112,7 +122,7 @@ def main() -> int:
         paper_summary,
         max_hypotheses=args.max_hypotheses,
         inject_bad_citation=args.inject_bad_citation,
-        providers=[p.strip() for p in args.providers.split(",") if p.strip()]
+        providers=providers,
     )
     timings["2_3_agent_search_generate"] = round(time.perf_counter() - t0, 2)
     literature = hypothesis_payload.get("literature", [])
@@ -159,7 +169,11 @@ def main() -> int:
         "paper_summary.json",
         "search_queries.json",
         "retrieved_literature.jsonl",
+        "fulltext_evidence.jsonl",
         "generated_hypothesis.md",
+        "provider_verification.jsonl",
+        "version_resolution.jsonl",
+        "paragraph_support_matches.jsonl",
         "citation_verification.csv",
         "evidence_chain.csv",
         "evidence_chain.md",

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 import time
 from typing import Any
 
@@ -39,6 +40,14 @@ class HypothesisGenerator:
         """
         Uses Function Calling with an LLM to actively search literature and generate hypotheses.
         """
+        if not os.environ.get("DEEPSEEK_API_KEY"):
+            return self._generate_without_llm_agent(
+                paper_summary,
+                max_hypotheses=max_hypotheses,
+                inject_bad_citation=inject_bad_citation,
+                providers=providers,
+            )
+
         call_id = self.logger.next_id()
         started = time.perf_counter()
         
@@ -281,6 +290,41 @@ class HypothesisGenerator:
         payload["evidence_id"] = evidence_id
         payload["literature"] = all_literature
         payload["queries"] = all_queries
+        return payload
+
+    def _generate_without_llm_agent(
+        self,
+        paper_summary: dict[str, Any],
+        *,
+        max_hypotheses: int,
+        inject_bad_citation: bool,
+        providers: list[str] | None,
+    ) -> dict[str, Any]:
+        keywords = paper_summary.get("keywords") or top_keywords(
+            f"{paper_summary.get('title', '')} {paper_summary.get('abstract', '')}",
+            6,
+        )
+        query_text = " ".join([paper_summary.get("title", ""), *keywords[:5]]).strip()
+        queries = [
+            {
+                "query_id": "Q001",
+                "query": query_text or paper_summary.get("title", "scientific citation verification"),
+                "query_stage": "fallback",
+                "query_type": "deterministic_seed",
+                "purpose": "Fallback literature search when no LLM API key is configured.",
+            }
+        ]
+        literature = []
+        if self.searcher:
+            literature = self.searcher.search(queries, providers or ["crossref", "openalex"], max_results_per_query=3)
+        payload = self.generate(
+            paper_summary,
+            literature,
+            max_hypotheses=max_hypotheses,
+            inject_bad_citation=inject_bad_citation,
+        )
+        payload["literature"] = literature
+        payload["queries"] = queries
         return payload
 
     def generate(

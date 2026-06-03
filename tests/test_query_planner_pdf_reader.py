@@ -6,6 +6,7 @@ from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 
 from agent.pdf_reader import PdfReaderTool
+from agent.fulltext_evidence import FullTextEvidenceExtractor
 from agent.query_planner import QueryPlanner
 from agent.run_logging import EvidenceStore, ToolCallLogger
 
@@ -59,3 +60,22 @@ def test_pdf_reader_extracts_line_based_keywords(tmp_path: Path) -> None:
         "multi-agent systems",
         "simulation fidelity",
     ]
+
+
+def test_fulltext_evidence_extractor_records_page_sentence_rows(tmp_path: Path) -> None:
+    pdf = tmp_path / "fulltext.pdf"
+    c = canvas.Canvas(str(pdf), pagesize=letter)
+    c.drawString(72, 720, "Evidence Grounded Hypothesis Generation")
+    c.drawString(72, 700, "This paper studies citation verification for large language models.")
+    c.drawString(72, 680, "Citation verification improves auditability in scientific writing workflows.")
+    c.save()
+
+    logger = ToolCallLogger(tmp_path)
+    evidence = EvidenceStore(tmp_path)
+    rows = FullTextEvidenceExtractor(logger, evidence).extract(pdf, max_pages=1)
+
+    assert rows
+    assert rows[0]["fulltext_evidence_id"].startswith("FT")
+    assert rows[0]["page_number"] == 1
+    assert rows[0]["source_location"].startswith("input_pdf page 1")
+    assert (tmp_path / "tool_calls.jsonl").exists()

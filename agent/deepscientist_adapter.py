@@ -40,6 +40,9 @@ MODULE_SPEC = {
     ],
     "outputs": [
         "citation_verification.csv",
+        "provider_verification.jsonl",
+        "version_resolution.jsonl",
+        "paragraph_support_matches.jsonl",
         "evidence_chain.csv",
         "evidence_chain.md",
         "deepscientist_audit_summary.md",
@@ -82,7 +85,7 @@ class DeepScientistCitationAuditModule:
 
         logger = ToolCallLogger(run_dir)
         evidence = EvidenceStore(run_dir)
-        verifier = CitationVerifier(logger, evidence, timeout_seconds=self.timeout_seconds)
+        verifier = CitationVerifier(logger, evidence, timeout_seconds=self.timeout_seconds, run_dir=run_dir)
         tracer = EvidenceChainTracer(logger, evidence)
 
         receive_call_id = logger.next_id()
