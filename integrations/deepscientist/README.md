@@ -23,7 +23,7 @@ base research agent and attach this project as a post-hypothesis audit tool:
 
 ```text
 Official DeepScientist quest
--> idea/write stage produces citation_audit_claims.json
+-> citation-hypothesis-claims skill generates ideas and citation_audit_claims.json
 -> llm_hypothesis_citation_agent audits claims
 -> citation_verification.csv + evidence_chain.csv + summary report
 ```
@@ -44,12 +44,29 @@ python scripts/install_deepscientist_extension.py `
 The script installs:
 
 ```text
+src/skills/citation-hypothesis-claims/SKILL.md
 src/skills/citation-evidence-audit/SKILL.md
+```
+
+The automated runner also copies `citation-hypothesis-claims` into each quest's
+`.codex/skills/` directory before calling:
+
+```powershell
+ds run citation-hypothesis-claims --quest-id <quest_id> --runner claude --message "<prompt>"
 ```
 
 ## Audit Command
 
-After a DeepScientist quest writes `citation_audit_claims.json`, run:
+Recommended automated command:
+
+```powershell
+python scripts/run_official_ds_case.py `
+  --case-id ai_rag_demo `
+  --pdf-path-or-url https://arxiv.org/pdf/2005.11401
+```
+
+Manual audit command after a DeepScientist quest writes
+`citation_audit_claims.json`:
 
 ```powershell
 python scripts/audit_deepscientist_output.py `

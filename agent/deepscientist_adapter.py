@@ -14,10 +14,11 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from agent.citation_verifier import CitationVerifier
+from agent.deepscientist_claims_normalizer import normalize_deepscientist_claims_payload
 from agent.evidence_chain_tracer import EvidenceChainTracer
 from agent.report_writer import CITATION_FIELDS
 from agent.run_logging import EvidenceStore, ToolCallLogger
-from agent.utils import clean_text, now_iso, timestamp_id, write_json
+from agent.utils import clean_text, now_iso, similarity, timestamp_id, write_json
 
 
 MODULE_SPEC = {
@@ -88,6 +89,7 @@ class DeepScientistCitationAuditModule:
         receive_call_id = logger.next_id()
         started = time.perf_counter()
         normalized_claims = [self._normalize_claim(claim, idx + 1) for idx, claim in enumerate(claims)]
+        self._enrich_claims_with_source_payload(normalized_claims, source_payload)
         write_json(run_dir / "deepscientist_module_manifest.json", self.module_spec())
         write_json(run_dir / "input_claims.json", {"claims": normalized_claims})
         if source_payload is not None:
@@ -161,9 +163,9 @@ class DeepScientistCitationAuditModule:
 
     def audit_claims_file(self, claims_path: Path, *, run_dir: Path | None = None) -> dict[str, Any]:
         payload = json.loads(claims_path.read_text(encoding="utf-8-sig"))
-        claims = payload.get("claims", payload if isinstance(payload, list) else [])
-        if not isinstance(claims, list):
-            raise ValueError("Claims file must be a list or a JSON object with a 'claims' list.")
+        claims = normalize_deepscientist_claims_payload(payload)
+        if not claims:
+            raise ValueError("Claims file must contain at least one auditable citation-backed claim.")
         return self.audit_claims(
             claims,
             run_dir=run_dir,
@@ -172,26 +174,54 @@ class DeepScientistCitationAuditModule:
         )
 
     def _normalize_claim(self, claim: dict[str, Any], idx: int) -> dict[str, Any]:
-        cited = claim.get("cited_work") or {}
+        normalized = normalize_deepscientist_claims_payload([claim])
+        if normalized:
+            return normalized[0]
         return {
-            "claim_id": clean_text(claim.get("claim_id")) or f"C{idx:03d}",
-            "claim_text": clean_text(claim.get("claim_text")),
-            "hypothesis_id": clean_text(claim.get("hypothesis_id")) or "H_UNKNOWN",
-            "claim_role": clean_text(claim.get("claim_role")) or "deepscientist_generated_claim",
-            "cited_work": {
-                "title": clean_text(cited.get("title")),
-                "authors": cited.get("authors") or [],
-                "year": cited.get("year") or "",
-                "doi": clean_text(cited.get("doi")),
-                "venue": clean_text(cited.get("venue")),
-                "url": clean_text(cited.get("url")),
-                "retrieval_source": clean_text(cited.get("retrieval_source")) or "deepscientist_output",
-                "literature_id": cited.get("literature_id"),
-                "evidence_id": cited.get("evidence_id"),
-                "abstract": clean_text(cited.get("abstract")),
-                "snippet": clean_text(cited.get("snippet")),
-            },
+            "claim_id": f"C{idx:03d}",
+            "claim_text": "",
+            "hypothesis_id": "H_UNKNOWN",
+            "claim_role": "deepscientist_generated_claim",
+            "cited_work": {"title": "", "authors": [], "year": "", "doi": "", "venue": "", "url": ""},
         }
+
+    def _enrich_claims_with_source_payload(
+        self,
+        claims: list[dict[str, Any]],
+        source_payload: dict[str, Any] | None,
+    ) -> None:
+        if not isinstance(source_payload, dict):
+            return
+        paper = source_payload.get("paper")
+        if not isinstance(paper, dict):
+            return
+        paper_title = clean_text(paper.get("title"))
+        paper_abstract = clean_text(paper.get("abstract"))
+        paper_url = clean_text(paper.get("pdf_path_or_url") or paper.get("url"))
+        if not paper_title or not paper_abstract:
+            return
+        for claim in claims:
+            cited = claim.get("cited_work")
+            if not isinstance(cited, dict):
+                continue
+            cited_title = clean_text(cited.get("title"))
+            if not self._same_source_paper_title(cited_title, paper_title):
+                continue
+            if not clean_text(cited.get("abstract")):
+                cited["abstract"] = paper_abstract
+            if paper_url and not clean_text(cited.get("url")):
+                cited["url"] = paper_url
+
+    def _same_source_paper_title(self, cited_title: str, paper_title: str) -> bool:
+        cited_norm = cited_title.casefold()
+        paper_norm = paper_title.casefold()
+        if not cited_norm or not paper_norm:
+            return False
+        return (
+            cited_norm in paper_norm
+            or paper_norm in cited_norm
+            or similarity(cited_title, paper_title) >= 0.82
+        )
 
     def _write_csv(self, path: Path, rows: list[dict[str, Any]]) -> None:
         with path.open("w", newline="", encoding="utf-8-sig") as handle:

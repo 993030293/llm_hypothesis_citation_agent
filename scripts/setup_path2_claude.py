@@ -12,7 +12,10 @@ from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILL_SOURCE = ROOT / "integrations" / "deepscientist" / "citation-evidence-audit"
+SKILL_SOURCES = (
+    ROOT / "integrations" / "deepscientist" / "citation-hypothesis-claims",
+    ROOT / "integrations" / "deepscientist" / "citation-evidence-audit",
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -96,10 +99,11 @@ def main() -> int:
     results["deepscientist_root"] = str(ds_root) if ds_root else ""
     if not ds_root:
         return finish(report_dir, results, 4, "Could not locate global @researai/deepscientist package root.")
-    skill_install = install_skill(ds_root, force=args.force_skill)
-    results["steps"].append(skill_install)
-    if not skill_install["ok"]:
-        return finish(report_dir, results, 5, skill_install["message"])
+    for source in SKILL_SOURCES:
+        skill_install = install_skill(ds_root, source=source, force=args.force_skill)
+        results["steps"].append(skill_install)
+        if not skill_install["ok"]:
+            return finish(report_dir, results, 5, skill_install["message"])
 
     if not args.skip_doctor:
         doctor = run(["ds", "doctor", "--runner", "claude"], timeout_seconds=300)
@@ -120,22 +124,30 @@ def resolve_global_deepscientist_root() -> Path | None:
     return None
 
 
-def install_skill(ds_root: Path, *, force: bool) -> dict[str, Any]:
-    target = ds_root / "src" / "skills" / "citation-evidence-audit"
+def install_skill(ds_root: Path, *, source: Path, force: bool) -> dict[str, Any]:
+    skill_name = source.name
+    target = ds_root / "src" / "skills" / skill_name
+    if not source.exists():
+        return {
+            "name": f"install_skill_{skill_name}",
+            "ok": False,
+            "message": f"Missing project DeepScientist skill source: {source}",
+            "target": str(target),
+        }
     if target.exists():
         if not force:
             return {
-                "name": "install_skill",
+                "name": f"install_skill_{skill_name}",
                 "ok": True,
-                "message": "DeepScientist citation audit skill already installed.",
+                "message": f"DeepScientist skill already installed: {skill_name}.",
                 "target": str(target),
             }
         shutil.rmtree(target)
-    shutil.copytree(SKILL_SOURCE, target)
+    shutil.copytree(source, target)
     return {
-        "name": "install_skill",
+        "name": f"install_skill_{skill_name}",
         "ok": True,
-        "message": "Installed DeepScientist citation audit skill.",
+        "message": f"Installed DeepScientist skill: {skill_name}.",
         "target": str(target),
     }
 

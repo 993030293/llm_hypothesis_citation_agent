@@ -5,6 +5,8 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import Any
 
+from qqbot.file_ingest import QQFileCandidate, candidates_from_notice, candidates_from_segments, file_segment_paths
+
 
 class MessageType(str, Enum):
     PRIVATE = "private"
@@ -39,22 +41,10 @@ def extract_text(segments: list[dict[str, Any]]) -> str:
     return "".join(texts)
 
 
-def file_segment_paths(segments: list[dict[str, Any]]) -> list[str]:
-    """Best-effort local path extraction for NapCat file/image message segments."""
+def file_segment_candidates(segments: list[dict[str, Any]]) -> list[QQFileCandidate]:
+    """Best-effort file extraction for NapCat file/image message segments."""
 
-    paths: list[str] = []
-    for seg in segments:
-        if not isinstance(seg, dict):
-            continue
-        if seg.get("type") not in {"file", "image"}:
-            continue
-        data = seg.get("data", {}) or {}
-        for key in ("path", "file", "url"):
-            value = data.get(key)
-            if value:
-                paths.append(str(value))
-                break
-    return paths
+    return candidates_from_segments(segments)
 
 
 def has_at_mention(segments: list[dict[str, Any]], bot_qq: str | None = None) -> bool:

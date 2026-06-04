@@ -19,25 +19,26 @@ def _make_client(api_key: str, base_url: str) -> OpenAI:
         http_client=httpx.Client(proxy=None, trust_env=False, follow_redirects=True)
     )
 
+def _required_api_key(env_name: str) -> str:
+    api_key = os.environ.get(env_name, "").strip()
+    if not api_key:
+        raise RuntimeError(f"{env_name} is required for this LLM client and must be provided via environment variable.")
+    return api_key
+
+
 def get_llm_client() -> OpenAI:
-    api_key = os.environ.get("DEEPSEEK_API_KEY", "sk-feea3ab5ca5c4cf2bad677a7cf124e53")
+    api_key = _required_api_key("DEEPSEEK_API_KEY")
     base_url = os.environ.get("DEEPSEEK_BASE_URL", "https://api.deepseek.com/v1")
     return _make_client(api_key, base_url)
 
 def get_minimax_client() -> OpenAI:
-    api_key = os.environ.get(
-        "MINIMAX_API_KEY",
-        "sk-api-8AVR5GpTlMUI7CszaGEJOMgTHu0SUxuYWv_5cBemUomH-eliT8YPluyPDRWdCcUYYuKnvVizkfpd78wMZA9ZF5zFeWP-1yqVcnfypXDNlFP6MdzHfDw6pO8"
-    )
+    api_key = _required_api_key("MINIMAX_API_KEY")
     base_url = os.environ.get("MINIMAX_BASE_URL", "https://api.minimax.chat/v1")
     return _make_client(api_key, base_url)
 
 
 def get_glm_client() -> OpenAI:
-    api_key = os.environ.get(
-        "GLM_API_KEY",
-        "bd8e142406f2453899f9c37ef73af379.mTNaHqtPULZAgAjF"
-    )
+    api_key = _required_api_key("GLM_API_KEY")
     base_url = os.environ.get("GLM_BASE_URL", "https://open.bigmodel.cn/api/paas/v4")
     return _make_client(api_key, base_url)
 

@@ -4,11 +4,15 @@ __pycache__/
 outputs/runs/
 outputs/stress_audits/
 outputs/deepscientist_audits/
+outputs/deepscientist_15x_campaigns/
+outputs/manual_smoke_launches/
+outputs/memory/
 outputs/generalization_audits/
 outputs/path2_setup/
 outputs/path2_smoke_tests/
 outputs/tmp_*/
 outputs/tmp_*.json
+inputs/qq_uploads/
 qqbot_logs/
 *.log
 .env

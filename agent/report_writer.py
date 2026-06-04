@@ -32,6 +32,24 @@ CITATION_FIELDS = [
     "support_score",
     "matched_evidence_text",
     "verification_method",
+    "error_type",
+    "source_agreement_count",
+    "source_agreement_summary",
+    "version_group_id",
+    "version_match_status",
+    "supporting_sentence",
+    "supporting_location",
+    "support_source_type",
+    "manual_review_action",
+    "green_gate_passed",
+    "llm_explanation",
+    "claim_strength_level",
+    "critical_terms",
+    "covered_critical_terms",
+    "missing_critical_terms",
+    "contradiction_type",
+    "risk_penalty",
+    "score_cap_reason",
 ]
 
 
@@ -91,7 +109,11 @@ class ReportWriter:
                     "paper_summary.json",
                     "search_queries.json",
                     "retrieved_literature.jsonl",
+                    "fulltext_evidence.jsonl",
                 "generated_hypothesis.md",
+                "provider_verification.jsonl",
+                "version_resolution.jsonl",
+                "paragraph_support_matches.jsonl",
                 "citation_verification.csv",
                 "evidence_chain.csv",
                 "evidence_chain.md",
@@ -159,6 +181,7 @@ class ReportWriter:
             f"- Evidence items recorded: {len(evidence_items)}",
             "",
             "Required run artifacts are in this same run directory: tool_calls.jsonl, retrieved_literature.jsonl, citation_verification.csv, and final_report.md.",
+            "Enhanced audit artifacts are also written as fulltext_evidence.jsonl, provider_verification.jsonl, version_resolution.jsonl, and paragraph_support_matches.jsonl.",
             "Evidence-chain artifacts are also written as evidence_chain.csv and evidence_chain.md.",
             "",
             "## Search Queries",
@@ -193,20 +216,32 @@ class ReportWriter:
                 "",
                 f"Green: {counts.get('Green', 0)}; Yellow: {counts.get('Yellow', 0)}; Red: {counts.get('Red', 0)}",
                 "",
-                "| Claim ID | Color | Exists | Metadata | Support | Scores | Reason | Evidence |",
-                "|---|---|---|---|---|---|---|---|",
+                "| Claim ID | Color | Error Type | Risk | Missing Critical Terms | Green Gate | Supporting Location | Reason | Evidence |",
+                "|---|---|---|---:|---|---|---|---|---|",
             ]
         )
         for row in verification_rows:
-            scores = (
-                f"title={row.get('title_similarity', '')}; "
-                f"author={row.get('author_match_score', '')}; "
-                f"support={row.get('support_score', '')}"
-            )
             lines.append(
-                f"| {row.get('claim_id')} | {row.get('color_label')} | {row.get('exists_status')} | "
-                f"{row.get('metadata_match_status')} | {row.get('support_status')} | "
-                f"{self._cell(scores)} | {self._cell(row.get('reason', ''))} | {row.get('evidence_id')} |"
+                f"| {row.get('claim_id')} | {row.get('color_label')} | {row.get('error_type', '')} | "
+                f"{row.get('risk_penalty', '')} | {self._cell(row.get('missing_critical_terms', ''))} | "
+                f"{row.get('green_gate_passed', '')} | {self._cell(row.get('supporting_location', ''))} | "
+                f"{self._cell(row.get('reason', ''))} | {row.get('evidence_id')} |"
+            )
+
+        lines.extend(
+            [
+                "",
+                "## Manual Review Guidance",
+                "",
+                "| Claim ID | Error Type | Manual Review Action | Supporting Sentence |",
+                "|---|---|---|---|",
+            ]
+        )
+        for row in verification_rows:
+            lines.append(
+                f"| {row.get('claim_id')} | {row.get('error_type', '')} | "
+                f"{self._cell(row.get('manual_review_action', ''))} | "
+                f"{self._cell(row.get('supporting_sentence', ''))} |"
             )
 
         lines.extend(
@@ -252,6 +287,7 @@ class ReportWriter:
                 "- Missing DOI/title matches are labeled Red.",
                 "- Existing papers with weak or abstract-only support are labeled Yellow.",
                 "- Green requires both metadata match and concrete support from title/abstract/snippet.",
+                "- Enhanced Green requires a recorded supporting sentence plus multi-source agreement or authoritative DOI lookup.",
                 "- API failures are preserved in tool_calls.jsonl and do not become fabricated evidence.",
             ]
         )

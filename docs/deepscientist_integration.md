@@ -155,9 +155,10 @@ python scripts/path2_smoke_test.py
 ```
 
 The first command prepares the official DeepScientist + Claude Code runtime and
-installs the `citation-evidence-audit` skill. The second command creates a
-small official DeepScientist quest, uses Claude Code to produce
-`citation_audit_claims.json`, and audits it through this module.
+installs both project skills: `citation-hypothesis-claims` for PDF-to-idea claim
+generation and `citation-evidence-audit` for the audit contract. The automated
+case runner creates a small official DeepScientist quest, uses Claude Code to
+produce `citation_audit_claims.json`, and audits it through this module.
 
 ## LLM Boundary
 

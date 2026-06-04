@@ -26,11 +26,14 @@ citation evidence-chain audit module.
 
 This repository owns:
 
+- `integrations/deepscientist/citation-hypothesis-claims/SKILL.md`;
 - `integrations/deepscientist/citation-evidence-audit/SKILL.md`;
 - `agent/deepscientist_adapter.py`;
 - `agent/citation_verifier.py`;
 - `agent/evidence_chain_tracer.py`;
 - `scripts/audit_deepscientist_output.py`;
+- `scripts/run_official_ds_case.py`;
+- `scripts/deepscientist_15x_campaign.py`;
 - `scripts/setup_path2_claude.py`;
 - `scripts/path2_smoke_test.py`.
 
@@ -52,7 +55,7 @@ The setup script checks:
 - Claude Code headless prompt execution;
 - global `ds` DeepScientist CLI;
 - local DeepScientist Claude startup probe compatibility on Windows;
-- installation of the `citation-evidence-audit` skill;
+- installation of `citation-hypothesis-claims` and `citation-evidence-audit`;
 - `ds doctor --runner claude`.
 
 If `ds` is missing, the script installs it with:

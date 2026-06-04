@@ -98,3 +98,40 @@ def test_deepscientist_adapter_loads_generated_claims_payload(tmp_path: Path, mo
     assert Path(result["run_dir"], "source_hypothesis_payload.json").exists()
     assert Path(result["run_dir"], "citation_verification.csv").exists()
     assert Path(result["run_dir"], "evidence_chain.csv").exists()
+
+
+def test_deepscientist_adapter_enriches_same_source_paper_abstract(tmp_path: Path, monkeypatch) -> None:
+    captured = {}
+
+    def fake_verify(self, claims):  # noqa: ANN001
+        captured["claims"] = claims
+        return []
+
+    monkeypatch.setattr(CitationVerifier, "verify", fake_verify)
+    module = DeepScientistCitationAuditModule(output_root=tmp_path)
+    module.audit_claims(
+        [
+            {
+                "claim_id": "C001",
+                "claim_text": "Prior work reports that FinRL is a deep reinforcement learning library.",
+                "cited_work": {
+                    "title": "FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance",
+                    "authors": ["Xiao-Yang Liu"],
+                    "year": 2020,
+                    "doi": "10.2139/ssrn.3737859",
+                },
+            }
+        ],
+        run_dir=tmp_path / "audit",
+        source_payload={
+            "paper": {
+                "title": "FinRL: A Deep Reinforcement Learning Library for",
+                "abstract": "FinRL is a deep reinforcement learning library for automated stock trading in quantitative finance.",
+                "pdf_path_or_url": "https://arxiv.org/pdf/2011.09607",
+            }
+        },
+    )
+
+    cited = captured["claims"][0]["cited_work"]
+    assert cited["abstract"].startswith("FinRL is a deep reinforcement learning library")
+    assert cited["url"] == "https://arxiv.org/pdf/2011.09607"

@@ -79,8 +79,9 @@ This script:
 - installs `@researai/deepscientist` globally if `ds` is missing;
 - patches the local DeepScientist Claude startup probe for Windows-compatible
   `--tools=` handling when needed;
-- installs this repository's `citation-evidence-audit` skill into the official
-  DeepScientist package;
+- installs this repository's DeepScientist skills:
+  `citation-hypothesis-claims` for PDF -> idea -> claims generation, and
+  `citation-evidence-audit` for the downstream audit contract;
 - runs `ds doctor --runner claude`.
 
 Start official DeepScientist with Claude Code for the live system:
@@ -112,11 +113,14 @@ Expected audit outputs:
 - `tool_calls.jsonl`
 - `evidence_items.jsonl`
 
-For a real DeepScientist run, ask DeepScientist/Claude to write
-`citation_audit_claims.json` in the quest root, then audit it:
+For the current official DeepScientist workflow, run the automated case runner.
+It creates or reuses a quest, asks DeepScientist/Claude to generate research
+ideas and `citation_audit_claims.json`, then runs the deterministic audit:
 
 ```powershell
-python scripts/audit_deepscientist_output.py --quest-root "C:\Users\<you>\DeepScientist\quests\<quest_id>"
+python scripts/run_official_ds_case.py `
+  --case-id ai_rag_demo `
+  --pdf-path-or-url https://arxiv.org/pdf/2005.11401
 ```
 
 ## DeepSeek LLM Agent WorkFlow (主推路线)

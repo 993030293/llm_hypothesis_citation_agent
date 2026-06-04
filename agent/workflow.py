@@ -17,6 +17,7 @@ from agent.literature_search import LiteratureSearcher
 from agent.pdf_reader import PdfReaderTool
 from agent.query_planner import QueryPlanner
 from agent.report_writer import ReportWriter
+from agent.research_memory import ResearchMemory
 from agent.run_logging import EvidenceStore, ToolCallLogger
 from agent.utils import configure_utf8_stdio, timestamp_id, write_json
 
@@ -149,6 +150,40 @@ def main() -> int:
     timings["total"] = total_time
 
     write_json(run_dir / "workflow_timing.json", {"timings_seconds": timings})
+    try:
+        memory_status = {
+            "case_id": run_dir.name,
+            "run_id": run_dir.name,
+            "case_dir": str(run_dir),
+            "pdf_path_or_url": str(pdf_path),
+            "quest_root": "",
+            "final_status": "success",
+            "claims_source": "local_workflow",
+        }
+        memory_updates = ResearchMemory().update_from_artifacts(
+            case_dir=run_dir,
+            status=memory_status,
+            citation_audit_dir=run_dir,
+            multi_review_dir=None,
+            updates_path=run_dir / "memory_updates.jsonl",
+        )
+        write_json(
+            run_dir / "memory_update_summary.json",
+            {
+                "memory_dir": str(ROOT / "outputs" / "memory"),
+                "updates": len(memory_updates),
+                "case_id": memory_status["case_id"],
+                "run_id": memory_status["run_id"],
+            },
+        )
+    except Exception as exc:
+        write_json(
+            run_dir / "memory_update_summary.json",
+            {
+                "memory_status": "failed",
+                "error": str(exc),
+            },
+        )
 
     print(f"[6/7] Reports written ({timings['6_7_report']}s)")
     print(f"[7/7] Workflow complete — total time: {total_time}s")
