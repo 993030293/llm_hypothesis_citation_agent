@@ -160,11 +160,11 @@ def test_deepseek_mode_uses_model_json_when_client_succeeds(tmp_path: Path, monk
             "confidence": "high",
         }
 
-    monkeypatch.setattr(reviewer, "call_deepseek_json", fake_call_deepseek_json)
+    monkeypatch.setattr(reviewer, "call_llm_json", fake_call_deepseek_json)
 
     status = reviewer.run_multi_review(make_args(tmp_path, audit_dir, mode="deepseek"))
 
-    assert [item["review_source"] for item in status["reviews"]] == ["deepseek"] * 4
+    assert [item["review_source"] for item in status["reviews"]] == ["deepseek", "deepseek", "minimax", "glm"]
     assert status["reviews"][1]["model"] == "deepseek-v4-pro"
     assert status["meta"]["review_source"] == "deepseek"
     assert status["meta"]["model"] == "deepseek-v4-pro"
@@ -274,7 +274,7 @@ def test_deepseek_meta_cannot_exceed_deterministic_cap(tmp_path: Path, monkeypat
             "confidence": "high",
         }
 
-    monkeypatch.setattr(reviewer, "call_deepseek_json", fake_call_deepseek_json)
+    monkeypatch.setattr(reviewer, "call_llm_json", fake_call_deepseek_json)
     status = reviewer.run_multi_review(make_args(tmp_path, audit_dir, mode="deepseek"))
     assert status["meta"]["review_source"] == "deepseek"
     assert status["meta"]["deterministic_score_cap"] == 3

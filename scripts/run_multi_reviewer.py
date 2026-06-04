@@ -26,42 +26,51 @@ class ReviewerConfig:
     role: str
     env_var: str
     model: str
-    focus: str
+    provider: str
+    base_url: str
 
+
+# ── API keys: must be set via environment variables ──
+# MINIMAX_API_KEY and GLM_API_KEY are required; set them before running
 
 REVIEWERS = [
     ReviewerConfig(
-        "R1",
-        "novelty_reviewer",
-        "DEEPSEEK_REVIEWER_1_API_KEY",
-        "deepseek-v4-flash",
-        "Judge whether the hypothesis is genuinely new or only a restatement of retrieved work.",
+        reviewer_id="R1",
+        role="general_reviewer",
+        env_var="DEEPSEEK_API_KEY",
+        model="deepseek-v4-flash",
+        provider="deepseek",
+        base_url="https://api.deepseek.com/v1",
     ),
     ReviewerConfig(
-        "R2",
-        "evidence_reviewer",
-        "DEEPSEEK_REVIEWER_2_API_KEY",
-        "deepseek-v4-pro",
-        "Judge whether the idea relies on Green/Yellow/Red citations appropriately.",
+        reviewer_id="R2",
+        role="general_reviewer",
+        env_var="DEEPSEEK_API_KEY",
+        model="deepseek-v4-pro",
+        provider="deepseek",
+        base_url="https://api.deepseek.com/v1",
     ),
     ReviewerConfig(
-        "R3",
-        "methodology_reviewer",
-        "DEEPSEEK_REVIEWER_3_API_KEY",
-        "deepseek-v4-flash",
-        "Judge whether the hypothesis is testable and whether the experiment plan is realistic.",
+        reviewer_id="R3",
+        role="general_reviewer",
+        env_var="MINIMAX_API_KEY",
+        model="minimax-text-01",
+        provider="minimax",
+        base_url="https://api.minimax.chat/v1",
     ),
     ReviewerConfig(
-        "R4",
-        "risk_reviewer",
-        "DEEPSEEK_REVIEWER_4_API_KEY",
-        "deepseek-v4-pro",
-        "Find over-strong claims, weak cross-domain analogies, citation risks, and tool failures.",
+        reviewer_id="R4",
+        role="general_reviewer",
+        env_var="GLM_API_KEY",
+        model="glm-4-flash",
+        provider="glm",
+        base_url="https://open.bigmodel.cn/api/paas/v4",
     ),
 ]
 
 META_MODEL = "deepseek-v4-pro"
-META_ENV_VAR = "DEEPSEEK_META_REVIEWER_API_KEY"
+META_ENV_VAR = "DEEPSEEK_API_KEY"
+META_PROVIDER = "deepseek"
 DEFAULT_BASE_URL = "https://api.deepseek.com/v1"
 RED_LINE_ERROR_TYPES = {
     "not_found",
@@ -394,7 +403,7 @@ def build_review_with_optional_deepseek(
     fallback = build_review(config.reviewer_id, config.role, context, rows)
     fallback.update(
         {
-            "model": "deterministic",
+            "model": config.model,
             "review_source": "deterministic",
             "fallback_reason": "",
         }
@@ -409,8 +418,8 @@ def build_review_with_optional_deepseek(
             fallback["review_source"] = "deterministic_fallback"
         log_tool(
             tool_log,
-            "deepseek_reviewer_call",
-            {"reviewer_id": config.reviewer_id, "model": config.model, "env_var": config.env_var, "key_configured": False},
+            "llm_reviewer_call",
+            {"reviewer_id": config.reviewer_id, "model": config.model, "provider": config.provider, "env_var": config.env_var, "key_configured": False},
             {"fallback_reason": fallback["fallback_reason"]},
             status="skipped",
         )
@@ -419,22 +428,23 @@ def build_review_with_optional_deepseek(
     started = time.time()
     try:
         prompt = build_reviewer_prompt(config, context, fallback)
-        raw = call_deepseek_json(
+        raw = call_llm_json(
             api_key=api_key,
-            base_url=args.deepseek_base_url,
+            base_url=config.base_url,
             model=config.model,
             messages=prompt,
             temperature=args.temperature,
             timeout_seconds=args.reviewer_timeout_seconds,
         )
         review = normalize_reviewer_json(raw, config, fallback)
-        review.update({"model": config.model, "review_source": "deepseek", "fallback_reason": ""})
+        review.update({"model": config.model, "review_source": config.provider, "fallback_reason": ""})
         log_tool(
             tool_log,
-            "deepseek_reviewer_call",
+            "llm_reviewer_call",
             {
                 "reviewer_id": config.reviewer_id,
                 "model": config.model,
+                "provider": config.provider,
                 "env_var": config.env_var,
                 "key_configured": True,
             },
@@ -446,10 +456,11 @@ def build_review_with_optional_deepseek(
         fallback["fallback_reason"] = f"{type(exc).__name__}: {str(exc)[:180]}"
         log_tool(
             tool_log,
-            "deepseek_reviewer_call",
+            "llm_reviewer_call",
             {
                 "reviewer_id": config.reviewer_id,
                 "model": config.model,
+                "provider": config.provider,
                 "env_var": config.env_var,
                 "key_configured": True,
             },
@@ -465,8 +476,10 @@ def build_reviewer_prompt(
     deterministic_anchor: dict[str, Any],
 ) -> list[dict[str, Any]]:
     payload = {
+        "reviewer_id": config.reviewer_id,
         "role": config.role,
-        "focus": config.focus,
+        "model": config.model,
+        "provider": config.provider,
         "label_summary": context["label_summary"],
         "evidence_summary": context["evidence_summary"],
         "provider_summary": context["provider_summary"],
@@ -477,13 +490,14 @@ def build_reviewer_prompt(
         "deterministic_anchor": deterministic_anchor,
     }
     system = (
-        "You are one reviewer in a scientific multi-reviewer panel. "
-        "You evaluate idea quality and citation risk only. "
+        "You are a reviewer in a scientific multi-reviewer panel. "
+        "Your task is to independently evaluate the entire citation-audited research idea package. "
+        "Consider all dimensions: novelty, evidence quality, methodology, and risks. "
         "Do not change Green/Yellow/Red labels; they are produced by deterministic code. "
         "Return one strict JSON object and no markdown."
     )
     user = (
-        "Review this citation-audited research idea package. "
+        "Review this citation-audited research idea package holistically. "
         "Use only the provided artifact summaries and evidence IDs. "
         "Output JSON with exactly these keys: reviewer_id, role, score_1_to_6, strengths, weaknesses, "
         "required_revision, evidence_ids_used, tool_calls_used, confidence.\n\n"
@@ -492,7 +506,7 @@ def build_reviewer_prompt(
     return [{"role": "system", "content": system}, {"role": "user", "content": user}]
 
 
-def call_deepseek_json(
+def call_llm_json(
     *,
     api_key: str,
     base_url: str,
@@ -570,9 +584,8 @@ def clamp_score(value: Any, default: int) -> int:
     return max(1, min(6, score))
 
 
-def reviewer_role_cap(role: str, labels: dict[str, Any]) -> int:
-    if role not in {"evidence_reviewer", "risk_reviewer"}:
-        return 6
+def reviewer_role_cap(labels: dict[str, Any]) -> int:
+    """All general reviewers share the same deterministic cap derived from label quality."""
     cap = 6
     if labels.get("red") or labels.get("red_line_triggered"):
         cap = min(cap, 2)
@@ -607,45 +620,40 @@ def build_review(reviewer_id: str, role: str, context: dict[str, Any], rows: lis
     green = labels["green"]
     yellow = labels["yellow"]
     red = labels["red"]
-    role_cap = reviewer_role_cap(role, labels)
+    role_cap = reviewer_role_cap(labels)
     evidence_ids = sorted({row.get("evidence_id", "") for row in rows if row.get("evidence_id")})[:8]
     tool_ids = sorted({row.get("verification_method", "") for row in rows if row.get("verification_method")})[:8]
 
-    if role == "novelty_reviewer":
-        score = 4 if context["hypotheses_count"] >= 2 else 3
-        if red:
-            score -= 1
-        strengths = ["The idea set is generated from a real input paper and linked to retrieved related work."]
-        weaknesses = ["Novelty is not independently proven; it is inferred from citation-backed idea cards."]
-        revisions = ["Keep novelty wording conservative and avoid claiming the idea is unprecedented."]
-    elif role == "evidence_reviewer":
-        score = 2 + min(3, green) + (1 if yellow and not red else 0)
-        if red:
-            score = max(1, score - red)
-        strengths = [f"All {total} claims passed through deterministic citation verification."]
-        weaknesses = [f"Label distribution is Green={green}, Yellow={yellow}, Red={red}; Yellow claims require manual review."]
-        revisions = ["Use only Green claims for strong presentation claims; explain Yellow as uncertain support."]
-    elif role == "methodology_reviewer":
-        score = 4 if total >= 2 else 3
-        if labels["manual_review_count"] > total / 2:
-            score -= 1
-        strengths = ["The workflow produces auditable artifacts instead of a chat-only answer."]
-        weaknesses = ["The generated hypotheses still need downstream experimental design before they become research results."]
-        revisions = ["Add a minimal experiment plan for the selected hypothesis before treating it as actionable."]
-    else:
+    # Holistic deterministic scoring for general reviewers
+    score = 3
+    if green >= 2:
         score = 4
-        if yellow / total > 0.5:
-            score -= 1
-        if red:
-            score -= min(2, red)
-        strengths = ["The verifier is conservative and does not upgrade uncertain support to Green."]
-        weaknesses = list(top_error_types(labels["error_types"]))
-        if not weaknesses:
-            weaknesses = ["No major verifier error type dominated this run."]
-        revisions = ["During demo, explicitly state that Yellow means citation exists but support is not fully confirmed."]
+    if green >= 3 and red == 0:
+        score = 5
+    if yellow > total * 0.5:
+        score = max(1, score - 1)
+    if red > 0:
+        score = max(1, score - red)
+    if green == 0:
+        score = min(score, 3)
+
+    strengths = [
+        f"All {total} claims passed through deterministic citation verification.",
+        f"Label distribution is Green={green}, Yellow={yellow}, Red={red}.",
+    ]
+    weaknesses = [
+        "Yellow claims require manual review; Green claims should anchor the presentation.",
+    ]
+    error_hits = top_error_types(labels.get("error_types", {}))
+    if error_hits:
+        weaknesses.append("Top error types: " + "; ".join(error_hits[:3]))
+    revisions = [
+        "Use only Green claims for strong presentation claims; explain Yellow as uncertain support.",
+        "Keep wording conservative and avoid claiming findings are unprecedented.",
+    ]
 
     penalty_reasons = [item.get("reason", "") for item in labels.get("penalty_breakdown", []) if item.get("reason")]
-    if penalty_reasons and role in {"evidence_reviewer", "risk_reviewer"}:
+    if penalty_reasons:
         weaknesses.extend(penalty_reasons[:3])
         revisions.append("Resolve deterministic citation penalties before using this as a success demo.")
 
@@ -680,15 +688,15 @@ def build_meta_decision_with_optional_deepseek(
     if args.review_mode == "deterministic":
         return fallback
 
-    api_key = os.environ.get(META_ENV_VAR, "").strip() or os.environ.get("DEEPSEEK_REVIEWER_4_API_KEY", "").strip()
+    api_key = os.environ.get(META_ENV_VAR, "").strip()
     if not api_key:
-        fallback["fallback_reason"] = f"missing_env:{META_ENV_VAR}|DEEPSEEK_REVIEWER_4_API_KEY"
+        fallback["fallback_reason"] = f"missing_env:{META_ENV_VAR}"
         if args.review_mode == "deepseek":
             fallback["review_source"] = "deterministic_fallback"
         log_tool(
             tool_log,
-            "deepseek_meta_reviewer_call",
-            {"model": META_MODEL, "env_var": f"{META_ENV_VAR}|DEEPSEEK_REVIEWER_4_API_KEY", "key_configured": False},
+            "llm_meta_reviewer_call",
+            {"model": META_MODEL, "provider": META_PROVIDER, "env_var": META_ENV_VAR, "key_configured": False},
             {"fallback_reason": fallback["fallback_reason"]},
             status="skipped",
         )
@@ -696,7 +704,7 @@ def build_meta_decision_with_optional_deepseek(
 
     started = time.time()
     try:
-        raw = call_deepseek_json(
+        raw = call_llm_json(
             api_key=api_key,
             base_url=args.deepseek_base_url,
             model=META_MODEL,
@@ -705,11 +713,11 @@ def build_meta_decision_with_optional_deepseek(
             timeout_seconds=args.reviewer_timeout_seconds,
         )
         meta = normalize_meta_json(raw, fallback)
-        meta.update({"model": META_MODEL, "review_source": "deepseek", "fallback_reason": ""})
+        meta.update({"model": META_MODEL, "review_source": META_PROVIDER, "fallback_reason": ""})
         log_tool(
             tool_log,
-            "deepseek_meta_reviewer_call",
-            {"model": META_MODEL, "env_var": f"{META_ENV_VAR}|DEEPSEEK_REVIEWER_4_API_KEY", "key_configured": True},
+            "llm_meta_reviewer_call",
+            {"model": META_MODEL, "provider": META_PROVIDER, "env_var": META_ENV_VAR, "key_configured": True},
             {"status": "parsed_json", "duration_seconds": round(time.time() - started, 3)},
         )
         return meta
@@ -718,8 +726,8 @@ def build_meta_decision_with_optional_deepseek(
         fallback["fallback_reason"] = f"{type(exc).__name__}: {str(exc)[:180]}"
         log_tool(
             tool_log,
-            "deepseek_meta_reviewer_call",
-            {"model": META_MODEL, "env_var": f"{META_ENV_VAR}|DEEPSEEK_REVIEWER_4_API_KEY", "key_configured": True},
+            "llm_meta_reviewer_call",
+            {"model": META_MODEL, "provider": META_PROVIDER, "env_var": META_ENV_VAR, "key_configured": True},
             {"fallback_reason": fallback["fallback_reason"], "duration_seconds": round(time.time() - started, 3)},
             status="error",
         )
@@ -745,7 +753,8 @@ def build_meta_prompt(
         "Return one strict JSON object and no markdown."
     )
     user = (
-        "Make a final decision from the four reviewer JSON objects and deterministic citation audit summary. "
+        "Make a final decision from the four parallel reviewer JSON objects and deterministic citation audit summary. "
+        "Each reviewer evaluated the full package independently as a general reviewer across all dimensions. "
         f"The final_score_1_to_6 must not exceed deterministic_score_cap={deterministic_anchor.get('deterministic_score_cap')}. "
         "If the cap is 2, the decision must be reject_or_boundary_case; if the cap is 3, it cannot be accept_for_demo. "
         "Output JSON with keys: final_score_1_to_6, decision, main_reason, must_fix_before_demo, "
@@ -895,13 +904,14 @@ def render_report(reviews: list[dict[str, Any]], meta: dict[str, Any], context: 
         "",
         "## Reviewer Scores",
         "",
-        "| Reviewer | Role | Model | Source | Score | Confidence |",
-        "|---|---|---|---|---:|---|",
+        "| Reviewer | Role | Provider | Model | Source | Score | Confidence |",
+        "|---|---|---|---|---|---:|---|",
     ]
     for review in reviews:
         lines.append(
-            f"| {review['reviewer_id']} | {review['role']} | {review.get('model', '')} | "
-            f"{review.get('review_source', '')} | {review['score_1_to_6']} | {review['confidence']} |"
+            f"| {review['reviewer_id']} | {review['role']} | {review.get('review_source', '')} | "
+            f"{review.get('model', '')} | {review.get('review_source', '')} | "
+            f"{review['score_1_to_6']} | {review['confidence']} |"
         )
     lines.extend(
         [
