@@ -43,7 +43,7 @@ EXTRA_20_CASES = [
     "case_id": "ai_clip_transfer",
     "field": "Vision / Multimodal AI",
     "pdf_url": "https://arxiv.org/pdf/2103.00020",
-    "pdf_path": "inputs/generalization_cases/papers/ai_clip_transfer.pdf",
+    "pdf_path": "inputs/deepscientist_20_cases/papers/ai_clip_transfer.pdf",
     "source_note": "Real public arXiv PDF: Learning Transferable Visual Models From Natural Language Supervision.",
     "expected_risk": "normal_real_pdf",
 },

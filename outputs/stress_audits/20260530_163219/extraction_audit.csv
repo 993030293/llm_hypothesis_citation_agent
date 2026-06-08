@@ -1,2 +1,0 @@
-﻿abstract_boundary_ok,abstract_chars,case_id,discipline,expected_keyword_source,expected_keywords,expected_keywords_overlap,expected_readiness,extracted_keywords,failure_category,keyword_source,layout_type,readiness,readiness_match,risk_flags,title_present
-True,245,keywords_before_abstract,finance,declared,agent-based modeling; financial market simulation; calibration; scalability,1.0,ready,agent-based modeling; financial market simulation; calibration; scalability,,declared,keywords_before_abstract,usable_with_caution,False,limited_extractable_text,True
