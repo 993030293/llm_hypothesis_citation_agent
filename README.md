@@ -38,6 +38,12 @@ See `docs/official_deepscientist_extension_plan.md` and
 - Yellow: the cited literature exists but support is uncertain or only partial.
 - Red: the citation is wrong, missing, or does not support the claim.
 
+## Submission Guide
+
+For the course submission mapping of source code, configuration, startup
+commands, test data, logs, presentation assets, and DeepScientist modifications,
+see `submission/github_submission_readme.md`.
+
 ## Planned structure
 
 - `agent/`: PDF parsing, literature search, hypothesis generation, citation

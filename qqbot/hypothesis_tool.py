@@ -243,7 +243,7 @@ async def run_official_hypothesis(
     if command.dry_run:
         return "Official DeepScientist command to run:\n" + " ".join(cmd)
 
-    case_dir = ROOT / "outputs" / "deepscientist_15x_campaigns" / run_id / "cases" / case_id
+    case_dir = ROOT / "outputs" / "deepscientist_20x_campaigns" / run_id / "cases" / case_id
     await _emit_progress(progress_callback, "Command accepted. Starting official DeepScientist + citation audit workflow.")
     proc = await asyncio.create_subprocess_exec(
         *cmd,
@@ -253,7 +253,7 @@ async def run_official_hypothesis(
         env=_subprocess_env(),
     )
     try:
-        stdout, stderr = await _wait_process_with_progress(proc, timeout_seconds + 120, progress_callback)
+        stdout, stderr = await _wait_process_with_progress(proc, timeout_seconds, progress_callback)
     except asyncio.TimeoutError:
         return _final_failed(
             f"Official DeepScientist workflow timed out: {command.pdf_path}\n"
@@ -519,7 +519,7 @@ def _workflow_status(stdout: str) -> str:
 
 async def _wait_process_with_progress(
     proc: asyncio.subprocess.Process,
-    timeout_seconds: int,
+    timeout_seconds: int | None,
     progress_callback: ProgressCallback | None,
 ) -> tuple[str, str]:
     stdout_lines: list[str] = []
@@ -545,7 +545,10 @@ async def _wait_process_with_progress(
         else None
     )
     try:
-        await asyncio.wait_for(proc.wait(), timeout=timeout_seconds)
+        if timeout_seconds is None:
+            await proc.wait()
+        else:
+            await asyncio.wait_for(proc.wait(), timeout=timeout_seconds)
     except asyncio.TimeoutError:
         proc.kill()
         await proc.wait()
@@ -672,7 +675,7 @@ def _final_failed(body: str) -> str:
 def _missing_pdf_prefix() -> str:
     return (
         "No PDF path was provided.\n"
-        "Use /official \"FULL_PDF_PATH\" or /local \"FULL_PDF_PATH\". If the path contains spaces, keep the quotes."
+        "Use /official or /local with \"FULL_PDF_PATH\". If the path contains spaces, keep the quotes."
     )
 
 

@@ -6,7 +6,7 @@ import json
 import sys
 from pathlib import Path
 
-from scripts import deepscientist_15x_campaign as campaign
+from scripts import deepscientist_20x_campaign as campaign
 from scripts import run_official_ds_case as ds_case
 
 
@@ -411,8 +411,8 @@ def test_campaign_continues_after_case_failure(tmp_path: Path, monkeypatch) -> N
     monkeypatch.setattr(campaign, "run_case_subprocess", fake_run_case_subprocess)
     monkeypatch.setattr(
         campaign,
-        "CLIP_CASE",
-        {"case_id": "clip_extra", "field": "AI", "pdf_url": "https://example.test/clip.pdf", "pdf_path": "clip.pdf"},
+        "EXTRA_20_CASES",
+        [{"case_id": "clip_extra", "field": "AI", "pdf_url": "https://example.test/clip.pdf", "pdf_path": "clip.pdf"}],
     )
     rc = campaign.main_with_args(
         argparse.Namespace(

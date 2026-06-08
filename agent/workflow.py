@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import os
 import sys
 import time
 from pathlib import Path
@@ -20,6 +21,10 @@ from agent.report_writer import ReportWriter
 from agent.research_memory import ResearchMemory
 from agent.run_logging import EvidenceStore, ToolCallLogger
 from agent.utils import configure_utf8_stdio, timestamp_id, write_json
+
+
+def _has_api_key(env_name: str) -> bool:
+    return bool(os.environ.get(env_name, "").strip())
 
 
 def parse_args() -> argparse.Namespace:
@@ -52,6 +57,11 @@ def parse_args() -> argparse.Namespace:
         "--inject-bad-citation",
         action="store_true",
         help="Add an explicitly invalid boundary-case citation to demonstrate Red labeling.",
+    )
+    parser.add_argument(
+        "--require-llm-agent",
+        action="store_true",
+        help="Fail instead of falling back to the deterministic local generator when DEEPSEEK_API_KEY is missing.",
     )
     return parser.parse_args()
 
@@ -106,19 +116,59 @@ def main() -> int:
     if args.live_demo and len(paper_summary.get("text_excerpt", "")) < 200:
         print("WARNING: live-demo PDF has very little extractable text. Explain this limitation if results are weak.")
 
-    # We now let the LLM agent proactively plan queries and call the search tool.
+    providers = [p.strip() for p in args.providers.split(",") if p.strip()]
+
+    # Prefer the LLM agent when configured. For classroom/local demos, keep a
+    # deterministic path available so /local can run without paid API keys.
     t0 = time.perf_counter()
-    print(f"[2/7] Agent is thinking and searching literature based on the paper...")
-    hypothesis_payload = generator.generate_with_agent(
-        paper_summary,
-        max_hypotheses=args.max_hypotheses,
-        inject_bad_citation=args.inject_bad_citation,
-        providers=[p.strip() for p in args.providers.split(",") if p.strip()]
-    )
-    timings["2_3_agent_search_generate"] = round(time.perf_counter() - t0, 2)
+    if _has_api_key("DEEPSEEK_API_KEY"):
+        generation_mode = "llm_agent"
+        print("[2/7] LLM agent is thinking and searching literature based on the paper...")
+        hypothesis_payload = generator.generate_with_agent(
+            paper_summary,
+            max_hypotheses=args.max_hypotheses,
+            inject_bad_citation=args.inject_bad_citation,
+            providers=providers,
+        )
+    else:
+        if args.require_llm_agent:
+            print(
+                "ERROR: DEEPSEEK_API_KEY is required when --require-llm-agent is set. "
+                "Unset --require-llm-agent or provide the environment variable.",
+                file=sys.stderr,
+            )
+            return 1
+        generation_mode = "deterministic_local"
+        print("[2/7] DEEPSEEK_API_KEY not set; using deterministic local generator.")
+        queries = query_planner.plan(paper_summary, max_queries=args.max_queries)
+        literature = searcher.search(queries, providers, max_results_per_query=args.max_results_per_query)
+        if not args.disable_followup and args.max_followup_queries > 0:
+            followups = query_planner.plan_followup(
+                paper_summary,
+                queries,
+                literature,
+                max_queries=args.max_followup_queries,
+            )
+            if followups:
+                followup_literature = searcher.search(
+                    followups,
+                    providers,
+                    max_results_per_query=args.max_results_per_query,
+                )
+                literature = searcher.combine_records([literature, followup_literature])
+                queries.extend(followups)
+        hypothesis_payload = generator.generate(
+            paper_summary,
+            literature,
+            max_hypotheses=args.max_hypotheses,
+            inject_bad_citation=args.inject_bad_citation,
+        )
+        hypothesis_payload["literature"] = literature
+        hypothesis_payload["queries"] = queries
+    timings["2_3_search_generate"] = round(time.perf_counter() - t0, 2)
     literature = hypothesis_payload.get("literature", [])
     queries = hypothesis_payload.get("queries", [])
-    print(f"[3/7] Agent retrieved {len(literature)} records and finalized ideas.")
+    print(f"[3/7] {generation_mode} retrieved {len(literature)} records and finalized ideas.")
 
     print(f"[4/7] Research idea cards generated: {len(hypothesis_payload.get('hypotheses', []))}")
 
@@ -149,7 +199,7 @@ def main() -> int:
     total_time = round(time.perf_counter() - start_time, 2)
     timings["total"] = total_time
 
-    write_json(run_dir / "workflow_timing.json", {"timings_seconds": timings})
+    write_json(run_dir / "workflow_timing.json", {"generation_mode": generation_mode, "timings_seconds": timings})
     try:
         memory_status = {
             "case_id": run_dir.name,

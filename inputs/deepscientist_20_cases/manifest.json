@@ -1,0 +1,167 @@
+{
+  "description": "Twenty real public PDFs for command-line official DeepScientist citation-audit campaign.",
+  "created_for": "LLM course Project A 20-paper full campaign",
+  "cases": [
+    {
+      "case_id": "ai_transformer_attention",
+      "field": "NLP / AI",
+      "pdf_url": "https://arxiv.org/pdf/1706.03762",
+      "pdf_path": "inputs/deepscientist_20_cases/papers/ai_transformer_attention.pdf",
+      "source_note": "Real public arXiv PDF: Attention Is All You Need.",
+      "expected_risk": "normal_real_pdf"
+    },
+    {
+      "case_id": "ai_rag_knowledge_nlp",
+      "field": "NLP / RAG",
+      "pdf_url": "https://arxiv.org/pdf/2005.11401",
+      "pdf_path": "inputs/deepscientist_20_cases/papers/ai_rag_knowledge_nlp.pdf",
+      "source_note": "Real public arXiv PDF: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.",
+      "expected_risk": "normal_real_pdf"
+    },
+    {
+      "case_id": "medical_chexnet",
+      "field": "Medical AI",
+      "pdf_url": "https://arxiv.org/pdf/1711.05225",
+      "pdf_path": "inputs/deepscientist_20_cases/papers/medical_chexnet.pdf",
+      "source_note": "Real public arXiv PDF: CheXNet.",
+      "expected_risk": "normal_real_pdf"
+    },
+    {
+      "case_id": "finance_finrl",
+      "field": "Quantitative Finance",
+      "pdf_url": "https://arxiv.org/pdf/2011.09607",
+      "pdf_path": "inputs/deepscientist_20_cases/papers/finance_finrl.pdf",
+      "source_note": "Real public arXiv PDF: FinRL.",
+      "expected_risk": "normal_real_pdf"
+    },
+    {
+      "case_id": "physics_gravitational_waves",
+      "field": "Physics",
+      "pdf_url": "https://arxiv.org/pdf/1602.03837",
+      "pdf_path": "inputs/deepscientist_20_cases/papers/physics_gravitational_waves.pdf",
+      "source_note": "Real public arXiv PDF: GW150914.",
+      "expected_risk": "normal_real_pdf"
+    },
+    {
+      "case_id": "materials_megnet",
+      "field": "Materials Science",
+      "pdf_url": "https://arxiv.org/pdf/1812.05055",
+      "pdf_path": "inputs/deepscientist_20_cases/papers/materials_megnet.pdf",
+      "source_note": "Real public arXiv PDF: MEGNet.",
+      "expected_risk": "normal_real_pdf"
+    },
+    {
+      "case_id": "neuroscience_deeplabcut",
+      "field": "Neuroscience / Behavior",
+      "pdf_url": "https://arxiv.org/pdf/1804.03142",
+      "pdf_path": "inputs/deepscientist_20_cases/papers/neuroscience_deeplabcut.pdf",
+      "source_note": "Real public arXiv PDF: DeepLabCut.",
+      "expected_risk": "normal_real_pdf"
+    },
+    {
+      "case_id": "robotics_rt1",
+      "field": "Robotics",
+      "pdf_url": "https://arxiv.org/pdf/2212.06817",
+      "pdf_path": "inputs/deepscientist_20_cases/papers/robotics_rt1.pdf",
+      "source_note": "Real public arXiv PDF: RT-1 Robotics Transformer.",
+      "expected_risk": "normal_real_pdf"
+    },
+    {
+      "case_id": "climate_remote_sensing_ai",
+      "field": "Climate / Remote Sensing",
+      "pdf_url": "https://arxiv.org/pdf/2107.02693",
+      "pdf_path": "inputs/deepscientist_20_cases/papers/climate_remote_sensing_ai.pdf",
+      "source_note": "Real public arXiv PDF: remote sensing and AI for climate adaptation.",
+      "expected_risk": "normal_real_pdf"
+    },
+    {
+      "case_id": "education_llm_survey",
+      "field": "Education",
+      "pdf_url": "https://arxiv.org/pdf/2405.13001",
+      "pdf_path": "inputs/deepscientist_20_cases/papers/education_llm_survey.pdf",
+      "source_note": "Real public arXiv PDF: Large Language Models for Education.",
+      "expected_risk": "normal_real_pdf"
+    },
+    {
+      "case_id": "education_gpt_surprise",
+      "field": "Education / Social Science",
+      "pdf_url": "https://arxiv.org/pdf/2407.09975",
+      "pdf_path": "inputs/deepscientist_20_cases/papers/education_gpt_surprise.pdf",
+      "source_note": "Real public arXiv PDF: The GPT Surprise.",
+      "expected_risk": "normal_real_pdf"
+    },
+    {
+      "case_id": "education_llm_harm_learning",
+      "field": "Education / HCI",
+      "pdf_url": "https://arxiv.org/pdf/2409.09047",
+      "pdf_path": "inputs/deepscientist_20_cases/papers/education_llm_harm_learning.pdf",
+      "source_note": "Real public arXiv PDF: AI Meets the Classroom.",
+      "expected_risk": "normal_real_pdf"
+    },
+    {
+      "case_id": "optimization_adam",
+      "field": "Optimization / ML",
+      "pdf_url": "https://arxiv.org/pdf/1412.6980",
+      "pdf_path": "inputs/deepscientist_20_cases/papers/optimization_adam.pdf",
+      "source_note": "Real public arXiv PDF: Adam optimizer.",
+      "expected_risk": "normal_real_pdf"
+    },
+    {
+      "case_id": "existing_finance_evomarket",
+      "field": "Finance / Simulation",
+      "pdf_url": "local:inputs/papers/EvoMarket.pdf",
+      "pdf_path": "inputs/deepscientist_20_cases/papers/existing_finance_evomarket.pdf",
+      "source_note": "Existing real local PDF: EvoMarket.",
+      "expected_risk": "keywords_before_abstract_two_column",
+      "local_existing_pdf": true
+    },
+    {
+      "case_id": "ai_clip_transfer",
+      "field": "Vision / Multimodal AI",
+      "pdf_url": "https://arxiv.org/pdf/2103.00020",
+      "pdf_path": "inputs/deepscientist_20_cases/papers/ai_clip_transfer.pdf",
+      "source_note": "Real public arXiv PDF: CLIP.",
+      "expected_risk": "normal_real_pdf"
+    },
+    {
+      "case_id": "cv_segment_anything",
+      "field": "Computer Vision / Segmentation",
+      "pdf_url": "https://arxiv.org/pdf/2304.02643",
+      "pdf_path": "inputs/deepscientist_20_cases/papers/cv_segment_anything.pdf",
+      "source_note": "Real public arXiv PDF: Segment Anything.",
+      "expected_risk": "normal_real_pdf"
+    },
+    {
+      "case_id": "ml_lora_adaptation",
+      "field": "LLM Adaptation",
+      "pdf_url": "https://arxiv.org/pdf/2106.09685",
+      "pdf_path": "inputs/deepscientist_20_cases/papers/ml_lora_adaptation.pdf",
+      "source_note": "Real public arXiv PDF: LoRA.",
+      "expected_risk": "normal_real_pdf"
+    },
+    {
+      "case_id": "genai_diffusion_ddpm",
+      "field": "Generative Models",
+      "pdf_url": "https://arxiv.org/pdf/2006.11239",
+      "pdf_path": "inputs/deepscientist_20_cases/papers/genai_diffusion_ddpm.pdf",
+      "source_note": "Real public arXiv PDF: Denoising Diffusion Probabilistic Models.",
+      "expected_risk": "normal_real_pdf"
+    },
+    {
+      "case_id": "biomed_medpalm",
+      "field": "Medical LLM",
+      "pdf_url": "https://arxiv.org/pdf/2212.13138",
+      "pdf_path": "inputs/deepscientist_20_cases/papers/biomed_medpalm.pdf",
+      "source_note": "Real public arXiv PDF: Large Language Models Encode Clinical Knowledge.",
+      "expected_risk": "normal_real_pdf"
+    },
+    {
+      "case_id": "bio_esmfold_protein",
+      "field": "Computational Biology",
+      "pdf_url": "https://arxiv.org/pdf/2212.03533",
+      "pdf_path": "inputs/deepscientist_20_cases/papers/bio_esmfold_protein.pdf",
+      "source_note": "Real public arXiv PDF: ESMFold protein structure prediction.",
+      "expected_risk": "normal_real_pdf"
+    }
+  ]
+}

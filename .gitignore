@@ -5,6 +5,7 @@ outputs/runs/
 outputs/stress_audits/
 outputs/deepscientist_audits/
 outputs/deepscientist_15x_campaigns/
+outputs/deepscientist_20x_campaigns/
 outputs/manual_smoke_launches/
 outputs/memory/
 outputs/generalization_audits/
@@ -13,7 +14,9 @@ outputs/path2_smoke_tests/
 outputs/tmp_*/
 outputs/tmp_*.json
 inputs/qq_uploads/
+inputs/deepscientist_20_cases/papers/
 qqbot_logs/
 *.log
 .env
 credentials.json
+~$*.pptx

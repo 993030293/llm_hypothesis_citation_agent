@@ -20,6 +20,11 @@ pip install -r requirements.txt
 The default live-demo providers are Crossref and OpenAlex. They require network
 access but no API key.
 
+The local workflow uses the LLM agent only when `DEEPSEEK_API_KEY` is present.
+If that variable is not set, `/local` and `agent/workflow.py` automatically use
+the deterministic query planner and local hypothesis generator so the demo still
+produces the required audit artifacts.
+
 ## Recreate demo PDFs
 
 ```powershell

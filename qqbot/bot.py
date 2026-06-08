@@ -248,7 +248,15 @@ def _is_long_running_command(user_text: str) -> bool:
     lowered = user_text.strip().lower()
     if "--dry-run" in lowered:
         return False
-    return lowered.startswith(("/official", "/ds", "/dshypothesis", "/officialhypothesis", "/local", "/hypothesis", "/hyp "))
+    return lowered.startswith((
+        "/official",
+        "/ds",
+        "/dshypothesis",
+        "/officialhypothesis",
+        "/local",
+        "/hypothesis",
+        "/hyp ",
+    ))
 
 
 def _command_can_use_recent_pdf(user_text: str) -> bool:
@@ -257,7 +265,15 @@ def _command_can_use_recent_pdf(user_text: str) -> bool:
         return False
     if ".pdf" in lowered:
         return False
-    return lowered.startswith(("/official", "/ds", "/dshypothesis", "/officialhypothesis", "/local", "/hypothesis", "/hyp "))
+    return lowered.startswith((
+        "/official",
+        "/ds",
+        "/dshypothesis",
+        "/officialhypothesis",
+        "/local",
+        "/hypothesis",
+        "/hyp ",
+    ))
 
 
 def _inject_recent_pdf_if_needed(user_text: str, recent_pdf: str | None) -> list[str]:

@@ -33,7 +33,7 @@ This repository owns:
 - `agent/evidence_chain_tracer.py`;
 - `scripts/audit_deepscientist_output.py`;
 - `scripts/run_official_ds_case.py`;
-- `scripts/deepscientist_15x_campaign.py`;
+- `scripts/deepscientist_20x_campaign.py`;
 - `scripts/setup_path2_claude.py`;
 - `scripts/path2_smoke_test.py`.
 

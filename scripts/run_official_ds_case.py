@@ -55,7 +55,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--case-id", required=True)
     parser.add_argument("--pdf-path-or-url", required=True)
     parser.add_argument("--run-id", default=None)
-    parser.add_argument("--output-root", default=str(ROOT / "outputs" / "deepscientist_15x_campaigns"))
+    parser.add_argument("--output-root", default=str(ROOT / "outputs" / "deepscientist_20x_campaigns"))
     parser.add_argument("--quest-id", default=None)
     parser.add_argument("--quest-root", default=None, help="Explicit quest root, mainly for tests or manual recovery.")
     parser.add_argument("--timeout-seconds", type=int, default=1800)
@@ -871,7 +871,7 @@ def run_logged_until_claims(
     logs_dir: Path,
     label: str,
     *,
-    timeout_seconds: int,
+    timeout_seconds: int | None,
     quest_root: Path,
     poll_seconds: int = 10,
     stage: str = "deepscientist_claim_generation",
@@ -890,6 +890,11 @@ def run_logged_until_claims(
     validation_error = ""
     start = time.monotonic()
     emit_progress(f"Starting {stage}.")
+    if timeout_seconds is None:
+        emit_progress(
+            "DeepScientist claim generation has no hard timeout. "
+            "Waiting until a valid citation_audit_claims.json is written or the process exits."
+        )
     try:
         with stdout_path.open("w", encoding="utf-8", errors="replace") as stdout_handle, stderr_path.open(
             "w",
@@ -906,7 +911,7 @@ def run_logged_until_claims(
                 errors="replace",
                 env=env,
             )
-            deadline = time.monotonic() + timeout_seconds
+            deadline = time.monotonic() + timeout_seconds if timeout_seconds is not None else None
             next_poll = 0.0
             next_progress = time.monotonic() + 60.0
             while True:
@@ -920,17 +925,20 @@ def run_logged_until_claims(
                         break
                     next_poll = now + max(1, poll_seconds)
                 if now >= next_progress:
-                    elapsed = int(timeout_seconds - max(0.0, deadline - now))
+                    elapsed = int(now - start)
                     emit_progress(f"Still waiting for DeepScientist to write citation_audit_claims.json. Elapsed: {elapsed}s.")
                     next_progress = now + 60.0
 
                 if process.poll() is not None:
                     break
-                if now >= deadline:
+                if deadline is not None and now >= deadline:
                     timeout = True
                     terminate_process_tree(process.pid)
                     break
-                time.sleep(min(2.0, max(0.1, next_poll - now), max(0.1, deadline - now)))
+                sleep_candidates = [2.0, max(0.1, next_poll - now)]
+                if deadline is not None:
+                    sleep_candidates.append(max(0.1, deadline - now))
+                time.sleep(min(sleep_candidates))
 
             try:
                 process.wait(timeout=5)
