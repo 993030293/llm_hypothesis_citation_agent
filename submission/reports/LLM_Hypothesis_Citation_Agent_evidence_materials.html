@@ -1,0 +1,154 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Evidence Materials</title><style>
+@page { size: A4; margin: 14mm 13mm 14mm 13mm; }
+* { box-sizing: border-box; }
+body { font-family: "Microsoft YaHei", "Segoe UI", Arial, sans-serif; color:#111827; margin:0; font-size:10.1pt; line-height:1.43; }
+.page { page-break-after: always; } .page:last-child { page-break-after:auto; }
+h1 { color:#0B2A4A; text-align:center; font-size:25pt; margin:18mm 0 4mm; }
+h2 { background:#0B4F91; color:white; padding:6px 10px; border-radius:4px; font-size:16pt; margin:0 0 9px; }
+.subtitle { text-align:center; color:#334155; font-size:11pt; margin-bottom:12px; }
+.note { color:#475569; font-size:9pt; }
+.card { border:1px solid #BBD3EF; border-radius:8px; padding:10px; margin:9px 0; background:#FBFDFF; }
+table { width:100%; border-collapse:collapse; margin:8px 0 12px; table-layout:fixed; }
+th,td { border:1px solid #CBD5E1; padding:5px 6px; vertical-align:top; word-break:break-word; overflow-wrap:anywhere; }
+th { background:#DBEAFE; color:#0F172A; font-weight:700; }
+.small { font-size:8.3pt; line-height:1.33; } .tiny { font-size:7.35pt; line-height:1.24; }
+.statgrid { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin:10px 0; }
+.stat { border:1px solid #BBD3EF; border-radius:8px; text-align:center; padding:8px; background:#F8FAFC; }
+.stat b { display:block; font-size:18pt; color:#0B4F91; }
+img { max-width:100%; display:block; margin:6px auto; border:1px solid #CBD5E1; border-radius:4px; }
+.caption { text-align:center; color:#475569; font-size:8.2pt; margin-top:3px; }
+.green { color:#15803D; font-weight:700; } .yellow { color:#B45309; font-weight:700; } .red { color:#DC2626; font-weight:700; }
+.path { font-family:Consolas,"Courier New",monospace; font-size:7.3pt; color:#334155; }
+</style></head><body>
+<section class="page">
+<h1>DeepScientist Citation Audit Agent</h1>
+<div class="subtitle">Evidence PDF: QQ interaction, backend logs, detailed test outputs, and boundary cases</div>
+<p class="note">Generated: 2026-06-08 22:49; Project path: <span class="path">C:\Users\99303\git\llm_hypothesis_citation_agent</span></p>
+<table><tr><th style="width:32%">Required evidence</th><th>Location in this PDF</th></tr>
+<tr><td>QQ / WeChat real interaction screenshots</td><td>Page 2: command, progress heartbeat, DONE summary, and END OF RUN screenshots</td></tr>
+<tr><td>Agent backend running screenshots</td><td>Page 3: tool_calls.jsonl and citation_verification.csv screenshots; Page 11 lists extra screenshot targets</td></tr>
+<tr><td>At least 5 test samples with inputs and outputs</td><td>Pages 4-6: five real PDF cases, normalized inputs, output directories, artifact counts, and representative output rows</td></tr>
+<tr><td>At least 2 failure or boundary cases</td><td>Pages 9-10: FinRL all-Yellow boundary case and GW150914 Red metadata-conflict case</td></tr>
+</table><div class="statgrid">
+<div class="stat"><b>33</b>CSV files</div>
+<div class="stat"><b>201</b>Checked claims</div>
+<div class="stat"><b>1408</b>Tool calls</div>
+<div class="stat"><b>985</b>Evidence items</div>
+<div class="stat"><b>24</b>Multi-review reports</div>
+<div class="stat"><b>24</b>Case reports</div>
+</div>
+<p>Green / Yellow / Red summary: <span class="green">61</span> / <span class="yellow">138</span> / <span class="red">2</span>. Scope: deepscientist_15x_campaigns, deepscientist_20x_campaigns, and outputs/runs. The /related module is excluded.</p>
+<p class="note">Yellow is intentionally frequent because the verifier is conservative: an existing paper is not marked Green unless concrete support is found.</p>
+</section>
+<section class="page">
+<h2>1. QQ Real Interaction Screenshots</h2>
+<p>The screenshot below comes from a complete QQ demo workflow: the user sends an /official command, the bot reports status checks, progress heartbeats, citation audit, multi-reviewer, memory update, DONE summary, and END OF RUN.</p>
+<img src="file:///C:/Users/99303/git/llm_hypothesis_citation_agent/submission/reports/qq_cropped_evidence_overview.jpg" style="max-height:245mm;">
+<div class="caption">Figure 1. QQ evidence overview: command accepted, progress heartbeat, DONE summary, and END OF RUN.</div>
+</section>
+<section class="page">
+<h2>2. Agent Backend Running Screenshots</h2>
+<p>These screenshots show that the system is not a prompt-only chat. It writes auditable tool logs, citation tables, evidence items, and evidence chains for every run.</p>
+<img src="file:///C:/Users/99303/git/llm_hypothesis_citation_agent/submission/reports/backend_tool_calls_screenshot.png" style="max-height:112mm;">
+<div class="caption">Figure 2. tool_calls.jsonl in VS Code: Crossref, OpenAlex, Semantic Scholar, arXiv, and verifier calls are logged.</div>
+<img src="file:///C:/Users/99303/git/llm_hypothesis_citation_agent/submission/reports/backend_citation_csv_screenshot.png" style="max-height:105mm;">
+<div class="caption">Figure 3. citation_verification.csv in Excel: claim labels, reasons, evidence IDs, and metadata fields are visible.</div>
+</section>
+<section class="page">
+<h2>3. Five Test Samples: Inputs and Output Directories</h2>
+<p>The five cases below are selected from real local runs. CheXNet input has been normalized into the repository input folder for submission consistency.</p>
+<table class="small"><tr><th style="width:21%">Case</th><th style="width:26%">Input PDF</th><th>Output run directory</th><th style="width:10%">G/Y/R</th><th style="width:18%">Status</th></tr>
+<tr><td><b>Success case: CLIP / visual-language transfer</b><br>qq_pdf_ai_clip_transfer</td><td class="path">.../llm_hypothesis_citation_agent/inputs/deepscientist_20_cases/papers/ai_clip_transfer.pdf</td><td class="path">.../outputs/deepscientist_20x_campaigns/qq_official_20260605_011710/cases/qq_pdf_ai_clip_transfer</td><td>5/1/0</td><td>success<br>review=3 revise_before_demo</td></tr>
+<tr><td><b>Test case: Education LLM harm learning</b><br>qq_pdf_education_llm_harm_learning</td><td class="path">.../llm_hypothesis_citation_agent/inputs/deepscientist_20_cases/papers/education_llm_harm_learning.pdf</td><td class="path">.../outputs/deepscientist_20x_campaigns/qq_official_20260605_022254/cases/qq_pdf_education_llm_harm_learning</td><td>5/1/0</td><td>success<br>review=3 revise_before_demo</td></tr>
+<tr><td><b>Test case: CheXNet medical AI</b><br>qq_pdf_chexnet_medical_ai</td><td class="path">.../llm_hypothesis_citation_agent/inputs/deepscientist_20_cases/papers/chexnet_medical_ai.pdf</td><td class="path">.../outputs/deepscientist_20x_campaigns/qq_official_20260605_130909/cases/qq_pdf_chexnet_medical_ai</td><td>1/5/0</td><td>success<br>review=2 revise_before_demo</td></tr>
+<tr><td><b>Boundary case: FinRL finance</b><br>qq_pdf_finance_finrl</td><td class="path">.../llm_hypothesis_citation_agent/inputs/deepscientist_20_cases/papers/finance_finrl.pdf</td><td class="path">.../outputs/deepscientist_20x_campaigns/qq_official_20260605_040224/cases/qq_pdf_finance_finrl</td><td>0/5/0</td><td>success<br>review=2 revise_before_demo</td></tr>
+<tr><td><b>Boundary case: GW150914 gravitational waves</b><br>qq_pdf_physics_gravitational_waves</td><td class="path">.../llm_hypothesis_citation_agent/inputs/deepscientist_20_cases/papers/physics_gravitational_waves.pdf</td><td class="path">.../outputs/deepscientist_20x_campaigns/qq_official_20260605_035133/cases/qq_pdf_physics_gravitational_waves</td><td>3/2/1</td><td>success<br>review=2 reject_or_boundary_case</td></tr>
+</table><p class="note">Each output directory contains citation audit artifacts, process logs, multi-reviewer results, memory updates, and a final case report.</p>
+</section>
+<section class="page">
+<h2>4. Five Test Samples: Detailed Output Artifact Counts</h2>
+<p>This table makes the outputs explicit. It shows how many rows or log entries were generated by each part of the pipeline for the selected cases.</p>
+<table class="tiny"><tr><th style="width:20%">Case</th><th>Citation CSV rows</th><th>Tool calls</th><th>Evidence items</th><th>Evidence chain rows</th><th>Reports present</th><th>Key artifact paths</th></tr>
+<tr><td>qq_pdf_ai_clip_transfer</td><td>6</td><td>33</td><td>8</td><td>6</td><td>final_case_report: yes; multi_review_report: yes</td><td class="path">.../cases/qq_pdf_ai_clip_transfer/citation_audit/citation_verification.csv; .../cases/qq_pdf_ai_clip_transfer/citation_audit/tool_calls.jsonl; .../cases/qq_pdf_ai_clip_transfer/citation_audit/evidence_chain.csv; .../qq_official_20260605_011710/cases/qq_pdf_ai_clip_transfer/final_case_report.md</td></tr>
+<tr><td>qq_pdf_education_llm_harm_learning</td><td>6</td><td>33</td><td>8</td><td>6</td><td>final_case_report: yes; multi_review_report: yes</td><td class="path">.../cases/qq_pdf_education_llm_harm_learning/citation_audit/citation_verification.csv; .../cases/qq_pdf_education_llm_harm_learning/citation_audit/tool_calls.jsonl; .../cases/qq_pdf_education_llm_harm_learning/citation_audit/evidence_chain.csv; .../qq_official_20260605_022254/cases/qq_pdf_education_llm_harm_learning/final_case_report.md</td></tr>
+<tr><td>qq_pdf_chexnet_medical_ai</td><td>6</td><td>33</td><td>8</td><td>6</td><td>final_case_report: yes; multi_review_report: yes</td><td class="path">.../cases/qq_pdf_chexnet_medical_ai/citation_audit/citation_verification.csv; .../cases/qq_pdf_chexnet_medical_ai/citation_audit/tool_calls.jsonl; .../cases/qq_pdf_chexnet_medical_ai/citation_audit/evidence_chain.csv; .../qq_official_20260605_130909/cases/qq_pdf_chexnet_medical_ai/final_case_report.md</td></tr>
+<tr><td>qq_pdf_finance_finrl</td><td>5</td><td>28</td><td>7</td><td>5</td><td>final_case_report: yes; multi_review_report: yes</td><td class="path">.../cases/qq_pdf_finance_finrl/citation_audit/citation_verification.csv; .../cases/qq_pdf_finance_finrl/citation_audit/tool_calls.jsonl; .../cases/qq_pdf_finance_finrl/citation_audit/evidence_chain.csv; .../qq_official_20260605_040224/cases/qq_pdf_finance_finrl/final_case_report.md</td></tr>
+<tr><td>qq_pdf_physics_gravitational_waves</td><td>6</td><td>33</td><td>8</td><td>6</td><td>final_case_report: yes; multi_review_report: yes</td><td class="path">.../cases/qq_pdf_physics_gravitational_waves/citation_audit/citation_verification.csv; .../cases/qq_pdf_physics_gravitational_waves/citation_audit/tool_calls.jsonl; .../cases/qq_pdf_physics_gravitational_waves/citation_audit/evidence_chain.csv; .../qq_official_20260605_035133/cases/qq_pdf_physics_gravitational_waves/final_case_report.md</td></tr>
+</table>
+</section>
+<section class="page">
+<h2>5. Five Test Samples: Representative Output Rows</h2>
+<table class="tiny"><tr><th style="width:19%">Case</th><th style="width:32%">Claim / Cited work</th><th style="width:9%">Label</th><th>Reason / Evidence</th></tr>
+<tr><td>qq_pdf_ai_clip_transfer</td><td>Prior work reports that State-of-the-art computer vision systems are trained to predict a fixed set of predetermined object categories.<br><b>Cited:</b> Learning Transferable Visual Models From Natural Language Supervision</td><td class="green">Green</td><td>arXiv id matches public record (2103.00020). A concrete supporting sentence was found (overlap=1.00, similarity=0.90; shared=categories, computer, fixed, object, predetermined, predict, set...<br><b>Evidence:</b> State-of-the-art computer vision systems are trained to predict a fixed set of predetermined object categories.<br><b>error_type:</b> none; <b>evidence_id:</b> E002</td></tr>
+<tr><td>qq_pdf_education_llm_harm_learning</td><td>Prior work reports that This study explores the integration of large language models (LLMs) into educational environments, emphasizing enhanced accessibil...<br><b>Cited:</b> Integrating Large Language Models into Accessible and Inclusive Education: Access Democratization and Individualized Le...</td><td class="green">Green</td><td>Metadata matches public record (title similarity 1.00). A concrete supporting sentence was found (overlap=1.00, similarity=0.94; shared=accessibility, educational, emphasizing, enhanced, en...<br><b>Evidence:</b> This study explores the integration of large language models (LLMs) into educational environments, emphasizing enhanced accessibility, inclusivity, and individ...<br><b>error_type:</b> none; <b>evidence_id:</b> E002</td></tr>
+<tr><td>qq_pdf_chexnet_medical_ai</td><td>Vision Transformers (ViTs) applied directly to sequences of image patches achieve excellent results on image classification benchmarks, matching or exceed...<br><b>Cited:</b> An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale</td><td class="green">Green</td><td>Metadata matches public record (title similarity 1.00). A concrete supporting sentence was found (overlap=0.52, similarity=0.16; shared=benchmarks, computational, convolutional, excellent, ...<br><b>Evidence:</b> When pre-trained on large amounts of data and transferred to multiple mid-sized or small image recognition benchmarks (ImageNet, CIFAR-100, VTAB, etc.), Vision...<br><b>error_type:</b> none; <b>evidence_id:</b> E006</td></tr>
+<tr><td>qq_pdf_finance_finrl</td><td>Limit Order Book data contains predictive signals for short-term price movements that are not captured by daily OHLCV features. Tsantekidis et al. (2018) ...<br><b>Cited:</b> Using Deep Learning for price prediction by exploiting stationary limit order book features</td><td class="yellow">Yellow</td><td>Year mismatch: cited 2018, public record 2020. The title/authors/DOI point to the same public record, so this requires manual metadata review. A concrete supporting sentence was found (over...<br><b>Evidence:</b> In this work a new method to construct stationary features is proposed, tested on predicting mid price movements of the Limit Order Book.<br><b>error_type:</b> year_mismatch_requires_review; <b>evidence_id:</b> E002</td></tr>
+<tr><td>qq_pdf_physics_gravitational_waves</td><td>Tests of general relativity with GW150914 placed empirical bounds on high-order post-Newtonian coefficients and constrained the graviton Compton wavelengt...<br><b>Cited:</b> Tests of general relativity with GW150914</td><td class="red">Red</td><td>Author metadata does not overlap with the public record. The evidence is related, but it does not cover critical claim term(s): constrained. overlap=0.38; similarity=0.34; shared=bound, com...<br><b>Evidence:</b> We constrain the graviton Compton wavelength, assuming that gravitons are dispersed in vacuum in the same way as particles with mass, obtaining a 90%-confidenc...<br><b>error_type:</b> author_mismatch; <b>evidence_id:</b> E003</td></tr>
+</table>
+</section>
+<section class="page">
+<h2>6. Success Case: CLIP / Visual-Language Transfer</h2>
+<p>This is a success case because the system produced multiple Green labels and at least one claim has a concrete supporting sentence, not merely a found title.</p><table>
+<tr><th style="width:22%">Run directory</th><td>.../llm_hypothesis_citation_agent/outputs/deepscientist_20x_campaigns/qq_official_20260605_011710/cases/qq_pdf_ai_clip_transfer</td></tr>
+<tr><th style="width:22%">Audit result</th><td>Green=5, Yellow=1, Red=0</td></tr>
+<tr><th style="width:22%">Representative claim</th><td>Prior work reports that State-of-the-art computer vision systems are trained to predict a fixed set of predetermined object categories.</td></tr>
+<tr><th style="width:22%">Cited work</th><td>Learning Transferable Visual Models From Natural Language Supervision</td></tr>
+<tr><th style="width:22%">Supporting sentence</th><td>State-of-the-art computer vision systems are trained to predict a fixed set of predetermined object categories.</td></tr>
+<tr><th style="width:22%">Why Green</th><td>arXiv id matches public record (2103.00020). A concrete supporting sentence was found (overlap=1.00, similarity=0.90; shared=categories, computer, fixed, object, predetermined, predict, set, state-of-the-art).</td></tr>
+</table><p class="note">A Green label requires existence, metadata match, support_status=supports, and a concrete supporting sentence.</p>
+</section>
+<section class="page">
+<h2>7. Additional Cross-Domain Samples: Education and Medical AI</h2>
+<p>These cases show that the workflow is not limited to one domain. The inputs include education/LLM and medical AI papers, and both produce auditable claims, citation labels, and evidence IDs.</p><table><tr><th>Case</th><th>Domain</th><th>G/Y/R</th><th>Representative behavior</th></tr>
+<tr><td>qq_pdf_education_llm_harm_learning</td><td>Education / LLM</td><td>5/1/0</td><td>Several claims have concrete supporting sentences, so Green is possible; weak or uncertain support remains Yellow.</td></tr>
+<tr><td>qq_pdf_chexnet_medical_ai</td><td>Medical AI</td><td>1/5/0</td><td>Many citations are only partially supported, so the verifier conservatively keeps them Yellow instead of forcing Green.</td></tr></table>
+<p class="note">This supports the presentation point: the system prioritizes auditability and conservative verification over optimistic labeling.</p>
+</section>
+<section class="page">
+<h2>8. Boundary Case 1: FinRL All-Yellow Result</h2>
+<p>FinRL is a boundary case: the workflow completes, papers are found, but no claim is safe enough for Green. The system asks for manual review instead of fabricating certainty.</p><table>
+<tr><th style="width:22%">Run directory</th><td>.../llm_hypothesis_citation_agent/outputs/deepscientist_20x_campaigns/qq_official_20260605_040224/cases/qq_pdf_finance_finrl</td></tr>
+<tr><th style="width:22%">Audit result</th><td>Green=0, Yellow=5, Red=0</td></tr>
+<tr><th style="width:22%">Representative claim</th><td>Limit Order Book data contains predictive signals for short-term price movements that are not captured by daily OHLCV features. Tsantekidis et al. (2018) demonstrated that a combined CNN-LSTM model trained on stationary LOB features can predict mid-price movements, establishing the informativeness of LOB microstructure for trad...</td></tr>
+<tr><th style="width:22%">Cited work</th><td>Using Deep Learning for price prediction by exploiting stationary limit order book features</td></tr>
+<tr><th style="width:22%">Risk / error type</th><td>year_mismatch_requires_review</td></tr>
+<tr><th style="width:22%">Verifier reason</th><td>Year mismatch: cited 2018, public record 2020. The title/authors/DOI point to the same public record, so this requires manual metadata review. A concrete supporting sentence was found (overlap=0.50, similarity=0.34; shared=book, features, limit, movements, order, price, stationary).</td></tr>
+</table><p class="note">Why this is a boundary case: the verifier can retrieve and inspect sources, but support is not strong enough to safely promote any claim to Green.</p>
+</section>
+<section class="page">
+<h2>9. Boundary Case 2: GW150914 Contains a Red Label</h2>
+<p>GW150914 shows that Red is not limited to fake DOI. Even if a cited paper exists, metadata conflict or incomplete claim support can invalidate the citation-backed claim.</p><table>
+<tr><th style="width:22%">Run directory</th><td>.../llm_hypothesis_citation_agent/outputs/deepscientist_20x_campaigns/qq_official_20260605_035133/cases/qq_pdf_physics_gravitational_waves</td></tr>
+<tr><th style="width:22%">Audit result</th><td>Green=3, Yellow=2, Red=1</td></tr>
+<tr><th style="width:22%">Representative claim</th><td>Tests of general relativity with GW150914 placed empirical bounds on high-order post-Newtonian coefficients and constrained the graviton Compton wavelength to a 90% confidence lower bound of 10^13 km, demonstrating that gravitational wave observations can probe strong-field gravity in regimes inaccessible to Solar System tests.</td></tr>
+<tr><th style="width:22%">Cited work</th><td>Tests of general relativity with GW150914</td></tr>
+<tr><th style="width:22%">Red error type</th><td>author_mismatch</td></tr>
+<tr><th style="width:22%">Supporting sentence</th><td>We constrain the graviton Compton wavelength, assuming that gravitons are dispersed in vacuum in the same way as particles with mass, obtaining a 90%-confidence lower bound of 10^{13} km.</td></tr>
+<tr><th style="width:22%">Verifier reason</th><td>Author metadata does not overlap with the public record. The evidence is related, but it does not cover critical claim term(s): constrained. overlap=0.38; similarity=0.34; shared=bound, compton, confidence, graviton, lower, wavelength.</td></tr>
+</table><p class="note">Why this is a failure/boundary case: the cited paper is real, but metadata and support are not reliable enough, so the claim is marked as a risk item.</p>
+</section>
+<section class="page">
+<h2>10. Where to Take More Backend Screenshots</h2>
+<p>If the existing backend screenshots are considered insufficient, take additional screenshots from this concrete case directory. These files show the complete pipeline from DeepScientist status, command logs, citation audit, multi-reviewer, memory update, and final report.</p>
+<table class="small"><tr><th style="width:26%">Screenshot target</th><th>Path</th><th>Why it matters</th></tr>
+<tr><td>Full case folder tree</td><td class="path">C:\Users\99303\git\llm_hypothesis_citation_agent\outputs\deepscientist_20x_campaigns\qq_official_20260605_130909\cases\qq_pdf_chexnet_medical_ai</td><td>Shows deepscientist / citation_audit / logs / multi_review / memory outputs.</td></tr>
+<tr><td>Command and stdout/stderr logs</td><td class="path">C:\Users\99303\git\llm_hypothesis_citation_agent\outputs\deepscientist_20x_campaigns\qq_official_20260605_130909\cases\qq_pdf_chexnet_medical_ai\logs</td><td>Open ds_status_stdout.txt, citation_audit_stdout.txt, multi_reviewer_stdout.txt, memory_update_stdout.txt.</td></tr>
+<tr><td>Tool-use proof</td><td class="path">C:\Users\99303\git\llm_hypothesis_citation_agent\outputs\deepscientist_20x_campaigns\qq_official_20260605_130909\cases\qq_pdf_chexnet_medical_ai\citation_audit\tool_calls.jsonl</td><td>Best screenshot for proving real API/tool calls.</td></tr>
+<tr><td>Main audit table</td><td class="path">C:\Users\99303\git\llm_hypothesis_citation_agent\outputs\deepscientist_20x_campaigns\qq_official_20260605_130909\cases\qq_pdf_chexnet_medical_ai\citation_audit\citation_verification.csv</td><td>Best screenshot for proving Green/Yellow/Red labels and reasons.</td></tr>
+<tr><td>Evidence chain</td><td class="path">C:\Users\99303\git\llm_hypothesis_citation_agent\outputs\deepscientist_20x_campaigns\qq_official_20260605_130909\cases\qq_pdf_chexnet_medical_ai\citation_audit\evidence_chain.csv</td><td>Shows claim_id to evidence_id and tool_call_id mapping.</td></tr>
+<tr><td>Reviewer result</td><td class="path">C:\Users\99303\git\llm_hypothesis_citation_agent\outputs\deepscientist_20x_campaigns\qq_official_20260605_130909\cases\qq_pdf_chexnet_medical_ai\multi_review\multi_review_report.md</td><td>Shows multi-reviewer score and risk comments.</td></tr>
+<tr><td>Final report</td><td class="path">C:\Users\99303\git\llm_hypothesis_citation_agent\outputs\deepscientist_20x_campaigns\qq_official_20260605_130909\cases\qq_pdf_chexnet_medical_ai\final_case_report.md</td><td>Shows final case status, G/Y/R counts, missing artifacts, failure reason if any.</td></tr>
+</table><div class="card"><b>Recommended screenshot set:</b> one Explorer screenshot of the full case directory tree, one VS Code screenshot of tool_calls.jsonl, one Excel screenshot of citation_verification.csv, and one VS Code screenshot of final_case_report.md.</div>
+</section>
+<section class="page">
+<h2>11. Reproducible Artifact Package</h2>
+<p>The following files are the main evidence artifacts for every case. They allow the instructor to inspect the tool calls, retrieval records, labels, and final explanation directly.</p><table><tr><th style="width:35%">File</th><th>Purpose</th></tr>
+<tr><td class="path">citation_audit/citation_verification.csv</td><td>Main table: cited work, exists_status, metadata_match_status, support_status, Green/Yellow/Red, reason, and evidence_id.</td></tr>
+<tr><td class="path">citation_audit/tool_calls.jsonl</td><td>Tool-call log for Crossref, OpenAlex, Semantic Scholar, arXiv, and verifier logic. This proves the workflow is not prompt-only.</td></tr>
+<tr><td class="path">citation_audit/evidence_items.jsonl</td><td>Evidence objects, including source text, retrieval result, and evidence ID.</td></tr>
+<tr><td class="path">citation_audit/evidence_chain.csv</td><td>Claim-to-evidence mapping with claim_id, evidence_id, tool_call_id, and support category.</td></tr>
+<tr><td class="path">multi_review/multi_review_report.md</td><td>Multi-reviewer assessment of idea quality and citation risk. It cannot override deterministic R/Y/G labels.</td></tr>
+<tr><td class="path">final_case_report.md</td><td>Per-case final status, input PDF, output directory, G/Y/R counts, and failure/boundary reason.</td></tr>
+</table><div class="card"><b>Integrity note:</b> This evidence PDF excludes the /related work citation audit module and only covers the final submitted DeepScientist hypothesis citation audit workflow. Screenshots, CSV files, logs, and case reports come from real local run directories. No DOI, retrieval result, or QQ record is fabricated.</div>
+</section>
+</body></html>
